@@ -1,0 +1,3 @@
+set ANT_HOME=c:\Users\oleksiy.konkin\Documents\JAVA\JAVA\JAVA\apache-ant-1.8.4
+set JAVA_HOME=c:\jaspers\jrs_470\java
+set PATH=%JAVA_HOME%\bin;%ANT_HOME%\bin
