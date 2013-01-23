@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="PrimeNumbers" basedir="." default="jar">
+<project name="MainApplication" basedir="." default="jar">
     <property name="src" value="./sources"/>
     <property name="output" value="bin"/>
 
@@ -15,7 +15,7 @@
     </target>
 
     <target name="jar" depends="compile">
-         <delete file="PrimeNumbers.jar"/>
+         <delete file="MainApplication.jar"/>
          <delete file="bin/MANIFEST.MF"/>
          <property name="version.num" value="1.00"/>
          <buildnumber file="build.num"/>
@@ -24,11 +24,11 @@
          </tstamp>
          <manifest file="bin/MANIFEST.MF">
            <attribute name="Built-By" value="${user.name}"/>
-           <attribute name="Main-Class" value="PrimeNumbers"/>
+           <attribute name="Main-Class" value="MainApplication"/>
            <attribute name="Implementation-Version" value="${version.num}-b${build.number}"/> 
            <attribute name="Built-Date" value="${TODAY}"/>
          </manifest>
-           <jar destfile="PrimeNumbers.jar" basedir="bin" includes="**/*.class" manifest="bin/MANIFEST.MF"/>
+           <jar destfile="MainApplication.jar" basedir="bin" includes="**/*.class" manifest="bin/MANIFEST.MF"/>
             <!--fileset dir="bin"/-->
         <!--/jar-->
     </target>
@@ -43,7 +43,7 @@
     </target>
 
     <target name="run">
-        <java jar="PrimeNumbers.jar" fork="true" input="sources/input_value_for_project1.txt"/>
+        <java jar="MainApplication.jar" fork="true" input="resources/input_value_for_project1.txt"/>
     </target>
 
     <path id="java">
