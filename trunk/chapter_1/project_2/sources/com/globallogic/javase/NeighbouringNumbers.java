@@ -16,18 +16,19 @@ public class NeighbouringNumbers{
 			List<int[]> outputResultsStorage = new ArrayList<int[]>();
 			for (int i = 0; i < stringArray.length; i++)
 				integerArray[i] = Integer.parseInt(stringArray[i]);
-		
-			System.out.println("integer array that was initialized by values: " + Arrays.toString(integerArray));
+
+			System.out.println("The class received array : " + Arrays.toString(integerArray));	
+				
 			for (int n = 0; n < integerArray.length; n++){
-				System.out.println("current value: " + integerArray[n]);
 				Integer distanceCounter = 0;
 				for (int m = n+1; m < integerArray.length; m++){
 					distanceCounter++;
-					System.out.println("current value of m : " + integerArray[m]);
 					if( integerArray[m] == (integerArray[n]+1)){
+					/*
 						System.out.println("index of the first element : " + n);
 						System.out.println("number of steps : " + distanceCounter );
 						System.out.println("one value was found : " + " "+ integerArray[n] +" "+integerArray[m]);
+					*/
 						outputResultsStorage.add(new int[] { n, distanceCounter, integerArray[n], integerArray[m]});
 					}
 				}
@@ -38,7 +39,6 @@ public class NeighbouringNumbers{
 			Integer numberOfSteps = outputResultsStorage.get(0)[1];
 			for (int[] row : outputResultsStorage) {
 				if(row[1] < numberOfSteps){
-					System.out.println("Row = " + row[1]);
 					numberOfSteps = row[1];
 					indexOfOutputValue = counter;
 				}

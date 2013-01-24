@@ -9,7 +9,6 @@ public class MainApplication{
 	
 	Scanner in = new Scanner(System.in);
 	String inputString = String.valueOf(in.nextLine());
-	System.out.println("result line is : " + inputString);
 	
 	NeighbouringNumbers neighbouringNumbers = new NeighbouringNumbers(inputString);
 	neighbouringNumbers.DoCalculation();
