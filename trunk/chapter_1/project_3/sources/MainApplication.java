@@ -15,16 +15,6 @@ public class MainApplication{
 	
 	Anagram varAnagram = new Anagram (firstString,secondString);
 	varAnagram.DoCalculation();
-	//firstString = firstString.replaceAll(" ", "").toLowerCase();
-	//secondString = secondString.replaceAll(" ", "").toLowerCase();
-	//System.out.println("Input first string : " + firstString);
-	//System.out.println("Input second string : " + secondString);
-		
-	//LetterKeeper lc = new LetterKeeper('a',1);
-    //LetterKeeper[] letterKeeper = new LetterKeeper[4]; 
-	
-	//Anagram varAnagram = new Anagram(firstString, secondString);
-	//varAnagram.DoCalculation();
 
 	System.out.println("--==< program stopped >==--");
  }
