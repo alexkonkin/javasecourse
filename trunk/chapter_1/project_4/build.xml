@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<project name="MainApplication" basedir="." default="jar">
+    <property name="src" value="./sources"/>
+    <property name="output" value="bin"/>
+
+    <presetdef name="javac">
+          <javac includeantruntime="false" />
+     </presetdef>
+
+    <target name="compile" depends="create">
+        <javac destdir="bin">
+            <src path="${src}"/>
+            <classpath refid="java"/>
+        </javac>
+    </target>
+
+    <target name="jar" depends="compile">
+         <delete file="MainApplication.jar"/>
+         <delete file="bin/MANIFEST.MF"/>
+         <property name="version.num" value="1.00"/>
+         <buildnumber file="build.num"/>
+         <tstamp>
+               <format property="TODAY" pattern="yyyy-MM-dd HH:mm:ss" />
+         </tstamp>
+         <manifest file="bin/MANIFEST.MF">
+           <attribute name="Built-By" value="${user.name}"/>
+           <attribute name="Main-Class" value="MainApplication"/>
+           <attribute name="Implementation-Version" value="${version.num}-b${build.number}"/> 
+           <attribute name="Built-Date" value="${TODAY}"/>
+         </manifest>
+           <jar destfile="MainApplication.jar" basedir="bin" includes="**/*.class" manifest="bin/MANIFEST.MF"/>
+            <!--fileset dir="bin"/-->
+        <!--/jar-->
+    </target>
+
+
+    <target name="clean">
+        <delete dir="${output}"/>
+    </target>
+
+    <target name="create" depends="clean">
+        <mkdir dir="${output}"/>
+    </target>
+
+    <target name="run" depends="jar">
+        <java jar="MainApplication.jar" fork="true" input="resources/input_value_for_project4.txt"/>
+    </target>
+
+    <path id="java">
+    <!--
+        <fileset dir="D:JarsHibernate">
+            <include name="*.jar"/>
+        </fileset>
+                  -->
+    </path>
+
+</project>
+
