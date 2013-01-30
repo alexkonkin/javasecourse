@@ -14,7 +14,7 @@ public class MainApplication{
 	String secondString = String.valueOf(in.nextLine());
 	
 	Anagram varAnagram = new Anagram (firstString,secondString);
-	varAnagram.DoCalculation();
+	varAnagram.doCalculation();
 
 	System.out.println("--==< program stopped >==--");
  }
