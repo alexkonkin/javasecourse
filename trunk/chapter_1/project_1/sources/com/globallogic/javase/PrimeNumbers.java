@@ -17,11 +17,11 @@ public class PrimeNumbers{
 			inputNumber = inpValue;
 		}
 		
-		public void PrintNumber(){
+		public void printNumber(){
 			System.out.println("inputNumber is : " + inputNumber.toString());
 		}
 
-		public void DoCalculation(){
+		public void doCalculation(){
 			int[] primeNumbers = new int[inputNumber];
 			System.out.println("array : " + Arrays.toString(primeNumbers));
 			int primeNumbersCount = 0;
