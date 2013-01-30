@@ -12,7 +12,7 @@ public class Anagram{
 			secondString = inputSecondString.replaceAll(" ", "").toLowerCase();
 	}
 	
-	public void DoCalculation(){
+	public void doCalculation(){
 		System.out.println("Input first string : " + firstString);
 		System.out.println("Input second string : " + secondString);
 			
