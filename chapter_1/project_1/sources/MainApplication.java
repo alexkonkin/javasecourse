@@ -10,7 +10,7 @@ public class MainApplication{
 	Integer inputNumber = Integer.valueOf(in.nextLine());
 	
     PrimeNumbers primeNumbers = new PrimeNumbers(inputNumber);
-	primeNumbers.DoCalculation();
+	primeNumbers.doCalculation();
 	
 	System.out.println("--==< program stopped >==--");
 
