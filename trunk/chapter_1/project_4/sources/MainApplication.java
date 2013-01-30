@@ -11,7 +11,7 @@ public class MainApplication{
 	String inputDate = String.valueOf(in.nextLine());
 	
 	CalendarSeeker varCalendarSeeker = new CalendarSeeker (inputDate);
-	varCalendarSeeker.DoCalculation();
+	varCalendarSeeker.doCalculation();
 
 	System.out.println("\n--==< program stopped >==--");
  }

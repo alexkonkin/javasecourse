@@ -28,7 +28,7 @@ public class CalendarSeeker{
 		inpStrDate = inpDate.split(" "); 
 	}
 
-	public String GetNameOfTheDay(Integer varDayNum){
+	public String getNameOfTheDay(Integer varDayNum){
 		String nameOfTheDay="";
 		switch (varDayNum){
             case 1:  nameOfTheDay = "Monday";
@@ -49,7 +49,7 @@ public class CalendarSeeker{
 		return nameOfTheDay;
 	}
 	
-	public void DoCalculation(){
+	public void doCalculation(){
 		System.out.println("debug " + Arrays.toString(inpStrDate));
 		varDay = Integer.parseInt(inpStrDate[0]);
 		varMonth = monthName.valueOf(inpStrDate[1]).getMonthNumber();
@@ -61,7 +61,7 @@ public class CalendarSeeker{
 		}
 		dayOfWeek =  1 + (varDay + varYear + varYear/4 - varYear/100 + varYear/400 + (31*varMonth+10)/12) % 7;
 		
-		System.out.println("The name of the Day is : " + GetNameOfTheDay(dayOfWeek));
+		System.out.println("The name of the Day is : " + getNameOfTheDay(dayOfWeek));
 		
 	}
 }
