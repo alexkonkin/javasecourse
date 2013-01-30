@@ -11,7 +11,7 @@ public class MainApplication{
 	String inputString = String.valueOf(in.nextLine());
 	
 	NeighbouringNumbers neighbouringNumbers = new NeighbouringNumbers(inputString);
-	neighbouringNumbers.DoCalculation();
+	neighbouringNumbers.doCalculation();
 
 	System.out.println("--==< program stopped >==--");
  }
