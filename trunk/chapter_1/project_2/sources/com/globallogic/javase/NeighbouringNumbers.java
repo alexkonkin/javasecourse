@@ -12,7 +12,7 @@ public class NeighbouringNumbers{
 			integerArray = new int[stringArray.length];
 		}
 
-		public void DoCalculation(){
+		public void doCalculation(){
 			List<int[]> outputResultsStorage = new ArrayList<int[]>();
 			for (int i = 0; i < stringArray.length; i++)
 				integerArray[i] = Integer.parseInt(stringArray[i]);
