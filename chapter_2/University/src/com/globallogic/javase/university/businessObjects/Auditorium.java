@@ -50,6 +50,10 @@ public class Auditorium {
         textComment = tComment;
     }
 
+    public  Integer getAuditoriumId(){
+        return auditoriumId;
+    }
+
     public Integer getCampusId(){
         return campusId;
     }
