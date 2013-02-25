@@ -28,7 +28,6 @@ public class CurriculumTest {
             oneCurriculumDefault.addCurriculumItem(oneCurriculumItem);
         for(int n = 0; n <10; n++){
             assertEquals(1, (int) oneCurriculumDefault.getAuditoriumId(n));
-            System.out.println(oneCurriculumDefault.printInfo(n));
         }
     }
 
@@ -38,9 +37,12 @@ public class CurriculumTest {
             oneCurriculumDefault.delCurriculumItem(i);
         for(int n = 0; n < 10; n++){
             assertEquals(0, (int) oneCurriculumDefault.getAuditoriumId(n));
-            System.out.println(oneCurriculumDefault.printInfo(n));
         }
     }
 
-
+    @Test
+    public void testDelCurriculumItemOneArg() throws Exception{
+        Curriculum oneCurriculumOneArg = new Curriculum(3);
+        assertEquals(3, (int) oneCurriculumOneArg.getItemCount());
+        }
 }

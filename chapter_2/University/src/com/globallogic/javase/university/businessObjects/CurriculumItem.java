@@ -93,7 +93,6 @@ public class CurriculumItem {
 
     public String dumpInfo(){
         StringBuilder itemInfo = new StringBuilder();
-        itemInfo.append("item contents ");
         itemInfo.append(auditoriumId);
         itemInfo.append(" ");
         itemInfo.append(lessonId);
