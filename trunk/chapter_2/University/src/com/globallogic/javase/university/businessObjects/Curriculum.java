@@ -19,6 +19,8 @@ public class Curriculum {
 
     public Curriculum(Integer itemCount){
         curriculumItems = new CurriculumItem[itemCount];
+        for(int i = 0; i < curriculumItems.length ; i++)
+            curriculumItems[i] = new CurriculumItem();
     }
 
     public void addCurriculumItem(CurriculumItem aCurriculumItem){
@@ -60,4 +62,13 @@ public class Curriculum {
     public Integer getDurationTime(Integer ciIndex){
         return curriculumItems[ciIndex].getDurationTime();
     }
+
+    public CurriculumItem getCurriculumItem(Integer ciIndex){
+        return curriculumItems[ciIndex];
+    }
+
+    public Integer getItemCount(){
+        return curriculumItems.length;
+    }
+
 }
