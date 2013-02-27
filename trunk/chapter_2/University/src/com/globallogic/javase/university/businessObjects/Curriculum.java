@@ -1,4 +1,6 @@
 package com.globallogic.javase.university.businessObjects;
+import com.globallogic.javase.university.staff.Teacher;
+
 import java.util.Arrays;
 
 /**
@@ -9,6 +11,7 @@ import java.util.Arrays;
  * To change this template use File | Settings | File Templates.
  */
 public class Curriculum {
+
     CurriculumItem[] curriculumItems;
 
     public Curriculum(){
@@ -43,20 +46,20 @@ public class Curriculum {
         return curriculumItems[ciIndex].dumpInfo();
     }
 
-    public Integer getAuditoriumId(Integer ciIndex){
-        return curriculumItems[ciIndex].getAuditoriumId();
+    public Auditorium getAuditorium(Integer ciIndex){
+        return curriculumItems[ciIndex].getAuditorium();
     }
 
-    public Integer getLessonId(Integer ciIndex){
-        return curriculumItems[ciIndex].getLessonId();
+    public Lesson getLesson(Integer ciIndex){
+        return curriculumItems[ciIndex].getLesson();
     }
 
-    public Integer getGroupId(Integer ciIndex){
-        return curriculumItems[ciIndex].getGroupId();
+    public Group getGroup(Integer ciIndex){
+        return curriculumItems[ciIndex].getGroup();
     }
 
-    public Integer getTeacherId(Integer ciIndex){
-        return curriculumItems[ciIndex].getTeacherId();
+    public Teacher getTeacher(Integer ciIndex){
+        return curriculumItems[ciIndex].getTeacher();
     }
 
     public Integer getDurationTime(Integer ciIndex){
