@@ -21,13 +21,19 @@ public class Main {
         for(int i = 0; i < groupsStorage.length ; i++)
             groupsStorage[i] = new Group(i,new String("Group "+(i+1)));
 
+        Auditorium[] auditoriumsFile = new Auditorium[1];
+        auditoriumsFile[0] = new Auditorium(1,1,1,1,"Test auditorium");
+
+        Lesson[] lessonsFile = new Lesson[1];
+        lessonsFile[0] = new Lesson(1,"Math","Mathematics lesson");
+
         Curriculum curriculum = new Curriculum(3);
 
         TeachersCurriculumBuilder teachersCurriculumBuilder = new TeachersCurriculumBuilder();
 
 
         for(int i = 0; i < curriculum.getItemCount() ; i++){
-            teachersCurriculumBuilder.addTeachersRecordToCurriculumItem(teachersTeam[0],groupsStorage[0], 45, curriculum.getCurriculumItem(i));
+            teachersCurriculumBuilder.addTeachersRecordToCurriculumItem(teachersTeam[0],groupsStorage[0],auditoriumsFile[0],lessonsFile[0], 45, curriculum.getCurriculumItem(i));
         }
 
         for(int i = 0; i < curriculum.getItemCount() ; i++){

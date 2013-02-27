@@ -13,62 +13,60 @@ import java.lang.StringBuilder;
  * To change this template use File | Settings | File Templates.
  */
 public class CurriculumItem {
-    private Integer auditoriumId;
-    private Integer lessonId;
-    private Integer groupId;
-    private Integer teacherId;
-    private Integer durationTime;
+    private Auditorium anAuditorium = null;
+    private Lesson aLesson = null;
+    private Group aGroup = null;
+    private Teacher aTeacher = null;
+    private Integer durationTime = 0;
 
     public CurriculumItem(){
-        auditoriumId = 0;
-        lessonId = 0;
-        groupId = 0;
-        teacherId = 0;
-        durationTime = 0;
     }
 
-    public CurriculumItem(Integer ciAudId, Integer ciLesId, Integer ciGrId, Integer ciTchrId, Integer ciDuration){
-        auditoriumId = new Integer(ciAudId);
-        lessonId = new Integer(ciLesId);
-        groupId = new Integer(ciGrId);
-        teacherId = new Integer(ciTchrId);
+
+    public CurriculumItem(Auditorium ciAud, Lesson ciLes, Group ciGr, Teacher ciTchr, Integer ciDuration){
+        anAuditorium = ciAud;
+        aLesson = ciLes;
+        aGroup = ciGr;
+        aTeacher = ciTchr;
         durationTime = new Integer(ciDuration);
     }
 
-    public void setCiAuditorium(Integer ciAudId){
-        auditoriumId = ciAudId;
+
+
+    public void setAuditorium(Auditorium ciAud){
+        anAuditorium = ciAud;
     }
 
-    public void setCiLesson(Integer ciLesId){
-        lessonId = ciLesId;
+    public void setLesson(Lesson ciLes){
+        aLesson = ciLes;
     }
 
-    public void setCiGroup(Integer ciGrId){
-        groupId = ciGrId;
+    public void setGroup(Group ciGr){
+        aGroup = ciGr;
     }
 
-    public void setCiTeacher(Integer ciTchrId){
-        teacherId = ciTchrId;
+    public void setTeacher(Teacher ciTchr){
+        aTeacher = ciTchr;
     }
 
     public void setDurationTime(Integer ciDurationTime){
         durationTime = ciDurationTime;
     }
 
-    public Integer getAuditoriumId(){
-        return auditoriumId;
+    public Auditorium getAuditorium(){
+        return anAuditorium;
     }
 
-    public Integer getLessonId() {
-        return lessonId;
+    public Lesson getLesson() {
+        return aLesson;
     }
 
-    public Integer getGroupId(){
-        return groupId;
+    public Group getGroup(){
+        return aGroup;
     }
 
-    public Integer getTeacherId(){
-        return teacherId;
+    public Teacher getTeacher(){
+        return aTeacher;
     }
 
     public Integer getDurationTime(){
@@ -77,29 +75,41 @@ public class CurriculumItem {
 
 
     public boolean isEmpty(){
-        if (auditoriumId == 0)
+        if (durationTime == 0)
                 return true;
             else
                 return false;
     }
 
     public void clearData(){
-        auditoriumId = 0;
-        lessonId = 0;
-        groupId = 0;
-        teacherId = 0;
+        anAuditorium = null;
+        aLesson = null;
+        aGroup = null;
+        aTeacher = null;
         durationTime = 0;
     }
 
     public String dumpInfo(){
         StringBuilder itemInfo = new StringBuilder();
-        itemInfo.append(auditoriumId);
+        if(anAuditorium != null)
+                itemInfo.append("Auditorium "+anAuditorium.getAuditoriumId());
+            else
+                itemInfo.append("Auditorium -");
         itemInfo.append(" ");
-        itemInfo.append(lessonId);
+        if(aLesson != null)
+                itemInfo.append("Lesson "+aLesson.getLessonId());
+            else
+                itemInfo.append("Lesson -");
         itemInfo.append(" ");
-        itemInfo.append(groupId);
+        if(aGroup != null)
+                itemInfo.append("Group "+aGroup.getGroupId());
+            else
+                itemInfo.append("Group -");
         itemInfo.append(" ");
-        itemInfo.append(teacherId);
+        if(aTeacher != null)
+                itemInfo.append("Teacher "+aTeacher.getTeacherId());
+            else
+                itemInfo.append("Teacher -");
         itemInfo.append(" ");
         itemInfo.append(durationTime);
         return itemInfo.toString();

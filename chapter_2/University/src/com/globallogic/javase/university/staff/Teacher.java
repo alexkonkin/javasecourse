@@ -26,4 +26,9 @@ public class Teacher {
         return teacherId;
     }
 
+    public Teacher getTeacher(){
+        return this;
+    }
+
+
 }

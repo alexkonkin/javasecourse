@@ -2,6 +2,8 @@ package com.globallogic.javase.services;
 
 import com.globallogic.javase.university.businessObjects.CurriculumItem;
 import com.globallogic.javase.university.businessObjects.Group;
+import com.globallogic.javase.university.businessObjects.Auditorium;
+import com.globallogic.javase.university.businessObjects.Lesson;
 import com.globallogic.javase.university.staff.Teacher;
 
 /**
@@ -15,39 +17,62 @@ public class TeachersCurriculumBuilder {
     public TeachersCurriculumBuilder(){
     }
 
-    public void addTeachersRecordToCurriculumItem(Teacher aTeacher,Group aGroup,Integer aDuration ,CurriculumItem anItem){
-        anItem.setCiTeacher(aTeacher.getTeacherId());
-        anItem.setCiGroup(aGroup.getGroupId());
+    public void addTeachersRecordToCurriculumItem(Teacher aTeacher,Group aGroup,Auditorium anAuditorium ,Lesson aLesson,Integer aDuration ,CurriculumItem anItem){
+        anItem.setTeacher(aTeacher);
+        anItem.setGroup(aGroup);
+        anItem.setAuditorium(anAuditorium);
+        anItem.setLesson(aLesson);
         anItem.setDurationTime(aDuration);
     }
 
     public void deleteTeachersRecordFromCurriculumItem(CurriculumItem anItem){
-        anItem.setCiTeacher(0);
-        anItem.setCiGroup(0);
+        anItem.setTeacher(null);
+        anItem.setGroup(null);
+        anItem.setAuditorium(null);
+        anItem.setLesson(null);
         anItem.setDurationTime(0);
     }
 
-    public void setTeacherIdCurriculumItem (Teacher aTeacher,CurriculumItem anItem){
-        anItem.setCiTeacher(aTeacher.getTeacherId());
+    public void setTeacherCurriculumItem (Teacher aTeacher,CurriculumItem anItem){
+        anItem.setTeacher(aTeacher);
     }
 
-    public void setGroupIdCurriculumItem (Group aGroup,CurriculumItem anItem){
-        anItem.setCiGroup(aGroup.getGroupId());
+    public void setGroupCurriculumItem (Group aGroup,CurriculumItem anItem){
+        anItem.setGroup(aGroup);
     }
+
+    public void setAuditoriumCurriculumItem (Auditorium anAuditorium,CurriculumItem anItem){
+        anItem.setAuditorium(anAuditorium);
+    }
+
+    public void setLessonCurriculumItem (Lesson aLesson,CurriculumItem anItem){
+        anItem.setLesson(aLesson);
+    }
+
 
     public void setDurationTimeCurriculumItem (Integer aDurationTime,CurriculumItem anItem){
         anItem.setDurationTime(aDurationTime);
     }
 
-    public void delTeacherIdFromCurriculumItem (CurriculumItem anItem){
-        anItem.setCiTeacher(0);
+    public void delTeacherFromCurriculumItem (CurriculumItem anItem){
+        anItem.setTeacher(null);
     }
 
-    public void delGroupIdFromCurriculumItem (CurriculumItem anItem){
-        anItem.setCiGroup(0);
+    public void delGroupFromCurriculumItem (CurriculumItem anItem){
+        anItem.setGroup(null);
     }
+
+    public void delAuditoriumFromCurriculumItem (CurriculumItem anItem){
+        anItem.setAuditorium(null);
+    }
+
+    public void delLessonFromCurriculumItem (CurriculumItem anItem){
+        anItem.setLesson(null);
+    }
+
 
     public void delDurationTimeFromCurriculumItem (CurriculumItem anItem){
         anItem.setDurationTime(0);
     }
+
 }
