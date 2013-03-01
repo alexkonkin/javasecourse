@@ -1,5 +1,7 @@
 package com.globallogic.javase.university.businessObjects;
 
+import com.globallogic.javase.university.staff.Student;
+
 /**
  * Created with IntelliJ IDEA.
  * User: oleksiy.konkin
@@ -10,15 +12,26 @@ package com.globallogic.javase.university.businessObjects;
 public class Group {
     private Integer groupId;
     private String groupName;
+    private Student[] studentsFile;
 
     public Group(){
         groupId = 0;
         groupName = "-";
+        studentsFile = new Student[10];
+        /*
+        for(int i = 0; i < studentsFile.length ; i++)
+            studentsFile[i] = new Student();
+        */
     }
 
     public Group(Integer gId, String gName){
         groupId = gId;
         groupName = gName;
+        studentsFile = new Student[10];
+        /*
+        for(int i = 0; i < studentsFile.length ; i++)
+            studentsFile[i] = new Student();
+        */
     }
 
     public void setGroupId(Integer gId){
@@ -35,6 +48,29 @@ public class Group {
 
     public String getGroupName(){
         return groupName;
+    }
+
+    public Student getStudent(Integer stId){
+        return this.studentsFile[stId];
+    }
+
+    public void setStudent(Integer stId, Student aStudent){
+        this.studentsFile[stId] = aStudent;
+    }
+
+    public Integer getStudentsCount(){
+        return studentsFile.length;
+    }
+
+    public void delStudent(Integer stId){
+        studentsFile[stId] = null;
+    }
+
+    public boolean isThePlaceEmpty(Integer stId){
+        if(studentsFile[stId] == null)
+                return true;
+            else
+                return false;
     }
 
 }
