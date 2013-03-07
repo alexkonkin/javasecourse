@@ -2,6 +2,7 @@ package com.globallogic.javase.university.businessObjects;
 import com.globallogic.javase.university.staff.Teacher;
 
 import java.util.Arrays;
+import java.util.Date;
 
 /**
  * Created with IntelliJ IDEA.
@@ -72,6 +73,17 @@ public class Curriculum {
 
     public Integer getItemCount(){
         return curriculumItems.length;
+    }
+
+    public boolean isEmpty(Integer ciIndex){
+        if(curriculumItems[ciIndex].isEmpty() == true)
+                return true;
+            else
+                return false;
+    }
+
+    public Date getDateTime(Integer ciIndex){
+        return curriculumItems[ciIndex].getDateTime();
     }
 
 }

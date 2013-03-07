@@ -10,19 +10,26 @@
     <file path="/a.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1360934914234" ignored="false" />
     <file path="/sample.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1360934912655" ignored="false" />
     <file path="/Group.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362148236288" ignored="false" />
-    <file path="/CurriculumItem.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1361972441025" ignored="false" />
+    <file path="/CurriculumItem.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362670169303" ignored="false" />
     <file path="/Teacher.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1361972137679" ignored="false" />
-    <file path="/Curriculum.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1361960017215" ignored="false" />
+    <file path="/Curriculum.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362678295060" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1361379313570" ignored="false" />
     <file path="/LessonTest.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1360949577960" ignored="false" />
-    <file path="/TeachersCurriculumBuilder.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1361971754038" ignored="false" />
-    <file path="/Main.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362148329644" ignored="false" />
-    <file path="/TeachersCurriculumBuilderTest.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1361973408420" ignored="false" />
-    <file path="/CurriculumTest.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1361967291597" ignored="false" />
-    <file path="/CurriculumItemTest.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1361903270901" ignored="false" />
+    <file path="/TeachersCurriculumBuilder.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362671894951" ignored="false" />
+    <file path="/Main.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362674916323" ignored="false" />
+    <file path="/TeachersCurriculumBuilderTest.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362678383352" ignored="false" />
+    <file path="/CurriculumTest.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362587798109" ignored="false" />
+    <file path="/CurriculumItemTest.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362672058464" ignored="false" />
     <file path="/Student.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362044402535" ignored="false" />
     <file path="/StudentsAdministrator.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362141124338" ignored="false" />
     <file path="/StudentsAdministratorTest.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362144096672" ignored="false" />
+    <file path="$PROJECT_DIR$/src/tests/javase/university/businessObjects/Curriculum.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362581119694" ignored="false" />
+    <file path="$PROJECT_DIR$/src/tests/javase/university/staff/Student.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362581119213" ignored="false" />
+    <file path="$PROJECT_DIR$/src/tests/javase/university/businessObjects/CurriculumItem.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362581119694" ignored="false" />
+    <file path="$PROJECT_DIR$/src/tests/javase/university/staff/Teacher.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362581119213" ignored="false" />
+    <file path="$PROJECT_DIR$/src/tests/javase/university/businessObjects/Auditorium.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362581119213" ignored="false" />
+    <file path="$PROJECT_DIR$/src/tests/javase/university/businessObjects/Lesson.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362581119213" ignored="false" />
+    <file path="$PROJECT_DIR$/src/tests/javase/university/businessObjects/Group.java" changelist="a214d8e1-ee81-4ec8-bc94-bbe45204bac0" time="1362581119694" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,9 +94,9 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="StudentsAdministratorTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tests/StudentsAdministratorTest.java">
+        <entry file="file://$PROJECT_DIR$/src/tests/com/globallogic/javase/services/StudentsAdministratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="29" selection-start="892" selection-end="1036" vertical-scroll-proportion="0.0">
+            <state line="27" column="29" selection-start="924" selection-end="1068" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,19 +104,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="20" selection-start="2228" selection-end="2228" vertical-scroll-proportion="0.36547086">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StudentsAdministrator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/globallogic/javase/services/StudentsAdministrator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="911" selection-end="911" vertical-scroll-proportion="0.0">
+            <state line="56" column="87" selection-start="2249" selection-end="2389" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,28 +115,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Student.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/globallogic/javase/university/staff/Student.java">
+      <file leaf-file-name="Curriculum.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/globallogic/javase/university/businessObjects/Curriculum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
+            <state line="84" column="43" selection-start="2307" selection-end="2307" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CurriculumTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tests/com/globallogic/javase/university/businessObjects/CurriculumTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="108" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuditoriumTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tests/AuditoriumTest.java">
+      <file leaf-file-name="CurriculumItemTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tests/com/globallogic/javase/university/businessObjects/CurriculumItemTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
+            <state line="45" column="66" selection-start="1753" selection-end="1753" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TeachersCurriculumBuilderTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tests/TeachersCurriculumBuilderTest.java">
+      <file leaf-file-name="CurriculumItem.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/globallogic/javase/university/businessObjects/CurriculumItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="72" selection-start="1941" selection-end="2005" vertical-scroll-proportion="0.0">
+            <state line="127" column="36" selection-start="3247" selection-end="3247" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TeachersCurriculumBuilderTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tests/com/globallogic/javase/services/TeachersCurriculumBuilderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="242" column="23" selection-start="9888" selection-end="9888" vertical-scroll-proportion="0.38715953">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TeachersCurriculumBuilder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/globallogic/javase/services/TeachersCurriculumBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="49" selection-start="660" selection-end="693" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -172,22 +203,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/globallogic/javase/tests/CurriculumTest.java" />
-        <option value="$PROJECT_DIR$/src/com/globallogic/javase/tests/TeachersCurriculumBuilderTest.java" />
-        <option value="$PROJECT_DIR$/src/com/globallogic/javase/university/businessObjects/Curriculum.java" />
-        <option value="$PROJECT_DIR$/src/tests/CurriculumItemTest.java" />
-        <option value="$PROJECT_DIR$/src/tests/CurriculumTest.java" />
         <option value="$PROJECT_DIR$/src/tests/AuditoriumTest.java" />
         <option value="$PROJECT_DIR$/src/tests/GroupTest.java" />
-        <option value="$PROJECT_DIR$/src/com/globallogic/javase/services/TeachersCurriculumBuilder.java" />
         <option value="$PROJECT_DIR$/src/com/globallogic/javase/university/staff/Teacher.java" />
-        <option value="$PROJECT_DIR$/src/com/globallogic/javase/university/businessObjects/CurriculumItem.java" />
         <option value="$PROJECT_DIR$/src/tests/TeachersCurriculumBuilderTest.java" />
         <option value="$PROJECT_DIR$/src/com/globallogic/javase/university/staff/Student.java" />
         <option value="$PROJECT_DIR$/src/com/globallogic/javase/services/StudentsAdministrator.java" />
         <option value="$PROJECT_DIR$/src/tests/StudentsAdministratorTest.java" />
         <option value="$PROJECT_DIR$/src/com/globallogic/javase/university/businessObjects/Group.java" />
+        <option value="$PROJECT_DIR$/src/tests/javase/services/TeachersCurriculumBuilder.java" />
+        <option value="$PROJECT_DIR$/src/tests/com/globallogic/javase/university/businessObjects/CurriculumTest.java" />
+        <option value="$PROJECT_DIR$/src/com/globallogic/javase/services/TeachersCurriculumBuilder.java" />
+        <option value="$PROJECT_DIR$/src/tests/com/globallogic/javase/university/businessObjects/CurriculumItemTest.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/globallogic/javase/university/businessObjects/CurriculumItem.java" />
+        <option value="$PROJECT_DIR$/src/com/globallogic/javase/university/businessObjects/Curriculum.java" />
+        <option value="$PROJECT_DIR$/src/tests/com/globallogic/javase/services/TeachersCurriculumBuilderTest.java" />
       </list>
     </option>
   </component>
@@ -195,8 +226,8 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="63" />
-    <option name="y" value="15" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -278,33 +309,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="University" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="University" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="javase" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="university" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="staff" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -331,6 +340,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="businessObjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="University" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="University" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="University" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="University" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javase" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -388,11 +437,14 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\oleksiy.konkin\Documents\JAVA\JAVA_SE\chapter_2\University\src\tests" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.globallogic.javase.tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.TeachersCurriculumBuilderTest">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -420,58 +472,10 @@
       <module name="University" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CurriculumTest" />
+      <option name="PACKAGE_NAME" value="tests.com.globallogic.javase.university.businessObjects" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.globallogic.javase.university.businessObjects.CurriculumTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="CurriculumItemTest.testCurriculumItemDefault" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="University" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CurriculumItemTest" />
-      <option name="METHOD_NAME" value="testCurriculumItemDefault" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <ConfigurationWrapper RunnerId="Debug" />
-      <method />
-    </configuration>
-    <configuration default="false" name="All in University" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="University" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -490,8 +494,8 @@
       <module name="University" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.StudentsAdministratorTest" />
+      <option name="PACKAGE_NAME" value="tests.com.globallogic.javase.services" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.globallogic.javase.services.StudentsAdministratorTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
@@ -511,6 +515,50 @@
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="tests.com.globallogic.javase in University" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="University" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tests.com.globallogic.javase" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TeachersCurriculumBuilderTest.testTeachersCurriculum" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="University" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tests.com.globallogic.javase.services" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.globallogic.javase.services.TeachersCurriculumBuilderTest" />
+      <option name="METHOD_NAME" value="testTeachersCurriculum" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -553,8 +601,8 @@
       <module name="University" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CurriculumItemTest" />
+      <option name="PACKAGE_NAME" value="tests.com.globallogic.javase.university.businessObjects" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.globallogic.javase.university.businessObjects.CurriculumItemTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
@@ -575,8 +623,8 @@
       <module name="University" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TeachersCurriculumBuilderTest" />
+      <option name="PACKAGE_NAME" value="tests.com.globallogic.javase.services" />
+      <option name="MAIN_CLASS_NAME" value="tests.com.globallogic.javase.services.TeachersCurriculumBuilderTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
@@ -604,17 +652,17 @@
       <item index="1" class="java.lang.String" itemvalue="JUnit.TeachersCurriculumBuilderTest" />
       <item index="2" class="java.lang.String" itemvalue="Application.Main" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.CurriculumTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.CurriculumItemTest.testCurriculumItemDefault" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.All in University" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.StudentsAdministratorTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.StudentsAdministratorTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.tests.com.globallogic.javase in University" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.TeachersCurriculumBuilderTest.testTeachersCurriculum" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.StudentsAdministratorTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.All in University" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TeachersCurriculumBuilderTest.testTeachersCurriculum" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.tests.com.globallogic.javase in University" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.CurriculumTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CurriculumItemTest.testCurriculumItemDefault" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.StudentsAdministratorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -646,24 +694,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="63" y="15" width="1936" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297062" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24972796" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48609567" sideWeight="0.6910352" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46051168" sideWeight="0.14941302" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48609567" sideWeight="0.6883671" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39933258" sideWeight="0.058697972" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24493062" sideWeight="0.49610677" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38932148" sideWeight="0.63874066" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38932148" sideWeight="0.6307364" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16755603" sideWeight="0.12680757" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18356457" sideWeight="0.37263626" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297062" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16755603" sideWeight="0.40489432" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46051168" sideWeight="0.84685165" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18356457" sideWeight="0.22024472" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39933258" sideWeight="0.9375667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -735,43 +783,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/globallogic/javase/services/TeachersCurriculumBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="25" selection-start="1728" selection-end="1728" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/globallogic/javase/university/businessObjects/Curriculum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="9" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/CurriculumItemTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="31" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/CurriculumTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="54" selection-start="1219" selection-end="1309" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="25" selection-start="2400" selection-end="2400" vertical-scroll-proportion="0.28270042">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/org/junit/internal/runners/statements/InvokeMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="16" selection-start="489" selection-end="489" vertical-scroll-proportion="0.47433266">
@@ -800,19 +811,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/AuditoriumTest.java">
+    <entry file="file://$PROJECT_DIR$/src/tests/com/globallogic/javase/university/businessObjects/AuditoriumTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
+        <state line="20" column="0" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/TeachersCurriculumBuilderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="72" selection-start="1941" selection-end="2005" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -823,15 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/StudentsAdministratorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="29" selection-start="892" selection-end="1036" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/globallogic/javase/university/businessObjects/Group.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="75" column="16" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.0">
@@ -839,19 +832,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/globallogic/javase/services/StudentsAdministrator.java">
+    <entry file="file://$PROJECT_DIR$/src/tests/com/globallogic/javase/services/StudentsAdministratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="911" selection-end="911" vertical-scroll-proportion="0.0">
+        <state line="27" column="29" selection-start="924" selection-end="1068" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/globallogic/javase/services/TeachersCurriculumBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="49" selection-start="660" selection-end="693" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/com/globallogic/javase/university/businessObjects/CurriculumTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="108" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="20" selection-start="2228" selection-end="2228" vertical-scroll-proportion="0.36547086">
+        <state line="56" column="87" selection-start="2249" selection-end="2389" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/globallogic/javase/university/businessObjects/CurriculumItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="36" selection-start="3247" selection-end="3247" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/globallogic/javase/university/businessObjects/Curriculum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="43" selection-start="2307" selection-end="2307" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/com/globallogic/javase/university/businessObjects/CurriculumItemTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="66" selection-start="1753" selection-end="1753" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/globallogic/javase/services/StudentsAdministrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="911" selection-end="911" vertical-scroll-proportion="0.7303371">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/com/globallogic/javase/services/TeachersCurriculumBuilderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="242" column="23" selection-start="9888" selection-end="9888" vertical-scroll-proportion="0.38715953">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

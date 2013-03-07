@@ -1,7 +1,7 @@
 package com.globallogic.javase.university.businessObjects;
 
 import com.globallogic.javase.university.staff.Teacher;
-
+import java.util.Date;
 import java.util.Arrays;
 import java.lang.StringBuilder;
 
@@ -18,16 +18,18 @@ public class CurriculumItem {
     private Group aGroup = null;
     private Teacher aTeacher = null;
     private Integer durationTime = 0;
+    private Date aDateTime = null;
 
     public CurriculumItem(){
     }
 
 
-    public CurriculumItem(Auditorium ciAud, Lesson ciLes, Group ciGr, Teacher ciTchr, Integer ciDuration){
+    public CurriculumItem(Auditorium ciAud, Lesson ciLes, Group ciGr, Teacher ciTchr, Integer ciDuration, Date ciDateTime){
         anAuditorium = ciAud;
         aLesson = ciLes;
         aGroup = ciGr;
         aTeacher = ciTchr;
+        aDateTime = ciDateTime;
         durationTime = new Integer(ciDuration);
     }
 
@@ -73,7 +75,6 @@ public class CurriculumItem {
         return durationTime;
     }
 
-
     public boolean isEmpty(){
         if (durationTime == 0)
                 return true;
@@ -87,6 +88,14 @@ public class CurriculumItem {
         aGroup = null;
         aTeacher = null;
         durationTime = 0;
+    }
+
+    public void setDateTime(Date ciDateTime){
+        aDateTime = ciDateTime;
+    }
+
+    public Date getDateTime(){
+        return aDateTime;
     }
 
     public String dumpInfo(){
@@ -111,7 +120,12 @@ public class CurriculumItem {
             else
                 itemInfo.append("Teacher -");
         itemInfo.append(" ");
-        itemInfo.append(durationTime);
+        if(aDateTime != null)
+                itemInfo.append("Start date/time "+aDateTime);
+            else
+                itemInfo.append("Start date/time -");
+        itemInfo.append(" ");
+        itemInfo.append("Duration "+durationTime);
         return itemInfo.toString();
     }
 

@@ -1,8 +1,11 @@
 import com.globallogic.javase.university.businessObjects.*;
 import com.globallogic.javase.university.staff.*;
 import com.globallogic.javase.services.*;
+import com.sun.corba.se.impl.logging.ORBUtilSystemException;
 
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Main {
 
@@ -40,10 +43,14 @@ public class Main {
 
 
         TeachersCurriculumBuilder teachersCurriculumBuilder = new TeachersCurriculumBuilder();
-
-
+        long incMinutes = new Date().getTime();
+        Date d;
         for(int i = 0; i < curriculum.getItemCount() ; i++){
-            teachersCurriculumBuilder.addTeachersRecordToCurriculumItem(teachersTeam[0],groupsStorage[0],auditoriumsFile[0],lessonsFile[0], 45, curriculum.getCurriculumItem(i));
+            if(i>0)
+                //define time interval equal to 50 minutes
+                incMinutes = incMinutes + (5*600000);
+            d = new Date(incMinutes);
+            teachersCurriculumBuilder.addTeachersRecordToCurriculumItem(teachersTeam[0],groupsStorage[0],auditoriumsFile[0],lessonsFile[0], 45,d,curriculum.getCurriculumItem(i));
         }
 
         for(int i = 0; i < curriculum.getItemCount() ; i++){

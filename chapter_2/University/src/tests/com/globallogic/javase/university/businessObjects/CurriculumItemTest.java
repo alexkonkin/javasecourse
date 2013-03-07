@@ -1,4 +1,4 @@
-package tests;
+package tests.com.globallogic.javase.university.businessObjects;
 
 import com.globallogic.javase.university.businessObjects.Auditorium;
 import com.globallogic.javase.university.businessObjects.CurriculumItem;
@@ -7,6 +7,8 @@ import com.globallogic.javase.university.businessObjects.Group;
 import com.globallogic.javase.university.businessObjects.Lesson;
 import com.globallogic.javase.university.staff.Teacher;
 import org.junit.Test;
+
+import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
 
@@ -24,9 +26,10 @@ public class CurriculumItemTest {
     Group aGroup = new Group();
     Teacher aTeacher = new Teacher();
     Integer durationTime = 45;
+    Date aDate = new Date();
 
     CurriculumItem aCurriculumItemDefault = new CurriculumItem();
-    CurriculumItem aCurriculumItem = new CurriculumItem(anAuditorium,aLesson,aGroup,aTeacher,45);
+    CurriculumItem aCurriculumItem = new CurriculumItem(anAuditorium,aLesson,aGroup,aTeacher,45,aDate);
 
     @Test
     public void testClearData() throws Exception {
@@ -40,6 +43,7 @@ public class CurriculumItemTest {
         assertEquals(true,(boolean)(aCurriculumItemDefault.getLesson() == null)?true:false);
         assertEquals(true,(boolean)(aCurriculumItemDefault.getGroup() == null)?true:false);
         assertEquals(true,(boolean)(aCurriculumItemDefault.getTeacher() == null)?true:false);
+        assertEquals(aDate, aCurriculumItemDefault.getDateTime());
         assertEquals(0,(int)aCurriculumItemDefault.getDurationTime());
     }
 
