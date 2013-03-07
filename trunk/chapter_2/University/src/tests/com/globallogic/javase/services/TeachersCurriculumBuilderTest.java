@@ -242,6 +242,7 @@ public class TeachersCurriculumBuilderTest {
                 //System.out.println("curriculum item "+(i+1)+" "+ curriculum.printInfo(i));
                 if(i>0)
                     incMinutes = incMinutes + (5*600000);
+                //check that the teachers time table equal to the current date with the 50 min step
                 assertEquals(incMinutes, curriculum.getDateTime(i).getTime());
             }
         }
