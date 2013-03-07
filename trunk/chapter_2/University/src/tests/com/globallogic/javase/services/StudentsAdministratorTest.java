@@ -1,4 +1,4 @@
-package tests;
+package tests.com.globallogic.javase.services;
 
 import com.globallogic.javase.services.StudentsAdministrator;
 import com.globallogic.javase.university.businessObjects.Group;

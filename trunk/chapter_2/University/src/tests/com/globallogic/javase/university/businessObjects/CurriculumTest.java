@@ -1,4 +1,4 @@
-package tests;
+package tests.com.globallogic.javase.university.businessObjects;
 
 import com.globallogic.javase.university.businessObjects.*;
 import com.globallogic.javase.university.staff.Teacher;
@@ -7,6 +7,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
+
+import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
 
@@ -25,7 +27,7 @@ public class CurriculumTest {
     Integer durationTime = 45;
 
     Curriculum oneCurriculumDefault = new Curriculum();
-    CurriculumItem oneCurriculumItem = new CurriculumItem(anAuditorium,aLesson,aGroup,aTeacher,45);
+    CurriculumItem oneCurriculumItem = new CurriculumItem(anAuditorium,aLesson,aGroup,aTeacher,45, new Date());
 
     @Test
     public void testAddCurriculumItem()throws Exception{

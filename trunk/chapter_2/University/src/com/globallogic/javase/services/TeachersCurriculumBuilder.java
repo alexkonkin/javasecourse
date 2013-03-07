@@ -6,6 +6,8 @@ import com.globallogic.javase.university.businessObjects.Auditorium;
 import com.globallogic.javase.university.businessObjects.Lesson;
 import com.globallogic.javase.university.staff.Teacher;
 
+import java.util.Date;
+
 /**
  * Created with IntelliJ IDEA.
  * User: oleksiy.konkin
@@ -17,12 +19,13 @@ public class TeachersCurriculumBuilder {
     public TeachersCurriculumBuilder(){
     }
 
-    public void addTeachersRecordToCurriculumItem(Teacher aTeacher,Group aGroup,Auditorium anAuditorium ,Lesson aLesson,Integer aDuration ,CurriculumItem anItem){
+    public void addTeachersRecordToCurriculumItem(Teacher aTeacher,Group aGroup,Auditorium anAuditorium ,Lesson aLesson,Integer aDuration ,Date aDateTime, CurriculumItem anItem){
         anItem.setTeacher(aTeacher);
         anItem.setGroup(aGroup);
         anItem.setAuditorium(anAuditorium);
         anItem.setLesson(aLesson);
         anItem.setDurationTime(aDuration);
+        anItem.setDateTime(aDateTime);
     }
 
     public void deleteTeachersRecordFromCurriculumItem(CurriculumItem anItem){

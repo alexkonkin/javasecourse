@@ -1,4 +1,4 @@
-package tests;
+package tests.com.globallogic.javase.university.businessObjects;
 
 import com.globallogic.javase.university.businessObjects.Auditorium;
 
