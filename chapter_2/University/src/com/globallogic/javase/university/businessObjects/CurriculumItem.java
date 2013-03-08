@@ -87,6 +87,7 @@ public class CurriculumItem {
         aLesson = null;
         aGroup = null;
         aTeacher = null;
+        aDateTime = null;
         durationTime = 0;
     }
 

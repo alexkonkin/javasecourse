@@ -7,6 +7,7 @@ import com.globallogic.javase.university.staff.Teacher;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 /**
  * Created with IntelliJ IDEA.
@@ -41,7 +42,7 @@ public class StudentsAdministratorTest {
             studentsAdministrator.enrollStudentIntoTheGroup(studentsTeam[i].getStudent(),aGroup);
 
         studentsAdministrator.deductStudentFromTheGroup(studentsTeam[3],aGroup);
-        assertEquals(true,((Student)aGroup.getStudent(3) == null)?true:false);
+        assertNull(aGroup.getStudent(3));
 
     }
 }
