@@ -11,6 +11,8 @@ import org.junit.Test;
 import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created with IntelliJ IDEA.
@@ -34,16 +36,16 @@ public class CurriculumItemTest {
     @Test
     public void testClearData() throws Exception {
         aCurriculumItem.clearData();
-        assertEquals(true,(boolean)aCurriculumItem.isEmpty());
+        assertTrue(aCurriculumItem.isEmpty());
     }
 
     @Test
     public void testCurriculumItemDefault() throws Exception {
-        assertEquals(true,(boolean)(aCurriculumItemDefault.getAuditorium() == null)?true:false);
-        assertEquals(true,(boolean)(aCurriculumItemDefault.getLesson() == null)?true:false);
-        assertEquals(true,(boolean)(aCurriculumItemDefault.getGroup() == null)?true:false);
-        assertEquals(true,(boolean)(aCurriculumItemDefault.getTeacher() == null)?true:false);
-        assertEquals(aDate, aCurriculumItemDefault.getDateTime());
+        assertNull(aCurriculumItemDefault.getAuditorium());
+        assertNull(aCurriculumItemDefault.getLesson());
+        assertNull(aCurriculumItemDefault.getGroup());
+        assertNull(aCurriculumItemDefault.getTeacher());
+        assertNull(aCurriculumItemDefault.getDateTime());
         assertEquals(0,(int)aCurriculumItemDefault.getDurationTime());
     }
 
@@ -51,10 +53,10 @@ public class CurriculumItemTest {
 
     @Test
     public void testCurriculumItem() throws Exception {
-        assertEquals(true,(boolean)aCurriculumItem.getAuditorium().equals(anAuditorium));
-        assertEquals(true,(boolean)aCurriculumItem.getLesson().equals(aLesson));
-        assertEquals(true,(boolean)aCurriculumItem.getGroup().equals(aGroup));
-        assertEquals(true,(boolean)aCurriculumItem.getTeacher().equals(aTeacher));
+        assertTrue(aCurriculumItem.getAuditorium().equals(anAuditorium));
+        assertTrue(aCurriculumItem.getLesson().equals(aLesson));
+        assertTrue(aCurriculumItem.getGroup().equals(aGroup));
+        assertTrue(aCurriculumItem.getTeacher().equals(aTeacher));
         assertEquals(45,(int)aCurriculumItem.getDurationTime());
     }
 }
