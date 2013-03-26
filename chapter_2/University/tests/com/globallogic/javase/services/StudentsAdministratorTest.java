@@ -1,10 +1,11 @@
-package tests.com.globallogic.javase.services;
+package com.globallogic.javase.services;
 
 import com.globallogic.javase.services.StudentsAdministrator;
 import com.globallogic.javase.university.businessObjects.Group;
 import com.globallogic.javase.university.staff.Student;
-import com.globallogic.javase.university.staff.Teacher;
 import org.junit.Test;
+
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -23,25 +24,26 @@ public class StudentsAdministratorTest {
 
     @Test
     public void testEnrollStudentIntoTheGroup() throws Exception {
-        Student[] studentsTeam = new Student[10];
-        for (int i = 0; i < studentsTeam.length ; i++)
-            studentsTeam[i] = new Student(i);
-        for (int i = 0; i < studentsTeam.length ; i++)
-            studentsAdministrator.enrollStudentIntoTheGroup(studentsTeam[i].getStudent(),aGroup);
+        ArrayList<Student> studentsTeam = new ArrayList<Student>();
 
-        for (int i = 0; i < studentsTeam.length ; i++)
-            assertEquals(studentsTeam[i],(Student)aGroup.getStudent(i));
+        for (int i = 0; i < 10 ; i++)
+            studentsTeam.add(new Student(i));
+        for (int i = 0; i < studentsTeam.size() ; i++)
+            studentsAdministrator.enrollStudentIntoTheGroup(studentsTeam.get(i).getStudent(),aGroup);
+
+        for (int i = 0; i < studentsTeam.size() ; i++)
+            assertEquals(studentsTeam.get(i),(Student)aGroup.getStudent(i));
     }
 
     @Test
     public void testDeductStudentFromTheGroup() throws Exception {
-        Student[] studentsTeam = new Student[10];
-        for (int i = 0; i < studentsTeam.length ; i++)
-            studentsTeam[i] = new Student(i);
-        for (int i = 0; i < studentsTeam.length ; i++)
-            studentsAdministrator.enrollStudentIntoTheGroup(studentsTeam[i].getStudent(),aGroup);
+        ArrayList<Student> studentsTeam = new ArrayList<Student>();
+        for (int i = 0; i < 10 ; i++)
+            studentsTeam.add(new Student(i));
+        for (int i = 0; i < studentsTeam.size() ; i++)
+            studentsAdministrator.enrollStudentIntoTheGroup(studentsTeam.get(i).getStudent(),aGroup);
 
-        studentsAdministrator.deductStudentFromTheGroup(studentsTeam[3],aGroup);
+        studentsAdministrator.deductStudentFromTheGroup(studentsTeam.get(3),aGroup);
         assertNull(aGroup.getStudent(3));
 
     }

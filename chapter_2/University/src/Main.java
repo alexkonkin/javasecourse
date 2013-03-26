@@ -3,6 +3,7 @@ import com.globallogic.javase.university.staff.*;
 import com.globallogic.javase.services.*;
 import com.sun.corba.se.impl.logging.ORBUtilSystemException;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
@@ -12,32 +13,33 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("--==<The program is started>==--");
 
-        Teacher[] teachersTeam = new Teacher[3];
-        for(int i = 0; i < teachersTeam.length ; i++)
-            teachersTeam[i] = new Teacher(i+1);
+        ArrayList<Teacher> teachersTeam = new ArrayList<Teacher>();
 
-        Lesson[] lessonsStorage = new Lesson[5];
-        for(int i = 0; i < lessonsStorage.length ; i++)
-            lessonsStorage[i] = new Lesson(i,new String("Lesson "+(i+1)),new String("Lesson "+(i+1)+" info"));
+        for(int i = 0; i < 3 ; i++)
+            teachersTeam.add(new Teacher(i+1));
 
-        Student[] studentsTeam = new Student[5];
-        for(int i = 0; i < studentsTeam.length ; i++)
-            studentsTeam[i] = new Student(i);
+        ArrayList<Lesson> lessonsStorage = new ArrayList<Lesson>();
+        for(int i = 0; i < 5 ; i++)
+            lessonsStorage.add(new Lesson(i,new String("Lesson "+(i+1)),new String("Lesson "+(i+1)+" info")));
 
-        Group[] groupsStorage = new Group[3];
-        for(int i = 0; i < groupsStorage.length ; i++)
-            groupsStorage[i] = new Group(i,new String("Group "+(i+1)));
+        ArrayList<Student> studentsTeam = new ArrayList<Student>();
+        for(int i = 0; i < 5 ; i++)
+            studentsTeam.add(new Student(i));
+
+        ArrayList<Group> groupsStorage = new ArrayList<Group>();
+        for(int i = 0; i < 3 ; i++)
+            groupsStorage.add(new Group(i,new String("Group "+(i+1))));
 
         StudentsAdministrator studentsAdministrator = new StudentsAdministrator();
 
-        for (int i = 0; i < studentsTeam.length ; i++)
-            studentsAdministrator.enrollStudentIntoTheGroup(studentsTeam[i].getStudent(),groupsStorage[0]);
+        for (int i = 0; i < studentsTeam.size() ; i++)
+            studentsAdministrator.enrollStudentIntoTheGroup(studentsTeam.get(i).getStudent(),groupsStorage.get(0));
 
-        Auditorium[] auditoriumsFile = new Auditorium[1];
-        auditoriumsFile[0] = new Auditorium(1,1,1,1,"Test auditorium");
+        ArrayList<Auditorium> auditoriumsFile = new ArrayList<Auditorium>();
+        auditoriumsFile.add(new Auditorium(1,1,1,1,"Test auditorium"));
 
-        Lesson[] lessonsFile = new Lesson[1];
-        lessonsFile[0] = new Lesson(1,"Math","Mathematics lesson");
+        ArrayList<Lesson> lessonsFile = new ArrayList<Lesson>();
+        lessonsFile.add(new Lesson(1,"Math","Mathematics lesson"));
 
         Curriculum curriculum = new Curriculum(3);
 
@@ -50,7 +52,13 @@ public class Main {
                 //define time interval equal to 50 minutes
                 incMinutes = incMinutes + (5*600000);
             d = new Date(incMinutes);
-            teachersCurriculumBuilder.addTeachersRecordToCurriculumItem(teachersTeam[0],groupsStorage[0],auditoriumsFile[0],lessonsFile[0], 45,d,curriculum.getCurriculumItem(i));
+            teachersCurriculumBuilder.addTeachersRecordToCurriculumItem(teachersTeam.get(0),
+                                                                        groupsStorage.get(0),
+                                                                        auditoriumsFile.get(0),
+                                                                        lessonsFile.get(0),
+                                                                        45,
+                                                                        d,
+                                                                        curriculum.getCurriculumItem(i));
         }
 
         for(int i = 0; i < curriculum.getItemCount() ; i++){
