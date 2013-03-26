@@ -1,8 +1,10 @@
 package com.globallogic.javase.university.businessObjects;
 import com.globallogic.javase.university.staff.Teacher;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,77 +15,68 @@ import java.util.Date;
  */
 public class Curriculum {
 
-    CurriculumItem[] curriculumItems;
+    ArrayList<CurriculumItem> curriculumItems = new ArrayList<CurriculumItem>();
 
     public Curriculum(){
-        curriculumItems = new CurriculumItem[10];
-        for(int i = 0; i < curriculumItems.length ; i++)
-            curriculumItems[i] = new CurriculumItem();
+        for(int i = 0; i < 10 ; i++)
+            curriculumItems.add(new CurriculumItem());
     }
 
     public Curriculum(Integer itemCount){
-        curriculumItems = new CurriculumItem[itemCount];
-        for(int i = 0; i < curriculumItems.length ; i++)
-            curriculumItems[i] = new CurriculumItem();
+        for(int i = 0; i < itemCount ; i++)
+            curriculumItems.add(new CurriculumItem());
     }
 
     public void addCurriculumItem(CurriculumItem aCurriculumItem){
-        for(int i = 0;i < curriculumItems.length;i++){
-            if(curriculumItems[i].isEmpty()){
-                curriculumItems[i] = aCurriculumItem;
-                break;
-            }
-            else
-                continue;
-        }
+        curriculumItems.add(aCurriculumItem);
     }
 
     public void delCurriculumItem(Integer ciIndex){
-        curriculumItems[ciIndex].clearData();
+        curriculumItems.remove(ciIndex);
 
     }
 
     public String printInfo(Integer ciIndex){
-        return curriculumItems[ciIndex].dumpInfo();
+        return curriculumItems.get(ciIndex).dumpInfo();
     }
 
     public Auditorium getAuditorium(Integer ciIndex){
-        return curriculumItems[ciIndex].getAuditorium();
+        return curriculumItems.get(ciIndex).getAuditorium();
     }
 
     public Lesson getLesson(Integer ciIndex){
-        return curriculumItems[ciIndex].getLesson();
+        return curriculumItems.get(ciIndex).getLesson();
     }
 
     public Group getGroup(Integer ciIndex){
-        return curriculumItems[ciIndex].getGroup();
+        return curriculumItems.get(ciIndex).getGroup();
     }
 
     public Teacher getTeacher(Integer ciIndex){
-        return curriculumItems[ciIndex].getTeacher();
+        return curriculumItems.get(ciIndex).getTeacher();
     }
 
     public Integer getDurationTime(Integer ciIndex){
-        return curriculumItems[ciIndex].getDurationTime();
+        return curriculumItems.get(ciIndex).getDurationTime();
     }
 
     public CurriculumItem getCurriculumItem(Integer ciIndex){
-        return curriculumItems[ciIndex];
+        return curriculumItems.get(ciIndex);
     }
 
     public Integer getItemCount(){
-        return curriculumItems.length;
+        return curriculumItems.size();
     }
 
     public boolean isEmpty(Integer ciIndex){
-        if(curriculumItems[ciIndex].isEmpty() == true)
+        if(curriculumItems.get(ciIndex).isEmpty() == true)
                 return true;
             else
                 return false;
     }
 
     public Date getDateTime(Integer ciIndex){
-        return curriculumItems[ciIndex].getDateTime();
+        return curriculumItems.get(ciIndex).getDateTime();
     }
 
 }
