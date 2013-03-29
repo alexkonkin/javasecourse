@@ -13,12 +13,12 @@ import java.lang.StringBuilder;
  * To change this template use File | Settings | File Templates.
  */
 public class CurriculumItem {
-    private Auditorium anAuditorium = null;
-    private Lesson aLesson = null;
-    private Group aGroup = null;
-    private Teacher aTeacher = null;
+    private Auditorium anAuditorium;
+    private Lesson aLesson;
+    private Group aGroup;
+    private Teacher aTeacher;
     private Integer durationTime = 0;
-    private Date aDateTime = null;
+    private Date aDateTime;
 
     public CurriculumItem(){
     }
@@ -101,28 +101,38 @@ public class CurriculumItem {
 
     public String dumpInfo(){
         StringBuilder itemInfo = new StringBuilder();
-        if(anAuditorium != null)
-                itemInfo.append("Auditorium "+anAuditorium.getAuditoriumId());
+        if(anAuditorium != null){
+                itemInfo.append("Auditorium ");
+                itemInfo.append(anAuditorium.getAuditoriumId());
+            }
             else
                 itemInfo.append("Auditorium -");
         itemInfo.append(" ");
-        if(aLesson != null)
-                itemInfo.append("Lesson "+aLesson.getLessonId());
+        if(aLesson != null){
+                itemInfo.append("Lesson ");
+                itemInfo.append(aLesson.getLessonId());
+            }
             else
                 itemInfo.append("Lesson -");
         itemInfo.append(" ");
-        if(aGroup != null)
-                itemInfo.append("Group "+aGroup.getGroupId());
+        if(aGroup != null){
+                itemInfo.append("Group ");
+                itemInfo.append(aGroup.getGroupId());
+            }
             else
                 itemInfo.append("Group -");
         itemInfo.append(" ");
-        if(aTeacher != null)
-                itemInfo.append("Teacher "+aTeacher.getTeacherId());
+        if(aTeacher != null){
+                itemInfo.append("Teacher ");
+                itemInfo.append(aTeacher.getTeacherId());
+            }
             else
                 itemInfo.append("Teacher -");
         itemInfo.append(" ");
-        if(aDateTime != null)
-                itemInfo.append("Start date/time "+aDateTime);
+        if(aDateTime != null){
+                itemInfo.append("Start date/time ");
+                itemInfo.append(aDateTime);
+            }
             else
                 itemInfo.append("Start date/time -");
         itemInfo.append(" ");

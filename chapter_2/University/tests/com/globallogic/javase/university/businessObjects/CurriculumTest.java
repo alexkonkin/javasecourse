@@ -27,6 +27,8 @@ public class CurriculumTest {
     Integer durationTime = 45;
 
     Curriculum oneCurriculumDefault = new Curriculum();
+
+
     CurriculumItem oneCurriculumItem = new CurriculumItem(anAuditorium,aLesson,aGroup,aTeacher,45, new Date());
 
     @Test
@@ -40,6 +42,9 @@ public class CurriculumTest {
 
     @Test
     public void testDelCurriculumItemDefault() throws Exception{
+        for(int i = 0; i < 10 ; i++)
+            oneCurriculumDefault.addCurriculumItem(new CurriculumItem());
+
         for(int i = 0; i < 10; i++)
             oneCurriculumDefault.delCurriculumItem(i);
         for(int n = 0; n < 10; n++){

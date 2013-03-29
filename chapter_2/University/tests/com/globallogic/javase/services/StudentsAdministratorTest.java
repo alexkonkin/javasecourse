@@ -6,6 +6,7 @@ import com.globallogic.javase.university.staff.Student;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -24,7 +25,7 @@ public class StudentsAdministratorTest {
 
     @Test
     public void testEnrollStudentIntoTheGroup() throws Exception {
-        ArrayList<Student> studentsTeam = new ArrayList<Student>();
+        List<Student> studentsTeam = new ArrayList<Student>();
 
         for (int i = 0; i < 10 ; i++)
             studentsTeam.add(new Student(i));
@@ -37,7 +38,7 @@ public class StudentsAdministratorTest {
 
     @Test
     public void testDeductStudentFromTheGroup() throws Exception {
-        ArrayList<Student> studentsTeam = new ArrayList<Student>();
+        List<Student> studentsTeam = new ArrayList<Student>();
         for (int i = 0; i < 10 ; i++)
             studentsTeam.add(new Student(i));
         for (int i = 0; i < studentsTeam.size() ; i++)

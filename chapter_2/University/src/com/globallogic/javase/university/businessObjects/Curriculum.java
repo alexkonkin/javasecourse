@@ -15,11 +15,9 @@ import java.util.List;
  */
 public class Curriculum {
 
-    ArrayList<CurriculumItem> curriculumItems = new ArrayList<CurriculumItem>();
+    List<CurriculumItem> curriculumItems = new ArrayList<CurriculumItem>();
 
     public Curriculum(){
-        for(int i = 0; i < 10 ; i++)
-            curriculumItems.add(new CurriculumItem());
     }
 
     public Curriculum(Integer itemCount){
@@ -69,10 +67,7 @@ public class Curriculum {
     }
 
     public boolean isEmpty(Integer ciIndex){
-        if(curriculumItems.get(ciIndex).isEmpty() == true)
-                return true;
-            else
-                return false;
+        return curriculumItems.get(ciIndex).isEmpty();
     }
 
     public Date getDateTime(Integer ciIndex){
