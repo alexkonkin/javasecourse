@@ -1,16 +1,10 @@
 package com.globallogic.javase.services;
 
 import com.globallogic.javase.services.TeachersCurriculumBuilder;
-import com.globallogic.javase.university.businessObjects.Curriculum;
-import com.globallogic.javase.university.businessObjects.Group;
-import com.globallogic.javase.university.businessObjects.Lesson;
-import com.globallogic.javase.university.businessObjects.Auditorium;
+import com.globallogic.javase.university.businessObjects.*;
 import com.globallogic.javase.university.staff.Teacher;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.Set;
+import java.util.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -28,21 +22,32 @@ import static org.junit.Assert.assertNull;
 public class TeachersCurriculumBuilderTest {
     @Test
     public void testAddTeachersRecordToCurriculumItem() throws Exception {
-        ArrayList<Teacher> teachersTeam = new ArrayList<Teacher>();
+        List<Teacher> teachersTeam = new ArrayList<Teacher>();
         teachersTeam.add(new Teacher(10));
 
-        ArrayList<Group> groupFile = new ArrayList<Group>();
+        List<Group> groupFile = new ArrayList<Group>();
         groupFile.add(new Group(10,"Test group"));
 
-        ArrayList<Auditorium> auditoriumsFile = new ArrayList<Auditorium>();
+        List<Auditorium> auditoriumsFile = new ArrayList<Auditorium>();
         auditoriumsFile.add(new Auditorium(1, 1, 1, 1, "Test auditorium"));
 
-        ArrayList<Lesson> lessonsFile = new ArrayList<Lesson>();
+        List<Lesson> lessonsFile = new ArrayList<Lesson>();
         lessonsFile.add(new Lesson(1,"Math","Mathematics lesson"));
 
         Date aDate = new Date();
 
         Curriculum curriculum = new Curriculum();
+
+        Auditorium anAuditorium = new Auditorium();
+        Lesson aLesson = new Lesson();
+        Group aGroup = new Group();
+        Teacher aTeacher = new Teacher();
+        Integer durationTime = 45;
+
+
+        CurriculumItem aCurriculumItem = new CurriculumItem(anAuditorium,aLesson,aGroup,aTeacher,45, new Date());
+        curriculum.addCurriculumItem(aCurriculumItem);
+
         TeachersCurriculumBuilder teachersCurriculumBuilder = new TeachersCurriculumBuilder();
         teachersCurriculumBuilder.addTeachersRecordToCurriculumItem(teachersTeam.get(0),
                                                                     groupFile.get(0),
@@ -62,10 +67,19 @@ public class TeachersCurriculumBuilderTest {
 
     @Test
     public void testSetTeacherIdCurriculumItem() throws Exception {
-        ArrayList<Teacher> teachersTeam = new ArrayList<Teacher>();
+        List<Teacher> teachersTeam = new ArrayList<Teacher>();
         teachersTeam.add(new Teacher(20));
 
+        Auditorium anAuditorium = new Auditorium();
+        Lesson aLesson = new Lesson();
+        Group aGroup = new Group();
+        Teacher aTeacher = new Teacher();
+        Integer durationTime = 45;
+
         Curriculum curriculum = new Curriculum();
+        CurriculumItem aCurriculumItem = new CurriculumItem(anAuditorium,aLesson,aGroup,aTeacher,45, new Date());
+        curriculum.addCurriculumItem(aCurriculumItem);
+
         TeachersCurriculumBuilder teachersCurriculumBuilder = new TeachersCurriculumBuilder();
         teachersCurriculumBuilder.setTeacherCurriculumItem(teachersTeam.get(0), curriculum.getCurriculumItem(0));
 
@@ -74,14 +88,23 @@ public class TeachersCurriculumBuilderTest {
 
     @Test
     public void testSetGroupIdCurriculumItem() throws Exception {
-        ArrayList<Teacher> teachersTeam = new ArrayList<Teacher>();
+        List<Teacher> teachersTeam = new ArrayList<Teacher>();
         teachersTeam.add(new Teacher(10));
 
         ArrayList<Group> groupFile = new ArrayList<Group>();
         groupFile.add(new Group(10,"Test group"));
         groupFile.add(new Group(20,"Test group"));
 
+        Auditorium anAuditorium = new Auditorium();
+        Lesson aLesson = new Lesson();
+        Group aGroup = new Group();
+        Teacher aTeacher = new Teacher();
+        Integer durationTime = 45;
+
         Curriculum curriculum = new Curriculum();
+        CurriculumItem aCurriculumItem = new CurriculumItem(anAuditorium,aLesson,aGroup,aTeacher,45, new Date());
+        curriculum.addCurriculumItem(aCurriculumItem);
+
         TeachersCurriculumBuilder teachersCurriculumBuilder = new TeachersCurriculumBuilder();
         teachersCurriculumBuilder.setGroupCurriculumItem(groupFile.get(0), curriculum.getCurriculumItem(0));
 
@@ -90,13 +113,22 @@ public class TeachersCurriculumBuilderTest {
 
     @Test
     public void testSetDurationTimeCurriculumItem() throws Exception {
-        ArrayList<Teacher> teachersTeam = new ArrayList<Teacher>();
+        List<Teacher> teachersTeam = new ArrayList<Teacher>();
         teachersTeam.add(new Teacher(10));
 
         ArrayList<Group> groupFile = new ArrayList<Group>();
         groupFile.add(new Group(10,"Test group"));
 
+        Auditorium anAuditorium = new Auditorium();
+        Lesson aLesson = new Lesson();
+        Group aGroup = new Group();
+        Teacher aTeacher = new Teacher();
+        Integer durationTime = 90;
+
         Curriculum curriculum = new Curriculum();
+        CurriculumItem aCurriculumItem = new CurriculumItem(anAuditorium,aLesson,aGroup,aTeacher,45, new Date());
+        curriculum.addCurriculumItem(aCurriculumItem);
+
         TeachersCurriculumBuilder teachersCurriculumBuilder = new TeachersCurriculumBuilder();
         teachersCurriculumBuilder.setDurationTimeCurriculumItem(90, curriculum.getCurriculumItem(0));
 
@@ -105,19 +137,29 @@ public class TeachersCurriculumBuilderTest {
 
     @Test
     public void testDeleteTeachersRecordFromCurriculumItem() throws Exception {
-        ArrayList<Teacher> teachersTeam = new ArrayList<Teacher>();
+        List<Teacher> teachersTeam = new ArrayList<Teacher>();
         teachersTeam.add(new Teacher(10));
 
-        ArrayList<Group> groupFile = new ArrayList<Group>();
+        List<Group> groupFile = new ArrayList<Group>();
         groupFile.add(new Group(10,"Test group"));
 
-        ArrayList<Auditorium> auditoriumsFile = new ArrayList<Auditorium>();
+        List<Auditorium> auditoriumsFile = new ArrayList<Auditorium>();
         auditoriumsFile.add(new Auditorium(1, 1, 1, 1, "Test auditorium"));
 
-        ArrayList<Lesson> lessonsFile = new ArrayList<Lesson>();
+        List<Lesson> lessonsFile = new ArrayList<Lesson>();
         lessonsFile.add(new Lesson(1,"Math","Mathematics lesson"));
 
+        Auditorium anAuditorium = new Auditorium();
+        Lesson aLesson = new Lesson();
+        Group aGroup = new Group();
+        Teacher aTeacher = new Teacher();
+        Integer durationTime = 45;
+
         Curriculum curriculum = new Curriculum();
+
+        CurriculumItem aCurriculumItem = new CurriculumItem(anAuditorium,aLesson,aGroup,aTeacher,45, new Date());
+        curriculum.addCurriculumItem(aCurriculumItem);
+
         TeachersCurriculumBuilder teachersCurriculumBuilder = new TeachersCurriculumBuilder();
         Date aDate = new Date();
 
@@ -139,10 +181,20 @@ public class TeachersCurriculumBuilderTest {
 
     @Test
     public void testDelTeacherFromCurriculumItem() throws Exception {
-        ArrayList<Teacher> teachersTeam = new ArrayList<Teacher>();
+        List<Teacher> teachersTeam = new ArrayList<Teacher>();
         teachersTeam.add(new Teacher(10));
 
-        Curriculum curriculum = new Curriculum(1);
+        Auditorium anAuditorium = new Auditorium();
+        Lesson aLesson = new Lesson();
+        Group aGroup = new Group();
+        Teacher aTeacher = new Teacher();
+        Integer durationTime = 45;
+
+        Curriculum curriculum = new Curriculum();
+
+        CurriculumItem aCurriculumItem = new CurriculumItem(anAuditorium,aLesson,aGroup,aTeacher,45, new Date());
+        curriculum.addCurriculumItem(aCurriculumItem);
+        curriculum.addCurriculumItem(aCurriculumItem);
 
         TeachersCurriculumBuilder teachersCurriculumBuilder = new TeachersCurriculumBuilder();
         teachersCurriculumBuilder.setTeacherCurriculumItem(teachersTeam.get(0),curriculum.getCurriculumItem(0));
@@ -153,10 +205,21 @@ public class TeachersCurriculumBuilderTest {
 
     @Test
     public void testDelGroupIdFromCurriculumItem() throws Exception {
-        ArrayList<Group> groupFile = new ArrayList<Group>();
+        List<Group> groupFile = new ArrayList<Group>();
         groupFile.add(new Group(10,"test"));
 
-        Curriculum curriculum = new Curriculum(1);
+        Auditorium anAuditorium = new Auditorium();
+        Lesson aLesson = new Lesson();
+        Group aGroup = new Group();
+        Teacher aTeacher = new Teacher();
+        Integer durationTime = 45;
+
+        Curriculum curriculum = new Curriculum();
+
+        CurriculumItem aCurriculumItem = new CurriculumItem(anAuditorium,aLesson,aGroup,aTeacher,45, new Date());
+        curriculum.addCurriculumItem(aCurriculumItem);
+        curriculum.addCurriculumItem(aCurriculumItem);
+
         TeachersCurriculumBuilder teachersCurriculumBuilder = new TeachersCurriculumBuilder();
         teachersCurriculumBuilder.setGroupCurriculumItem(groupFile.get(0), curriculum.getCurriculumItem(0));
         teachersCurriculumBuilder.delGroupFromCurriculumItem(curriculum.getCurriculumItem(0));
@@ -166,10 +229,20 @@ public class TeachersCurriculumBuilderTest {
 
     @Test
     public void testDelAuditoriumFromCurriculumItem() throws Exception {
-        ArrayList<Auditorium> auditoriumsFile = new ArrayList<Auditorium>();
+        List<Auditorium> auditoriumsFile = new ArrayList<Auditorium>();
         auditoriumsFile.add(new Auditorium(1, 1, 1, 1, "Test auditorium"));
 
-        Curriculum curriculum = new Curriculum(1);
+        Auditorium anAuditorium = new Auditorium();
+        Lesson aLesson = new Lesson();
+        Group aGroup = new Group();
+        Teacher aTeacher = new Teacher();
+        Integer durationTime = 45;
+
+        Curriculum curriculum = new Curriculum();
+
+        CurriculumItem aCurriculumItem = new CurriculumItem(anAuditorium,aLesson,aGroup,aTeacher,45, new Date());
+        curriculum.addCurriculumItem(aCurriculumItem);
+        curriculum.addCurriculumItem(aCurriculumItem);
 
         TeachersCurriculumBuilder teachersCurriculumBuilder = new TeachersCurriculumBuilder();
         teachersCurriculumBuilder.setAuditoriumCurriculumItem(auditoriumsFile.get(0), curriculum.getCurriculumItem(0));
@@ -181,10 +254,20 @@ public class TeachersCurriculumBuilderTest {
 
     @Test
     public void testDelLessonFromCurriculumItem() throws Exception {
-        ArrayList<Lesson> lessonsFile = new ArrayList<Lesson>();
+        List<Lesson> lessonsFile = new ArrayList<Lesson>();
         lessonsFile.add(new Lesson(1,"Math","Mathematics lesson"));
 
-        Curriculum curriculum = new Curriculum(1);
+        Auditorium anAuditorium = new Auditorium();
+        Lesson aLesson = new Lesson();
+        Group aGroup = new Group();
+        Teacher aTeacher = new Teacher();
+        Integer durationTime = 45;
+
+        Curriculum curriculum = new Curriculum();
+
+        CurriculumItem aCurriculumItem = new CurriculumItem(anAuditorium,aLesson,aGroup,aTeacher,45, new Date());
+        curriculum.addCurriculumItem(aCurriculumItem);
+        curriculum.addCurriculumItem(aCurriculumItem);
 
         TeachersCurriculumBuilder teachersCurriculumBuilder = new TeachersCurriculumBuilder();
         teachersCurriculumBuilder.setLessonCurriculumItem(lessonsFile.get(0), curriculum.getCurriculumItem(0));
@@ -197,7 +280,18 @@ public class TeachersCurriculumBuilderTest {
 
     @Test
     public void testDelDurationTimeFromCurriculumItem() throws Exception {
-        Curriculum curriculum = new Curriculum(1);
+        Auditorium anAuditorium = new Auditorium();
+        Lesson aLesson = new Lesson();
+        Group aGroup = new Group();
+        Teacher aTeacher = new Teacher();
+        Integer durationTime = 45;
+
+        Curriculum curriculum = new Curriculum();
+
+        CurriculumItem aCurriculumItem = new CurriculumItem(anAuditorium,aLesson,aGroup,aTeacher,45, new Date());
+        curriculum.addCurriculumItem(aCurriculumItem);
+        curriculum.addCurriculumItem(aCurriculumItem);
+
         TeachersCurriculumBuilder teachersCurriculumBuilder = new TeachersCurriculumBuilder();
         teachersCurriculumBuilder.setDurationTimeCurriculumItem(100,curriculum.getCurriculumItem(0));
 
@@ -208,16 +302,16 @@ public class TeachersCurriculumBuilderTest {
 
     @Test
     public void testTeachersCurriculum() throws Exception {
-        ArrayList<Teacher> teachersTeam = new ArrayList<Teacher>();
+        List<Teacher> teachersTeam = new ArrayList<Teacher>();
         teachersTeam.add(new Teacher(10));
 
-        ArrayList<Group> groupFile = new ArrayList<Group>();
+        List<Group> groupFile = new ArrayList<Group>();
         groupFile.add(new Group(10,"Test group"));
 
-        ArrayList<Auditorium> auditoriumsFile = new ArrayList<Auditorium>();
+        List<Auditorium> auditoriumsFile = new ArrayList<Auditorium>();
         auditoriumsFile.add(new Auditorium(1, 1, 1, 1, "Test auditorium"));
 
-        ArrayList<Lesson> lessonsFile = new ArrayList<Lesson>();
+        List<Lesson> lessonsFile = new ArrayList<Lesson>();
         lessonsFile.add(new Lesson(1,"Math","Mathematics lesson"));
         lessonsFile.add(new Lesson(2,"English","English lesson"));
         lessonsFile.add(new Lesson(3,"Chemistry","Chemistry lesson"));
@@ -226,6 +320,9 @@ public class TeachersCurriculumBuilderTest {
         Date aDate;
         long incMinutes = currDate.getTime();
         Curriculum curriculum = new Curriculum();
+        for(int i = 0; i < 10 ; i++)
+            curriculum.addCurriculumItem(new CurriculumItem());
+
         TeachersCurriculumBuilder teachersCurriculumBuilder = new TeachersCurriculumBuilder();
         for(int n = 0; n < lessonsFile.size();n++){
             if(n>0)
