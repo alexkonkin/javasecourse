@@ -1,0 +1,24 @@
+Given: root node of the binary tree
+When : I create the root node
+Then : the root node with the one data field and 
+		the two fields that initialized with null 
+		should be created
+	   
+Given: one item should be added to the binary tree
+When : I add the new item into the binary tree
+Then : the root node should be checked, If it does not
+		have any child nodes the item should be added as 
+		the right leaf, if the right leaf has already been created
+		the item should be added as the left leaf.
+	   
+Given: height of the binary tree should be calculated
+When : I check the binary three height
+Then : the integer value that represents the height of the tree
+		should be returned
+		
+Given: contents of the binary tree should be printed
+When : I request the contents of the binary tree
+Then : contents of the binary tree should be printed
+
+
+		
