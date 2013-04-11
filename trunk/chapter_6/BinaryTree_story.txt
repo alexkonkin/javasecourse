@@ -6,11 +6,16 @@ Then : the root node with the one data field and
 	   
 Given: one item should be added to the binary tree
 When : I add the new item into the binary tree
-Then : the root node should be checked, If it does not
-		have any child nodes the item should be added as 
-		the right leaf, if the right leaf has already been created
-		the item should be added as the left leaf.
-	   
+And  : if the tree does not exist
+Then : the root node should be created
+And  : If it does not have any child nodes 
+Then : the item should be added as 
+	   the right leaf
+And  : If the right leaf has already been created
+Then : the item should be added as the left leaf.
+
+
+		
 Given: height of the binary tree should be calculated
 When : I check the binary three height
 Then : the integer value that represents the height of the tree
