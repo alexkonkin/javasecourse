@@ -18,11 +18,34 @@ public class Node {
 
    public int getMaxLeafDepth(){
        int depth = 1;
+
+       if (isLeaf()) {
+           // do nothing
+       } else if (left == null) {
+           depth += right.getMaxLeafDepth();
+       } else if (right == null) {
+           depth += left.getMaxLeafDepth();
+       } else {
+           depth += Math.max(left.getMaxLeafDepth(), right.getMaxLeafDepth());
+       }
+
        return depth;
    }
 
    public void addValue (Integer aValue){
-        this.value = aValue;
+       if (aValue < value) {
+           if (left == null) {
+               left = new Node(aValue);
+           } else {
+               left.addValue(aValue);
+           }
+       } else if (aValue > value) {
+           if (right == null) {
+               right = new Node(aValue);
+           } else {
+               right.addValue(aValue);
+           }
+       }
    }
 
     public Integer getValue (){
@@ -55,7 +78,7 @@ public class Node {
     }
 
     public String toString(){
-        return "(10, (1, null, null), (2, null, null))";
+        return String.format("(%s, %s, %s)", value, left, right);
     }
 
 

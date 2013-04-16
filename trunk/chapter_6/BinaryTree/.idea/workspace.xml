@@ -5,8 +5,9 @@
     <ignored path="BinaryTree.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/createBinaryTree.java" changelist="d4a14e8a-4d39-4a3a-b2f9-8b776e73ad8b" time="1366033331390" ignored="false" />
-    <file path="/Node.java" changelist="d4a14e8a-4d39-4a3a-b2f9-8b776e73ad8b" time="1366105802343" ignored="false" />
-    <file path="/NodeTest.java" changelist="d4a14e8a-4d39-4a3a-b2f9-8b776e73ad8b" time="1366105766087" ignored="false" />
+    <file path="/Node.java" changelist="d4a14e8a-4d39-4a3a-b2f9-8b776e73ad8b" time="1366120879293" ignored="false" />
+    <file path="/NodeTest.java" changelist="d4a14e8a-4d39-4a3a-b2f9-8b776e73ad8b" time="1366120493079" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../FullBinaryTree/FullBinaryTree/src/com/binarytree/oop/OOPTree.java" changelist="d4a14e8a-4d39-4a3a-b2f9-8b776e73ad8b" time="1366120829457" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NodeTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="NodeTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/com/binarytree/NodeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="65" selection-start="1895" selection-end="1935" vertical-scroll-proportion="0.0">
+            <state line="53" column="26" selection-start="1656" selection-end="1656" vertical-scroll-proportion="0.3707665">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Node.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Node.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/binarytree/BinaryTree/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="55" selection-start="1106" selection-end="1106" vertical-scroll-proportion="2.1336899">
+            <state line="35" column="7" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,8 +106,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/tests/com/binarytree/createBinaryTree.java" />
-        <option value="$PROJECT_DIR$/tests/com/binarytree/NodeTest.java" />
         <option value="$PROJECT_DIR$/src/com/binarytree/BinaryTree/Node.java" />
+        <option value="$PROJECT_DIR$/tests/com/binarytree/NodeTest.java" />
       </list>
     </option>
   </component>
@@ -396,7 +397,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19465649" sideWeight="0.70552886" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29447114" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29447114" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -506,19 +507,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/binarytree/NodeTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/binarytree/BinaryTree/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="65" selection-start="1895" selection-end="1935" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="35" column="7" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/binarytree/BinaryTree/Node.java">
+    <entry file="file://$PROJECT_DIR$/tests/com/binarytree/NodeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="55" selection-start="1106" selection-end="1106" vertical-scroll-proportion="2.1336899">
-          <folding />
+        <state line="53" column="26" selection-start="1656" selection-end="1656" vertical-scroll-proportion="0.3707665">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
