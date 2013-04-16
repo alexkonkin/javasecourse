@@ -31,7 +31,7 @@ public class NodeTest {
             Node aNode = new Node(10);
             assertEquals(10, (int) aNode.getValue());
             assertNull(aNode.getObjectLinkLeft());
-            aNode.addValue(11);
+            aNode.addValue(9);
             assertNotNull(aNode.getObjectLinkLeft());
     }
 
@@ -40,9 +40,9 @@ public class NodeTest {
             Node aNode = new Node(10);
             assertEquals(10, (int) aNode.getValue());
             assertNull(aNode.getObjectLinkLeft());
-            aNode.addValue(11);
+            aNode.addValue(9);
             assertNotNull(aNode.getObjectLinkLeft());
-            aNode.addValue(12);
+            aNode.addValue(11);
             assertNotNull(aNode.getObjectLinkRight());
     }
 
@@ -50,15 +50,15 @@ public class NodeTest {
         public void testCheckTheDepthOfTheTree()throws Exception{
             Node aNode = new Node(10);
             aNode.addValue(1);
-            aNode.addValue(2);
-            assertEquals(1,aNode.getMaxLeafDepth());
+            aNode.addValue(11);
+            assertEquals(2,aNode.getMaxLeafDepth());
     }
 
     @Test
     public void testPrintContentsOfTheBinaryTree()throws Exception{
             Node aNode = new Node(10);
             aNode.addValue(1);
-            aNode.addValue(2);
-            assertEquals("(10, (1, null, null), (2, null, null))",aNode.toString());
+            aNode.addValue(11);
+            assertEquals("(10, (1, null, null), (11, null, null))",aNode.toString());
     }
 }
