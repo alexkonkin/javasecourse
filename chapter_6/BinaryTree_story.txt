@@ -21,5 +21,9 @@ Given: contents of the binary tree should be printed
 When : I request the contents of the binary tree
 Then : contents of the binary tree should be printed
 
-
-		
+Given: the binary tree has root node with the value 10 and 2 child nodes
+       with the values 9 and 11
+When : I add to the binary tree the value with the number 8
+	   it should be added as a child to the node with the value equal to 9
+	   as a left leaf
+	   

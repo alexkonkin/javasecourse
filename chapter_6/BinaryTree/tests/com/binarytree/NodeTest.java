@@ -47,6 +47,27 @@ public class NodeTest {
     }
 
     @Test
+    public void testAddItemToTheChildNode()throws Exception{
+            Node aNode = new Node(10);
+            assertEquals(10, (int) aNode.getValue());
+            assertNull(aNode.getObjectLinkLeft());
+            aNode.addValue(9);
+            assertNotNull(aNode.getObjectLinkLeft());
+            aNode.addValue(11);
+            assertNotNull(aNode.getObjectLinkRight());
+            aNode.addValue(8);
+
+            System.out.println(aNode.toString());
+
+            Node aNodeLeftChild = aNode.getObjectLinkLeft();
+            Node aChildOfLeftNode = aNodeLeftChild.getObjectLinkLeft();
+            assertEquals(10, (int) aNode.getValue());
+            assertEquals(11, (int) aNode.getObjectLinkRight().getValue());
+            assertEquals(9, (int) aNode.getObjectLinkLeft().getValue());
+            assertEquals(8, (int)aChildOfLeftNode.getValue());
+    }
+
+    @Test
         public void testCheckTheDepthOfTheTree()throws Exception{
             Node aNode = new Node(10);
             aNode.addValue(1);

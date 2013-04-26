@@ -61,7 +61,7 @@ public class Node {
     }
 
     public Node getObjectLinkRight(){
-        return this.left;
+        return this.right;
     }
 
 
