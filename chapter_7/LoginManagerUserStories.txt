@@ -1,4 +1,5 @@
 User Service
+#----------------------------------------------------
 Story: register a user
 given: user credentials
 when : user has a complex login
@@ -8,13 +9,23 @@ and  : if user has a too simple login
 then : exception should be raised
 
 Story: authenticate user
-Given: user credentials
+given: user credentials
 when : user credentials is accepted by the system
 then : user allowed to log in
 and  : credentials is incorrect
 then : user is not allowed to log in
 and  : exception should be raised
+
 User DAO
-given: 
+#-----------------------------------------------------
+Story: register user
+given: user credentials
+when : user credentials is passed
+then : allocate them in the storage
 
-
+Story: authenticate user
+given: user credentials
+when : user credentials is passed
+then : compare them with the credentials in the User database
+and  : if these credentials are match confirm that the user authenticated
+and  : if these credentials don't match raise the exception
