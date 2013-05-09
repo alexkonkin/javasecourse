@@ -1,0 +1,20 @@
+User Service
+Story: register a user
+given: user credentials
+when : user has a complex login
+then : his login should be accepted
+and  : this information should be stored in the array
+and  : if user has a too simple login
+then : exception should be raised
+
+Story: authenticate user
+Given: user credentials
+when : user credentials is accepted by the system
+then : user allowed to log in
+and  : credentials is incorrect
+then : user is not allowed to log in
+and  : exception should be raised
+User DAO
+given: 
+
+
