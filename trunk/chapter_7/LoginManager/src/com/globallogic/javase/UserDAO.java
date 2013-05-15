@@ -8,24 +8,29 @@ package com.globallogic.javase;
  * To change this template use File | Settings | File Templates.
  */
 
-import com.globallogic.javase.User;
-import com.globallogic.javase.UserStorage;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDAO {
     User daoUser;
+    List<User> userDB = new ArrayList<User>();
+
     UserDAO(User aUser){
         daoUser = aUser;
     }
 
-    public User getUser(UserStorage aStorage, String aLogin){
-        //User aUser = aStorage.getUser(aLogin);
-        User aUser = new User("user","123456");
-        return aUser;
+    public boolean authenticateUser(String aLogin){
+        if (aLogin == "user")
+                return true;
+            else
+                return false;
     }
 
-    public boolean registerUser (UserStorage aStorage, User aUser){
-
-        return true;
+    public boolean registerUser (User aUser){
+        if(aUser.getPassword() == "123456")
+                return true;
+            else
+                return false;
     }
 
 }

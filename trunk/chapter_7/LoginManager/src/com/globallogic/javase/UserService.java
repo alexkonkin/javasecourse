@@ -8,15 +8,28 @@ package com.globallogic.javase;
  * To change this template use File | Settings | File Templates.
  */
 public class UserService {
-    private User usUser;
+    private UserDAO userDAO = new UserDAO(new User("test","test"));
 
-    UserService(User aUser){
-        usUser = aUser;
+    protected boolean checkComplexity(User usUser){
+        if (usUser.getPassword() == "123456")
+                return true;
+            else
+                return false;
     }
 
-    public boolean checkComplexity(User usUser){
+    public boolean registerUser(User aUser){
+        boolean result = false;
+        if (checkComplexity(aUser)){
+            result = userDAO.registerUser(aUser);
+        }
+        return result;
+    }
 
-        return true;
+    public boolean authenticateUser(User aUser){
+        boolean result = false;
+        if(userDAO.authenticateUser(aUser.getLogin()))
+            result = true;
+        return result;
     }
 
 }

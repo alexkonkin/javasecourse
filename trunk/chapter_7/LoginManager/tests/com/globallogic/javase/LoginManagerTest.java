@@ -19,26 +19,26 @@ public class LoginManagerTest {
     @Test
     public void testUserDAOregisterUser(){
         User testUser = new User("user","123456");
-        UserStorage aUserStorage = new UserStorage();
 
         //given
         UserDAO aUserDAO =    mock(UserDAO.class);
         //when
-        when(aUserDAO.registerUser(aUserStorage,testUser)).thenReturn(true);
+        when(aUserDAO.registerUser(testUser)).thenReturn(true);
         //then
-        assertEquals(true, aUserDAO.registerUser(aUserStorage,testUser));
+        assertEquals(true, aUserDAO.registerUser(testUser));
     }
 
     @Test
     public void testUserDAOgetUser(){
         User testUser = new User("user","123456");
-        UserStorage aUserStorage = new UserStorage();
         //given
         UserDAO aUserDAO =    mock(UserDAO.class);
         //when
-        when(aUserDAO.getUser(aUserStorage, "user")).thenReturn(testUser);
+        when(aUserDAO.authenticateUser("user")).thenReturn(true);
         //then
-        assertEquals(testUser, aUserDAO.getUser(aUserStorage, "user"));
+        assertEquals(true, aUserDAO.authenticateUser("user"));
     }
+
+
 
 }

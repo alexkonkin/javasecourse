@@ -27,4 +27,12 @@ public class User {
         userPassword = aPassword;
     }
 
+    public String getLogin(){
+        return userLogin;
+    }
+
+    public String getPassword(){
+        return userPassword;
+    }
+
 }
