@@ -12,22 +12,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO {
-    User daoUser;
+    //User daoUser;
     List<User> userDB = new ArrayList<User>();
 
     UserDAO(User aUser){
-        daoUser = aUser;
+        //daoUser = aUser;
     }
 
-    public boolean authenticateUser(String aLogin){
-        if (aLogin == "user")
-                return true;
+    public String getUser(String aLogin){
+        if (aLogin.equals("user"))
+                return "user";
             else
-                return false;
+                return "user1";
     }
 
-    public boolean registerUser (User aUser){
-        if(aUser.getPassword() == "123456")
+    public boolean putUser (User aUser){
+        if(aUser.getPassword().equals("123456"))
                 return true;
             else
                 return false;
