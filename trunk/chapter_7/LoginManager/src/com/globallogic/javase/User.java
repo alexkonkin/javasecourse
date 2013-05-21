@@ -14,7 +14,7 @@ public class User {
     User (){
     }
 
-    User(String uLogin, String uPassword){
+    public User(String uLogin, String uPassword){
         userLogin = uLogin;
         userPassword = uPassword;
     }

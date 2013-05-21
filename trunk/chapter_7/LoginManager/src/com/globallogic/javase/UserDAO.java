@@ -9,28 +9,32 @@ package com.globallogic.javase;
  */
 
 import java.util.ArrayList;
+
+import java.util.Iterator;
 import java.util.List;
 
 public class UserDAO {
-    //User daoUser;
-    List<User> userDB = new ArrayList<User>();
+    private List<User> userDB = new ArrayList<User>();
 
     UserDAO(User aUser){
         //daoUser = aUser;
     }
 
     public String getUser(String aLogin){
-        if (aLogin.equals("user"))
-                return "user";
-            else
-                return "user1";
+        Iterator<User> iterator = userDB.iterator();
+        User aUser;
+        String result = "no_user";
+        while(iterator.hasNext()){
+            aUser = iterator.next();
+            if (aUser.getLogin().equals(aLogin))
+                result = aUser.getLogin();
+        }
+        return result;
     }
 
     public boolean putUser (User aUser){
-        if(aUser.getPassword().equals("123456"))
-                return true;
-            else
-                return false;
+        return userDB.add(aUser);
+
     }
 
 }
