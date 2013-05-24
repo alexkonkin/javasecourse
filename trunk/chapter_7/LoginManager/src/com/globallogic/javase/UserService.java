@@ -36,17 +36,15 @@ public class UserService {
 
     public boolean registerUser(User aUser){
         boolean result = false;
-        if (result = checkComplexity(aUser)){
+        if (checkComplexity(aUser)){
             result = userDAO.putUser(aUser);
         }
         return result;
     }
 
     public boolean authenticateUser(User aUser){
-        boolean result = false;
-        if(userDAO.getUser(aUser.getLogin()).equals(aUser.getLogin()))
-            result = true;
-        return result;
+        boolean result;
+        return result =  (userDAO.getUser(aUser.getLogin()).equals(aUser));
     }
 
 }

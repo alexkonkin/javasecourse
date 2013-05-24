@@ -20,14 +20,14 @@ public class UserDAO {
         //daoUser = aUser;
     }
 
-    public String getUser(String aLogin){
+    public User getUser(String aLogin){
         Iterator<User> iterator = userDB.iterator();
         User aUser;
-        String result = "no_user";
+        User result = new User();
         while(iterator.hasNext()){
             aUser = iterator.next();
             if (aUser.getLogin().equals(aLogin))
-                result = aUser.getLogin();
+                result = aUser;
         }
         return result;
     }
