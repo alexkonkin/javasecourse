@@ -8,6 +8,7 @@ import org.mockito.MockitoAnnotations;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.verify;
@@ -48,25 +49,36 @@ public class UserServiceTest {
 
     @Test
     public void testCheckComplexityComplexCredentials()throws Exception{
-        // given
+        //given
         User testUser = new User("user","mkyong1A@");
         UserService aUserService = new UserService();
-        aUserService.registerUser(testUser);
 
-        assertEquals(true, aUserService.authenticateUser(testUser));
+        //when
+        service.registerUser(testUser);
+
+        //then
+        verify(userDAO).getUser(testUser.getLogin());
+        assertEquals("user",userDAO.getUser(testUser.getLogin()));
     }
 
     @Test
     public void testCheckComplexityEasyCredentials()throws Exception{
+        //given
         User testEasyUser = new User("user1","111111");
         UserService aUserService = new UserService();
-        assertEquals(false, aUserService.checkComplexity(testEasyUser));
+
+        //when
+        service.registerUser(testEasyUser);
+
+        //then
+        verify(userDAO).getUser(testEasyUser.getLogin());
+        assertNull(userDAO.getUser(testEasyUser.getLogin()));
     }
 
     @Test
     public void testAuthenticateUser()throws Exception{
         User testUser = new User("user","mkyong1A@");
-        when(userDAO.getUser(testUser.getLogin())).thenReturn("user");
+        when(userDAO.getUser(testUser.getLogin())).thenReturn(testUser);
         service.registerUser(testUser);
 
         // when
@@ -80,7 +92,7 @@ public class UserServiceTest {
     @Test
     public void testAuthenticateUserBadCredentials() throws Exception{
         User testUser = new User("user","123457");
-        when(userDAO.getUser(testUser.getLogin())).thenReturn("no_user");
+        when(userDAO.getUser(testUser.getLogin())).thenReturn(null);
 
         // when
         service.authenticateUser(testUser);
