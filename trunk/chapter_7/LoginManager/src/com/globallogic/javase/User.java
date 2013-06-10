@@ -8,8 +8,8 @@ package com.globallogic.javase;
  * To change this template use File | Settings | File Templates.
  */
 public class User {
-    private String userLogin;
-    private String userPassword;
+    private String userLogin = "";
+    private String userPassword = "";
 
     User (){
     }

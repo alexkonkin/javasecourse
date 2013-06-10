@@ -16,7 +16,7 @@ public class UserService {
     private Matcher matcher;
     private static final String PASSWORD_PATTERN = "((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})";
 
-    protected boolean checkComplexity(User usUser){
+    protected boolean checkComplexity(User usUser) throws PasswordToSimple {
         // Validation rules for the user's password
         /*
             (			        # Start of group
@@ -31,10 +31,14 @@ public class UserService {
         pattern = Pattern.compile(PASSWORD_PATTERN);
         matcher = pattern.matcher(usUser.getPassword());
         boolean result = matcher.matches();
+        if (result == false)
+        {
+            throw new PasswordToSimple(usUser);
+        }
         return result;
     }
 
-    public boolean registerUser(User aUser){
+    public boolean registerUser(User aUser) throws PasswordToSimple {
         boolean result = false;
         if (checkComplexity(aUser)){
             result = userDAO.putUser(aUser);
@@ -42,9 +46,17 @@ public class UserService {
         return result;
     }
 
-    public boolean authenticateUser(User aUser){
-        boolean result;
-        return result =  (userDAO.getUser(aUser.getLogin()).equals(aUser));
+    public boolean authenticateUser(User aUser) throws UserNotFound{
+        boolean result = false;
+        User tmpUser = userDAO.getUser(aUser.getLogin());
+        if (tmpUser != null){
+            if (tmpUser.getLogin().equals(aUser.getLogin())&& tmpUser.getPassword().equals(aUser.getPassword()))
+                    result = true;
+            }
+        if (result == false)
+                throw new UserNotFound(aUser.getLogin());
+        return result;
+        //return result =  (userDAO.getUser(aUser.getLogin()).equals(aUser));
     }
 
 }
