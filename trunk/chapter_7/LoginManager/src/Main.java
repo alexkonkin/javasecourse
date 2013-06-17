@@ -1,7 +1,9 @@
-import com.globallogic.javase.User;
-import com.globallogic.javase.UserService;
-import com.globallogic.javase.PasswordToSimple;
-import com.globallogic.javase.UserNotFound;
+import com.globallogic.javase.*;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Main {
 
@@ -10,20 +12,20 @@ public class Main {
         UserService aUserService = new UserService();
         User aUser1 = new User("user1","mkyong1A@");
         User aUser2 = new User("user2","aaaaaaaaa");
+        User aUser3 = new User("user1","mkyong2A@");
 
 
-        //if(aUserService.registerUser(aUser1)!=true)
-        //    System.out.println(aUser1.getLogin()+" the password is to simple");
 
         try{
             aUserService.registerUser(aUser1);
         }
         catch(PasswordToSimple e){
-            e.toString();
+            System.out.println(e.toString());
+        }
+        catch(UserAlreadyExists e){
+            System.out.println(e.toString());
         }
 
-        //if(aUserService.registerUser(aUser2)!= true)
-        //    System.out.println(aUser2.getLogin()+" the password is to simple");
 
         try{
             aUserService.registerUser(aUser2);
@@ -31,36 +33,39 @@ public class Main {
         catch(PasswordToSimple e){
             System.out.println(e);
         }
-
-        /*
-        if(aUserService.authenticateUser(aUser1))
-                System.out.println(aUser1.getLogin()+" has been authenticated");
-            else
-                System.out.println(aUser1.getLogin()+" has not found in user db");
-        */
+        catch(UserAlreadyExists e){
+            System.out.println(e);
+        }
 
         try{
             aUserService.authenticateUser(aUser1);
-            System.out.println(aUser1.getLogin()+" has been authenticated");
         }
         catch(UserNotFound e){
             System.out.println(e);
         }
+        catch(BadCredentialsPassed e){
+            System.out.println(e);
+        }
 
-        /*
-        if(aUserService.authenticateUser(aUser2))
-                System.out.println(aUser2.getLogin()+" has been authenticated");
-            else
-            System.out.println(aUser2.getLogin()+" has not found in user db");
-        */
         try{
             aUserService.authenticateUser(aUser2);
-            System.out.println(aUser2.getLogin()+" has been authenticated");
         }
         catch(UserNotFound e){
             System.out.println(e);
         }
+        catch(BadCredentialsPassed e){
+            System.out.println(e);
+        }
 
 
+        try{
+            aUserService.authenticateUser(aUser3);
+        }
+        catch(UserNotFound e){
+            System.out.println(e);
+        }
+        catch(BadCredentialsPassed e){
+            System.out.println(e);
+        }
     }
 }
