@@ -11,12 +11,25 @@ package com.globallogic.javase;
 import java.util.regex.*;
 
 public class UserService {
-    private UserDAO userDAO = new UserDAO(new User("test","test"));
+    private UserDAO userDAO; /* = new UserDAO();*/
     private Pattern pattern;
     private Matcher matcher;
     private static final String PASSWORD_PATTERN = "((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})";
+    private String dbFileName;
 
-    protected boolean checkComplexity(User usUser) throws PasswordToSimple {
+
+    public UserService(){
+        //UserDAO ud = new UserDAO(/*new User("test","test")*/);
+        userDAO =  new UserDAO();
+    }
+
+    public UserService(String aDbStorageName){
+        userDAO = new UserDAO(aDbStorageName);
+    }
+
+
+
+    protected void checkComplexity(User usUser) throws PasswordToSimple {
         // Validation rules for the user's password
         /*
             (			        # Start of group
@@ -35,28 +48,24 @@ public class UserService {
         {
             throw new PasswordToSimple(usUser);
         }
-        return result;
     }
 
-    public boolean registerUser(User aUser) throws PasswordToSimple {
-        boolean result = false;
-        if (checkComplexity(aUser)){
-            result = userDAO.putUser(aUser);
-        }
-        return result;
+    public void registerUser(User aUser) throws PasswordToSimple,UserAlreadyExists {
+            checkComplexity(aUser);
+            userDAO.putUser(aUser);
     }
 
-    public boolean authenticateUser(User aUser) throws UserNotFound{
-        boolean result = false;
+    public void authenticateUser(User aUser) throws UserNotFound, BadCredentialsPassed {
         User tmpUser = userDAO.getUser(aUser.getLogin());
         if (tmpUser != null){
             if (tmpUser.getLogin().equals(aUser.getLogin())&& tmpUser.getPassword().equals(aUser.getPassword()))
-                    result = true;
-            }
-        if (result == false)
+                ;//System.out.println(aUser.getLogin()+" has been authenticated");
+            else
+                throw new BadCredentialsPassed(aUser);
+            if (tmpUser.getLogin().equals(aUser.getLogin())&& !tmpUser.getPassword().equals(aUser.getPassword()))
                 throw new UserNotFound(aUser.getLogin());
-        return result;
-        //return result =  (userDAO.getUser(aUser.getLogin()).equals(aUser));
+        }
+        //else
+        //    throw new UserNotFound(aUser.getLogin());
     }
-
 }

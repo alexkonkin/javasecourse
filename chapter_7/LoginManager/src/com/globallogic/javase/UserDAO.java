@@ -19,59 +19,51 @@ import java.util.List;
 
 public class UserDAO {
     private List<User> userDB = new ArrayList<User>();
-
-    UserDAO(User aUser){
-        //daoUser = aUser;
+    private String aDbFileName;
+    UserDAO(/*User aUser*/){
         initUserStorage();
     }
-    private void initUserStorage(){
-        boolean flag = false;
-
-        File usersDB = new File("users.txt");
-        try {
-            if (!usersDB.exists())
-                flag = usersDB.createNewFile();
-        } catch (IOException ioe) {
-            System.out.println("Error while Creating File in Java" + ioe);
-        }
 
 
-        /*
-        try {
-            if (!usersDB.exists())
-                flag = usersDB.createNewFile();
-
-
-            BufferedWriter writer = new BufferedWriter(new FileWriter(usersDB));
-            writer.write("ID, Date, Address, Body");
-            writer.newLine();
-            writer.write("ID, Date, Address, Body");
-            writer.newLine();
-            writer.flush();
-            writer.close();
-        } catch (IOException ioe) {
-            System.out.println("Error while Creating File in Java" + ioe);
-        }
-        */
+    UserDAO(String aDbStorageName){
+        aDbFileName = aDbStorageName;
+        initUserStorage(aDbStorageName);
     }
 
+
+    private void initUserStorage(){
+        aDbFileName = "users.txt";
+        boolean flag = false;
+
+        File usersDB = new File(aDbFileName);
+        try {
+            if (!usersDB.exists())
+                flag = usersDB.createNewFile();
+        } catch (IOException ioe) {
+            System.out.println("Error while Creating File in Java" + ioe);
+        }
+    }
+
+
+    private void initUserStorage(String aDbStorageName){
+        boolean flag = false;
+
+        File usersDB = new File(aDbStorageName);
+        try {
+            if (!usersDB.exists())
+                flag = usersDB.createNewFile();
+        } catch (IOException ioe) {
+            System.out.println("Error while Creating File in Java" + ioe);
+        }
+    }
+
+
     public User getUser(String aLogin){
-        Iterator<User> iterator = userDB.iterator();
+        //Iterator<User> iterator = userDB.iterator();
         User aUser;
         User result = new User();
-        /*
-        while(iterator.hasNext()){
-            aUser = iterator.next();
-            if (aUser.getLogin().equals(aLogin))
-                result = aUser;
-        }
-        if (result.getLogin().equals(""))
-            return null;
-           else
-            return result;
-        */
         try{
-            BufferedReader in = new BufferedReader(new FileReader("users.txt"));
+            BufferedReader in = new BufferedReader(new FileReader(aDbFileName));
             while (in.ready()) {
                 String s = in.readLine();
                 String[] uLogin = s.split(" ");
@@ -80,9 +72,6 @@ public class UserDAO {
                     result.setPassword(uLogin[1]);
                     continue;
                 }
-
-                //System.out.println(s);
-
             }
             in.close();
         }catch (IOException ioe) {
@@ -94,12 +83,11 @@ public class UserDAO {
             return result;
     }
 
-    public boolean putUser (User aUser){
-        //return userDB.add(aUser);
+    public void putUser (User aUser) throws UserAlreadyExists{
         boolean result = false;
         if(getUser(aUser.getLogin()) == null){
             try{
-                FileWriter fileWriter = new FileWriter("users.txt",true);
+                FileWriter fileWriter = new FileWriter(aDbFileName,true);
                 BufferedWriter out = new BufferedWriter(fileWriter);
                 fileWriter.append(aUser.getLogin()+" "+aUser.getPassword());
                 out.newLine();
@@ -110,9 +98,7 @@ public class UserDAO {
             }
         }
         else{
-            System.out.println("The user with such password already exists in the database");
-            result = false;
+            throw new UserAlreadyExists(aUser.getLogin());
         }
-        return result;
     }
 }
