@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class UserDAO {
+public class UserDAO implements AbstractDAO {
     private List<User> userDB = new ArrayList<User>();
     private String aDbFileName;
     UserDAO(/*User aUser*/){
