@@ -17,7 +17,7 @@ import static junit.framework.Assert.assertEquals;
 
 
 
-public class UserDAOTest {
+public class UserDaoTest {
     @Test
     public void testUserDAOPutUser() throws Exception {
         Path aPath = FileSystems.getDefault().getPath(".", "usersIoDAOTestDb.txt");
@@ -31,7 +31,6 @@ public class UserDAOTest {
         assertEquals(testUser.getPassword(),testUser1.getPassword());
     }
 
-
     @Test
     public void testUserDAOInMemoryPutUser() throws Exception {
         AbstractDAO aUserDAOInMemory = new UserDAOInMemory();
@@ -39,5 +38,19 @@ public class UserDAOTest {
 
         aUserDAOInMemory.putUser(testUser);
         assertEquals(testUser,aUserDAOInMemory.getUser("user"));
+    }
+
+    @Test
+    public void testUserXmlDAOPutUser() throws Exception {
+        Path aPath = FileSystems.getDefault().getPath(".", "usersIoDAOTestDb.xml");
+        if(Files.exists(aPath))
+            Files.delete(aPath);
+
+        AbstractDAO aUserXmlDAO = new UserXmlDAO("usersIoDAOTestDb.xml");
+        User testUser = new User("user","mkyong1A@");
+        aUserXmlDAO.putUser(testUser);
+        User testUser1 =  aUserXmlDAO.getUser("user");
+        assertEquals(testUser.getLogin(),testUser1.getLogin());
+        assertEquals(testUser.getPassword(),testUser1.getPassword());
     }
 }
