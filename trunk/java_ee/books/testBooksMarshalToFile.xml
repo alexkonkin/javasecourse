@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog>
+    <books>
+        <book id="111">
+            <name>Learning JAXB</name>
+            <ISBN>123445</ISBN>
+            <price>34.12 $</price>
+            <authors>
+                <name>Jane Doe</name>
+            </authors>
+            <description>Step by step instructions for beginners</description>
+            <publishDate>2003-02-01+02:00</publishDate>
+        </book>
+        <book id="222">
+            <name>Java Webservices today and Beyond</name>
+            <ISBN>522965</ISBN>
+            <price>29.12 $</price>
+            <authors>
+                <name>John Brown</name>
+                <name>Peter T.</name>
+            </authors>
+            <description>Information for users so that they can start using Java Web Services Developer Pack</description>
+            <publishDate>2002-12-01+02:00</publishDate>
+        </book>
+    </books>
+</catalog>
