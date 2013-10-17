@@ -7,18 +7,6 @@
     </listener>
 
     <servlet>
-        <servlet-name>Redirect</servlet-name>
-        <servlet-class>com.globallogic.javaee.Redirect</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-
-    <servlet>
-        <servlet-name>Register</servlet-name>
-        <servlet-class>com.globallogic.javaee.Register</servlet-class>
-        <load-on-startup>2</load-on-startup>
-    </servlet>
-
-    <servlet>
         <servlet-name>RegisterUserAccount</servlet-name>
         <servlet-class>com.globallogic.javaee.RegisterUserAccount</servlet-class>
         <load-on-startup>3</load-on-startup>
@@ -29,16 +17,6 @@
         <servlet-class>com.globallogic.javaee.LoginToUserAccount</servlet-class>
         <load-on-startup>4</load-on-startup>
     </servlet>
-
-    <servlet-mapping>
-        <servlet-name>Redirect</servlet-name>
-        <url-pattern>/redirect</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>Register</servlet-name>
-        <url-pattern>/register</url-pattern>
-    </servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>RegisterUserAccount</servlet-name>
@@ -52,7 +30,7 @@
 
 
     <welcome-file-list>
-        <welcome-file>redirect.jsp</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
 </web-app>

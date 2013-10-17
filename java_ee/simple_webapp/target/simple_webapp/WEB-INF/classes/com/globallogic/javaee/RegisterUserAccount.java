@@ -19,7 +19,6 @@ import com.globallogic.javase.*;
  * To change this template use File | Settings | File Templates.
  */
 public class RegisterUserAccount extends HttpServlet {
-    //private static int count = 0;
 
     public void doPost(HttpServletRequest request,HttpServletResponse response)throws ServletException, IOException{
         response.setContentType("text/html");
@@ -33,14 +32,6 @@ public class RegisterUserAccount extends HttpServlet {
         String login = new String(request.getParameter("login"));
         String password = new String(request.getParameter("password"));
 
-        /*
-        ServletContext context = getServletContext();
-        System.out.println("count is : "+context.getAttribute("count"));
-        Integer tmpcnt = new Integer(context.getAttribute("count").toString());
-        tmpcnt++;
-        context.setAttribute("count", tmpcnt);
-        request.setAttribute("current_count", context.getAttribute("count"));
-        */
 
         ServletContext context = getServletContext();
         UserXmlService tmpUserXmlService = (UserXmlService)context.getAttribute("aUserXmlService");
