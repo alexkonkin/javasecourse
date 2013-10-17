@@ -19,7 +19,6 @@ import com.globallogic.javase.*;
  * To change this template use File | Settings | File Templates.
  */
 public class LoginToUserAccount extends HttpServlet {
-    //private static int count = 0;
 
     public void doPost(HttpServletRequest request,HttpServletResponse response)throws ServletException, IOException{
         response.setContentType("text/html");
