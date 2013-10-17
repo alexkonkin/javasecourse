@@ -1,0 +1,58 @@
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+    <listener>
+        <listener-class>com.globallogic.javaee.SimpleWebappContextListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>Redirect</servlet-name>
+        <servlet-class>com.globallogic.javaee.Redirect</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>com.globallogic.javaee.Register</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>RegisterUserAccount</servlet-name>
+        <servlet-class>com.globallogic.javaee.RegisterUserAccount</servlet-class>
+        <load-on-startup>3</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>LoginToUserAccount</servlet-name>
+        <servlet-class>com.globallogic.javaee.LoginToUserAccount</servlet-class>
+        <load-on-startup>4</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Redirect</servlet-name>
+        <url-pattern>/redirect</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>RegisterUserAccount</servlet-name>
+        <url-pattern>/registerUserAccount</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LoginToUserAccount</servlet-name>
+        <url-pattern>/loginToUserAccount</url-pattern>
+    </servlet-mapping>
+
+
+    <welcome-file-list>
+        <welcome-file>redirect.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
