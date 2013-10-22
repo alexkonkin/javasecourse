@@ -1,4 +1,7 @@
 <html>
+<head>
+<title>Simple web application main page</title>
+</head>
 <body>
 <h2>Please register to continue your work with the application</h2>
 <h3>Current date is: <%= new java.util.Date() %></h3>
@@ -11,7 +14,7 @@
     <INPUT TYPE="SUBMIT" VALUE="Submit">
 </FORM>
 <p>
-<a href="register.jsp">Don't have account? Click here to register</a>
+<a href="register.jsp" id="register_new_account">Don't have account? Click here to register </a>
 <p>
 <% Integer hitsCount = (Integer)application.getAttribute("count");
     if( hitsCount ==null || hitsCount == 0 ){
