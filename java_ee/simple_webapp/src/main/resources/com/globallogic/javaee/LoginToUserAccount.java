@@ -21,14 +21,6 @@ import com.globallogic.javase.*;
 public class LoginToUserAccount extends HttpServlet {
 
     public void doPost(HttpServletRequest request,HttpServletResponse response)throws ServletException, IOException{
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        out.println("<html>");
-        out.println("<head><title>Login to user account</title></head>");
-        out.println("<body>");
-        out.println("<p>the login is : "+request.getParameter("login")+"</p>");
-        out.println("<p>the password is : "+request.getParameter("password")+"</p>");
-
         String login = new String(request.getParameter("login"));
         String password = new String(request.getParameter("password"));
 
@@ -40,25 +32,20 @@ public class LoginToUserAccount extends HttpServlet {
         request.setAttribute("current_count", context.getAttribute("count"));
         System.out.println("tmpcount is "+tmpcnt);
 
+        request.setAttribute("login",login);
+        request.setAttribute("password",password);
+        context.setAttribute("aUserXmlService",tmpUserXmlService);
+
         User aUser = new User(login,password);
         try{
             tmpUserXmlService.authenticateUser(aUser);
-            out.println("<p>the user "+login+" and password "+password+" logged in to the system</p>");
-            context.setAttribute("aUserXmlService",tmpUserXmlService);
-
+            context.getRequestDispatcher("/registered.jsp").forward(request, response);
         }
         catch(UserNotFound e){
-            System.out.println(e.toString());
-            out.println("<p>the user "+login+" and password "+password+" is not found in the database</p>");
+            context.getRequestDispatcher("/notfound.jsp").forward(request, response);
         }
         catch(BadCredentialsPassed e){
-            System.out.println(e.toString());
-            out.println("<p>the user "+login+" and passowrd " +password+"tried to login with the wrong password</p>");
+            context.getRequestDispatcher("/badcredentials.jsp").forward(request, response);
         }
-
-        out.println("<p><a href=index.jsp>return to the main page</a><p>");
-
-        out.println("</body></html>");
-        out.close();
     }
 }

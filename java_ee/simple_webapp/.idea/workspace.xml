@@ -21,10 +21,12 @@
     <file path="/SimpleWebappContextListener.java" changelist="5117ee19-cde9-4146-a52b-fda64c7ed488" time="1381934265889" ignored="false" />
     <file path="/RegisterUserAccount.java" changelist="5117ee19-cde9-4146-a52b-fda64c7ed488" time="1381937681462" ignored="false" />
     <file path="/UserXmlDAO.java" changelist="5117ee19-cde9-4146-a52b-fda64c7ed488" time="1381936841112" ignored="false" />
-    <file path="/LoginToUserAccount.java" changelist="5117ee19-cde9-4146-a52b-fda64c7ed488" time="1382001157318" ignored="false" />
+    <file path="/LoginToUserAccount.java" changelist="5117ee19-cde9-4146-a52b-fda64c7ed488" time="1383215935162" ignored="false" />
     <file path="/LoginToUserAccountTest.java" changelist="5117ee19-cde9-4146-a52b-fda64c7ed488" time="1382435672785" ignored="false" />
     <file path="/RegisterUserAccountTest.java" changelist="5117ee19-cde9-4146-a52b-fda64c7ed488" time="1382435232257" ignored="false" />
     <file path="/a.dummy" changelist="5117ee19-cde9-4146-a52b-fda64c7ed488" time="1382431879272" ignored="false" />
+    <file path="/registered.jsp" changelist="5117ee19-cde9-4146-a52b-fda64c7ed488" time="1383214282664" ignored="false" />
+    <file path="/notfound.jsp" changelist="5117ee19-cde9-4146-a52b-fda64c7ed488" time="1383232405787" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,37 +87,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="32" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RegisterUserAccount.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/globallogic/javaee/RegisterUserAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="34" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0">
+            <state line="53" column="86" selection-start="2142" selection-end="2214" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleWebappContextListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/globallogic/javaee/SimpleWebappContextListener.java">
+      <file leaf-file-name="userexists.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/userexists.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="26" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.0">
+            <state line="22" column="0" selection-start="482" selection-end="482" vertical-scroll-proportion="-10.307693">
               <folding />
             </state>
           </provider>
@@ -124,7 +108,16 @@
       <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="48" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
+            <state line="19" column="54" selection-start="640" selection-end="640" vertical-scroll-proportion="-6.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registersuccess.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/registersuccess.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="32" selection-start="272" selection-end="272" vertical-scroll-proportion="-5.230769">
               <folding />
             </state>
           </provider>
@@ -133,16 +126,16 @@
       <file leaf-file-name="register.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="48" selection-start="323" selection-end="342" vertical-scroll-proportion="0.0">
+            <state line="13" column="48" selection-start="323" selection-end="342" vertical-scroll-proportion="-5.8461537">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginToUserAccount.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/globallogic/javaee/LoginToUserAccount.java">
+      <file leaf-file-name="registered.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/registered.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
+            <state line="22" column="73" selection-start="555" selection-end="555" vertical-scroll-proportion="-10.461538">
               <folding />
             </state>
           </provider>
@@ -151,27 +144,34 @@
       <file leaf-file-name="LoginToUserAccountTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/com/globallogic/javaee/LoginToUserAccountTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="0" selection-start="3031" selection-end="3031" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterUserAccountTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/com/globallogic/javaee/RegisterUserAccountTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.74747473">
+            <state line="64" column="48" selection-start="2153" selection-end="2174" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="LoginToUserAccount.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/globallogic/javaee/LoginToUserAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="33" selection-start="899" selection-end="906" vertical-scroll-proportion="0.0">
+            <state line="39" column="55" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notfound.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/notfound.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="28" selection-start="259" selection-end="259" vertical-scroll-proportion="0.07951807">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="badcredentials.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/badcredentials.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="32" selection-start="270" selection-end="270" vertical-scroll-proportion="-6.5384617">
               <folding />
             </state>
           </provider>
@@ -187,21 +187,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/redirect.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/redirect.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/globallogic/javaee/Redirect.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/globallogic/javaee/SimpleWebappContextListener.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/globallogic/javase/UserXmlDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/register.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/globallogic/javaee/RegisterUserAccount.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/globallogic/javaee/Register.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/globallogic/javaee/LoginToUserAccount.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/tests/logback-test.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/tests/com/globallogic/javaee/LoginToUserAccountTest.java" />
         <option value="$PROJECT_DIR$/tests/com/globallogic/javaee/RegisterUserAccountTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/registered.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/globallogic/javaee/LoginToUserAccount.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/simplepassword.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/globallogic/javaee/RegisterUserAccount.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/userexists.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/registersuccess.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/registered.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/badcredentials.jsp" />
+        <option value="$PROJECT_DIR$/tests/com/globallogic/javaee/LoginToUserAccountTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/notfound.jsp" />
       </list>
     </option>
   </component>
@@ -257,9 +258,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="119" />
+    <option name="x" value="14" />
     <option name="y" value="46" />
-    <option name="width" value="1647" />
+    <option name="width" value="1752" />
     <option name="height" value="965" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -450,19 +451,19 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../lib" />
     <property name="project.structure.side.proportion" value="0.34530708" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="apache-tomcat" serverId="b4447ba2-ae53-48cd-a207-48492de74946">
     <servers>
@@ -477,68 +478,13 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\simple_webapp\src\main\webapp" />
       <recent name="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\simple_webapp" />
       <recent name="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\simple_webapp\tests" />
       <recent name="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\simple_webapp\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RegisterUserAccountTest">
-    <configuration default="false" name="LoginToUserAccountTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.globallogic.javaee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="simple_webapp" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.globallogic.javaee" />
-      <option name="MAIN_CLASS_NAME" value="com.globallogic.javaee.LoginToUserAccountTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="LoginToUserAccountTest.LoginToUserAccountTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.globallogic.javaee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="simple_webapp" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.globallogic.javaee" />
-      <option name="MAIN_CLASS_NAME" value="com.globallogic.javaee.LoginToUserAccountTest" />
-      <option name="METHOD_NAME" value="LoginToUserAccountTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.All in simple_webapp">
     <configuration default="false" name="RegisterUserAccountTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -567,7 +513,30 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="LoginToUserAccountTest.LoginToUserAccountClickTest" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="All in simple_webapp" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="simple_webapp" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="LoginToUserAccountTest.LoginToUserAccountCorrectCredentialsTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.globallogic.javaee.*" />
@@ -579,8 +548,64 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.globallogic.javaee" />
       <option name="MAIN_CLASS_NAME" value="com.globallogic.javaee.LoginToUserAccountTest" />
-      <option name="METHOD_NAME" value="LoginToUserAccountClickTest" />
+      <option name="METHOD_NAME" value="LoginToUserAccountCorrectCredentialsTest" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="com.globallogic.javaee in simple_webapp" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.globallogic.javaee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="simple_webapp" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.globallogic.javaee" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="LoginToUserAccountTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.globallogic.javaee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="simple_webapp" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.globallogic.javaee" />
+      <option name="MAIN_CLASS_NAME" value="com.globallogic.javaee.LoginToUserAccountTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -631,19 +656,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -670,6 +682,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -713,26 +738,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
-      <option name="LOCAL" value="false" />
-      <deployment />
-      <server-settings>
-        <data>
-          <option name="transportHostId" />
-        </data>
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="61466" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="false" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" editBeforeRun="true" APPLICATION_SERVER_NAME="Tomcat 6.0">
@@ -811,6 +816,26 @@
           <artifact name="simple_webapp:war" />
         </option>
       </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="transportHostId" />
+        </data>
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61466" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
     </configuration>
     <configuration default="false" name="simple_webapp" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -995,21 +1020,23 @@
         <option name="Make" enabled="false" />
       </method>
     </configuration>
-    <list size="7">
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Maven.simple_webapp" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.apache-tomcat" />
       <item index="2" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 6.0" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.LoginToUserAccountTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.LoginToUserAccountTest.LoginToUserAccountTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.RegisterUserAccountTest" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.LoginToUserAccountTest.LoginToUserAccountClickTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RegisterUserAccountTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in simple_webapp" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.LoginToUserAccountTest.LoginToUserAccountCorrectCredentialsTest" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.com.globallogic.javaee in simple_webapp" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.LoginToUserAccountTest" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.RegisterUserAccountTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.LoginToUserAccountTest.LoginToUserAccountClickTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.LoginToUserAccountTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.LoginToUserAccountTest.LoginToUserAccountTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in simple_webapp" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.LoginToUserAccountTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.com.globallogic.javaee in simple_webapp" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.LoginToUserAccountTest.LoginToUserAccountCorrectCredentialsTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.RegisterUserAccountTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1064,8 +1091,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="119" y="46" width="1647" height="965" extended-state="0" />
-    <editor active="true" />
+    <frame x="14" y="46" width="1752" height="965" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1083,11 +1110,11 @@
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291714" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24972796" sideWeight="0.6687345" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1577287" sideWeight="0.67245656" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1577287" sideWeight="0.67245656" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2214511" sideWeight="0.67245656" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32754344" sideWeight="0.6452666" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23431952" sideWeight="0.60545903" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39454094" sideWeight="0.6452666" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297062" sideWeight="0.53121454" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291714" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1162,38 +1189,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="33" selection-start="899" selection-end="906" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../JAVA/JAVA/apache-tomcat-6.0.36/lib/servlet-api.jar!/javax/servlet/http/HttpServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="16" selection-start="3012" selection-end="3012" vertical-scroll-proportion="0.6520468" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/globallogic/javase/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="33" selection-start="282" selection-end="282" vertical-scroll-proportion="0.03469388" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/globallogic/javase/AbstractDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="212" selection-end="212" vertical-scroll-proportion="0.3122449" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/globallogic/javase/UserXmlDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="18" selection-start="4805" selection-end="4805" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/globallogic/javase/UserXmlService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="12" selection-start="1758" selection-end="1758" vertical-scroll-proportion="1.6239837" />
-      </provider>
-    </entry>
     <entry file="uml://MAVEN/simple_webapp:simple_webapp:1.0-SNAPSHOT">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1213,13 +1208,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/globallogic/javaee/RegisterUserAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="34" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="33" selection-start="899" selection-end="906" vertical-scroll-proportion="0.0">
@@ -1227,19 +1215,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/globallogic/javaee/RegisterUserAccountTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="32" selection-start="742" selection-end="742" vertical-scroll-proportion="-4.52">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
       </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="32" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
       </provider>
     </entry>
@@ -1250,39 +1245,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/globallogic/javaee/LoginToUserAccount.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/simplepassword.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
+        <state line="9" column="25" selection-start="0" selection-end="678" vertical-scroll-proportion="-4.3076925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/globallogic/javaee/RegisterUserAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="86" selection-start="2142" selection-end="2214" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/userexists.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="482" selection-end="482" vertical-scroll-proportion="-10.307693">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="48" selection-start="323" selection-end="342" vertical-scroll-proportion="0.0">
+        <state line="13" column="48" selection-start="323" selection-end="342" vertical-scroll-proportion="-5.8461537">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="48" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
+        <state line="19" column="54" selection-start="640" selection-end="640" vertical-scroll-proportion="-6.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/registersuccess.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="32" selection-start="272" selection-end="272" vertical-scroll-proportion="-5.230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/registered.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="73" selection-start="555" selection-end="555" vertical-scroll-proportion="-10.461538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/badcredentials.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="32" selection-start="270" selection-end="270" vertical-scroll-proportion="-6.5384617">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/com/globallogic/javaee/LoginToUserAccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="3031" selection-end="3031" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="64" column="48" selection-start="2153" selection-end="2174" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/globallogic/javaee/RegisterUserAccountTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/globallogic/javaee/LoginToUserAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.74747473">
+        <state line="39" column="55" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/notfound.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="28" selection-start="259" selection-end="259" vertical-scroll-proportion="0.07951807">
           <folding />
         </state>
       </provider>

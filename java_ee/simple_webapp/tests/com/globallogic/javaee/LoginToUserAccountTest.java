@@ -33,8 +33,6 @@ public class LoginToUserAccountTest {
     @Test
     public void LoginToUserAccountCorrectCredentialsTest() {
         beginAt("index.jsp");
-        //clickLink("login");
-        //assertTitleEquals("Login");
         setTextField("login", "alex");
         setTextField("password", "mkyong1A@");
         submit();
@@ -54,7 +52,7 @@ public class LoginToUserAccountTest {
         assertTitleEquals("Login to user account");
         assertTextPresent("the login is : alex");
         assertTextPresent("the password is : mkyong1A@1");
-        assertTextPresent("the user alex and passowrd mkyong1A@1tried to login with the wrong password");
+        assertTextPresent("the user alex and passowrd mkyong1A@1 tried to login with the wrong password");
         assertLinkPresentWithText("return to the main page");
     }
 
