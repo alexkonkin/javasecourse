@@ -22,16 +22,9 @@ public class RegisterUserAccount extends HttpServlet {
 
     public void doPost(HttpServletRequest request,HttpServletResponse response)throws ServletException, IOException{
         response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        out.println("<html>");
-        out.println("<head><title>Register user account</title></head>");
-        out.println("<body>");
-        out.println("<p>the login is : "+request.getParameter("login")+"</p>");
-        out.println("<p>the password is : "+request.getParameter("password")+"</p>");
 
         String login = new String(request.getParameter("login"));
         String password = new String(request.getParameter("password"));
-
 
         ServletContext context = getServletContext();
         UserXmlService tmpUserXmlService = (UserXmlService)context.getAttribute("aUserXmlService");
@@ -41,26 +34,30 @@ public class RegisterUserAccount extends HttpServlet {
         request.setAttribute("current_count", context.getAttribute("count"));
         System.out.println("tmpcount is "+tmpcnt);
 
+        request.setAttribute("login",login);
+        request.setAttribute("password",password);
+        context.setAttribute("aUserXmlService",tmpUserXmlService);
+
         User aUser = new User(login,password);
         try{
             tmpUserXmlService.registerUser(aUser);
-            out.println("<p>the user "+login+" and password "+password+" has been successfully registered</p>");
-            context.setAttribute("aUserXmlService",tmpUserXmlService);
-
+            context.getRequestDispatcher("/registersuccess.jsp").forward(request, response);
         }
         catch(PasswordToSimple e){
-            System.out.println(e.toString());
-            out.println("<p>the user "+login+" and password "+password+" has not been registered</p>");
-            out.println("<p>the password "+password+" is too simple</p>");
+            //System.out.println(e.toString());
+            //out.println("<p>the user "+login+" and password "+password+" has not been registered</p>");
+            //out.println("<p>the password "+password+" is too simple</p>");
+            context.getRequestDispatcher("/simplepassword.jsp").forward(request, response);
         }
         catch(UserAlreadyExists e){
-            System.out.println(e.toString());
-            out.println("<p>the user "+login+" already exists in the database</p>");
+            //System.out.println(e.toString());
+            //out.println("<p>the user "+login+" already exists in the database</p>");
+            context.getRequestDispatcher("/userexists.jsp").forward(request, response);
         }
 
-        out.println("<p><a href=index.jsp>return to the main page</a><p>");
+        //out.println("<p><a href=index.jsp>return to the main page</a><p>");
 
-        out.println("</body></html>");
-        out.close();
+        //out.println("</body></html>");
+        //out.close();
     }
 }
