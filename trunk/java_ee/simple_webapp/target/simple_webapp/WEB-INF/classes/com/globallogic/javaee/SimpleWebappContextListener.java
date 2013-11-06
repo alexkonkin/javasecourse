@@ -5,6 +5,7 @@ import com.globallogic.javase.UserXmlService;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
@@ -17,11 +18,14 @@ import java.io.IOException;
 
 public class SimpleWebappContextListener implements ServletContextListener{
     ServletContext context;
+    HttpSession session;
+
     public void contextInitialized(ServletContextEvent contextEvent) {
         System.out.println("Context Created");
         context = contextEvent.getServletContext();
-        Integer count = new Integer(0);
-        context.setAttribute("count",count);
+
+        Counter count = new Counter();
+        context.setAttribute("count", count);
 
         String current = null;
         try {

@@ -1,3 +1,6 @@
+<%@ page import="com.globallogic.javase.User" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page isELIgnored="false"%>
 <%--
   Created by IntelliJ IDEA.
   User: oleksiy.konkin
@@ -13,14 +16,17 @@
 </head>
 <body>
 
-<%
-    String login = request.getParameter("login");
-    String password = request.getParameter("password");
-%>
+<c:set var="login" scope="session" value="${sessionScope.aUserRegistrationInfo.login}"/>
+<c:set var="password" scope="session" value="${sessionScope.aUserRegistrationInfo.password}"/>
+<p> the login is <c:out value="${login}"/>
+<p> the password is <c:out value="${password}"/>
+<p> the user <c:out value="${login}"/> with the password <c:out value="${password}"/> logged in to the system<p>
 
-<p>the login is : <%=login%></p>
-<p>the password is : <%=password%></p>
-<p>the user <%=login%> and password <%=password%> logged in to the system</p>
+<p>List of the users that are present in the system storage:
+<c:set var="arr" scope="session" value="${sessionScope.arr}"/>
+   <c:forEach var="user" items="${sessionScope.arr}">
+        <p><c:out value="${user.login}"/>  <c:out value="${user.password}"/>
+    </c:forEach>
 
 <p><a href=index.jsp>return to the main page</a><p>
 
