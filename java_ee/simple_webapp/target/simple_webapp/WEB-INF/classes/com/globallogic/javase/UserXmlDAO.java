@@ -23,7 +23,7 @@ import java.util.List;
 public class UserXmlDAO implements AbstractDAO {
     private String aDbFileName;
 
-    UserXmlDAO(String aDbStorageName){
+    public UserXmlDAO(String aDbStorageName){
         aDbFileName = aDbStorageName;
         initUserStorage(aDbStorageName);
     }
@@ -107,6 +107,49 @@ public class UserXmlDAO implements AbstractDAO {
             return null;
         else
             return result;
+    }
+
+    public ArrayList<User> getUserList(){
+        User aUser;
+        User usr;
+        ArrayList<User> ua = new ArrayList<User>();
+        try{
+            //File fXmlFile = new File("D:\\oleksiy.konkin\\Documents\\JAVA\\JAVA_SE\\chapter_7\\LoginManager\\staff.xml");
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = null;
+            dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = null;
+            doc = dBuilder.parse(aDbFileName);
+            doc.getDocumentElement().normalize();
+            //System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+            NodeList nList = doc.getElementsByTagName("credential");
+
+            for (int temp = 0; temp < nList.getLength(); temp++) {
+                Node nNode = nList.item(temp);
+                //System.out.println("\nelement :" + nNode.getNodeName());
+
+                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                    Element eElement = (Element) nNode;
+                    //System.out.println("credential id : " + eElement.getAttribute("id"));
+                    //System.out.println("login : " + eElement.getAttribute("login"));
+                    //System.out.println("password : " + eElement.getAttribute("password"));
+                    usr = new User();
+                    usr.setLogin(eElement.getAttribute("login"));
+                    usr.setPassword(eElement.getAttribute("password"));
+                    ua.add(usr);
+                }
+            }
+        }catch (IOException ioe) {
+            System.out.println("Error while reading db file" + ioe);
+        }
+        catch (SAXException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        catch (ParserConfigurationException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        return ua;
     }
 
     public void putUser (User aUser) throws UserAlreadyExists{
