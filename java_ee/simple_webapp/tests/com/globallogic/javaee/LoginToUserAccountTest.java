@@ -37,10 +37,11 @@ public class LoginToUserAccountTest {
         setTextField("password", "mkyong1A@");
         submit();
         assertTitleEquals("Login to user account");
-        assertLinkPresentWithText("return to the main page");
         assertTextPresent("the login is : alex");
         assertTextPresent("the password is : mkyong1A@");
-        assertTextPresent("the user alex and password mkyong1A@ logged in to the system");
+        assertTextPresent("the user alex with the password mkyong1A@ logged in to the system");
+        assertTextPresent("List of the users that are present in the system storage:");
+        assertLinkPresentWithText("return to the main page");
     }
 
     @Test
@@ -49,11 +50,10 @@ public class LoginToUserAccountTest {
         setTextField("login", "alex");
         setTextField("password", "mkyong1A@1");
         submit();
-        assertTitleEquals("Login to user account");
-        assertTextPresent("the login is : alex");
-        assertTextPresent("the password is : mkyong1A@1");
-        assertTextPresent("the user alex and passowrd mkyong1A@1 tried to login with the wrong password");
-        assertLinkPresentWithText("return to the main page");
+        assertTitleEquals("Simple web application main page");
+        assertTextPresent("Error:");
+        assertTextPresent("the user alex with password mkyong1A@1 tried to login with the wrong password");
+        assertLinkPresentWithText("Don't have account? Click here to register");
     }
 
     @Test
@@ -62,11 +62,10 @@ public class LoginToUserAccountTest {
         setTextField("login", "");
         setTextField("password", "");
         submit();
-        assertTitleEquals("Login to user account");
-        assertTextPresent("the login is :");
-        assertTextPresent("the password is :");
-        assertTextPresent("the user and password is not found in the database");
-        assertLinkPresentWithText("return to the main page");
+        assertTitleEquals("Simple web application main page");
+        assertTextPresent("Error:");
+        assertTextPresent("the user with password is not found in the database");
+        assertLinkPresentWithText("Don't have account? Click here to register");
     }
 
     @Test
@@ -75,10 +74,9 @@ public class LoginToUserAccountTest {
         setTextField("login", "alex111111");
         setTextField("password", "mkyong1A@");
         submit();
-        assertTitleEquals("Login to user account");
-        assertTextPresent("the login is : alex111111");
-        assertTextPresent("the password is : mkyong1A@");
-        assertTextPresent("the user alex111111 and password mkyong1A@ is not found in the database");
-        assertLinkPresentWithText("return to the main page");
+        assertTitleEquals("Simple web application main page");
+        assertTextPresent("Error:");
+        assertTextPresent("the user alex111111 with password mkyong1A@ is not found in the database");
+        assertLinkPresentWithText("Don't have account? Click here to register");
     }
 }
