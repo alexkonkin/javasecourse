@@ -18,16 +18,19 @@
 
 <c:set var="login" scope="session" value="${sessionScope.aUserRegistrationInfo.login}"/>
 <c:set var="password" scope="session" value="${sessionScope.aUserRegistrationInfo.password}"/>
-<p> the login is <c:out value="${login}"/>
-<p> the password is <c:out value="${password}"/>
+<p> the login is : <c:out value="${login}"/>
+<p> the password is : <c:out value="${password}"/>
 <p> the user <c:out value="${login}"/> with the password <c:out value="${password}"/> logged in to the system<p>
 
 <p>List of the users that are present in the system storage:
 <c:set var="arr" scope="session" value="${sessionScope.arr}"/>
+   <table border="1">
    <c:forEach var="user" items="${sessionScope.arr}">
-        <p><c:out value="${user.login}"/>  <c:out value="${user.password}"/>
+       <tr>
+       <th><c:out value="${user.login}"/></th><th><c:out value="${user.password}"/></th>
+       </tr>
     </c:forEach>
-
+   </table>
 <p><a href=index.jsp>return to the main page</a><p>
 
 </body>

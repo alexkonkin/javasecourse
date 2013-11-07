@@ -28,11 +28,14 @@ public class RegisterUserAccount extends HttpServlet {
 
         ServletContext context = getServletContext();
         UserXmlService tmpUserXmlService = (UserXmlService)context.getAttribute("aUserXmlService");
+
+        /*
         Integer tmpcnt = (Integer)context.getAttribute("count");
         tmpcnt++;
         context.setAttribute("count", tmpcnt);
         request.setAttribute("current_count", context.getAttribute("count"));
         System.out.println("tmpcount is "+tmpcnt);
+         */
 
         request.setAttribute("login",login);
         request.setAttribute("password",password);
