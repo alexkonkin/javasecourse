@@ -1,0 +1,17 @@
+Anonymous user:
+As anonymous user I can read forum threads
+As anonymous user I can register in forum and start to be registered user
+As anonymous user I can not create new threads
+As anonymous user I can not delete any threads
+
+Registered user:
+As registered user I can login to forum
+As registered user I can change my credentials
+As registered user I can create new threads
+As registered user I can delete my own threads
+
+Forum administrator:
+As administrator I can login to forum
+As administrator I can change my credentials
+As administrator I can create new threads
+As administrator I can delete any threads
