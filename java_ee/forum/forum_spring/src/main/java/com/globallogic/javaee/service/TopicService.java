@@ -24,4 +24,9 @@ public class TopicService
     {
         return topicDao.findAllTopics();
     }
+
+    public Integer createTopic(String topicName){
+        return topicDao.createTopic(topicName);
+    }
+
 }

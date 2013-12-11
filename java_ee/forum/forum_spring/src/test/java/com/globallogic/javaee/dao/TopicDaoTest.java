@@ -29,14 +29,15 @@ public class TopicDaoTest extends AbstractTest
     @Test
     public void testCreateAndFindAllTopics()
     {
-        Topic topic = new Topic();
-        topic.setName("NEWS");
-        topicDao.createTopic(topic);
+        //Topic topic = new Topic();
+        //topic.setName("NEWS");
+        //topicDao.createTopic(topic);
+        topicDao.createTopic("NEWS");
 
         List<Topic> allTopics = topicDao.findAllTopics();
         Assert.assertEquals(1, allTopics.size());
 
         Topic storedTopic = allTopics.get(0);
-        Assert.assertEquals(topic.getName(), storedTopic.getName());
+        Assert.assertEquals("NEWS", storedTopic.getName());
     }
 }
