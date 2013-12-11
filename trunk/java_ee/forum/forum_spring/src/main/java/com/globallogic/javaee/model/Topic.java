@@ -28,7 +28,7 @@ public class Topic
     public void setId(int id) {
         this.id = id;
     }
-    @Column
+    @Column(name="name")
     private String name;
 
     /**

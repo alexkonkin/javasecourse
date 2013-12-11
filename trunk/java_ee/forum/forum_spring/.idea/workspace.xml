@@ -13,6 +13,11 @@
     <file path="/Dummy.txt" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1386173750953" ignored="false" />
     <file path="/a.dummy" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1386173178734" ignored="false" />
     <file path="/UserService.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1386251492027" ignored="false" />
+    <file path="/SpringIntegrationTest.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1386776910984" ignored="false" />
+    <file path="/applicationContext.xml" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1386318447404" ignored="false" />
+    <file path="/TopicDao.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1386775407936" ignored="false" />
+    <file path="/Topic.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1386773356477" ignored="false" />
+    <file path="/TopicService.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1386775249034" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,29 +78,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="applicationContext.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <file leaf-file-name="Topic.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/Topic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="4" selection-start="1355" selection-end="1355" vertical-scroll-proportion="0.0">
+            <state line="30" column="22" selection-start="667" selection-end="667" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="TopicService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/TopicService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="21" selection-start="2861" selection-end="2861" vertical-scroll-proportion="0.0">
+            <state line="28" column="28" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/User.java">
+      <file leaf-file-name="TopicDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="32" selection-start="1140" selection-end="1140" vertical-scroll-proportion="1.2932166">
-              <folding />
+            <state line="36" column="31" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#571#601#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,37 +116,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java">
+      <file leaf-file-name="testTopicServiceIntegrationTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/testTopicServiceIntegrationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="53" column="50" selection-start="1206" selection-end="1658" vertical-scroll-proportion="0.7995283">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Topic.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/Topic.java">
+      <file leaf-file-name="ServiceFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/ServiceFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="70" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TopicDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="13" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/UserServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="70" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
+            <state line="11" column="13" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -148,17 +139,19 @@
       <file leaf-file-name="AbstractTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/AbstractTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="0" selection-start="2816" selection-end="2816" vertical-scroll-proportion="0.0">
+            <state line="68" column="19" selection-start="2482" selection-end="2482" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDaoTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/UserDaoTest.java">
+      <file leaf-file-name="TopicDaoTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/TopicDaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="2" column="0" selection-start="37" selection-end="80" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -173,22 +166,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/ServiceFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/TopicService.java" />
         <option value="$PROJECT_DIR$/src/main/java/foo/bar/HelloApp.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/AbstractTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/TopicDaoTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/foo/bar/SpringAppTests.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/Topic.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/User.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/UserDaoTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/UserServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/Topic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/TopicService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/TopicDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/SpringIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/testTopicServiceIntegrationTest.java" />
       </list>
     </option>
   </component>
@@ -200,9 +193,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="147" />
-    <option name="y" value="93" />
-    <option name="width" value="1392" />
+    <option name="x" value="162" />
+    <option name="y" value="84" />
+    <option name="width" value="1624" />
     <option name="height" value="921" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -212,6 +205,8 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
@@ -273,6 +268,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -312,6 +308,10 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javaee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -350,6 +350,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javaee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -381,23 +389,27 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
@@ -406,8 +418,8 @@
       <recent name="D:\oleksiy.konkin\Documents\JAVA\forum_1\src\main\java\com\globallogic\javaee" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.com.globallogic.javaee in forum_spring">
-    <configuration default="false" name="com.globallogic.javaee in forum_spring" type="JUnit" factoryName="JUnit" temporary="true">
+  <component name="RunManager" selected="JUnit.testTopicServiceIntegrationTest">
+    <configuration default="false" name="SpringIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.globallogic.javaee.*" />
@@ -418,9 +430,43 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.globallogic.javaee" />
-      <option name="MAIN_CLASS_NAME" />
+      <option name="MAIN_CLASS_NAME" value="com.globallogic.javaee.SpringIntegrationTest" />
       <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TopicDaoTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.globallogic.javaee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="forum_spring" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.globallogic.javaee.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.globallogic.javaee.dao.TopicDaoTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -432,6 +478,96 @@
       <envs />
       <patterns />
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SpringIntegrationTest.testGetAllTopics" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.globallogic.javaee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="forum_spring" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.globallogic.javaee" />
+      <option name="MAIN_CLASS_NAME" value="com.globallogic.javaee.SpringIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetAllTopics" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SpringIntegrationTest.testCreateTopic" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.globallogic.javaee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="forum_spring" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.globallogic.javaee" />
+      <option name="MAIN_CLASS_NAME" value="com.globallogic.javaee.SpringIntegrationTest" />
+      <option name="METHOD_NAME" value="testCreateTopic" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="testTopicServiceIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.globallogic.javaee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="forum_spring" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.globallogic.javaee" />
+      <option name="MAIN_CLASS_NAME" value="com.globallogic.javaee.testTopicServiceIntegrationTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -545,18 +681,32 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Application.HelloApp" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.All in forum_spring" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.com.globallogic.javaee in forum_spring" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SpringIntegrationTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TopicDaoTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.SpringIntegrationTest.testGetAllTopics" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.SpringIntegrationTest.testCreateTopic" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.testTopicServiceIntegrationTest" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.com.globallogic.javaee in forum_spring" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.testTopicServiceIntegrationTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SpringIntegrationTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TopicDaoTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SpringIntegrationTest.testCreateTopic" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SpringIntegrationTest.testGetAllTopics" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -565,6 +715,23 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="dba670d6-8114-4a12-8f0a-8ec0116528d2" name="Default" comment="" />
@@ -574,29 +741,29 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="147" y="93" width="1392" height="921" extended-state="0" />
-    <editor active="false" />
+    <frame x="162" y="84" width="1624" height="921" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39895013" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36071032" sideWeight="0.20382166" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3753281" sideWeight="0.20358515" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24972796" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496799" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25872093" sideWeight="0.6404066" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3595934" sideWeight="0.79617834" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22023048" sideWeight="0.5905512" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40944883" sideWeight="0.79577464" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -669,67 +836,58 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/foo/bar/HelloService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/foo/bar/HelloApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="32" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/foo/bar/SpringAppTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="2" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="77" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/TopicDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="29" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/AbstractTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="0" selection-start="2816" selection-end="2816" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/Topic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="70" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forum_spring.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="37" selection-start="1143" selection-end="1144" vertical-scroll-proportion="0.42" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="4" selection-start="1355" selection-end="1355" vertical-scroll-proportion="0.0">
+        <state line="59" column="32" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="21" selection-start="2861" selection-end="2861" vertical-scroll-proportion="0.0">
+        <state line="88" column="0" selection-start="2861" selection-end="2861" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="4" selection-start="2147" selection-end="2147" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.8.2/junit-4.8.2.jar!/org/junit/runner/JUnitCore.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="35" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.49222797">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.8.2/junit-4.8.2.jar!/org/junit/internal/runners/ClassRoadie.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="17" selection-start="1005" selection-end="1005" vertical-scroll-proportion="0.7479893">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/2.5/spring-test-2.5.jar!/org/springframework/test/context/junit4/SpringMethodRoadie.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="19" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.3147208">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_25/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="19" selection-start="1142" selection-end="1142" vertical-scroll-proportion="0.33254716">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/UserServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="5" selection-start="1318" selection-end="1318" vertical-scroll-proportion="1.6037736">
           <folding />
         </state>
       </provider>
@@ -741,31 +899,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/ServiceFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
+        <state line="11" column="13" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/UserDaoTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/Topic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0">
+        <state line="30" column="22" selection-start="667" selection-end="667" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/UserServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/TopicService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="70" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
+        <state line="28" column="28" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="32" selection-start="1140" selection-end="1140" vertical-scroll-proportion="1.2932166">
+        <state line="36" column="31" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#571#601#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/AbstractTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="19" selection-start="2482" selection-end="2482" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/TopicDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="37" selection-end="80" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/testTopicServiceIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="50" selection-start="1206" selection-end="1658" vertical-scroll-proportion="0.7995283">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -826,6 +1011,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

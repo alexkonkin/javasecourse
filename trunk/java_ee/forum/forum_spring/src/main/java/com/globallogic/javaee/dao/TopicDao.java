@@ -31,9 +31,13 @@ public class TopicDao extends HibernateDaoSupport
         return (List<Topic>)allTopicsCriteria.list();
     }
 
-    public void createTopic(Topic topic)
+    public int createTopic(String topicName)
     {
+        Topic topic = new Topic();
+        topic.setName(topicName);
         getHibernateTemplate().persist(topic);
+        //getHibernateTemplate().saveOrUpdate(topic);
+        return Integer.valueOf(topic.getId());
     }
 
 }
