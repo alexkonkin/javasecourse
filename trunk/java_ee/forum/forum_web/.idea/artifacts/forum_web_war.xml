@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="forum_web:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="forum_web.war">
+      <element id="artifact" artifact-name="forum_web:war exploded" />
+    </root>
+  </artifact>
+</component>
