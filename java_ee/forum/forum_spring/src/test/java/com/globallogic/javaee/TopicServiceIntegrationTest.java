@@ -13,6 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 
 
+import javax.annotation.Resource;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -23,7 +24,9 @@ import static org.junit.Assert.assertNotNull;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations="classpath:applicationContext.xml")
 @TransactionConfiguration(defaultRollback=true,transactionManager="transactionManager")
-public class testTopicServiceIntegrationTest extends AbstractTest {
+public class TopicServiceIntegrationTest extends AbstractTest {
+    @Resource
+    TopicService topicService;
 
     @Before
     public void init() throws SQLException
@@ -31,35 +34,24 @@ public class testTopicServiceIntegrationTest extends AbstractTest {
         executeUpdateExpressions("delete from TOPICS");
     }
 
-    @Autowired
-    private TopicDao topicDAO;
-
-    /*
     @Test
-    public void testGetAllTopics() {
-        List<Topic> topicsList = topicDAO.findAllTopics();
-        assertNotNull(topicsList.get(0));
+    public void TopicServiceNotNullTest(){
+        assertNotNull(topicService);
     }
 
-
     @Test
-    public void testCreateTopic()
-    {
-        //Topic aTopic = new Topic();
-        //aTopic.setName("New topic");
-        //Integer key = topicDAO.createTopic(aTopic);
-        Integer key = topicDAO.createTopic("New Topic");
-        assertNotNull(key.intValue());
+    public void TopicDaoNotNullTest(){
+        //topicService.createTopic("NEWS");
+        //at this point the list should be empty because all records are deleted, however it should not
+        //be equal to NULL
+        List<Topic> topicsList = topicService.findAllTopics();
+        assertEquals(0,topicsList.size());
     }
-    */
 
     @Test
-    public void testTopicService(){
-        TopicService topicService = new TopicService();
-        topicService.setTopicDao(topicDAO);
+    public void CreateTopicTest(){
         topicService.createTopic("NEWS");
-        List<Topic> topicsList = topicDAO.findAllTopics();
+        List<Topic> topicsList = topicService.findAllTopics();
         assertEquals("NEWS", topicsList.get(0).getName());
     }
-
 }

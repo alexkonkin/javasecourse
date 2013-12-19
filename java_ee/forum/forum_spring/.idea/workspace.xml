@@ -12,7 +12,7 @@
     <file path="/fragment.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1387180413347" ignored="false" />
     <file path="/Dummy.txt" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1386952298687" ignored="false" />
     <file path="/a.dummy" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1386845772840" ignored="false" />
-    <file path="/UserService.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1386251492027" ignored="false" />
+    <file path="/UserService.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1387462289601" ignored="false" />
     <file path="/SpringIntegrationTest.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1386777987074" ignored="false" />
     <file path="/applicationContext.xml" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1386318447404" ignored="false" />
     <file path="/TopicDao.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1386775407936" ignored="false" />
@@ -50,10 +50,13 @@
     <file path="/mvc-dispatcher-servlet.xml" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1387180464512" ignored="false" />
     <file path="/web.xml" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1387180502455" ignored="false" />
     <file path="$PROJECT_DIR$/../forum_web/src/main/java/com/springapp/mvc/MainPage.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1387180669324" ignored="false" />
-    <file path="$PROJECT_DIR$/../forum_web/src/main/java/com/globallogic/javaee/controllers/MainPage.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1387183767208" ignored="false" />
-    <file path="/MainPage.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1387181917810" ignored="false" />
+    <file path="$PROJECT_DIR$/../forum_web/src/main/java/com/globallogic/javaee/controllers/MainPage.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1387461302478" ignored="false" />
+    <file path="/MainPage.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1387461286407" ignored="false" />
     <file path="$PROJECT_DIR$/../forum_web/src/main/webapp/WEB-INF/pages/main.jsp" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1387182015374" ignored="false" />
     <file path="/main.jsp" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1387182011759" ignored="false" />
+    <file path="$PROJECT_DIR$/../forum_web/src/main/java/com/globallogic/javaee/service/UserService.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1387462289601" ignored="false" />
+    <file path="$PROJECT_DIR$/../forum_web/src/main/java/com/globallogic/javaee/dao/UserDao.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1387462446114" ignored="false" />
+    <file path="/UserDao.java" changelist="dba670d6-8114-4a12-8f0a-8ec0116528d2" time="1387462384251" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,19 +136,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="66" selection-start="2552" selection-end="2552" vertical-scroll-proportion="0.5589942">
+            <state line="75" column="66" selection-start="2552" selection-end="2552" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Topic.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/Topic.java">
+      <file leaf-file-name="UserDaoTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/UserDaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="22" selection-start="667" selection-end="667" vertical-scroll-proportion="0.0">
+            <state line="11" column="13" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -160,17 +163,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopicDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="31" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#571#601#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -180,13 +172,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopicServiceIntegrationTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/TopicServiceIntegrationTest.java">
+      <file leaf-file-name="TopicDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="0" selection-start="1883" selection-end="1883" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="36" column="31" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -200,10 +190,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/AbstractTest.java">
+      <file leaf-file-name="UserDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="19" selection-start="2482" selection-end="2482" vertical-scroll-proportion="0.0">
+            <state line="8" column="13" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TopicServiceIntegrationTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/TopicServiceIntegrationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="0" selection-start="1883" selection-end="1883" vertical-scroll-proportion="0.9416168">
               <folding />
             </state>
           </provider>
@@ -213,9 +212,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/TopicDaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -271,10 +268,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1762" />
-    <option name="y" value="96" />
-    <option name="width" value="1624" />
-    <option name="height" value="921" />
+    <option name="x" value="-1928" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -405,6 +402,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javaee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forum_spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forum_spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -436,6 +463,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="javaee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forum_spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forum_spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javaee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -799,7 +856,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1762" y="96" width="1624" height="921" extended-state="0" />
+    <frame x="-1928" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -820,12 +877,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297055" sideWeight="0.5866142" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22023048" sideWeight="0.7401575" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25984251" sideWeight="0.79577464" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21985058" sideWeight="0.7406617" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25933832" sideWeight="0.79577464" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -894,58 +951,24 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="32" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.8.2/junit-4.8.2.jar!/org/junit/runner/JUnitCore.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="35" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.49222797">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.8.2/junit-4.8.2.jar!/org/junit/internal/runners/ClassRoadie.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="17" selection-start="1005" selection-end="1005" vertical-scroll-proportion="0.7479893">
-          <folding />
-        </state>
+        <state line="26" column="17" selection-start="1005" selection-end="1005" vertical-scroll-proportion="0.7479893" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/2.5/spring-test-2.5.jar!/org/springframework/test/context/junit4/SpringMethodRoadie.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="19" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.3147208">
-          <folding />
-        </state>
+        <state line="31" column="19" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.3147208" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_25/src.zip!/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="19" selection-start="1142" selection-end="1142" vertical-scroll-proportion="0.33254716">
-          <folding />
-        </state>
+        <state line="51" column="19" selection-start="1142" selection-end="1142" vertical-scroll-proportion="0.33254716" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/UserServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="5" selection-start="1318" selection-end="1318" vertical-scroll-proportion="1.6037736">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="101" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/ServiceFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -967,24 +990,41 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="31" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#571#601#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/TopicDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="11" selection-start="1772" selection-end="1772" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="66" selection-start="2552" selection-end="2552" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/UserDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/TopicDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="101" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -996,18 +1036,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/TopicServiceIntegrationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/ServiceFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="1883" selection-end="1883" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="11" column="13" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="66" selection-start="2552" selection-end="2552" vertical-scroll-proportion="0.5589942">
+        <state line="8" column="13" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/TopicServiceIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="0" selection-start="1883" selection-end="1883" vertical-scroll-proportion="0.9416168">
           <folding />
         </state>
       </provider>
