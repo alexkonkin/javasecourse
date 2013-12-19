@@ -1,5 +1,8 @@
 <%@ page import="com.globallogic.javaee.model.Topic" %>
+<%@ page import="com.globallogic.javaee.model.User" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@page isELIgnored="false"%>
 <%--
   Created by IntelliJ IDEA.
@@ -18,7 +21,32 @@
 </head>
 <body>
 <h3>Forum's main page</h3>
-    <br>
+<br>
+
+<form:form method="post" action="/register" commandName="user">
+    <table>
+        <tr>
+            <td><form:label path="login">login</form:label></td>
+            <td><form:input path="login" /></td>
+        </tr>
+        <tr>
+            <td><form:label path="password">password</form:label></td>
+            <td><form:input path="password" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+            <td ><input type="submit" value="Submit"/></td>
+            </td>
+        </tr>
+    </table>
+</form:form>
+
+<!--c:out value="login is : ${sessionScope.userCredentials.login}"/><br-->
+<!--c:out value="password is : ${sessionScope.userCredentials.password}"/-->
+<c:if test="${isAuthenticated}">
+    <c:out value="User ${sessionScope.userCredentials.login} logged in"/><br>
+</c:if>
+
 
 <table border="1">
     <tr>

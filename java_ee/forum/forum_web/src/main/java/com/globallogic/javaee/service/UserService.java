@@ -35,14 +35,23 @@ public class UserService
     public void register(User user) throws ServiceException
     {
         // if user already exists
-        throw new ServiceException("Unable to register new user. The user with name " + user.getLogin()
-            + " already exists.");
+        //throw new ServiceException("Unable to register new user. The user with name " + user.getLogin()+ " already exists.");
         // else
         // register new user
+        //List<User> usersList = userDao.findUser()
+        List<User> usersList = userDao.findUserByLogin(user.getLogin());
+        if (usersList.size() == 0){
+            userDao.createUser(user);
+        }else
+            throw new ServiceException("Unable to register new user. The user with name " + user.getLogin()+ " already exists.");
     }
 
-    public void login( String user, String password )
+    public boolean login( User aUser )
     {
-        throw new NotImplementedException("Loging is not implemented, yet" );
+        List<User> usersList = userDao.findUser(aUser);
+        if (usersList.size() == 0)
+                return false;
+            else
+                return true;
     }
 }

@@ -3,6 +3,8 @@ package com.globallogic.javaee.service;
 import com.globallogic.javaee.dao.TopicDao;
 import com.globallogic.javaee.model.Topic;
 
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.List;
 
 /**
