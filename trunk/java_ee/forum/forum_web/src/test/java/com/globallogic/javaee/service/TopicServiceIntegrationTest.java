@@ -1,5 +1,6 @@
-package com.globallogic.javaee;
+package com.globallogic.javaee.service;
 
+import com.globallogic.javaee.AbstractTest;
 import com.globallogic.javaee.model.Topic;
 import com.globallogic.javaee.service.TopicService;
 import org.junit.Before;

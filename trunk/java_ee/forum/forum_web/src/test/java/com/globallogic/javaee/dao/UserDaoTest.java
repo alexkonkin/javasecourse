@@ -41,4 +41,28 @@ public class UserDaoTest extends AbstractTest
         User storedUser = allUsers.get(0);
         Assert.assertEquals(user.getLogin(), storedUser.getLogin());
     }
+
+    @Test
+    public void testFindUser(){
+        User user = new User();
+        user.setLogin("SENYA");
+        user.setPassword("123456");
+        user.setId(0);
+        userDao.createUser(user);
+        List<User> user1 = userDao.findUser(user);
+        Assert.assertEquals(user.getLogin(),user1.get(0).getLogin());
+        Assert.assertEquals(user.getPassword(),user1.get(0).getPassword());
+    }
+
+    @Test
+    public void testFindUserByLogin(){
+        User user = new User();
+        user.setLogin("SENYA");
+        user.setPassword("123456");
+        user.setId(0);
+        userDao.createUser(user);
+        List<User> user1 = userDao.findUserByLogin(user.getLogin());
+        Assert.assertEquals(user.getLogin(),user1.get(0).getLogin());
+    }
+
 }

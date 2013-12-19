@@ -10,7 +10,10 @@ package com.globallogic.javaee.dao;
 
 
 import com.globallogic.javaee.model.Topic;
+import com.globallogic.javaee.model.User;
 import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import java.util.List;
@@ -39,5 +42,4 @@ public class TopicDao extends HibernateDaoSupport
         //getHibernateTemplate().saveOrUpdate(topic);
         return Integer.valueOf(topic.getId());
     }
-
 }

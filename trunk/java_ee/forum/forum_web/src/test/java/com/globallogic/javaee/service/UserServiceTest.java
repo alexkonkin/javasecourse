@@ -6,6 +6,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -34,7 +36,8 @@ public class UserServiceTest extends AbstractTest
     @Test
     public void testRegisterNewUser() throws Exception
     {
-        // just a stub
+        User user = makeUser(0,"ALEX","123456");
+        userService.register(user);
     }
 
     @Test(expected = ServiceException.class)
