@@ -54,4 +54,5 @@ public class TopicServiceIntegrationTest extends AbstractTest {
         List<Topic> topicsList = topicService.findAllTopics();
         assertEquals("NEWS", topicsList.get(0).getName());
     }
+	
 }
