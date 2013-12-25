@@ -3,8 +3,6 @@ package com.globallogic.javaee.service;
 import com.globallogic.javaee.dao.TopicDao;
 import com.globallogic.javaee.model.Topic;
 
-import java.net.URL;
-import java.net.URLClassLoader;
 import java.util.List;
 
 /**
@@ -29,6 +27,10 @@ public class TopicService
 
     public Integer createTopic(String topicName){
         return topicDao.createTopic(topicName);
+    }
+
+    public Topic getTopicById (Integer anId){
+        return topicDao.getTopicById(anId);
     }
 
 }

@@ -1,5 +1,6 @@
 package com.globallogic.javaee;
 
+import com.globallogic.javaee.dao.MessageDao;
 import com.globallogic.javaee.dao.TopicDao;
 import com.globallogic.javaee.dao.UserDao;
 import com.globallogic.javaee.service.ServiceFactory;
@@ -10,15 +11,18 @@ import org.hibernate.SessionFactory;
 import org.hibernate.classic.Session;
 import org.junit.BeforeClass;
 import org.springframework.beans.factory.BeanDefinitionStoreException;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import java.sql.SQLException;
 
+//@ContextConfiguration(locations = "file:src/main/webapp/WEB-INF/applicationContext.xml")
 public abstract class AbstractTest
 {
     private static SessionFactory sessionFactory;
     protected static UserDao userDao;
     protected static TopicDao topicDao;
+    protected static MessageDao messageDao;
     protected static UserService userService;
     protected static TopicService topicService;
     private static ServiceFactory serviceFactory;
@@ -42,13 +46,16 @@ public abstract class AbstractTest
                     // if the configuration file is not found in the class-path
                     // then it is likely that the test is running from Ant. In
                     // this case the configuration file in root folder.
-                    context = new FileSystemXmlApplicationContext( "applicationContext.xml" );
+                    //context = new ClassPathXmlApplicationContext( "applicationContext.xml" );
+                    context = new FileSystemXmlApplicationContext("file:src/main/webapp/WEB-INF/applicationContext.xml");
+                    //context = new StaticApplicationContext();
                 }
             }
         };
 
         userDao = serviceFactory.getUserDao();
         topicDao = serviceFactory.getTopicDao();
+        messageDao = serviceFactory.getMessageDao();
 
         userService = serviceFactory.getUserService();
         topicService = serviceFactory.getTopicService();

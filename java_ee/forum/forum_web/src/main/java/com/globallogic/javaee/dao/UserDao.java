@@ -5,8 +5,6 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
-
-import javax.annotation.Resource;
 import java.util.List;
 
 public class UserDao extends HibernateDaoSupport
@@ -40,6 +38,7 @@ public class UserDao extends HibernateDaoSupport
                 .setParameter("login", aUser.getLogin())
                 .setParameter("password",aUser.getPassword())
                 .list();
+        aSession.close();
         return result;
     }
 
@@ -50,6 +49,7 @@ public class UserDao extends HibernateDaoSupport
         List<User> result = aSession.createQuery(hql)
                 .setParameter("login", aLogin)
                 .list();
+        aSession.close();
         return result;
     }
 

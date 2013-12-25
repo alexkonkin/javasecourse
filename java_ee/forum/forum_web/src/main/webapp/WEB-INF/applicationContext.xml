@@ -17,6 +17,7 @@
             <props>
                 <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
+                <!--prop key="hibernate.hbm2ddl.auto">update</prop-->
                 <prop key="hibernate.hbm2ddl.auto">update</prop>
             </props>
         </property>
@@ -24,6 +25,7 @@
             <list>
                 <value>com.globallogic.javaee.model.User</value>
                 <value>com.globallogic.javaee.model.Topic</value>
+                <value>com.globallogic.javaee.model.Message</value>
             </list>
         </property>
     </bean>
@@ -40,6 +42,11 @@
         </property>
     </bean>
 
+    <bean id="messageDao" class="com.globallogic.javaee.dao.MessageDao">
+        <property name="sessionFactory">
+            <ref local="sessionFactory" />
+        </property>
+    </bean>
 
     <bean id="userService" class="com.globallogic.javaee.service.UserService">
         <property name="userDao">
@@ -52,6 +59,13 @@
             <ref local="topicDao" />
         </property>
     </bean>
+
+    <bean id="messageService" class="com.globallogic.javaee.service.MessageService">
+        <property name="messageDao">
+            <ref local="messageDao" />
+        </property>
+    </bean>
+
 
     <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
