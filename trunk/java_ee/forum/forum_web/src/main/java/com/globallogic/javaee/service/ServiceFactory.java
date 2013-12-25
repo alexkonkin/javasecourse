@@ -1,5 +1,6 @@
 package com.globallogic.javaee.service;
 
+import com.globallogic.javaee.dao.MessageDao;
 import com.globallogic.javaee.dao.TopicDao;
 import com.globallogic.javaee.dao.UserDao;
 import org.hibernate.SessionFactory;
@@ -27,7 +28,7 @@ public class ServiceFactory
      */
     protected void initialize()
     {
-        context = new ClassPathXmlApplicationContext( "applicationContext.xml" );
+        context = new ClassPathXmlApplicationContext( "WEB-INF/applicationContext.xml" );
     }
 
     /**
@@ -62,6 +63,9 @@ public class ServiceFactory
         return context.getBean( "topicDao", TopicDao.class );
     }
 
+    public MessageDao getMessageDao() {
+        return context.getBean( "messageDao", MessageDao.class );
+    }
 
     /**
      * Returns session factory
@@ -70,5 +74,4 @@ public class ServiceFactory
     {
         return context.getBean( "sessionFactory", SessionFactory.class );
     }
-
 }

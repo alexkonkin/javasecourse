@@ -10,7 +10,6 @@ package com.globallogic.javaee.dao;
 
 
 import com.globallogic.javaee.model.Topic;
-import com.globallogic.javaee.model.User;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -40,6 +39,17 @@ public class TopicDao extends HibernateDaoSupport
         topic.setName(topicName);
         getHibernateTemplate().persist(topic);
         //getHibernateTemplate().saveOrUpdate(topic);
-        return Integer.valueOf(topic.getId());
+        return topic.getId();
+    }
+
+    public Topic getTopicById(Integer anId){
+        SessionFactory sessionFactory = getSessionFactory();
+        Session aSession = sessionFactory.openSession();
+        String hql = "from TOPICS t where t.id = :id";
+        List<Topic> topic = aSession.createQuery(hql)
+                .setParameter("id", anId)
+                .list();
+        aSession.close();
+        return topic.get(0);
     }
 }

@@ -2,7 +2,6 @@ package com.globallogic.javaee.service;
 
 import com.globallogic.javaee.AbstractTest;
 import com.globallogic.javaee.model.Topic;
-import com.globallogic.javaee.service.TopicService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +17,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations="classpath:applicationContext.xml")
+@ContextConfiguration(locations = "file:src/main/webapp/WEB-INF/applicationContext.xml")
 @TransactionConfiguration(defaultRollback=true,transactionManager="transactionManager")
 public class TopicServiceIntegrationTest extends AbstractTest {
     @Resource

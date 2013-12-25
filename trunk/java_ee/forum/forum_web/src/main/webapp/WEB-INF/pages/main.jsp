@@ -54,7 +54,7 @@
     </tr>
     <c:forEach var="topic" items="${topics}" varStatus="topicLoop">
         <tr>
-            <td>${topic.name}</td>
+            <td><a href="<c:url value="http://localhost:8181/topic?topicId=${topic.id}"/>">${topic.name}</a></td>
          </tr>
     </c:forEach>
 </table>
