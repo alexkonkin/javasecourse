@@ -1,7 +1,9 @@
 package com.globallogic.javaee.controllers;
 
+import com.globallogic.javaee.model.Message;
 import com.globallogic.javaee.model.Topic;
 import com.globallogic.javaee.model.User;
+import com.globallogic.javaee.service.MessageService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.ModelMap;
@@ -15,6 +17,7 @@ import com.globallogic.javaee.service.UserService;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 
 @Controller
@@ -25,6 +28,9 @@ public class TopicsPageController {
 
     @Resource
     UserService userService;
+
+    @Resource
+    MessageService messageService;
 
     @ModelAttribute("user")
     public User createModel() {
@@ -38,6 +44,8 @@ public class TopicsPageController {
 
         System.out.println("topic get controller : "+ topicId);
         Topic aTopic = topicService.getTopicById(topicId);
+
+        //List <Message> = messageService.getMessageByTopicId(0);
 
         model.addAttribute("topic", aTopic);
 
