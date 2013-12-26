@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/Message.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/MessageDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/MessageDaoTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/MessageService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/TopicsPageController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/topic.jsp" />
-      <change type="DELETED" beforePath="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\forum\forum_web\src\main\resources\applicationContext.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\forum\forum_web\src\main\java\com\springapp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources" afterPath="$PROJECT_DIR$/src/main/resources" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/AbstractTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/AbstractTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/springapp/mvc/AppTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/springapp/mvc/AppTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/ServiceFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/ServiceFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/TopicService.java" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/TopicService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/TopicServiceIntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/TopicServiceIntegrationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum_web.iml" afterPath="$PROJECT_DIR$/forum_web.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/TopicsPageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/TopicsPageController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="forum_web.iws" />
@@ -37,7 +15,7 @@
     <file path="$PROJECT_DIR$/src/test/java/javaee/dao/TopicDaoTest.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1386951493741" ignored="false" />
     <file path="$PROJECT_DIR$/src/test/java/javaee/dao/UserDaoTest.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1386951493744" ignored="false" />
     <file path="/fragment.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1387986194818" ignored="false" />
-    <file path="/Dummy.txt" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1387988956150" ignored="false" />
+    <file path="/Dummy.txt" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1387988986449" ignored="false" />
     <file path="/a.txt" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1387525490972" ignored="false" />
     <file path="/mvc-dispatcher-servlet.xml" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1387445590498" ignored="false" />
     <file path="/web.xml" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1387980377779" ignored="false" />
@@ -50,7 +28,7 @@
     <file path="/TopicServiceIntegrationTest.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1387467856801" ignored="false" />
     <file path="/TopicDao.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1387988556399" ignored="false" />
     <file path="$PROJECT_DIR$/../forum_spring/src/test/java/com/globallogic/javaee/TopicServiceIntegrationTest.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1387471067905" ignored="false" />
-    <file path="/TopicsPageController.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1387958963976" ignored="false" />
+    <file path="/TopicsPageController.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1387989122870" ignored="false" />
     <file path="/topic.jsp" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1387961380398" ignored="false" />
     <file path="/TopicService.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1387958256737" ignored="false" />
     <file path="/applicationContext.xml" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1387977735509" ignored="false" />
@@ -127,10 +105,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TopicsPageController.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TopicsPageController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/TopicsPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="126" selection-start="1556" selection-end="1556" vertical-scroll-proportion="0.4390863">
+            <state line="47" column="10" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,17 +161,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopicDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="28" selection-start="1359" selection-end="1359" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MessageDao.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/MessageDao.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -215,7 +182,18 @@
       <file leaf-file-name="TopicServiceIntegrationTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/TopicServiceIntegrationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
+            <state line="48" column="27" selection-start="1602" selection-end="1602" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="13" selection-start="136" selection-end="136" vertical-scroll-proportion="0.24156305">
               <folding />
             </state>
           </provider>
@@ -252,10 +230,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/MessageDao.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/TopicServiceIntegrationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/TopicService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/TopicsPageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/AbstractTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/TopicsPageController.java" />
       </list>
     </option>
   </component>
@@ -352,107 +330,77 @@
               <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="forum_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forum_web" />
+              <option name="myItemId" value="mvc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forum_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forum_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forum_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forum_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MessageDaoTest" />
+              <option name="myItemId" value="AppTests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forum_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forum_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javaee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forum_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forum_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javaee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1185,11 +1133,16 @@
       <created>1386948447022</created>
       <updated>1386948447022</updated>
     </task>
+    <task id="LOCAL-00001" summary="forum_web: TopicController has been added to the project, Message entity,dao and service have been added to the project">
+      <created>1387989022124</created>
+      <updated>1387989022124</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1202,7 +1155,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.53177255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27759197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1210,8 +1163,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23959444" sideWeight="0.46822742" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42697883" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23959444" sideWeight="0.6566332" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34336677" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1286,11 +1239,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_25/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="356" column="0" selection-start="13549" selection-end="13549" vertical-scroll-proportion="0.030630631" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/MessageService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="61" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0">
@@ -1349,13 +1297,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/TopicServiceIntegrationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/TopicService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
@@ -1402,10 +1343,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/TopicsPageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="126" selection-start="1556" selection-end="1556" vertical-scroll-proportion="0.4390863">
+        <state line="47" column="10" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/TopicServiceIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="27" selection-start="1602" selection-end="1602" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="136" selection-end="136" vertical-scroll-proportion="0.24156305">
+          <folding />
         </state>
       </provider>
     </entry>
