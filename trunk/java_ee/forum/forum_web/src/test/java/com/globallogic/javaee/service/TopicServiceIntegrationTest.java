@@ -2,6 +2,7 @@ package com.globallogic.javaee.service;
 
 import com.globallogic.javaee.AbstractTest;
 import com.globallogic.javaee.model.Topic;
+import com.globallogic.javaee.model.User;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,15 +19,17 @@ import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "file:src/main/webapp/WEB-INF/applicationContext.xml")
-@TransactionConfiguration(defaultRollback=true,transactionManager="transactionManager")
+//@TransactionConfiguration(defaultRollback=true,transactionManager="transactionManager")
 public class TopicServiceIntegrationTest extends AbstractTest {
-    @Resource
-    TopicService topicService;
+
+    //@Resource
+    //TopicService topicService;
 
     @Before
     public void init() throws SQLException
     {
-        executeUpdateExpressions("delete from TOPICS");
+        //executeUpdateExpressions("delete from MESSAGES",
+        //        "delete from TOPICS");
     }
 
     @Test
@@ -45,8 +48,23 @@ public class TopicServiceIntegrationTest extends AbstractTest {
 
     @Test
     public void CreateTopicTest(){
-        topicService.createTopic("NEWS");
+        User aUser = new User();
+        aUser.setId(0);
+        aUser.setLogin("test");
+        aUser.setPassword("123456");
+        try {
+            userService.register(aUser);
+        } catch (ServiceException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        /*
+        Topic aTopic = new Topic();
+        aTopic.setUser(aUser);
+
+        topicService.createTopic(aTopic);
         List<Topic> topicsList = topicService.findAllTopics();
         assertEquals("NEWS", topicsList.get(0).getName());
+        */
     }
 }

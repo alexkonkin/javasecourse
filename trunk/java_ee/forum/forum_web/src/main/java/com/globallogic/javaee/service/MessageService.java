@@ -2,14 +2,23 @@ package com.globallogic.javaee.service;
 
 import com.globallogic.javaee.dao.MessageDao;
 import com.globallogic.javaee.model.Message;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 /**
  * Represents the services related with the User.
  */
+
+@Service
+@Transactional(propagation= Propagation.REQUIRED, readOnly=false)
 public class MessageService
 {
+    //@Autowired
+    //private MessageDao messageDao;
     private MessageDao messageDao;
 
     public void setMessageDao(MessageDao messageDao)
