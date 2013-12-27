@@ -14,6 +14,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -33,13 +34,18 @@ public class TopicDao extends HibernateDaoSupport
         return (List<Topic>)allTopicsCriteria.list();
     }
 
-    public int createTopic(String topicName)
+    //public int createTopic(String topicName)
+    public int createTopic(Topic aTopic)
     {
-        Topic topic = new Topic();
-        topic.setName(topicName);
-        getHibernateTemplate().persist(topic);
+        //Topic topic = new Topic();
+        //topic.setName(topicName);
+        getHibernateTemplate().save(aTopic);
+        //getHibernateTemplate().save(aTopic);
         //getHibernateTemplate().saveOrUpdate(topic);
-        return topic.getId();
+
+        //return aTopic.getId();
+        int Id = aTopic.getId();
+        return Id;
     }
 
     public Topic getTopicById(Integer anId){

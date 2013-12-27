@@ -15,7 +15,10 @@ public class UserDaoTest extends AbstractTest
     @Before
     public void init() throws SQLException
     {
-        executeUpdateExpressions("delete from USERS");
+        executeUpdateExpressions(
+                "delete from MESSAGES",
+                "delete from TOPICS",
+                "delete from USERS");
     }
 
     @Test
@@ -30,13 +33,13 @@ public class UserDaoTest extends AbstractTest
     public void testCreateAndFindAllUsers()
     {
         User user = new User();
-        user.setLogin("SENYA");
+        user.setLogin("petya");
         user.setPassword("123456");
         user.setId(0);
         userDao.createUser(user);
 
         List<User> allUsers = userDao.findAllUsers();
-        Assert.assertEquals(1, allUsers.size());
+        Assert.assertTrue(allUsers.size() >=1 );
 
         User storedUser = allUsers.get(0);
         Assert.assertEquals(user.getLogin(), storedUser.getLogin());

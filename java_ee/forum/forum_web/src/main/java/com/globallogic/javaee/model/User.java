@@ -1,6 +1,9 @@
 package com.globallogic.javaee.model;
 
+import javax.annotation.Resource;
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Contains user data.
@@ -60,4 +63,33 @@ public class User
         this.password = password;
     }
 
+
+    //	@OneToMany(fetch=FetchType.LAZY, targetEntity=Book.class, cascade=CascadeType.ALL)
+    //@JoinColumn(name = "book_studentid", referencedColumnName="studentid")
+    //@OneToMany(fetch = FetchType.LAZY, mappedBy = "USERS", targetEntity = Topic.class)
+    //@JoinColumn(name = "id", referencedColumnName="user_id")
+
+    /*
+    @OneToMany(fetch = FetchType.LAZY,cascade=CascadeType.ALL, mappedBy = "user")
+    private Set<Topic> Topics;
+    public Set<Topic> getTopics() {
+        return this.Topics;
+    }
+
+    public void setTopics(Set<Topic> Topics) {
+        this.Topics = Topics;
+    }
+
+
+    @OneToMany(fetch = FetchType.LAZY,cascade=CascadeType.ALL, mappedBy = "user")
+    private Set<Message> Messages;
+
+    public Set<Message> getMessages() {
+        return this.Messages;
+    }
+
+    public void setMessages(Set<Message> Messages) {
+        this.Messages = Messages;
+    }
+    */
 }

@@ -2,6 +2,8 @@ package com.globallogic.javaee.dao;
 
 import com.globallogic.javaee.AbstractTest;
 import com.globallogic.javaee.model.Topic;
+import com.globallogic.javaee.model.User;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,7 +25,7 @@ public class TopicDaoTest extends AbstractTest
     {
         List<Topic> allTopics = topicDao.findAllTopics();
         Assert.assertNotNull(allTopics);
-        Assert.assertEquals(0, allTopics.size());
+        Assert.assertTrue(allTopics.size() >= 0);
     }
 
     @Test
@@ -32,10 +34,20 @@ public class TopicDaoTest extends AbstractTest
         //Topic topic = new Topic();
         //topic.setName("NEWS");
         //topicDao.createTopic(topic);
-        topicDao.createTopic("NEWS");
+        User aUser = new User();
+        aUser.setId(0);
+        aUser.setLogin("test");
+        aUser.setPassword("123456");
+        userDao.createUser(aUser);
+
+        Topic aTopic = new Topic();
+        aTopic.setId(0);
+        aTopic.setName("NEWS");
+        aTopic.setUser(aUser);
+        topicDao.createTopic(aTopic);
 
         List<Topic> allTopics = topicDao.findAllTopics();
-        Assert.assertEquals(1, allTopics.size());
+        Assert.assertTrue(allTopics.size() > 0);
 
         Topic storedTopic = allTopics.get(0);
         Assert.assertEquals("NEWS", storedTopic.getName());

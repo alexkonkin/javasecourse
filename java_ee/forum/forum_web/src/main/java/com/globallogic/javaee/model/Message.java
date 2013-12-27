@@ -29,6 +29,7 @@ public class Message
         this.id = id;
     }
 
+    /*
     @Column(name = "id_topic")
     private int id_topic;
 
@@ -49,6 +50,30 @@ public class Message
 
     public void setIdUser(int id_user) {
         this.id = id_user;
+    }
+    */
+
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "ID_USER")
+    private User user;
+    public User getUser() {
+        return this.user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "ID_TOPIC")
+    private Topic topic;
+    public Topic getTopic() {
+        return this.topic;
+    }
+
+
+    public void setTopic(Topic topic) {
+        this.topic = topic;
     }
 
     @Column(name="content")

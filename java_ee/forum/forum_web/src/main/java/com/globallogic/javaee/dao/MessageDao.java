@@ -13,9 +13,17 @@ import com.globallogic.javaee.model.Message;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Expression;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+import org.springframework.test.context.transaction.TransactionConfiguration;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
+import java.io.Serializable;
 import java.util.List;
+
 
 public class MessageDao extends HibernateDaoSupport
 {
@@ -25,6 +33,7 @@ public class MessageDao extends HibernateDaoSupport
      *
      * @return the list of all users, empty list if there are no users.
      */
+
     @SuppressWarnings("unchecked")
     public List<Message> findAllMessages()
     {
@@ -35,9 +44,17 @@ public class MessageDao extends HibernateDaoSupport
 
     public int createMessage(Message aMessage)
     {
-        getHibernateTemplate().persist(aMessage);
-        //getHibernateTemplate().saveOrUpdate(topic);
-        return aMessage.getId();
+        //getSessionFactory->Session
+        //Session session = getSessionFactory().getCurrentSession();
+        //session.save(aMessage);
+
+        //this.getSession().save(aMessage);     //getCurrentSession().save(aMessage);
+
+        getHibernateTemplate().save(aMessage);
+        int Id = aMessage.getId();
+        //this.getSession().close();
+
+        return Id;
     }
 
     public Message getMessageById(Integer anId){
@@ -55,6 +72,7 @@ public class MessageDao extends HibernateDaoSupport
         SessionFactory sessionFactory = getSessionFactory();
         Session aSession = sessionFactory.openSession();
         String hql = "from MESSAGES m where m.id_topic = :id_topic";
+        //Expression?
         List<Message> message = aSession.createQuery(hql)
                 .setParameter("id_topic", aTopicId)
                 .list();

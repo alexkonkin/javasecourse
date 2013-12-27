@@ -2,12 +2,16 @@ package com.globallogic.javaee.service;
 
 import com.globallogic.javaee.dao.TopicDao;
 import com.globallogic.javaee.model.Topic;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 /**
  * Represents the services related with the Topic.
  */
+
+@Transactional(propagation= Propagation.REQUIRED, readOnly=false)
 public class TopicService
 {
     private TopicDao topicDao;
@@ -25,8 +29,8 @@ public class TopicService
         return topicDao.findAllTopics();
     }
 
-    public Integer createTopic(String topicName){
-        return topicDao.createTopic(topicName);
+    public Integer createTopic(Topic aTopic){
+        return topicDao.createTopic(aTopic);
     }
 
     public Topic getTopicById (Integer anId){

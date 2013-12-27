@@ -8,10 +8,12 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.SQLException;
 import java.util.List;
 
+@Transactional
 @ContextConfiguration(locations = "file:src/main/webapp/WEB-INF/applicationContext.xml")
 public class MessageDaoTest extends AbstractTest
 {
@@ -19,15 +21,24 @@ public class MessageDaoTest extends AbstractTest
     @Before
     public void init() throws SQLException
     {
+        /*
         executeUpdateExpressions(
+                "delete from TOPICS",
                 "delete from USERS",
                 "insert into USERS (ID, LOGIN, PASSWORD) values (0,'PETYA','123456')",
                 "insert into USERS (ID, LOGIN, PASSWORD) values (1,'VASYA','123456')",
                 "insert into USERS (ID, LOGIN, PASSWORD) values (2,'SENYA','123456')");
         executeUpdateExpressions(
-                "delete from TOPICS",
-                "insert into TOPICS (ID,NAME) values (0,'NEWS')");
+                "insert into TOPICS (ID,NAME, ID_USER) values (0,'NEWS',0)");
         executeUpdateExpressions("delete from MESSAGES");
+        */
+
+
+        executeUpdateExpressions(
+                "delete from MESSAGES",
+                "delete from TOPICS",
+                "delete from USERS");
+
 
     }
 
@@ -36,24 +47,68 @@ public class MessageDaoTest extends AbstractTest
     {
         List<Message> allMessages = messageDao.findAllMessages();
         Assert.assertNotNull(allMessages);
-        Assert.assertEquals(0, allMessages.size());
+        Assert.assertEquals (0, allMessages.size());
     }
 
 
     @Test
     public void testCreateMessage()
     {
-        List<Topic> allTopics = topicDao.findAllTopics();
-        List<User> allUsers = userDao.findAllUsers();
+
+        User user = new User();
+        user.setLogin("petya");
+        user.setPassword("123456");
+        userDao.createUser(user);
+
+        Topic topic = new Topic();
+        topic.setName("NEWS");
+        topic.setUser(user);
+        topicDao.createTopic(topic);
 
         Message aMessage = new Message();
         aMessage.setId(0);
-        aMessage.setIdTopic(allTopics.get(0).getId());
-        aMessage.setIdUser(allUsers.get(0).getId());
+
+        aMessage.setUser(user);
+        aMessage.setTopic(topic);
+
         aMessage.setContent("test content");
+
         Integer messageId = messageDao.createMessage(aMessage);
+
         Assert.assertNotNull(messageId);
     }
+
+    @Test
+    public void testCreateMessageExistingUserAndTopic()
+    {
+        User user = new User();
+        user.setLogin("petya");
+        user.setPassword("123456");
+        userDao.createUser(user);
+
+        Topic topic = new Topic();
+        topic.setName("NEWS");
+        topic.setUser(user);
+        topicDao.createTopic(topic);
+
+
+        User user1 = userService.findAllUsers().get(0);
+        Topic topic1 = topicService.findAllTopics().get(0);
+
+        Message aMessage = new Message();
+        aMessage.setId(0);
+
+        aMessage.setUser(user1);
+        aMessage.setTopic(topic1);
+
+        aMessage.setContent("test content");
+
+        Integer messageId = messageDao.createMessage(aMessage);
+
+        Assert.assertNotNull(messageId);
+    }
+
+
 
     @Test
     public void testGetMessageById()
@@ -63,9 +118,12 @@ public class MessageDaoTest extends AbstractTest
 
         Message aMessage = new Message();
         aMessage.setId(0);
-        aMessage.setIdTopic(allTopics.get(0).getId());
-        aMessage.setIdUser(allUsers.get(0).getId());
+
+        //aMessage.setUser(allUsers.get(0));
+        //aMessage.setTopic(allTopics.get(0));
+
         aMessage.setContent("test content");
+
         Integer messageId = messageDao.createMessage(aMessage);
 
         List<Message> allMessages = messageDao.findAllMessages();
@@ -76,6 +134,8 @@ public class MessageDaoTest extends AbstractTest
         Assert.assertEquals(allMessages.get(0).getId() , aTempMessage.getId());
     }
 
+
+    /*
     @Test
     public void testGetMessagesByTopicId()
     {
@@ -84,8 +144,10 @@ public class MessageDaoTest extends AbstractTest
 
         Message aMessage = new Message();
         aMessage.setId(0);
-        aMessage.setIdTopic(allTopics.get(0).getId());
-        aMessage.setIdUser(allUsers.get(0).getId());
+
+        //aMessage.setUser(allUsers.get(0));
+        //aMessage.setTopic(allTopics.get(0));
+
         aMessage.setContent("test content");
         Integer messageId = messageDao.createMessage(aMessage);
 
@@ -94,6 +156,6 @@ public class MessageDaoTest extends AbstractTest
 
         Assert.assertEquals("test content",allMessages.get(0).getContent());
     }
-
+    */
 
 }

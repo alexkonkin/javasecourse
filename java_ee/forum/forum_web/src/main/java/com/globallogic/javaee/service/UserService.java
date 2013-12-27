@@ -3,12 +3,16 @@ package com.globallogic.javaee.service;
 import com.globallogic.javaee.dao.UserDao;
 import com.globallogic.javaee.model.User;
 import org.apache.commons.lang.NotImplementedException;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 /**
  * Represents the services related with the User.
  */
+
+@Transactional(propagation= Propagation.REQUIRED, readOnly=false)
 public class UserService
 {
     private UserDao userDao;
