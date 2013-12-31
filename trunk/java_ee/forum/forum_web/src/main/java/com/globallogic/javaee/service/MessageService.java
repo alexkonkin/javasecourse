@@ -2,6 +2,7 @@ package com.globallogic.javaee.service;
 
 import com.globallogic.javaee.dao.MessageDao;
 import com.globallogic.javaee.model.Message;
+import com.globallogic.javaee.model.Topic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -13,7 +14,6 @@ import java.util.List;
  * Represents the services related with the User.
  */
 
-@Service
 @Transactional(propagation= Propagation.REQUIRED, readOnly=false)
 public class MessageService
 {
@@ -38,8 +38,11 @@ public class MessageService
         return messageDao.getMessageById(anId);
     }
 
-    public List<Message> getMessageByTopicId (Integer aTopicId){
-        return messageDao.getMessagesListByTopicId(aTopicId);
+    public List<Message> getMessageByTopicId (Topic aTopic){
+        return messageDao.getMessagesListByTopicId(aTopic);
     }
 
+    public int createMessage(Message aMessage){
+        return messageDao.createMessage(aMessage);
+    }
 }

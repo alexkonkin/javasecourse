@@ -3,6 +3,7 @@ package com.globallogic.javaee;
 import com.globallogic.javaee.dao.MessageDao;
 import com.globallogic.javaee.dao.TopicDao;
 import com.globallogic.javaee.dao.UserDao;
+import com.globallogic.javaee.service.MessageService;
 import com.globallogic.javaee.service.ServiceFactory;
 import com.globallogic.javaee.service.TopicService;
 import com.globallogic.javaee.service.UserService;
@@ -25,6 +26,7 @@ public abstract class AbstractTest
     protected static MessageDao messageDao;
     protected static UserService userService;
     protected static TopicService topicService;
+    protected static MessageService messageService;
     private static ServiceFactory serviceFactory;
 
     @BeforeClass
@@ -59,6 +61,7 @@ public abstract class AbstractTest
 
         userService = serviceFactory.getUserService();
         topicService = serviceFactory.getTopicService();
+        messageService = serviceFactory.getMessageService();
 
         sessionFactory = serviceFactory.getSessionFactory();
     }

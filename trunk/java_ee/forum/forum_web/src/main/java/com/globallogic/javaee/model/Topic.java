@@ -11,12 +11,14 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 import com.globallogic.javaee.model.User;
+import org.hibernate.annotations.Proxy;
 
 /**
  * Contains user data.
  */
 
 @Entity(name = "TOPICS")
+@Proxy(lazy=false)
 public class Topic
 {
 

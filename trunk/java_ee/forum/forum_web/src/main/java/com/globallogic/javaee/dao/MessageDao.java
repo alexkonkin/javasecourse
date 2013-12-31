@@ -10,6 +10,7 @@ package com.globallogic.javaee.dao;
 
 
 import com.globallogic.javaee.model.Message;
+import com.globallogic.javaee.model.Topic;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -64,19 +65,19 @@ public class MessageDao extends HibernateDaoSupport
         List<Message> message = aSession.createQuery(hql)
                 .setParameter("id", anId)
                 .list();
-        aSession.close();
+        //aSession.close();
         return message.get(0);
     }
 
-    public List<Message> getMessagesListByTopicId(Integer aTopicId){
+    public List<Message> getMessagesListByTopicId(Topic aTopic){
         SessionFactory sessionFactory = getSessionFactory();
         Session aSession = sessionFactory.openSession();
-        String hql = "from MESSAGES m where m.id_topic = :id_topic";
+        String hql = "from MESSAGES m where m.topic = :topic";
         //Expression?
         List<Message> message = aSession.createQuery(hql)
-                .setParameter("id_topic", aTopicId)
+                .setParameter("topic", aTopic)
                 .list();
-        aSession.close();
+        //aSession.close();
         return message;
     }
 

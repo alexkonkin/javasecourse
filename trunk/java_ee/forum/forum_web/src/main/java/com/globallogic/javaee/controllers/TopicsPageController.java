@@ -4,6 +4,7 @@ import com.globallogic.javaee.model.Message;
 import com.globallogic.javaee.model.Topic;
 import com.globallogic.javaee.model.User;
 import com.globallogic.javaee.service.MessageService;
+import com.globallogic.javaee.service.ServiceFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.ModelMap;
@@ -25,10 +26,6 @@ import java.util.List;
 public class TopicsPageController {
     @Resource
     TopicService topicService;
-
-    @Resource
-    UserService userService;
-
     @Resource
     MessageService messageService;
 
@@ -37,27 +34,45 @@ public class TopicsPageController {
         return new User();
     }
 
+    @ModelAttribute("message")
+    public Message createMessage(){
+        return new Message();
+    }
+
     @RequestMapping(method = RequestMethod.GET)
     public String printForumTopics(@RequestParam("topicId") Integer topicId, ModelMap model) {
-        //List<Topic> topicsList = topicService.findAllTopics();
-        //model.addAttribute("topics", topicsList);
-
         System.out.println("topic get controller : "+ topicId);
         Topic aTopic = topicService.getTopicById(topicId);
 
-        //List <Message> = messageService.getMessageByTopicId(0);
+        List<Message> aMessages =  messageService.getMessageByTopicId(aTopic);
+
+        System.out.println(aMessages.get(0).getContent());
+        System.out.println(aMessages.get(0).getTopic().getName());
+        System.out.println(aMessages.get(0).getUser().getLogin());
 
         model.addAttribute("topic", aTopic);
+        model.addAttribute("messages",aMessages);
 
         return "topic";
     }
 
-    @RequestMapping(value = "/topic/add", method = RequestMethod.POST)
-    public String registerUser(@ModelAttribute(value="user") User user, /*BindingResult result*/ModelMap modelMap,HttpSession session)
+    @RequestMapping(value = "addMessage", method = RequestMethod.POST)
+    public String registerUser(@ModelAttribute(value="message") Message message,/*BindingResult result*/ModelMap modelMap,HttpSession session)
     {
-        //session.setAttribute("userCredentials", user);
 
-        return "redirect:/topic";
+        Integer id = message.getTopic().getId();
+        /*
+        System.out.println(message.getContent());
+        System.out.println ("current user login is "+ message.getUser().getLogin());
+        System.out.println ("current user password is "+ message.getUser().getPassword());
+        System.out.println ("current user id is "+ message.getUser().getId());
+        System.out.println ("current topic id is "+ message.getTopic().getId());
+        System.out.println ("current topic Name is "+ message.getTopic().getName());
+        */
+        message.getTopic().setUser(message.getUser());
+        messageService.createMessage(message);
+
+        return "redirect:/topic?topicId="+id;
     }
 
 }
