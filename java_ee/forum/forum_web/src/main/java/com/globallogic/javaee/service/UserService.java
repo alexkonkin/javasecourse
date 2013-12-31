@@ -58,4 +58,9 @@ public class UserService
             else
                 return true;
     }
+
+    public User findUserByLoginPassword(User aUser){
+        User result;
+        return result = userDao.findUser(aUser).get(0);
+    }
 }

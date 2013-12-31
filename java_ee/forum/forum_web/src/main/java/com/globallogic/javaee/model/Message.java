@@ -7,12 +7,15 @@ package com.globallogic.javaee.model;
  * Time: 5:46 PM
  * To change this template use File | Settings | File Templates.
  */
+import org.hibernate.annotations.Proxy;
+
 import javax.persistence.*;
 
 /**
  * Contains user data.
  */
 @Entity(name = "MESSAGES")
+@Proxy(lazy=false)
 public class Message
 {
     @Id

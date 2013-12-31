@@ -135,27 +135,45 @@ public class MessageDaoTest extends AbstractTest
     }
 
 
-    /*
+
     @Test
     public void testGetMessagesByTopicId()
     {
-        List<Topic> allTopics = topicDao.findAllTopics();
-        List<User> allUsers = userDao.findAllUsers();
+        User user = new User();
+        user.setLogin("petya");
+        user.setPassword("123456");
+        userDao.createUser(user);
+
+        Topic topic = new Topic();
+        topic.setName("NEWS");
+        topic.setUser(user);
+        topicDao.createTopic(topic);
+
+
+        User user1 = userService.findAllUsers().get(0);
+        Topic topic1 = topicService.findAllTopics().get(0);
 
         Message aMessage = new Message();
         aMessage.setId(0);
 
-        //aMessage.setUser(allUsers.get(0));
-        //aMessage.setTopic(allTopics.get(0));
+        aMessage.setUser(user1);
+        aMessage.setTopic(topic1);
 
         aMessage.setContent("test content");
-        Integer messageId = messageDao.createMessage(aMessage);
+        messageDao.createMessage(aMessage);
+
 
         List<Topic> allTopics1 = topicDao.findAllTopics();
-        List<Message> allMessages = messageDao.getMessagesListByTopicId(allTopics1.get(0).getId());
+        //List<Message> allMessages = messageDao.getMessagesListByTopicId(allTopics1.get(0));
+        List<Message> allMessages = messageService.getMessageByTopicId(allTopics1.get(0));
+        User user2 = new User();
+        user2 = allMessages.get(0).getUser();
+        Topic topic2 = allMessages.get(0).getTopic();
 
         Assert.assertEquals("test content",allMessages.get(0).getContent());
+        Assert.assertEquals("petya",user2.getLogin());
+        Assert.assertEquals("NEWS",topic2.getName());
     }
-    */
+
 
 }

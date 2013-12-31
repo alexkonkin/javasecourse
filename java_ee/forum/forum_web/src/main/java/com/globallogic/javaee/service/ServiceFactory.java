@@ -47,6 +47,10 @@ public class ServiceFactory
         return context.getBean( "topicService", TopicService.class );
     }
 
+    public MessageService getMessageService() {
+        return context.getBean( "messageService", MessageService.class );
+    }
+
     /**
      * Returns user dao
      */
@@ -74,4 +78,5 @@ public class ServiceFactory
     {
         return context.getBean( "sessionFactory", SessionFactory.class );
     }
+
 }

@@ -1,5 +1,7 @@
 package com.globallogic.javaee.model;
 
+import org.hibernate.annotations.Proxy;
+
 import javax.annotation.Resource;
 import javax.persistence.*;
 import java.util.HashSet;
@@ -9,6 +11,7 @@ import java.util.Set;
  * Contains user data.
  */
 @Entity(name = "USERS")
+@Proxy(lazy=false)
 public class User
 {
     @Id

@@ -50,6 +50,8 @@ public class MainPage {
     {
         boolean isAuthenticated = false;
         isAuthenticated = userService.login(user);
+        if(isAuthenticated)
+            user = userService.findUserByLoginPassword(user);
         session.setAttribute("userCredentials", user);
         session.setAttribute("isAuthenticated", isAuthenticated);
         return "redirect:/";

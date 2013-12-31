@@ -57,6 +57,14 @@
             <td><a href="<c:url value="http://localhost:8181/topic?topicId=${topic.id}"/>">${topic.name}</a></td>
          </tr>
     </c:forEach>
+        <c:choose>
+            <c:when test="${isAuthenticated == true}">
+                <tr><td><a href="<c:url value="http://localhost:8181/newtopic"/>">Create a new topic</a></td></tr>
+            </c:when>
+            <c:otherwise>
+                <tr><td>Please login to create a new topic</td></tr>
+            </c:otherwise>
+        </c:choose>
 </table>
 
 </body>
