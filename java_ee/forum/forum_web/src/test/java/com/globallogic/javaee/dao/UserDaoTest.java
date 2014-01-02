@@ -1,6 +1,8 @@
 package com.globallogic.javaee.dao;
 
 import com.globallogic.javaee.AbstractTest;
+import com.globallogic.javaee.exceptions.UserWithGivenLoginAlreadyExists;
+import com.globallogic.javaee.exceptions.UserWithGivenLoginNotFound;
 import com.globallogic.javaee.model.User;
 import org.junit.Assert;
 import org.junit.Before;
@@ -39,7 +41,7 @@ public class UserDaoTest extends AbstractTest
         userDao.createUser(user);
 
         List<User> allUsers = userDao.findAllUsers();
-        Assert.assertTrue(allUsers.size() >=1 );
+        Assert.assertTrue(allUsers.size() >= 1);
 
         User storedUser = allUsers.get(0);
         Assert.assertEquals(user.getLogin(), storedUser.getLogin());
@@ -64,8 +66,15 @@ public class UserDaoTest extends AbstractTest
         user.setPassword("123456");
         user.setId(0);
         userDao.createUser(user);
-        List<User> user1 = userDao.findUserByLogin(user.getLogin());
-        Assert.assertEquals(user.getLogin(),user1.get(0).getLogin());
+        User user1 = null;
+        try {
+            user1 = userDao.findUserByLogin(user.getLogin());
+        } catch (UserWithGivenLoginNotFound userWithGivenLoginNotFound) {
+            System.out.println(userWithGivenLoginNotFound.toString());
+        } catch (UserWithGivenLoginAlreadyExists userWithGivenLoginAlreadyExists) {
+            System.out.println(userWithGivenLoginAlreadyExists.toString());
+        }
+        Assert.assertEquals(user.getLogin(),user1.getLogin());
     }
 
 }

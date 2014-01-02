@@ -45,7 +45,7 @@ public class MainPage {
         return "main";
     }
 
-    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String registerUser(@ModelAttribute(value="user") User user, /*BindingResult result*/ModelMap modelMap,HttpSession session)
     {
         boolean isAuthenticated = false;

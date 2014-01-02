@@ -70,8 +70,9 @@ public class TopicDao extends HibernateDaoSupport
                 .setParameter("name", aTopicName)
                 .list();
         aSession.close();
-        }else
+        }else{
             throw new TopicEmptyNameProhibited();
+        }
 
         if(topic.size() == 0 ) {
             throw new TopicWithGivenNameNotFound(aTopicName);

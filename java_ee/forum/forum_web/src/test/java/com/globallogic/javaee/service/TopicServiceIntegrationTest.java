@@ -1,6 +1,8 @@
 package com.globallogic.javaee.service;
 
 import com.globallogic.javaee.AbstractTest;
+import com.globallogic.javaee.exceptions.UserWithGivenLoginAlreadyExists;
+import com.globallogic.javaee.exceptions.UserWithGivenLoginNotFound;
 import com.globallogic.javaee.model.Topic;
 import com.globallogic.javaee.model.User;
 import org.junit.Before;
@@ -50,13 +52,11 @@ public class TopicServiceIntegrationTest extends AbstractTest {
     public void CreateTopicTest(){
         User aUser = new User();
         aUser.setId(0);
-        aUser.setLogin("test");
+        aUser.setLogin("petya");
         aUser.setPassword("123456");
-        try {
-            userService.register(aUser);
-        } catch (ServiceException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
+
+        userService.register(aUser);
+
 
         /*
         Topic aTopic = new Topic();
