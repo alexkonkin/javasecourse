@@ -8,6 +8,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@page isELIgnored="false"%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -21,11 +22,18 @@
     <tr>
         <th>This page is dedicated to topic : ${topic.name}</th>
     </tr>
-    <c:forEach var="message" items="${messages}" varStatus="topicLoop">
-        <tr>
-            <td>${message.content} ${message.user.login}</td>
-        </tr>
-    </c:forEach>
+    <c:choose>
+        <c:when test="${fn:length(messages) > 0 }">
+            <c:forEach var="message" items="${messages}" varStatus="topicLoop">
+                <tr>
+                <td>${message.content} ${message.user.login}</td>
+                </tr>
+            </c:forEach>
+        </c:when>
+        <c:otherwise>
+            <tr><td>This thread is empty, please add a first comment</td></tr>
+        </c:otherwise>
+    </c:choose>
 </table>
 <p>
 

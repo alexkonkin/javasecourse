@@ -10,6 +10,7 @@ package com.globallogic.javaee.dao;
 
 
 import com.globallogic.javaee.model.Topic;
+import com.globallogic.javaee.exceptions.*;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -58,4 +59,30 @@ public class TopicDao extends HibernateDaoSupport
         aSession.close();
         return topic.get(0);
     }
+
+    public Topic getTopicByName(String aTopicName) throws TopicWithGivenNameNotFound, TopicWithGivenNameAlreadyExists, TopicEmptyNameProhibited {
+        List<Topic> topic;
+        if(aTopicName.length() > 0){
+        SessionFactory sessionFactory = getSessionFactory();
+        Session aSession = sessionFactory.openSession();
+        String hql = "from TOPICS t where t.name = :name";
+        topic = aSession.createQuery(hql)
+                .setParameter("name", aTopicName)
+                .list();
+        aSession.close();
+        }else
+            throw new TopicEmptyNameProhibited();
+
+        if(topic.size() == 0 ) {
+            throw new TopicWithGivenNameNotFound(aTopicName);
+        }
+        else if (topic.get(0).getName().equals(aTopicName)){
+            throw new TopicWithGivenNameAlreadyExists(aTopicName);
+        }
+
+        return topic.get(0);
+    }
+
+
+
 }

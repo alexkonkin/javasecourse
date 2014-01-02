@@ -9,6 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@page isELIgnored="false"%>
 
 <html>
@@ -36,6 +37,10 @@
 </form:form>
 <p>
 
+<c:if test="${fn:length(sessionScope.createTopicStringResponse) > 0}">
+    <c:out value="${sessionScope.createTopicStringResponse}"/><br>
+    <c:remove var="createTopicStringResponse" scope="session"/>
+</c:if>
 
 <a href="<c:url value="/"/>">return to the main page</a>
 </body>

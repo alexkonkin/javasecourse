@@ -1,5 +1,8 @@
 package com.globallogic.javaee.controllers;
 
+import com.globallogic.javaee.exceptions.TopicEmptyNameProhibited;
+import com.globallogic.javaee.exceptions.TopicWithGivenNameAlreadyExists;
+import com.globallogic.javaee.exceptions.TopicWithGivenNameNotFound;
 import com.globallogic.javaee.model.Message;
 import com.globallogic.javaee.model.Topic;
 import com.globallogic.javaee.model.User;
@@ -35,10 +38,29 @@ public class NewTopicController {
     }
 
     @RequestMapping(value = "addTopic", method = RequestMethod.POST)
-    public String registerUser(@ModelAttribute(value="topic") Topic topic,/*BindingResult result*/ModelMap modelMap,HttpSession session)
+    public String registerUser(@ModelAttribute(value="topic") Topic topic,ModelMap model,HttpSession session)
     {
+        System.out.println("current user login is " + topic.getUser().getLogin());
+        System.out.println("current user password is " + topic.getUser().getPassword());
+        System.out.println("current user id is " + topic.getUser().getId());
+        String createTopicStringResponse = new String();
+        try {
+            topicService.getTopicByName(topic.getName());
+        }
+        catch (TopicWithGivenNameNotFound topicWithGivenNameNotFound) {
+            topicService.createTopic(topic);
+            createTopicStringResponse = "Topic " + topic.getName() + " successfully created";
+        }
+        catch (TopicWithGivenNameAlreadyExists topicWithGivenNameAlreadyExists){
+            createTopicStringResponse = topicWithGivenNameAlreadyExists.toString();
+        }
+        catch (TopicEmptyNameProhibited topicEmptyNameProhibited){
+            createTopicStringResponse = topicEmptyNameProhibited.toString();
+        }
 
-        return "redirect:/createTopic";
+        //model.addAttribute("createTopicStringResponse", createTopicStringResponse);
+        session.setAttribute("createTopicStringResponse", createTopicStringResponse);
+        return "redirect:/newtopic";
     }
 
 }
