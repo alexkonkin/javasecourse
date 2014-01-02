@@ -5,6 +5,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+import com.globallogic.javaee.exceptions.*;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -46,7 +47,7 @@ public class UserDao extends HibernateDaoSupport
         return result;
     }
 
-    public List<User> findUserByLogin(String aLogin){
+    public User findUserByLogin(String aLogin) throws UserWithGivenLoginNotFound, UserWithGivenLoginAlreadyExists{
         SessionFactory sessionFactory = getSessionFactory();
         Session aSession = sessionFactory.openSession();
         String hql = "from USERS s where s.login = :login";
@@ -54,7 +55,13 @@ public class UserDao extends HibernateDaoSupport
                 .setParameter("login", aLogin)
                 .list();
         aSession.close();
-        return result;
+        if(result.size() == 0) {
+            throw new UserWithGivenLoginNotFound(aLogin);
+        }else if(result.get(0).getLogin().equals(aLogin)){
+            throw new UserWithGivenLoginAlreadyExists(aLogin);
+        }
+
+        return result.get(0);
     }
 
 

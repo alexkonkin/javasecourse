@@ -2,6 +2,7 @@ package com.globallogic.javaee.service;
 
 import com.globallogic.javaee.dao.UserDao;
 import com.globallogic.javaee.model.User;
+import com.globallogic.javaee.exceptions.*;
 import org.apache.commons.lang.NotImplementedException;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -36,18 +37,14 @@ public class UserService
      * @param user the user to register
      * @throws ServiceException if user with the same name already exists
      */
-    public void register(User user) throws ServiceException
+    public void register(User user)
     {
-        // if user already exists
-        //throw new ServiceException("Unable to register new user. The user with name " + user.getLogin()+ " already exists.");
-        // else
-        // register new user
-        //List<User> usersList = userDao.findUser()
-        List<User> usersList = userDao.findUserByLogin(user.getLogin());
-        if (usersList.size() == 0){
-            userDao.createUser(user);
-        }else
-            throw new ServiceException("Unable to register new user. The user with name " + user.getLogin()+ " already exists.");
+        userDao.createUser(user);
+    }
+
+    public void findUserByLogin(String aLogin) throws UserWithGivenLoginNotFound, UserWithGivenLoginAlreadyExists
+    {
+        userDao.findUserByLogin(aLogin);
     }
 
     public boolean login( User aUser )

@@ -40,9 +40,11 @@ public class NewTopicController {
     @RequestMapping(value = "addTopic", method = RequestMethod.POST)
     public String registerUser(@ModelAttribute(value="topic") Topic topic,ModelMap model,HttpSession session)
     {
+        /*
         System.out.println("current user login is " + topic.getUser().getLogin());
         System.out.println("current user password is " + topic.getUser().getPassword());
         System.out.println("current user id is " + topic.getUser().getId());
+        */
         String createTopicStringResponse = new String();
         try {
             topicService.getTopicByName(topic.getName());

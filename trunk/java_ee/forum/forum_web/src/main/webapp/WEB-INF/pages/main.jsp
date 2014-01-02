@@ -23,7 +23,7 @@
 <h3>Forum's main page</h3>
 <br>
 
-<form:form method="post" action="/register" commandName="user">
+<form:form method="post" action="/login" commandName="user">
     <table>
         <tr>
             <td><form:label path="login">login</form:label></td>
@@ -34,13 +34,13 @@
             <td><form:input path="password" /></td>
         </tr>
         <tr>
-            <td colspan="2">
             <td ><input type="submit" value="Submit"/></td>
-            </td>
         </tr>
     </table>
 </form:form>
-
+<p>
+<a href="<c:url value="http://localhost:8181/register"/>">Don't have user account?Click here to register</a>
+<p>
 <!--c:out value="login is : ${sessionScope.userCredentials.login}"/><br-->
 <!--c:out value="password is : ${sessionScope.userCredentials.password}"/-->
 <c:if test="${isAuthenticated}">
