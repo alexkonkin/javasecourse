@@ -46,10 +46,11 @@ public class TopicsPageController {
 
         List<Message> aMessages =  messageService.getMessageByTopicId(aTopic);
 
+        /*
         System.out.println(aMessages.get(0).getContent());
         System.out.println(aMessages.get(0).getTopic().getName());
         System.out.println(aMessages.get(0).getUser().getLogin());
-
+        */
         model.addAttribute("topic", aTopic);
         model.addAttribute("messages",aMessages);
 

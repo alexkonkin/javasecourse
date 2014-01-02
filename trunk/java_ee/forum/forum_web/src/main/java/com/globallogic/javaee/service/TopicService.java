@@ -1,6 +1,7 @@
 package com.globallogic.javaee.service;
 
 import com.globallogic.javaee.dao.TopicDao;
+import com.globallogic.javaee.exceptions.*;
 import com.globallogic.javaee.model.Topic;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -35,6 +36,10 @@ public class TopicService
 
     public Topic getTopicById (Integer anId){
         return topicDao.getTopicById(anId);
+    }
+
+    public Topic getTopicByName (String aTopicName) throws TopicWithGivenNameNotFound,TopicWithGivenNameAlreadyExists,TopicEmptyNameProhibited {
+        return topicDao.getTopicByName(aTopicName);
     }
 
 }
