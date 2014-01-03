@@ -28,7 +28,7 @@
             <td><form:input path="password"/></td>
         </tr>
         <tr>
-            <td ><input type="submit" value="Register a new user"/></td>
+            <td colspan = "2"><input type="submit" value="Register a new user" style="width:100%"/></td>
         </tr>
     </table>
 </form:form>

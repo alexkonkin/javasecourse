@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" name="Default" comment="forum_web: page to create new topic has been added to the project. Helper exception classes that should facilitate a work with this entity have been added to the project">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/RegisterNewUserController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/exceptions/UserWithGivenLoginAlreadyExists.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/exceptions/UserWithGivenLoginNotFound.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/NewTopicController.java" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/NewTopicController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/TopicServiceIntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/TopicServiceIntegrationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/UserDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/UserDaoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserService.java" />
+    <list default="true" readonly="true" id="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" name="Default" comment="forum_web: controller which allows to add a new user has been added to the project wit the relevant jsp page">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="forum_web.iws" />
@@ -26,12 +16,12 @@
     <file path="$PROJECT_DIR$/src/test/java/javaee/dao/TopicDaoTest.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1386951493741" ignored="false" />
     <file path="$PROJECT_DIR$/src/test/java/javaee/dao/UserDaoTest.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1386951493744" ignored="false" />
     <file path="/fragment.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388673629128" ignored="false" />
-    <file path="/Dummy.txt" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388664086651" ignored="false" />
+    <file path="/Dummy.txt" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388678760808" ignored="false" />
     <file path="/a.txt" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388417150172" ignored="false" />
     <file path="/mvc-dispatcher-servlet.xml" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388418500431" ignored="false" />
     <file path="/web.xml" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388414287395" ignored="false" />
     <file path="/MainPage.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388477094211" ignored="false" />
-    <file path="/main.jsp" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388677690881" ignored="false" />
+    <file path="/main.jsp" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388746070164" ignored="false" />
     <file path="/UserService.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388675686372" ignored="false" />
     <file path="/UserDao.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388677464564" ignored="false" />
     <file path="/TopicDaoTest.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388163722124" ignored="false" />
@@ -58,7 +48,7 @@
     <file path="/WebForumException.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388652565151" ignored="false" />
     <file path="/TopicWithGivenNameNotFound.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388652992958" ignored="false" />
     <file path="/RegisterNewUserController.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388677414442" ignored="false" />
-    <file path="/register.jsp" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388676740953" ignored="false" />
+    <file path="/register.jsp" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388746361150" ignored="false" />
     <file path="/UserWithGivenLoginNotFound.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388673085127" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,54 +115,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="42" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterNewUserController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/RegisterNewUserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="10" selection-start="1439" selection-end="1439" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="24" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewTopicController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/NewTopicController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="10" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="register.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="49" selection-start="971" selection-end="971" vertical-scroll-proportion="-6.923077">
+            <state line="31" column="78" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.95644283">
               <folding />
             </state>
           </provider>
@@ -181,16 +127,7 @@
       <file leaf-file-name="main.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="39" selection-start="789" selection-end="789" vertical-scroll-proportion="-2.6153846">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainPage.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="35" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.51031893">
+            <state line="36" column="95" selection-start="1204" selection-end="1222" vertical-scroll-proportion="-10.076923">
               <folding />
             </state>
           </provider>
@@ -199,30 +136,8 @@
       <file leaf-file-name="newtopic.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newtopic.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="51" selection-start="701" selection-end="719" vertical-scroll-proportion="-2.3461537">
+            <state line="21" column="51" selection-start="701" selection-end="719" vertical-scroll-proportion="-3.1923077">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TopicDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="9" selection-start="2375" selection-end="2375" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TopicService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/TopicService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="13" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -247,12 +162,12 @@
         <option value="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/UserDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/TopicServiceIntegrationTest.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/NewTopicController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/RegisterNewUserController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" />
       </list>
     </option>
   </component>
@@ -700,25 +615,49 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="244" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="245" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="75" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="245" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="195" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder5" value="5" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="194" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="195" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../forum_spring" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth5" value="870" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="195" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="195" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="116" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="919" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="dynamic.classpath" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1270,7 +1209,11 @@
       <created>1388662352111</created>
       <updated>1388662352111</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="forum_web: controller which allows to add a new user has been added to the project wit the relevant jsp page">
+      <created>1388678084113</created>
+      <updated>1388678084113</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1308,17 +1251,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39018953" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39576367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23188406" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.6309922" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25827107" sideWeight="0.6231884" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3768116" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25827107" sideWeight="0.6722408" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3277592" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1357,7 +1301,7 @@
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="false" />
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
@@ -1368,7 +1312,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="forum_web: page to create new topic has been added to the project. Helper exception classes that should facilitate a work with this entity have been added to the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="forum_web: controller which allows to add a new user has been added to the project wit the relevant jsp page" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1386,6 +1330,7 @@
     <MESSAGE value="forum_web: last save before adding one-to-many mappings to hibernate configuration" />
     <MESSAGE value="forum_web: lazy mode for models has been turned off, added 2 new controllers, updated jsp pages for these controllers" />
     <MESSAGE value="forum_web: page to create new topic has been added to the project. Helper exception classes that should facilitate a work with this entity have been added to the project" />
+    <MESSAGE value="forum_web: controller which allows to add a new user has been added to the project wit the relevant jsp page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1445,9 +1390,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="35" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.5455975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="9" selection-start="2375" selection-end="2375" vertical-scroll-proportion="0.0">
+        <state line="74" column="9" selection-start="2375" selection-end="2375" vertical-scroll-proportion="0.43867925">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1456,25 +1408,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/TopicService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="24" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="42" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.0">
+        <state line="15" column="13" selection-start="464" selection-end="464" vertical-scroll-proportion="0.4009434">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1483,14 +1417,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newtopic.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="51" selection-start="701" selection-end="719" vertical-scroll-proportion="-2.3461537">
+        <state line="21" column="51" selection-start="701" selection-end="719" vertical-scroll-proportion="-3.1923077">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/NewTopicController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="10" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0">
+        <state line="59" column="42" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.9355346">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1499,30 +1433,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/RegisterNewUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="10" selection-start="1439" selection-end="1439" vertical-scroll-proportion="0.0">
+        <state line="41" column="10" selection-start="1439" selection-end="1439" vertical-scroll-proportion="0.2783019">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="49" selection-start="971" selection-end="971" vertical-scroll-proportion="-6.923077">
-          <folding />
+        <state line="46" column="24" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.38522014">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/NewTopicController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="10" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.2971698">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="39" selection-start="789" selection-end="789" vertical-scroll-proportion="-2.6153846">
+        <state line="36" column="95" selection-start="1204" selection-end="1222" vertical-scroll-proportion="-10.076923">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="35" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.51031893">
+        <state line="31" column="78" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.95644283">
           <folding />
         </state>
       </provider>

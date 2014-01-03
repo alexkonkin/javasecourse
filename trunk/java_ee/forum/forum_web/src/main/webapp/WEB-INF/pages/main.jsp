@@ -34,7 +34,7 @@
             <td><form:input path="password" /></td>
         </tr>
         <tr>
-            <td ><input type="submit" value="Submit"/></td>
+            <td colspan = "2"><input type="submit" value="Click to register" style="width:100%"/></td>
         </tr>
     </table>
 </form:form>
@@ -50,11 +50,12 @@
 
 <table border="1">
     <tr>
-        <th>Topic name</th>
+        <th>Topic name</th><th>Topic owner</th>
     </tr>
     <c:forEach var="topic" items="${topics}" varStatus="topicLoop">
         <tr>
             <td><a href="<c:url value="http://localhost:8181/topic?topicId=${topic.id}"/>">${topic.name}</a></td>
+            <td>${topic.user.login}</td>
          </tr>
     </c:forEach>
         <c:choose>
@@ -62,7 +63,7 @@
                 <tr><td><a href="<c:url value="http://localhost:8181/newtopic"/>">Create a new topic</a></td></tr>
             </c:when>
             <c:otherwise>
-                <tr><td>Please login to create a new topic</td></tr>
+                <tr><td colspan = "2">Please login to create a new topic</td></tr>
             </c:otherwise>
         </c:choose>
 </table>
