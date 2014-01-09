@@ -44,7 +44,7 @@
 <!--c:out value="login is : ${sessionScope.userCredentials.login}"/><br-->
 <!--c:out value="password is : ${sessionScope.userCredentials.password}"/-->
 <c:if test="${isAuthenticated}">
-    <c:out value="User ${sessionScope.userCredentials.login} logged in"/><br>
+    <c:out value="User ${sessionScope.userCredentials.login} logged in."/> <a href="<c:url value="http://localhost:8181/logout"/>">Logout</a><br>
 </c:if>
 
 
@@ -60,7 +60,7 @@
     </c:forEach>
         <c:choose>
             <c:when test="${isAuthenticated == true}">
-                <tr><td><a href="<c:url value="http://localhost:8181/newtopic"/>">Create a new topic</a></td></tr>
+                <tr><td colspan = "2"><a href="<c:url value="http://localhost:8181/newtopic"/>">Create a new topic</a></td></tr>
             </c:when>
             <c:otherwise>
                 <tr><td colspan = "2">Please login to create a new topic</td></tr>
