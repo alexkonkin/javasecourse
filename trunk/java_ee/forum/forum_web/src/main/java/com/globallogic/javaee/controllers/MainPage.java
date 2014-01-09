@@ -45,6 +45,15 @@ public class MainPage {
         return "main";
     }
 
+    @RequestMapping(value = "logout",method = RequestMethod.GET)
+    public String logoutFromForum(ModelMap model, HttpSession session) {
+        session.setAttribute("isAuthenticated", false);
+        List<Topic> topicsList = topicService.findAllTopics();
+        model.addAttribute("topics", topicsList);
+        return "main";
+    }
+
+
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String registerUser(@ModelAttribute(value="user") User user, /*BindingResult result*/ModelMap modelMap,HttpSession session)
     {

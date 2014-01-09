@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" name="Default" comment="forum_web: controller which allows to add a new user has been added to the project wit the relevant jsp page">
+    <list default="true" readonly="true" id="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum_web.iml" afterPath="$PROJECT_DIR$/forum_web.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="forum_web.iws" />
@@ -16,12 +17,12 @@
     <file path="$PROJECT_DIR$/src/test/java/javaee/dao/TopicDaoTest.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1386951493741" ignored="false" />
     <file path="$PROJECT_DIR$/src/test/java/javaee/dao/UserDaoTest.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1386951493744" ignored="false" />
     <file path="/fragment.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388673629128" ignored="false" />
-    <file path="/Dummy.txt" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388678760808" ignored="false" />
+    <file path="/Dummy.txt" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388746490776" ignored="false" />
     <file path="/a.txt" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388417150172" ignored="false" />
     <file path="/mvc-dispatcher-servlet.xml" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388418500431" ignored="false" />
     <file path="/web.xml" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388414287395" ignored="false" />
-    <file path="/MainPage.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388477094211" ignored="false" />
-    <file path="/main.jsp" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388746070164" ignored="false" />
+    <file path="/MainPage.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1389260689139" ignored="false" />
+    <file path="/main.jsp" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1389260461429" ignored="false" />
     <file path="/UserService.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388675686372" ignored="false" />
     <file path="/UserDao.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388677464564" ignored="false" />
     <file path="/TopicDaoTest.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388163722124" ignored="false" />
@@ -115,10 +116,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="register.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="register.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="78" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.95644283">
+            <state line="31" column="78" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,7 +128,16 @@
       <file leaf-file-name="main.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="95" selection-start="1204" selection-end="1222" vertical-scroll-proportion="-10.076923">
+            <state line="46" column="131" selection-start="1703" selection-end="1703" vertical-scroll-proportion="-9.153846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainPage.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="0" selection-start="1743" selection-end="1743" vertical-scroll-proportion="0.49253732">
               <folding />
             </state>
           </provider>
@@ -136,7 +146,7 @@
       <file leaf-file-name="newtopic.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newtopic.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="51" selection-start="701" selection-end="719" vertical-scroll-proportion="-3.1923077">
+            <state line="21" column="51" selection-start="701" selection-end="719" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -165,9 +175,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/NewTopicController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/RegisterNewUserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java" />
       </list>
     </option>
   </component>
@@ -238,8 +248,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -616,7 +626,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="244" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="245" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="75" />
     <property name="project.structure.proportion" value="0.15" />
@@ -1213,7 +1223,11 @@
       <created>1388678084113</created>
       <updated>1388678084113</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="forum_web: updated the width of the Submit buttons (style/width attribute)">
+      <created>1388746504112</created>
+      <updated>1388746504112</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1237,13 +1251,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44481605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24866596" sideWeight="0.67001116" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36231884" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1252,21 +1265,22 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39576367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39479393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23188406" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.6309922" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25827107" sideWeight="0.6722408" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3277592" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25729167" sideWeight="0.6822126" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3177874" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23188406" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44481605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19509476" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1312,7 +1326,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="forum_web: controller which allows to add a new user has been added to the project wit the relevant jsp page" />
+    <option name="LAST_COMMIT_MESSAGE" value="forum_web: updated the width of the Submit buttons (style/width attribute)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1331,6 +1345,7 @@
     <MESSAGE value="forum_web: lazy mode for models has been turned off, added 2 new controllers, updated jsp pages for these controllers" />
     <MESSAGE value="forum_web: page to create new topic has been added to the project. Helper exception classes that should facilitate a work with this entity have been added to the project" />
     <MESSAGE value="forum_web: controller which allows to add a new user has been added to the project wit the relevant jsp page" />
+    <MESSAGE value="forum_web: updated the width of the Submit buttons (style/width attribute)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1390,13 +1405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="35" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.5455975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="74" column="9" selection-start="2375" selection-end="2375" vertical-scroll-proportion="0.43867925">
@@ -1417,7 +1425,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/newtopic.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="51" selection-start="701" selection-end="719" vertical-scroll-proportion="-3.1923077">
+        <state line="21" column="51" selection-start="701" selection-end="719" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1458,16 +1466,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="95" selection-start="1204" selection-end="1222" vertical-scroll-proportion="-10.076923">
+        <state line="31" column="78" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="78" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.95644283">
+        <state line="46" column="131" selection-start="1703" selection-end="1703" vertical-scroll-proportion="-9.153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="0" selection-start="1743" selection-end="1743" vertical-scroll-proportion="0.49253732">
           <folding />
         </state>
       </provider>
@@ -1478,7 +1493,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>forum_web:war</last-edited>
+          <last-edited>forum_web:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1531,6 +1546,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
