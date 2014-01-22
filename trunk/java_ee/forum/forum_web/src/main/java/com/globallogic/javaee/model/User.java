@@ -66,7 +66,6 @@ public class User
         this.password = password;
     }
 
-
     //	@OneToMany(fetch=FetchType.LAZY, targetEntity=Book.class, cascade=CascadeType.ALL)
     //@JoinColumn(name = "book_studentid", referencedColumnName="studentid")
     //@OneToMany(fetch = FetchType.LAZY, mappedBy = "USERS", targetEntity = Topic.class)

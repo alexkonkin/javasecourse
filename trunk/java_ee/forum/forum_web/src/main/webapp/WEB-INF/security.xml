@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security.xsd">
+
+
+
+    <security:http access-denied-page="/error403.jsp">
+        <security:intercept-url pattern="/main" access="ROLE_USER" />
+        <!--security:intercept-url pattern="/login*" access="ROLE_USER" /-->
+        <!--security:intercept-url pattern="/index*" access="ROLE_USER,ROLE_ANONYMOUS" />
+        <security:intercept-url pattern="/add*" access="ROLE_USER" />
+        <security:intercept-url pattern="/delete/*" access="ROLE_ADMIN" /-->
+
+        <security:form-login login-page="/login" default-target-url="/loginpassed" authentication-failure-url="/loginfailed" />
+        <security:logout logout-url="/logout" logout-success-url="/index" />
+
+        <security:anonymous username="guest" granted-authority="ROLE_ANONYMOUS" />
+        <security:remember-me />
+    </security:http>
+
+    <security:authentication-manager>
+        <security:authentication-provider>
+            <security:password-encoder hash="plaintext" />
+
+            <security:jdbc-user-service data-source-ref="dataSource"
+                               users-by-username-query="SELECT login as username, password, true as enabled from users where login=?;"
+                               authorities-by-username-query="select login as username, role as authority from users, user_roles where users.id = user_roles.id_user and users.login = ?;"
+                    />
+
+            <!--security:user-service>
+                <security:user name="test" password="123456" authorities="ROLE_USER" />
+            </security:user-service-->
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+</beans>

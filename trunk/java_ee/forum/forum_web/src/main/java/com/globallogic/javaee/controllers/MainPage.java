@@ -65,4 +65,36 @@ public class MainPage {
         session.setAttribute("isAuthenticated", isAuthenticated);
         return "redirect:/";
     }
+
+    @RequestMapping(value = "/loginfailed", method = RequestMethod.GET)
+    public String loginFailed(@ModelAttribute(value="user") User user, /*BindingResult result*/ModelMap modelMap,HttpSession session)
+    {
+        boolean isAuthenticated = false;
+        //boolean error = true;
+        isAuthenticated = userService.login(user);
+        if(isAuthenticated)
+            user = userService.findUserByLoginPassword(user);
+        session.setAttribute("userCredentials", user);
+        session.setAttribute("isAuthenticated", isAuthenticated);
+        //session.setAttribute("error", error);
+        session.setAttribute("error",true);
+
+        return "redirect:/";
+    }
+
+    @RequestMapping(value = "/loginpassed", method = RequestMethod.GET)
+    public String loginPassed(@ModelAttribute(value="user") User user, /*BindingResult result*/ModelMap modelMap,HttpSession session)
+    {
+        boolean isAuthenticated = false;
+        //boolean error = true;
+        isAuthenticated = userService.login(user);
+        if(isAuthenticated)
+            user = userService.findUserByLoginPassword(user);
+        session.setAttribute("userCredentials", user);
+        session.setAttribute("isAuthenticated", isAuthenticated);
+        //session.setAttribute("error", error);
+        session.removeAttribute("error");
+
+        return "redirect:/";
+    }
 }

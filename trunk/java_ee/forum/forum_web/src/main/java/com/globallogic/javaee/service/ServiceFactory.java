@@ -3,6 +3,7 @@ package com.globallogic.javaee.service;
 import com.globallogic.javaee.dao.MessageDao;
 import com.globallogic.javaee.dao.TopicDao;
 import com.globallogic.javaee.dao.UserDao;
+import com.globallogic.javaee.dao.UserRolesDao;
 import org.hibernate.SessionFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -69,6 +70,14 @@ public class ServiceFactory
 
     public MessageDao getMessageDao() {
         return context.getBean( "messageDao", MessageDao.class );
+    }
+
+    /**
+     * Returns user roles dao
+     */
+    public UserRolesDao getUserRolesDao()
+    {
+        return context.getBean( "userRolesDao", UserRolesDao.class );
     }
 
     /**
