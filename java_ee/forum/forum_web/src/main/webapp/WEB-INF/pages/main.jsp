@@ -18,26 +18,50 @@
 <html>
 <head>
     <title>Forum's main page</title>
+    <style>
+        .errorblock {
+            color: #ff0000;
+            background-color: #ffEEEE;
+            border: 3px solid #ff0000;
+            padding: 8px;
+            margin: 8px;
+            width: 350px;
+            height: 50px;
+            overflow:auto;
+        }
+    </style>
 </head>
 <body>
 <h3>Forum's main page</h3>
 <br>
 
-<form:form method="post" action="/login" commandName="user">
+<c:if test="${error}">
+    <div class="errorblock">
+        Your login attempt was not successful, try again.<br /> Caused :
+            ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
+    </div>
+</c:if>
+
+<form name="f" action="<c:url value='j_spring_security_check'/>" method="POST">
     <table>
         <tr>
-            <td><form:label path="login">login</form:label></td>
-            <td><form:input path="login" /></td>
+            <td>Username:</td>
+            <td><input type='text' name='j_username' /></td>
         </tr>
         <tr>
-            <td><form:label path="password">password</form:label></td>
-            <td><form:input path="password" /></td>
+            <td>Password:</td>
+            <td><input type='password' name='j_password'></td>
         </tr>
         <tr>
-            <td colspan = "2"><input type="submit" value="Click to register" style="width:100%"/></td>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan='2'><input name="submit" type="submit" value="Click to register">&nbsp;<input name="reset" type="reset"></td>
         </tr>
     </table>
-</form:form>
+</form>
+
+
 <p>
 <a href="<c:url value="http://localhost:8181/register"/>">Don't have user account?Click here to register</a>
 <p>
