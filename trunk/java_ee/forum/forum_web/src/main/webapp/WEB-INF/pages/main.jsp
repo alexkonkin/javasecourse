@@ -67,6 +67,7 @@
 <p>
 <!--c:out value="login is : ${sessionScope.userCredentials.login}"/><br-->
 <!--c:out value="password is : ${sessionScope.userCredentials.password}"/-->
+
 <c:if test="${isAuthenticated}">
     <c:out value="User ${sessionScope.userCredentials.login} logged in."/> <a href="<c:url value="http://localhost:8181/logout"/>">Logout</a><br>
 </c:if>

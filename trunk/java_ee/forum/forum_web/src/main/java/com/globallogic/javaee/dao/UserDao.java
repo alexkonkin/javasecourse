@@ -1,6 +1,7 @@
 package com.globallogic.javaee.dao;
 
 import com.globallogic.javaee.model.User;
+import com.globallogic.javaee.model.UserRoles;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

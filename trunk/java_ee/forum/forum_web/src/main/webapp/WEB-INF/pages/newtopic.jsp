@@ -19,6 +19,7 @@
 <body>
 <c:out value="Hello, ${sessionScope.userCredentials.login}"/>
 <p>
+
 <form:form method="post" action="/newtopic/addTopic" commandName="topic">
     <table>
         <tr>
