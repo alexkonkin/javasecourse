@@ -38,7 +38,6 @@ public class Topic
     }
 
 
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_USER")
     private User user;

@@ -4,6 +4,8 @@ import com.globallogic.javaee.exceptions.UserWithGivenLoginAlreadyExists;
 import com.globallogic.javaee.exceptions.UserWithGivenLoginNotFound;
 import com.globallogic.javaee.model.Topic;
 import com.globallogic.javaee.model.User;
+import com.globallogic.javaee.model.UserRoles;
+import com.globallogic.javaee.service.UserRolesService;
 import com.globallogic.javaee.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -20,6 +22,9 @@ import javax.servlet.http.HttpSession;
 public class RegisterNewUserController {
     @Resource
     UserService userService;
+
+    @Resource
+    UserRolesService userRolesService;
 
     @ModelAttribute("user")
     public User createModel() {
@@ -49,6 +54,11 @@ public class RegisterNewUserController {
                 userService.register(user);
                 registerNewUserStringResponse = "User " + user.getLogin() + " successfully created";
                 System.out.println(registerNewUserStringResponse);
+
+                UserRoles aUsersRoleUser = new UserRoles();
+                aUsersRoleUser.setRole("ROLE_USER");
+                aUsersRoleUser.setUser(user);
+                userRolesService.createUserRole(aUsersRoleUser);
         }
         catch (UserWithGivenLoginAlreadyExists userWithGivenLoginAlreadyExists) {
             registerNewUserStringResponse = userWithGivenLoginAlreadyExists.toString();

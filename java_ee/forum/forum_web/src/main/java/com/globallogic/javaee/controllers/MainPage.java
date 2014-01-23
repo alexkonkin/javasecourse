@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.ui.ModelMap;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 
 import org.springframework.validation.BindingResult;
 import com.globallogic.javaee.service.TopicService;
@@ -45,7 +47,7 @@ public class MainPage {
         return "main";
     }
 
-    @RequestMapping(value = "logout",method = RequestMethod.GET)
+    @RequestMapping(value = "/logout",method = RequestMethod.GET)
     public String logoutFromForum(ModelMap model, HttpSession session) {
         session.setAttribute("isAuthenticated", false);
         List<Topic> topicsList = topicService.findAllTopics();
@@ -53,31 +55,55 @@ public class MainPage {
         return "main";
     }
 
-
+    /*
+     * Method is used to the local authentication, has been replaced with spring db authentication
+     *
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String registerUser(@ModelAttribute(value="user") User user, /*BindingResult result*/ModelMap modelMap,HttpSession session)
+    public String registerUser(@ModelAttribute(value="user") User user, ModelMap modelMap,HttpSession session)
     {
         boolean isAuthenticated = false;
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
+
         isAuthenticated = userService.login(user);
         if(isAuthenticated)
             user = userService.findUserByLoginPassword(user);
+
+
         session.setAttribute("userCredentials", user);
         session.setAttribute("isAuthenticated", isAuthenticated);
+
         return "redirect:/";
     }
+    */
 
     @RequestMapping(value = "/loginfailed", method = RequestMethod.GET)
     public String loginFailed(@ModelAttribute(value="user") User user, /*BindingResult result*/ModelMap modelMap,HttpSession session)
     {
         boolean isAuthenticated = false;
-        //boolean error = true;
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
+        /*
         isAuthenticated = userService.login(user);
         if(isAuthenticated)
             user = userService.findUserByLoginPassword(user);
+        */
+
+        user.setLogin(auth.getName());
+        if(auth.getName().equals("guest"))
+            isAuthenticated = false;
+        else
+            isAuthenticated = true;
+
         session.setAttribute("userCredentials", user);
         session.setAttribute("isAuthenticated", isAuthenticated);
         //session.setAttribute("error", error);
         session.setAttribute("error",true);
+
+        System.out.println("Spring  /loginfailed"); //get logged in username
+        System.out.println("Spring username        : "+auth.getName()); //get logged in username
+        System.out.println("Spring authorities     : "+auth.getAuthorities().toString());
+        System.out.println("Spring isAuthenticated : "+auth.isAuthenticated());
 
         return "redirect:/";
     }
@@ -86,13 +112,21 @@ public class MainPage {
     public String loginPassed(@ModelAttribute(value="user") User user, /*BindingResult result*/ModelMap modelMap,HttpSession session)
     {
         boolean isAuthenticated = false;
-        //boolean error = true;
-        isAuthenticated = userService.login(user);
-        if(isAuthenticated)
-            user = userService.findUserByLoginPassword(user);
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
+        user.setLogin(auth.getName());
+        user.setPassword(SecurityContextHolder.getContext().getAuthentication().getCredentials().toString());
+        User aUser = userService.findUserByLoginPassword(user);
+        user.setId(aUser.getId());
+
+        if(auth.getName().equals("guest"))
+            isAuthenticated = false;
+        else
+            isAuthenticated = true;
+
+
         session.setAttribute("userCredentials", user);
         session.setAttribute("isAuthenticated", isAuthenticated);
-        //session.setAttribute("error", error);
         session.removeAttribute("error");
 
         return "redirect:/";
