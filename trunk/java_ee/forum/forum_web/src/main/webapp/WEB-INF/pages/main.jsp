@@ -3,6 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <%@page isELIgnored="false"%>
 <%--
   Created by IntelliJ IDEA.
@@ -65,32 +67,74 @@
 <p>
 <a href="<c:url value="http://localhost:8181/register"/>">Don't have user account?Click here to register</a>
 <p>
-<!--c:out value="login is : ${sessionScope.userCredentials.login}"/><br-->
-<!--c:out value="password is : ${sessionScope.userCredentials.password}"/-->
+
+<%--c:out value="login is : ${sessionScope.userCredentials.login}"/><br>
+<c:out value="password is : ${sessionScope.userCredentials.password}"/--%>
+
+<p>
+    <a href="<c:url value="http://localhost:8181/admin"/>">Forum administrator's area</a>
+<p>
 
 <c:if test="${isAuthenticated}">
     <c:out value="User ${sessionScope.userCredentials.login} logged in."/> <a href="<c:url value="http://localhost:8181/logout"/>">Logout</a><br>
+    <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')" var="isAdmin"/>
+    <sec:authentication property="principal.username" var="spring_username" scope="page"/>
 </c:if>
 
-
+<%--
+<c:if test="${isAuthenticated}">
+<sec:authentication property="authorities" var="roles" scope="page" />
+<sec:authentication property="principal.username" var="spring_username" scope="page"/>
+Your roles are:
+<ul>
+    <c:forEach var="role" items="${roles}">
+        <li>${role}</li>
+    </c:forEach>
+</ul>
+Your username is: ${spring_username}
+<p>
+<sec:authorize access="hasRole('ROLE_ADMINISTRATOR')" var="isAdmin"/>
+<c:if test="${isAdmin}">
+    admin block here
+</c:if>
+</c:if>
+--%>
 <table border="1">
     <tr>
-        <th>Topic name</th><th>Topic owner</th>
+        <th>Topic name</th><th>Topic owner</th><th>Edit</th>
     </tr>
-    <c:forEach var="topic" items="${topics}" varStatus="topicLoop">
-        <tr>
-            <td><a href="<c:url value="http://localhost:8181/topic?topicId=${topic.id}"/>">${topic.name}</a></td>
-            <td>${topic.user.login}</td>
-         </tr>
-    </c:forEach>
-        <c:choose>
-            <c:when test="${isAuthenticated == true}">
-                <tr><td colspan = "2"><a href="<c:url value="http://localhost:8181/newtopic"/>">Create a new topic</a></td></tr>
+<c:forEach var="topic" items="${topics}" varStatus="topicLoop">
+    <tr>
+        <td><a href="<c:url value="http://localhost:8181/topic?topicId=${topic.id}"/>">${topic.name}</a></td>
+        <td>${topic.user.login}</td>
+        <c:if test="${isAuthenticated}">
+            <c:choose>
+            <c:when test="${isAdmin}">
+                    <td>${spring_username}</td>
             </c:when>
             <c:otherwise>
-                <tr><td colspan = "2">Please login to create a new topic</td></tr>
+                <c:if test="${topic.user.login == spring_username}">
+                    <td>${spring_username}</td>
+                </c:if>
+                <c:if test="${topic.user.login != spring_username}">
+                    <td>&nbsp</td>
+                </c:if>
             </c:otherwise>
-        </c:choose>
+            </c:choose>
+        </c:if>
+        <c:if test="${isAuthenticated == null}">
+            <td>&nbsp</td>
+        </c:if>
+     </tr>
+</c:forEach>
+    <c:choose>
+        <c:when test="${isAuthenticated == true}">
+            <tr><td colspan = "3"><a href="<c:url value="http://localhost:8181/newtopic"/>">Create a new topic</a></td></tr>
+        </c:when>
+        <c:otherwise>
+            <tr><td colspan = "3">Please login to create a new topic</td></tr>
+        </c:otherwise>
+    </c:choose>
 </table>
 
 </body>
