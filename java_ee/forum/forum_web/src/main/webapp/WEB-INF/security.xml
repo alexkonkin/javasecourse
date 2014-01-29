@@ -8,10 +8,10 @@
        http://www.springframework.org/schema/security/spring-security.xsd">
 
 
-
-    <security:http access-denied-page="/error403.jsp">
-        <security:intercept-url pattern="/main" access="ROLE_USER" />
-        <!--security:intercept-url pattern="/login*" access="ROLE_USER" /-->
+    <security:http auto-config="true">
+        <security:access-denied-handler error-page="/error403"/>
+        <security:intercept-url pattern="/main" access="ROLE_USER"/>
+        <security:intercept-url pattern="/admin" access="ROLE_ADMINISTRATOR"/>
         <!--security:intercept-url pattern="/index*" access="ROLE_USER,ROLE_ANONYMOUS" />
         <security:intercept-url pattern="/add*" access="ROLE_USER" />
         <security:intercept-url pattern="/delete/*" access="ROLE_ADMIN" /-->
@@ -32,5 +32,7 @@
             />
         </security:authentication-provider>
     </security:authentication-manager>
+
+    <bean class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler"/>
 
 </beans>

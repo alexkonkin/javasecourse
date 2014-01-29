@@ -2,23 +2,16 @@ package com.globallogic.javaee.controllers;
 
 import com.globallogic.javaee.model.Topic;
 import com.globallogic.javaee.model.User;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.ui.ModelMap;
 
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.ui.ModelMap;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import org.springframework.validation.BindingResult;
 import com.globallogic.javaee.service.TopicService;
 import com.globallogic.javaee.service.UserService;
 
@@ -54,6 +47,13 @@ public class MainPage {
         model.addAttribute("topics", topicsList);
         return "main";
     }
+
+    @RequestMapping(value = "/error403",method = RequestMethod.GET)
+    public String error403(ModelMap model, HttpSession session) {
+
+        return "error403";
+    }
+
 
     /*
      * Method is used to the local authentication, has been replaced with spring db authentication
@@ -97,13 +97,7 @@ public class MainPage {
 
         session.setAttribute("userCredentials", user);
         session.setAttribute("isAuthenticated", isAuthenticated);
-        //session.setAttribute("error", error);
         session.setAttribute("error",true);
-
-        System.out.println("Spring  /loginfailed"); //get logged in username
-        System.out.println("Spring username        : "+auth.getName()); //get logged in username
-        System.out.println("Spring authorities     : "+auth.getAuthorities().toString());
-        System.out.println("Spring isAuthenticated : "+auth.isAuthenticated());
 
         return "redirect:/";
     }
@@ -127,7 +121,10 @@ public class MainPage {
 
         session.setAttribute("userCredentials", user);
         session.setAttribute("isAuthenticated", isAuthenticated);
+        session.setAttribute("authorities",auth);
         session.removeAttribute("error");
+
+        System.out.println("role is : "+auth.getAuthorities().iterator().next().getAuthority());
 
         return "redirect:/";
     }

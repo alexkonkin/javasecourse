@@ -30,6 +30,7 @@ public class UserDao extends HibernateDaoSupport
 
     public void createUser(User user)
     {
+        user.setEnabled(true);
         getHibernateTemplate().persist(user);
         //Session session = getSession();
         //session.close();

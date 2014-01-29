@@ -66,6 +66,25 @@ public class User
         this.password = password;
     }
 
+    @Column
+    private boolean enabled;
+
+    /**
+     * Returns user name. Every user must have unique name.
+     */
+    public boolean getEnabled()
+    {
+        return enabled;
+    }
+
+    /**
+     * Sets user name. Every user must have unique name.
+     */
+    public void setEnabled(boolean enabled)
+    {
+        this.enabled = enabled;
+    }
+
     //	@OneToMany(fetch=FetchType.LAZY, targetEntity=Book.class, cascade=CascadeType.ALL)
     //@JoinColumn(name = "book_studentid", referencedColumnName="studentid")
     //@OneToMany(fetch = FetchType.LAZY, mappedBy = "USERS", targetEntity = Topic.class)
