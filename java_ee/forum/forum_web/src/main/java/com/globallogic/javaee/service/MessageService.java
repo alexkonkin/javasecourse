@@ -45,4 +45,8 @@ public class MessageService
     public int createMessage(Message aMessage){
         return messageDao.createMessage(aMessage);
     }
+
+    public int deleteMessagesByTopicId (Integer aTopicId){
+        return messageDao.deleteMessagesByTopicId(aTopicId);
+    }
 }

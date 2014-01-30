@@ -110,11 +110,11 @@ Your username is: ${spring_username}
         <c:if test="${isAuthenticated}">
             <c:choose>
             <c:when test="${isAdmin}">
-                    <td>${spring_username}</td>
+                    <td><a href="<c:url value="http://localhost:8181/topic/delete?topicId=${topic.id}"/>">delete</a></td>
             </c:when>
             <c:otherwise>
                 <c:if test="${topic.user.login == spring_username}">
-                    <td>${spring_username}</td>
+                    <td><a href="<c:url value="http://localhost:8181/topic/delete?topicId=${topic.id}"/>">delete</a></td>
                 </c:if>
                 <c:if test="${topic.user.login != spring_username}">
                     <td>&nbsp</td>

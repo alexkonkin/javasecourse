@@ -42,4 +42,7 @@ public class TopicService
         return topicDao.getTopicByName(aTopicName);
     }
 
+    public int deleteTopicById (Integer anId){
+        return topicDao.deleteTopicById(anId);
+    }
 }
