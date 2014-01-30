@@ -1,0 +1,5 @@
+#summary On this page I would like to share the links that helped me during the development of this project.
+
+= Useful links =
+
+http://doanduyhai.wordpress.com/2012/02/26/spring-security-part-v-security-tags/
