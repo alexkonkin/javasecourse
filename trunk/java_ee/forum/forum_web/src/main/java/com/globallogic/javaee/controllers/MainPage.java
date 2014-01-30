@@ -54,7 +54,6 @@ public class MainPage {
         return "error403";
     }
 
-
     /*
      * Method is used to the local authentication, has been replaced with spring db authentication
      *
@@ -76,6 +75,7 @@ public class MainPage {
         return "redirect:/";
     }
     */
+
 
     @RequestMapping(value = "/loginfailed", method = RequestMethod.GET)
     public String loginFailed(@ModelAttribute(value="user") User user, /*BindingResult result*/ModelMap modelMap,HttpSession session)

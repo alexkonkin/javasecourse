@@ -16,7 +16,7 @@
         <security:intercept-url pattern="/add*" access="ROLE_USER" />
         <security:intercept-url pattern="/delete/*" access="ROLE_ADMIN" /-->
 
-        <security:form-login login-page="/login" default-target-url="/loginpassed" authentication-failure-url="/loginfailed" />
+        <security:form-login login-page="/" default-target-url="/loginpassed" authentication-failure-url="/loginfailed" />
         <security:logout logout-url="/logout" logout-success-url="/" />
 
         <security:anonymous username="guest" granted-authority="ROLE_ANONYMOUS" />

@@ -84,6 +84,19 @@ public class TopicDao extends HibernateDaoSupport
         return topic.get(0);
     }
 
+    public int deleteTopicById(Integer anId){
+        int result;
+        SessionFactory sessionFactory = getSessionFactory();
+        Session aSession = sessionFactory.openSession();
 
+
+        String hql = "delete TOPICS where id = :id";
+        result = aSession.createQuery(hql)
+                .setParameter("id", anId)
+                .executeUpdate();
+
+        aSession.close();
+        return result;
+    }
 
 }

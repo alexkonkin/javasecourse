@@ -81,4 +81,18 @@ public class MessageDao extends HibernateDaoSupport
         return message;
     }
 
+    public int deleteMessagesByTopicId(Integer aTopicId){
+        int result;
+        SessionFactory sessionFactory = getSessionFactory();
+        Session aSession = sessionFactory.openSession();
+
+
+        String hql = "delete MESSAGES where id_topic = :id_topic";
+        result = aSession.createQuery(hql)
+                .setParameter("id_topic", aTopicId)
+                .executeUpdate();
+        aSession.close();
+        return result;
+    }
+
 }
