@@ -2,4 +2,8 @@
 
 = Useful links =
 
+spring security tags
 http://doanduyhai.wordpress.com/2012/02/26/spring-security-part-v-security-tags/
+
+how to extract parameters from the request
+http://www.byteslounge.com/tutorials/spring-mvc-requestmapping-example
