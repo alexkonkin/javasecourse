@@ -49,4 +49,8 @@ public class MessageService
     public int deleteMessagesByTopicId (Integer aTopicId){
         return messageDao.deleteMessagesByTopicId(aTopicId);
     }
+
+    public int deleteMessageById (Integer aMessageId){
+        return messageDao.deleteMessagesById(aMessageId);
+    }
 }

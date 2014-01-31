@@ -85,11 +85,6 @@ public class TopicsPageController {
     @RequestMapping(value = "/delete", method = RequestMethod.GET)
     public String deleteTopic(@RequestParam(value = "topicId") Integer topicId, ModelMap modelMap,HttpSession session)
     {
-        /*
-        System.out.println("topic get controller : "+ topicId);
-        System.out.println("delete topic has been called");
-        */
-
         messageService.deleteMessagesByTopicId(topicId);
         topicService.deleteTopicById(topicId);
 
@@ -101,8 +96,23 @@ public class TopicsPageController {
         System.out.println ("current topic id is "+ message.getTopic().getId());
         System.out.println ("current topic Name is "+ message.getTopic().getName());
         */
-
         return "redirect:/";
     }
 
+    @RequestMapping(value = "/delete/message", method = RequestMethod.GET)
+    public String deleteMesssage(@RequestParam(value = "topicId") Integer topicId,
+                                 @RequestParam(value = "messageId") Integer messageId ,
+                                 ModelMap modelMap,HttpSession session)
+    {
+        messageService.deleteMessageById(messageId);
+        /*
+        System.out.println(message.getContent());
+        System.out.println ("current user login is "+ message.getUser().getLogin());
+        System.out.println ("current user password is "+ message.getUser().getPassword());
+        System.out.println ("current user id is "+ message.getUser().getId());
+        System.out.println ("current topic id is "+ message.getTopic().getId());
+        System.out.println ("current topic Name is "+ message.getTopic().getName());
+        */
+        return "redirect:/topic?topicId="+topicId;
+    }
 }
