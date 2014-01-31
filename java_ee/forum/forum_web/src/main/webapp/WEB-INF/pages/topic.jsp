@@ -9,6 +9,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <%@page isELIgnored="false"%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -17,16 +18,43 @@
     <title>Topic's page</title>
 </head>
 <body>
+
 <p>
+    <c:if test="${isAuthenticated}">
+    <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')" var="isAdmin"/>
+    <sec:authentication property="principal.username" var="spring_username" scope="page"/>
+    </c:if>
+
 <table border="1">
     <tr>
-        <th>This page is dedicated to topic : ${topic.name}</th>
+        <th>This page is dedicated to topic : ${topic.name}</th><th>Edit</th>
     </tr>
     <c:choose>
         <c:when test="${fn:length(messages) > 0 }">
             <c:forEach var="message" items="${messages}" varStatus="topicLoop">
                 <tr>
-                <td>${message.content} ${message.user.login}</td>
+                    <td>This message was posted by : ${message.user.login}</td>
+                    <c:if test="${isAuthenticated}">
+                        <c:choose>
+                            <c:when test="${isAdmin}">
+                                <td><a href="<c:url value="http://localhost:8181/topic/delete/message?topicId=${topic.id}&messageId=${message.id}"/>">delete</a></td>
+                            </c:when>
+                            <c:otherwise>
+                                <c:if test="${message.user.login == spring_username}">
+                                    <td><a href="<c:url value="http://localhost:8181/topic/delete/message?topicId=${topic.id}&messageId=${message.id}"/>">delete</a></td>
+                                </c:if>
+                                <c:if test="${message.user.login != spring_username}">
+                                    <td>&nbsp</td>
+                                </c:if>
+                            </c:otherwise>
+                        </c:choose>
+                    </c:if>
+                    <c:if test="${isAuthenticated == null}">
+                        <td>&nbsp</td>
+                    </c:if>
+                </tr>
+                <tr>
+                    <td colspan="2">${message.content}</td>
                 </tr>
             </c:forEach>
         </c:when>
