@@ -77,6 +77,7 @@ public class TopicsPageController {
         System.out.println ("current topic Name is "+ message.getTopic().getName());
         */
         message.getTopic().setUser(message.getUser());
+        message.getUser().setEnabled(true);
         messageService.createMessage(message);
 
         return "redirect:/topic?topicId="+id;
@@ -100,7 +101,7 @@ public class TopicsPageController {
     }
 
     @RequestMapping(value = "/delete/message", method = RequestMethod.GET)
-    public String deleteMesssage(@RequestParam(value = "topicId") Integer topicId,
+    public String deleteMessage(@RequestParam(value = "topicId") Integer topicId,
                                  @RequestParam(value = "messageId") Integer messageId ,
                                  ModelMap modelMap,HttpSession session)
     {

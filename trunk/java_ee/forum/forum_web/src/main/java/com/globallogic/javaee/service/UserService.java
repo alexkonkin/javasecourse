@@ -47,6 +47,12 @@ public class UserService
         userDao.findUserByLogin(aLogin);
     }
 
+    public User findUserById(Integer userId)
+    {
+        return userDao.findUserById(userId);
+    }
+
+
     public boolean login( User aUser )
     {
         List<User> usersList = userDao.findUser(aUser);
@@ -60,4 +66,10 @@ public class UserService
         User result;
         return result = userDao.findUser(aUser).get(0);
     }
+
+    public void setAccountStatus(User aUser){
+        userDao.setAccountStatus(aUser);
+    }
+
+
 }

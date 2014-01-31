@@ -66,5 +66,24 @@ public class UserDao extends HibernateDaoSupport
         return result.get(0);
     }
 
+    public User findUserById(Integer userId){
+        SessionFactory sessionFactory = getSessionFactory();
+        Session aSession = sessionFactory.openSession();
+        String hql = "from USERS s where s.id = :id";
+        List<User> result = aSession.createQuery(hql)
+                .setParameter("id", userId)
+                .list();
+        aSession.close();
+        return result.get(0);
+    }
 
+
+    public void setAccountStatus(User aUser){
+        SessionFactory sessionFactory = getSessionFactory();
+        Session aSession = sessionFactory.openSession();
+        aSession.beginTransaction();
+        aSession.saveOrUpdate(aUser);
+        aSession.getTransaction().commit();
+        aSession.close();
+    }
 }

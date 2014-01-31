@@ -1,10 +1,10 @@
 package com.globallogic.javaee.controllers;
 
 import com.globallogic.javaee.model.Message;
-import com.globallogic.javaee.model.Topic;
 import com.globallogic.javaee.model.User;
 import com.globallogic.javaee.service.MessageService;
 import com.globallogic.javaee.service.TopicService;
+import com.globallogic.javaee.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -24,6 +24,8 @@ public class AdminPageController {
     TopicService topicService;
     @Resource
     MessageService messageService;
+    @Resource
+    UserService userService;
 
     @ModelAttribute("user")
     public User createModel() {
@@ -37,7 +39,18 @@ public class AdminPageController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String printForumTopics(ModelMap model) {
-        System.out.println("administrator's page has been requested");
+        List<User> aUsers =  userService.findAllUsers();
+        model.addAttribute("users", aUsers);
         return "admin";
     }
+
+    @RequestMapping(value = "/manage", method = RequestMethod.GET)
+    public String adminManage(@RequestParam(value = "isEnabled") Boolean isEnabled, @RequestParam(value = "userId") Integer userId , ModelMap modelMap,HttpSession session)
+    {
+        User aUser = userService.findUserById(userId);
+        aUser.setEnabled(isEnabled);
+        userService.setAccountStatus(aUser);
+        return "redirect:/admin";
+    }
+
 }
