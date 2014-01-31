@@ -44,6 +44,11 @@
     </div>
 </c:if>
 
+<c:if test="${isAuthenticated}">
+    <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')" var="isAdmin"/>
+    <sec:authentication property="principal.username" var="spring_username" scope="page"/>
+</c:if>
+
 <form name="f" action="<c:url value='j_spring_security_check'/>" method="POST">
     <table>
         <tr>
@@ -71,14 +76,14 @@
 <%--c:out value="login is : ${sessionScope.userCredentials.login}"/><br>
 <c:out value="password is : ${sessionScope.userCredentials.password}"/--%>
 
-<p>
-    <a href="<c:url value="http://localhost:8181/admin"/>">Forum administrator's area</a>
-<p>
+<c:if test="${isAdmin}">
+    <p>
+        <a href="<c:url value="http://localhost:8181/admin"/>">Forum administrator's area</a>
+    <p>
+</c:if>
 
 <c:if test="${isAuthenticated}">
     <c:out value="User ${sessionScope.userCredentials.login} logged in."/> <a href="<c:url value="http://localhost:8181/logout"/>">Logout</a><br>
-    <sec:authorize access="hasRole('ROLE_ADMINISTRATOR')" var="isAdmin"/>
-    <sec:authentication property="principal.username" var="spring_username" scope="page"/>
 </c:if>
 
 <%--
