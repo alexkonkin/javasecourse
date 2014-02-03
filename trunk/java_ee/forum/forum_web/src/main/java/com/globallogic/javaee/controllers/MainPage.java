@@ -1,7 +1,11 @@
 package com.globallogic.javaee.controllers;
 
+import com.globallogic.javaee.exceptions.UserWithGivenLoginAlreadyExists;
+import com.globallogic.javaee.exceptions.UserWithGivenLoginNotFound;
 import com.globallogic.javaee.model.Topic;
 import com.globallogic.javaee.model.User;
+import com.globallogic.javaee.model.UserRoles;
+import com.globallogic.javaee.service.UserRolesService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 
@@ -28,6 +32,9 @@ public class MainPage {
     @Resource
     UserService userService;
 
+    @Resource
+    UserRolesService userRolesService;
+
     @ModelAttribute("user")
     public User createModel() {
         return new User();
@@ -37,6 +44,30 @@ public class MainPage {
     public String printForumTopics(ModelMap model) {
         List<Topic> topicsList = topicService.findAllTopics();
         model.addAttribute("topics", topicsList);
+
+        try {
+            userService.findUserByLogin("admin");
+        } catch (UserWithGivenLoginNotFound userWithGivenLoginNotFound) {
+            User adminUser = new User();
+            adminUser.setLogin("admin");
+            adminUser.setPassword("123456");
+            adminUser.setEnabled(true);
+            userService.register(adminUser);
+
+            UserRoles aUserRoles1 = new UserRoles();
+            aUserRoles1.setUser(adminUser);
+            aUserRoles1.setRole("ROLE_ADMINISTRATOR");
+            userRolesService.createUserRole(aUserRoles1);
+
+            UserRoles aUserRoles2 = new UserRoles();
+            aUserRoles2.setUser(adminUser);
+            aUserRoles2.setRole("ROLE_USER");
+            userRolesService.createUserRole(aUserRoles2);
+
+        } catch (UserWithGivenLoginAlreadyExists userWithGivenLoginAlreadyExists) {
+            System.out.println("admin's mandatory account is checked and present in the database");
+        }
+
         return "main";
     }
 
