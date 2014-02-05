@@ -4,7 +4,6 @@ import com.globallogic.javaee.model.Message;
 import com.globallogic.javaee.model.Topic;
 import com.globallogic.javaee.model.User;
 import com.globallogic.javaee.service.MessageService;
-import com.globallogic.javaee.service.ServiceFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.ModelMap;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.globallogic.javaee.service.TopicService;
-import com.globallogic.javaee.service.UserService;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;

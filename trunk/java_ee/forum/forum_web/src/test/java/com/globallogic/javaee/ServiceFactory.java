@@ -1,9 +1,12 @@
-package com.globallogic.javaee.service;
+package com.globallogic.javaee;
 
 import com.globallogic.javaee.dao.MessageDao;
 import com.globallogic.javaee.dao.TopicDao;
 import com.globallogic.javaee.dao.UserDao;
 import com.globallogic.javaee.dao.UserRolesDao;
+import com.globallogic.javaee.service.MessageService;
+import com.globallogic.javaee.service.TopicService;
+import com.globallogic.javaee.service.UserService;
 import org.hibernate.SessionFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -11,6 +14,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * Initializes and contains application service.
  */
+
+
 public class ServiceFactory
 {
     protected ApplicationContext context;

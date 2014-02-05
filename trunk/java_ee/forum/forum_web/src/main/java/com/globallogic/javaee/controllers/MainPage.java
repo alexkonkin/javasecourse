@@ -5,7 +5,9 @@ import com.globallogic.javaee.exceptions.UserWithGivenLoginNotFound;
 import com.globallogic.javaee.model.Topic;
 import com.globallogic.javaee.model.User;
 import com.globallogic.javaee.model.UserRoles;
+import com.globallogic.javaee.service.AdminUserCheckerService;
 import com.globallogic.javaee.service.UserRolesService;
+import org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestWrapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 
@@ -35,6 +37,9 @@ public class MainPage {
     @Resource
     UserRolesService userRolesService;
 
+    @Resource
+    AdminUserCheckerService adminUserCheckerService;
+
     @ModelAttribute("user")
     public User createModel() {
         return new User();
@@ -45,6 +50,11 @@ public class MainPage {
         List<Topic> topicsList = topicService.findAllTopics();
         model.addAttribute("topics", topicsList);
 
+        //AdminUserCheckerService cust = (AdminUserCheckerService)    context.getBean("customerService");
+
+        //System.out.println(adminUserCheckerService.getMessage());
+
+        /*
         try {
             userService.findUserByLogin("admin");
         } catch (UserWithGivenLoginNotFound userWithGivenLoginNotFound) {
@@ -67,6 +77,7 @@ public class MainPage {
         } catch (UserWithGivenLoginAlreadyExists userWithGivenLoginAlreadyExists) {
             System.out.println("admin's mandatory account is checked and present in the database");
         }
+        */
 
         return "main";
     }
@@ -85,43 +96,14 @@ public class MainPage {
         return "error403";
     }
 
-    /*
-     * Method is used to the local authentication, has been replaced with spring db authentication
-     *
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String registerUser(@ModelAttribute(value="user") User user, ModelMap modelMap,HttpSession session)
-    {
-        boolean isAuthenticated = false;
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-
-
-        isAuthenticated = userService.login(user);
-        if(isAuthenticated)
-            user = userService.findUserByLoginPassword(user);
-
-
-        session.setAttribute("userCredentials", user);
-        session.setAttribute("isAuthenticated", isAuthenticated);
-
-        return "redirect:/";
-    }
-    */
-
-
     @RequestMapping(value = "/loginfailed", method = RequestMethod.GET)
-    public String loginFailed(@ModelAttribute(value="user") User user, /*BindingResult result*/ModelMap modelMap,HttpSession session)
+    public String loginFailed(@ModelAttribute(value="user") User user, /*BindingResult result*/ModelMap modelMap,HttpSession session,SecurityContextHolderAwareRequestWrapper request)
     {
         boolean isAuthenticated = false;
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-
-        /*
-        isAuthenticated = userService.login(user);
-        if(isAuthenticated)
-            user = userService.findUserByLoginPassword(user);
-        */
 
         user.setLogin(auth.getName());
-        if(auth.getName().equals("guest"))
+        if(auth.getAuthorities().toString().equals("[ROLE_ANONYMOUS]"))
             isAuthenticated = false;
         else
             isAuthenticated = true;
@@ -134,7 +116,7 @@ public class MainPage {
     }
 
     @RequestMapping(value = "/loginpassed", method = RequestMethod.GET)
-    public String loginPassed(@ModelAttribute(value="user") User user, /*BindingResult result*/ModelMap modelMap,HttpSession session)
+    public String loginPassed(@ModelAttribute(value="user") User user, /*BindingResult result*/ModelMap modelMap,HttpSession session,SecurityContextHolderAwareRequestWrapper request)
     {
         boolean isAuthenticated = false;
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -144,11 +126,10 @@ public class MainPage {
         User aUser = userService.findUserByLoginPassword(user);
         user.setId(aUser.getId());
 
-        if(auth.getName().equals("guest"))
+        if(auth.getAuthorities().toString().equals("[ROLE_ANONYMOUS]"))
             isAuthenticated = false;
         else
             isAuthenticated = true;
-
 
         session.setAttribute("userCredentials", user);
         session.setAttribute("isAuthenticated", isAuthenticated);

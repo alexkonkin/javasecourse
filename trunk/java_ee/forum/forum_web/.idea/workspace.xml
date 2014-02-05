@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/AdminUserCheckerService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/AbstractTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/AbstractTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/TopicsPageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/TopicsPageController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\forum\forum_web\src\main\java\com\globallogic\javaee\service\ServiceFactory.java" afterPath="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/ServiceFactory.java" />
     </list>
     <ignored path="forum_web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,13 +20,13 @@
     <file path="/pom.xml" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1390309767336" ignored="false" />
     <file path="$PROJECT_DIR$/src/test/java/javaee/dao/TopicDaoTest.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1386951493741" ignored="false" />
     <file path="$PROJECT_DIR$/src/test/java/javaee/dao/UserDaoTest.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1386951493744" ignored="false" />
-    <file path="/fragment.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1390923045839" ignored="false" />
-    <file path="/Dummy.txt" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391195748056" ignored="false" />
+    <file path="/fragment.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391611454506" ignored="false" />
+    <file path="/Dummy.txt" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391415615247" ignored="false" />
     <file path="/a.txt" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388417150172" ignored="false" />
     <file path="/mvc-dispatcher-servlet.xml" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388418500431" ignored="false" />
     <file path="/web.xml" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1390990979203" ignored="false" />
-    <file path="/MainPage.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391415289423" ignored="false" />
-    <file path="/main.jsp" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391185846766" ignored="false" />
+    <file path="/MainPage.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391616954095" ignored="false" />
+    <file path="/main.jsp" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391613474701" ignored="false" />
     <file path="/UserService.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391194158375" ignored="false" />
     <file path="/UserDao.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391194694282" ignored="false" />
     <file path="/TopicDaoTest.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388163722124" ignored="false" />
@@ -31,7 +37,7 @@
     <file path="/TopicsPageController.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391184266569" ignored="false" />
     <file path="/topic.jsp" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391182922758" ignored="false" />
     <file path="/TopicService.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391094991832" ignored="false" />
-    <file path="/applicationContext.xml" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391004436832" ignored="false" />
+    <file path="/applicationContext.xml" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391620795861" ignored="false" />
     <file path="/AppTests.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1387962698166" ignored="false" />
     <file path="/Message.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388137240541" ignored="false" />
     <file path="/MessageDao.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391099425255" ignored="false" />
@@ -55,11 +61,12 @@
     <file path="/UserRolesService.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1390388090392" ignored="false" />
     <file path="/security.xml" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391091520556" ignored="false" />
     <file path="/a.dummy" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1390486347330" ignored="false" />
-    <file path="/admin.jsp" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391195302024" ignored="false" />
+    <file path="/admin.jsp" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391621617406" ignored="false" />
     <file path="/AdminPageController.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391194197264" ignored="false" />
     <file path="/error404.jsp" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1390989914580" ignored="false" />
     <file path="/403.jsp" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391004763788" ignored="false" />
     <file path="/error403.jsp" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391005829874" ignored="false" />
+    <file path="/AdminUserCheckerService.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1391621009612" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,10 +134,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainPage.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainPage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="0" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.8201754">
+            <state line="123" column="0" selection-start="4593" selection-end="4593" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,38 +145,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRolesTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/UserRolesTest.java">
+      <file leaf-file-name="AdminUserCheckerService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/AdminUserCheckerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="21" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserRolesService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserRolesService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="16" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserRoles.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/UserRoles.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="13" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminPageController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/AdminPageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="62" column="0" selection-start="1385" selection-end="1385" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -177,28 +159,71 @@
       <file leaf-file-name="admin.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="222" selection-end="222" vertical-scroll-proportion="-5.230769">
+            <state line="25" column="27" selection-start="643" selection-end="643" vertical-scroll-proportion="-4.423077">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserService.java">
+      <file leaf-file-name="NewTopicController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/NewTopicController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="16" selection-start="962" selection-end="962" vertical-scroll-proportion="0.0">
+            <state line="24" column="13" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java">
+      <file leaf-file-name="RegisterNewUserController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/RegisterNewUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="45" selection-start="2182" selection-end="2182" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#630#660#0" expanded="true" />
-              </folding>
+            <state line="21" column="13" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TopicsPageController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/TopicsPageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="113" column="14" selection-start="4034" selection-end="4526" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/UserServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="13" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="95" column="43" selection-start="3972" selection-end="3972" vertical-scroll-proportion="0.56666666">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="security.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/security.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="80" selection-start="1767" selection-end="1767" vertical-scroll-proportion="-16.84">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="0" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.5">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -213,22 +238,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/403.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/error403.jsp" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/TopicService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/TopicDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/MessageDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/MessageService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/topic.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/security.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/TopicsPageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/AdminPageController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/ServiceFactory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/globallogic/javaee/AbstractTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/AdminUserCheckerService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin.jsp" />
       </list>
     </option>
   </component>
@@ -560,40 +585,6 @@
               <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UserService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forum_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forum_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -780,14 +771,16 @@
       <recent name="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\forum\forum_web\src\test\java\com\globallogic\javaee" />
       <recent name="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\forum\forum_web\src\test\java" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.globallogic.javaee" />
+      <recent name="com.globallogic.javaee.service" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\forum\forum_web\src\test\java\com\globallogic\javaee" />
+      <recent name="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\forum\forum_web\src\test" />
       <recent name="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\forum\forum_web\src\main\webapp\WEB-INF\classes" />
       <recent name="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\forum\forum_web\src\main\webapp\WEB-INF" />
       <recent name="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\forum\forum_web\src\main\resources" />
-      <recent name="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\forum\forum_web\src\test" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.globallogic.javaee.service" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 6 web forum">
@@ -1408,7 +1401,11 @@
       <created>1391195768111</created>
       <updated>1391195768111</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="forum_web: Mandatory System Administrator's account has been added to the system (login admin/password 123456)">
+      <created>1391415641112</created>
+      <updated>1391415641112</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1435,18 +1432,19 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7591973" sideWeight="0.68676627" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42809364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24866596" sideWeight="0.67001116" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40691194" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33667782" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32329988" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.75473803" sideWeight="0.31323373" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32218507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23857301" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1454,14 +1452,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26360726" sideWeight="0.79152733" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20847268" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24599786" sideWeight="0.6633222" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40802675" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23188406" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44468546" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19509476" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1507,7 +1504,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="forum_web: Disable user feature has been implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="forum_web: Mandatory System Administrator's account has been added to the system (login admin/password 123456)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1534,6 +1531,7 @@
     <MESSAGE value="forum_web: DELETE topic feature has been implemented&#10;" />
     <MESSAGE value="forum_web: DELETE message feature has been implemented" />
     <MESSAGE value="forum_web: Disable user feature has been implemented" />
+    <MESSAGE value="forum_web: Mandatory System Administrator's account has been added to the system (login admin/password 123456)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1547,106 +1545,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="24" selection-start="3982" selection-end="4074" vertical-scroll-proportion="-14.346154">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.2.0.RELEASE/spring-web-3.2.0.RELEASE.jar!/org/springframework/web/bind/annotation/support/HandlerMethodInvoker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="34" selection-start="1962" selection-end="1962" vertical-scroll-proportion="0.3512304">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.2.0.RELEASE/spring-webmvc-3.2.0.RELEASE.jar!/org/springframework/web/servlet/mvc/annotation/AnnotationMethodHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="59" selection-start="4800" selection-end="4800" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.2.0.RELEASE/spring-webmvc-3.2.0.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="19" selection-start="7547" selection-end="7547" vertical-scroll-proportion="0.33547008">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/3.2.0.RELEASE/spring-core-3.2.0.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="28" selection-start="1725" selection-end="1725" vertical-scroll-proportion="0.35042736">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.2.0.RELEASE/spring-aop-3.2.0.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="32" selection-start="4524" selection-end="4524" vertical-scroll-proportion="0.31837606">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.2.0.RELEASE/spring-aop-3.2.0.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="31" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.31837606">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.0.5.RELEASE/spring-tx-3.0.5.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="809" selection-end="809" vertical-scroll-proportion="0.33547008">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/AdminPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="222" selection-end="222" vertical-scroll-proportion="-5.230769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/UserRoles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="45" selection-start="2182" selection-end="2182" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#630#660#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserRolesService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="16" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="16" selection-start="962" selection-end="962" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/dao/UserRolesTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="21" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.0">
@@ -1654,12 +1552,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserRolesService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.8201754">
+        <state line="33" column="8" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/springapp/mvc/AppTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="16" selection-start="1438" selection-end="1438" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/TopicServiceIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="13" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/service/UserServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/NewTopicController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="13" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/RegisterNewUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="13" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/AbstractTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="29" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.2437107">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/globallogic/javaee/ServiceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="19" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.24056605">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/TopicsPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="14" selection-start="4034" selection-end="4526" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/AdminUserCheckerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="1385" selection-end="1385" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="27" selection-start="643" selection-end="643" vertical-scroll-proportion="-4.423077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/security.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="80" selection-start="1767" selection-end="1767" vertical-scroll-proportion="-16.84">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/MainPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="0" selection-start="4593" selection-end="4593" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="43" selection-start="3972" selection-end="3972" vertical-scroll-proportion="0.56666666">
+          <folding />
         </state>
       </provider>
     </entry>

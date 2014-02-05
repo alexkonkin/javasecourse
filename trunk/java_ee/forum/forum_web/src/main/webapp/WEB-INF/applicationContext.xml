@@ -86,4 +86,21 @@
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
 
+    <bean id="adminUserCheckerService" class="com.globallogic.javaee.service.AdminUserCheckerService" init-method="init">
+        <property name="userService" >
+            <ref local="userService"/>
+        </property>
+        <property name="userRolesService" >
+            <ref local="userRolesService"/>
+        </property>
+        <property name="login" value="admin" />
+        <property name="password" value="123456" />
+        <property name="enabled" value="true" />
+        <property name="roles">
+            <list value-type="java.lang.String">
+                <value>ROLE_ADMINISTRATOR</value>
+                <value>ROLE_USER</value>
+            </list>
+        </property>
+    </bean>
 </beans>

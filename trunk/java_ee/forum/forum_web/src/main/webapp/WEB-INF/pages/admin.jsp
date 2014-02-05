@@ -23,7 +23,7 @@
 <c:forEach var="user" items="${users}" varStatus="userLoop">
     <tr>
         <td>${user.login}</td>
-        <td>${user.login}</td>
+        <td>${user.password}</td>
         <td>
             <c:if test="${user.enabled == true}">
                 enabled
@@ -33,11 +33,16 @@
             </c:if>
         </td>
         <td>
-            <c:if test="${user.enabled == true}">
-                <a href="<c:url value="http://localhost:8181/admin/manage?isEnabled=false&userId=${user.id}"/>">disable</a>
-            </c:if>
-            <c:if test="${user.enabled == false}">
-                <a href="<c:url value="http://localhost:8181/admin/manage?isEnabled=true&userId=${user.id}"/>">enable</a>
+            <c:if test="${user.login != 'admin'}">
+                <c:if test="${user.enabled == true}">
+                    <a href="<c:url value="http://localhost:8181/admin/manage?isEnabled=false&userId=${user.id}"/>">disable</a>
+                </c:if>
+                <c:if test="${user.enabled == false}">
+                    <a href="<c:url value="http://localhost:8181/admin/manage?isEnabled=true&userId=${user.id}"/>">enable</a>
+                </c:if>
+                </c:if>
+            <c:if test="${user.login == 'admin'}">
+                    &nbsp
             </c:if>
         </td>
     </tr>
