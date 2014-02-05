@@ -5,7 +5,6 @@ import com.globallogic.javaee.dao.TopicDao;
 import com.globallogic.javaee.dao.UserDao;
 import com.globallogic.javaee.dao.UserRolesDao;
 import com.globallogic.javaee.service.MessageService;
-import com.globallogic.javaee.service.ServiceFactory;
 import com.globallogic.javaee.service.TopicService;
 import com.globallogic.javaee.service.UserService;
 import org.hibernate.SQLQuery;
@@ -13,7 +12,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.classic.Session;
 import org.junit.BeforeClass;
 import org.springframework.beans.factory.BeanDefinitionStoreException;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import java.sql.SQLException;
