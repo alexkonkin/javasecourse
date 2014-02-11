@@ -2,11 +2,14 @@
 
 = Useful links forum_web =
 
-spring security tags
+spring security tags =
 http://doanduyhai.wordpress.com/2012/02/26/spring-security-part-v-security-tags/
 
-how to extract parameters from the request
+how to extract parameters from the request =
 http://www.byteslounge.com/tutorials/spring-mvc-requestmapping-example
 
-jersey 1.8 is used as a framework for rest in forum_web application
+jersey 1.8 is used as a framework for rest in forum_web application =
 https://jersey.java.net/nonav/documentation/1.8/user-guide.html
+
+rest xml example =
+http://www.vogella.com/tutorials/REST/article.html
