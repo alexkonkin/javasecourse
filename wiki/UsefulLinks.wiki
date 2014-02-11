@@ -17,3 +17,7 @@ https://jersey.java.net/nonav/documentation/1.8/user-guide.html
 rest xml example
 
 http://www.vogella.com/tutorials/REST/article.html
+
+rest jaxb example
+
+http://www.mkyong.com/webservices/jax-rs/download-xml-with-jersey-jaxb/
