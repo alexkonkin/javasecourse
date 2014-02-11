@@ -148,6 +148,14 @@
         </dependency>
         <!-- spring security-->
 
+        <!-- rest api library -->
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>1.8</version>
+        </dependency>
+        <!-- rest api library -->
+
     </dependencies>
 
 
