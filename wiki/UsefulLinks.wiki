@@ -21,3 +21,7 @@ http://www.vogella.com/tutorials/REST/article.html
 rest jaxb example
 
 http://www.mkyong.com/webservices/jax-rs/download-xml-with-jersey-jaxb/
+
+good xml/xsd validator
+
+http://www.utilities-online.info/xsdvalidation/
