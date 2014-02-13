@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<forum>
+    <topics>
+        <topic topic_id="1">
+            <topic_name>topic name</topic_name>
+			<user user_id="1">
+				<login>test</login>
+				<password>test</password>
+				<enabled>true</enabled>
+					<roles>
+						<role role_id="1">
+							<role_name>ROLE_USER</role_name>
+						</role>
+						<role role_id="2">
+							<role_name>ROLE_ADMINISTRATOR</role_name>
+						</role>
+					</roles>
+			</user>
+			<messages>
+				<message message_id="1">
+					<user user_id="1">
+						<login>test</login>
+						<password>test</password>
+						<enabled>true</enabled>
+						<roles>
+							<role role_id="1">
+								<role_name>ROLE_USER</role_name>
+							</role>
+							<role role_id="2">
+								<role_name>ROLE_ADMINISTRATOR</role_name>
+							</role>
+						</roles>
+					</user>	
+					<text>message's text</text>
+				</message>
+			</messages>
+        </topic>
+    </topics>
+</forum>
