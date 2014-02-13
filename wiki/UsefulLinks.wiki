@@ -14,6 +14,11 @@ jersey 1.8 is used as a framework for rest in forum_web application
 
 https://jersey.java.net/nonav/documentation/1.8/user-guide.html
 
+jersey and spring integration 
+(@InjectParam only worked for me and not @Autowired and @Resource)
+
+http://www.mkyong.com/webservices/jax-rs/jersey-spring-integration-example/
+
 rest xml example
 
 http://www.vogella.com/tutorials/REST/article.html
