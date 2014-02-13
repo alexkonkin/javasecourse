@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- http://www.freeformatter.com/xml-validator-xsd.html -->
+<!-- definition of simple elements -->
+<!-- user entity -->
+<xs:element name="login" type="xs:string"/>
+<xs:element name="password" type="xs:string"/>
+<xs:element name="enabled" type="xs:boolean"/>
+
+<!-- topic entity -->
+<xs:element name="topic_name" type="xs:string"/>
+
+<!-- role entity -->
+<xs:element name="role_name" type="xs:string"/>
+
+<!-- message entity -->
+<xs:element name="text" type="xs:string"/>
+
+<!-- definition of attributes --> 
+<xs:attribute name="user_id" type="xs:integer"/>
+<xs:attribute name="topic_id" type="xs:integer"/>
+<xs:attribute name="message_id" type="xs:integer"/>
+<xs:attribute name="role_id" type="xs:integer"/>
+
+<!-- definition of complex elements -->
+<xs:element name="role">
+  <xs:complexType>
+  <xs:sequence>
+    <xs:element ref="role_name"/>
+  </xs:sequence>
+  <xs:attribute ref="role_id" use="required"/>  
+  </xs:complexType>
+</xs:element>
+
+
+<xs:element name="roles">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="role" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="user">
+  <xs:complexType>
+  <xs:sequence>
+    <xs:element ref="login"/>
+    <xs:element ref="password"/>
+	<xs:element ref="enabled"/>
+	<xs:element ref="roles"/>	
+  </xs:sequence>
+  <xs:attribute ref="user_id" use="required"/>  
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="topic">
+  <xs:complexType>
+    <xs:sequence>
+	  <xs:element ref="topic_name" maxOccurs="unbounded"/>
+	  <xs:element ref="user" maxOccurs="unbounded"/>
+      <xs:element ref="messages" maxOccurs="unbounded"/>
+    </xs:sequence>
+	<xs:attribute name="topic_id" type="xs:integer"/>
+  </xs:complexType>
+</xs:element> 
+
+<xs:element name="message">
+  <xs:complexType>
+    <xs:sequence>
+	  <xs:element ref="user" maxOccurs="unbounded"/>
+      <xs:element ref="text" maxOccurs="unbounded"/>
+    </xs:sequence>
+	<xs:attribute ref="message_id" use="required"/>
+  </xs:complexType>
+</xs:element> 
+
+
+<xs:element name="messages">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="message" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element> 
+
+<xs:element name="topics">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="topic" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element> 
+
+<xs:element name="forum">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="topics" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element> 
+
+</xs:schema>
