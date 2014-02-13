@@ -33,22 +33,6 @@
 					</user>	
 					<text>message's text</text>
 				</message>
-				<message message_id="2">
-					<user user_id="1">
-						<login>test</login>
-						<password>test</password>
-						<enabled>true</enabled>
-						<roles>
-							<role role_id="1">
-								<role_name>ROLE_USER</role_name>
-							</role>
-							<role role_id="2">
-								<role_name>ROLE_ADMINISTRATOR</role_name>
-							</role>
-						</roles>
-					</user>	
-					<text>message's text</text>
-				</message>
 			</messages>
         </topic>
 		<topic topic_id="2">
@@ -66,24 +50,6 @@
 						</role>
 					</roles>
 			</user>
-			<messages>
-				<message message_id="3">
-					<user user_id="1">
-						<login>test</login>
-						<password>test</password>
-						<enabled>true</enabled>
-						<roles>
-							<role role_id="1">
-								<role_name>ROLE_USER</role_name>
-							</role>
-							<role role_id="2">
-								<role_name>ROLE_ADMINISTRATOR</role_name>
-							</role>
-						</roles>
-					</user>	
-					<text>message's text</text>
-				</message>
-			</messages>
         </topic>
     </topics>
 </forum>
