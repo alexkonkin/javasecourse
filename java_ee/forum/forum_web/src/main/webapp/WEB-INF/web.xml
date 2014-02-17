@@ -34,7 +34,15 @@
 
     <servlet>
         <servlet-name>rest-service</servlet-name>
-        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <!--servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class-->
+        <servlet-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>
+        <init-param>
+            <param-name>
+                com.sun.jersey.config.property.packages
+            </param-name>
+            <param-value>com.globallogic.javaee.rest</param-value>
+        </init-param>
+        <load-on-startup>2</load-on-startup>
     </servlet>
 
     <servlet-mapping>
