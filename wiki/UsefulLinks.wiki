@@ -30,3 +30,7 @@ http://www.mkyong.com/webservices/jax-rs/download-xml-with-jersey-jaxb/
 good xml/xsd validator
 
 http://www.utilities-online.info/xsdvalidation/
+
+Data Transfer Object
+
+http://martinfowler.com/eaaCatalog/dataTransferObject.html
