@@ -34,3 +34,10 @@ http://www.utilities-online.info/xsdvalidation/
 Data Transfer Object
 
 http://martinfowler.com/eaaCatalog/dataTransferObject.html
+
+5 ways to convert InputStream to String in Java
+
+http://javarevisited.blogspot.com/2012/08/convert-inputstream-to-string-java-example-tutorial.html#ixzz2tmIyI8j5
+
+
+http://javarevisited.blogspot.com/2012/08/convert-inputstream-to-string-java-example-tutorial.html
