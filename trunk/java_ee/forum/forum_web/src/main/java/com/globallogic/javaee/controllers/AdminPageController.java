@@ -1,5 +1,6 @@
 package com.globallogic.javaee.controllers;
 
+import com.globallogic.javaee.exceptions.UserWithGivenIdNotFound;
 import com.globallogic.javaee.model.Message;
 import com.globallogic.javaee.model.User;
 import com.globallogic.javaee.service.MessageService;
@@ -45,8 +46,7 @@ public class AdminPageController {
     }
 
     @RequestMapping(value = "/manage", method = RequestMethod.GET)
-    public String adminManage(@RequestParam(value = "isEnabled") Boolean isEnabled, @RequestParam(value = "userId") Integer userId , ModelMap modelMap,HttpSession session)
-    {
+    public String adminManage(@RequestParam(value = "isEnabled") Boolean isEnabled, @RequestParam(value = "userId") Integer userId , ModelMap modelMap,HttpSession session) throws UserWithGivenIdNotFound {
         User aUser = userService.findUserById(userId);
         aUser.setEnabled(isEnabled);
         userService.setAccountStatus(aUser);

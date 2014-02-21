@@ -66,7 +66,7 @@ public class UserDao extends HibernateDaoSupport
         return result.get(0);
     }
 
-    public User findUserById(Integer userId){
+    public User findUserById(Integer userId)throws UserWithGivenIdNotFound{
         SessionFactory sessionFactory = getSessionFactory();
         Session aSession = sessionFactory.openSession();
         String hql = "from USERS s where s.id = :id";
@@ -74,7 +74,10 @@ public class UserDao extends HibernateDaoSupport
                 .setParameter("id", userId)
                 .list();
         aSession.close();
-        return result.get(0);
+        if(result.size() == 0) {
+            throw new UserWithGivenIdNotFound(userId);
+        }else
+            return result.get(0);
     }
 
 
