@@ -77,6 +77,14 @@ public class Roles {
         return this.role;
     }
 
+    public Role getRole(Integer idRole) {
+        if (role == null) {
+            role = new ArrayList<Role>();
+        }
+        return this.role.get(idRole);
+    }
+
+
     public void setRole(List<Role> aRole) {
         if (role == null) {
             role = new ArrayList<Role>();
@@ -89,6 +97,10 @@ public class Roles {
             role = new ArrayList<Role>();
         }
         this.role.add(aRole);
+    }
+
+    public Integer size(){
+        return this.role.size();
     }
 
     /*

@@ -1,24 +1,25 @@
 package com.globallogic.javaee.rest;
 
 import com.globallogic.javaee.dto.*;
+import com.globallogic.javaee.exceptions.UserWithGivenIdNotFound;
 import com.globallogic.javaee.model.User;
 import com.globallogic.javaee.model.UserRoles;
 import com.globallogic.javaee.service.UserRolesService;
 import com.globallogic.javaee.service.UserService;
 import com.sun.jersey.api.core.InjectParam;
 import org.springframework.stereotype.Component;
-import org.springframework.ui.ModelMap;
+
 
 import javax.annotation.Resource;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.io.File;
+import java.io.InputStream;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 
 @Path("/users")
@@ -62,28 +63,23 @@ public class UserRestService {
             aDtoUsers.setUser(aDtoUser);
         }
         aForum.setUsers(aDtoUsers);
-        //String output = "<?xml version=\"1.0\"?>" + "<user>" +userId+ "</user>";
-
-        ForumWebXmlProcessor aForumWebXmlProcessor = new ForumWebXmlProcessor(aForum);
-        String output = aForumWebXmlProcessor.marshalToXmlString();
-
-        System.out.println("output : "+ output);
-
-
-        return Response.status(200).entity(output).build();
-
+        return Response.status(200).entity(aForum).build();
     }
 
     @GET
     @Path("/{userId}")
     public Response getUserById(@PathParam("userId") Integer userId) {
-        User aUser = userService.findUserById(userId);
+
+        User aUser = null;
+        try {
+            aUser = userService.findUserById(userId);
+        } catch (UserWithGivenIdNotFound userWithGivenIdNotFound) {
+            String output = "<?xml version=\"1.0\"?>" + "<message> User with specified Id : " +userId+ " not found in the database</message>";
+            return Response.status(404).entity(output).build();
+        }
+
         List<UserRoles> aUserRoles = userRolesService.getUserRolesByUserId(aUser);
 
-        System.out.println(aUser.getLogin());
-
-        Forum aForum = new Forum();
-        Users aUsers = new Users();
         com.globallogic.javaee.dto.User aDtoUser = new com.globallogic.javaee.dto.User();
 
         aDtoUser.setLogin(aUser.getLogin());
@@ -99,24 +95,51 @@ public class UserRestService {
         }
 
         aDtoUser.setRoles(aDtoRoles);
-        aUsers.setUser(aDtoUser);
-        aForum.setUsers(aUsers);
-        //String output = "<?xml version=\"1.0\"?>" + "<user>" +userId+ "</user>";
-
-        ForumWebXmlProcessor aForumWebXmlProcessor = new ForumWebXmlProcessor(aForum);
-        String output = aForumWebXmlProcessor.marshalToXmlString();
-
-        System.out.println("output : "+ output);
-
-        return Response.status(200).entity(output).build();
-
+        return Response.status(200).entity(aDtoUser).build();
     }
 
+    @PUT
+    @Path("/")
+    @Consumes(MediaType.APPLICATION_XML)
+    public Response putUserById(com.globallogic.javaee.dto.User aUser) {
+        //String inputXmlString = new Scanner(input,"UTF-8").useDelimiter("\\A").next();
+        Roles aDtoRoles = aUser.getRoles();
+        String output = "";
+        Integer statusCode = 0;
+        if (aDtoRoles == null){
+            output = "<?xml version=\"1.0\"?>" + "<message> PUT method : please add roles to the user's description</message>";
+            statusCode = 404;
+        }
+        else
+        if(aDtoRoles.size() > 0){
+            User daoUser = new User();
+            daoUser.setEnabled(aUser.isEnabled());
+            daoUser.setLogin(aUser.getLogin());
+            daoUser.setPassword(aUser.getPassword());
+            userService.register(daoUser);
 
+            User addedUser = userService.findUserByLoginPassword(daoUser);
 
-    /*
-    public void setUserService(UserService userService) {
-        this.usrService = userService;
+            UserRoles aUserRoles = new UserRoles();
+
+            for (int userRoles = 0; userRoles < aDtoRoles.size(); userRoles++){
+                aUserRoles.setRole(aDtoRoles.getRole(userRoles).getRoleName());
+                aUserRoles.setUser(addedUser);
+                userRolesService.createUserRole(aUserRoles);
+            }
+            output = "<?xml version=\"1.0\"?>" + "<message> PUT method : " + aUser.getLogin() + " successfylly added to the database</message>";
+            statusCode = 200;
+        }
+        return Response.status(statusCode).entity(output).build();
     }
-    */
+
+    @POST
+    @Path("/{userId}")
+    @Consumes(MediaType.APPLICATION_XML)
+    public Response manageUserById(@QueryParam("isEnabled") Boolean isEnabled) {
+        //http://localhost:8080/JAXRS-HelloWorld/rest/helloWorldREST/parameters?parameter2=Examples&parameter2=09709
+        System.out.println("isEnabled "+isEnabled);
+        return Response.status(200).entity("stub").build();
+    }
+
 }

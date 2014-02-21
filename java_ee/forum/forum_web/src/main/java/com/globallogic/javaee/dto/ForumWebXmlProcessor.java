@@ -27,6 +27,7 @@ public class ForumWebXmlProcessor {
         webForum = aForum;
     }
 
+
 /*
     public void marshalToXmlFile(String aFimeName){
         try {
@@ -70,21 +71,22 @@ public class ForumWebXmlProcessor {
         }
         return result;
     }
-
-    public Catalog unMarshalFromString (String aString){
-        Catalog result = null;
+*/
+    public Forum unMarshalFromString (String aString){
+        Forum result = null;
         String content = new String(aString);
         try {
-            JAXBContext jc = JAXBContext.newInstance(Catalog.class);
+            JAXBContext jc = JAXBContext.newInstance(Forum.class);
             StringReader stringReader = new StringReader(content);
             Unmarshaller unmarshaller = jc.createUnmarshaller();
-            result = (Catalog) unmarshaller.unmarshal(stringReader);
+            result = (Forum) unmarshaller.unmarshal(stringReader);
         } catch( JAXBException je ) {
             je.printStackTrace();
         }
         return result;
     }
 
+/*
     public Catalog unMarshalFromClassPath(String anXmlFileName){
         Catalog result = null;
         try {

@@ -47,8 +47,7 @@ public class UserService
         userDao.findUserByLogin(aLogin);
     }
 
-    public User findUserById(Integer userId)
-    {
+    public User findUserById(Integer userId) throws UserWithGivenIdNotFound {
         return userDao.findUserById(userId);
     }
 
