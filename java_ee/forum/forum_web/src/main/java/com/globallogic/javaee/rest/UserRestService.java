@@ -9,18 +9,11 @@ import com.globallogic.javaee.service.UserService;
 import com.sun.jersey.api.core.InjectParam;
 import org.springframework.stereotype.Component;
 
-
-import javax.annotation.Resource;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.io.File;
-import java.io.InputStream;
 import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-
 
 @Path("/users")
 @Component
@@ -127,7 +120,7 @@ public class UserRestService {
                 aUserRoles.setUser(addedUser);
                 userRolesService.createUserRole(aUserRoles);
             }
-            output = "<?xml version=\"1.0\"?>" + "<message> PUT method : " + aUser.getLogin() + " successfylly added to the database</message>";
+            output = "<?xml version=\"1.0\"?>" + "<message> User with login " + aUser.getLogin() + " successfully added to the database</message>";
             statusCode = 200;
         }
         return Response.status(statusCode).entity(output).build();
@@ -136,10 +129,17 @@ public class UserRestService {
     @POST
     @Path("/{userId}")
     @Consumes(MediaType.APPLICATION_XML)
-    public Response manageUserById(@QueryParam("isEnabled") Boolean isEnabled) {
-        //http://localhost:8080/JAXRS-HelloWorld/rest/helloWorldREST/parameters?parameter2=Examples&parameter2=09709
-        System.out.println("isEnabled "+isEnabled);
-        return Response.status(200).entity("stub").build();
+    public Response manageUserById(@PathParam("userId") Integer userId, @QueryParam("isEnabled") Boolean isEnabled) {
+        //http://localhost:8181/rest/users/11?isEnabled=true
+        User daoUser = new User();
+        try {
+            daoUser = userService.findUserById(userId);
+        } catch (UserWithGivenIdNotFound userWithGivenIdNotFound) {
+            return Response.status(404).entity("<error>User with given indentified not found</error>").build();
+        }
+        daoUser.setEnabled(isEnabled);
+        userService.setAccountStatus(daoUser);
+        return Response.status(201).entity("<message>User with login"+daoUser.getLogin()+" enabled status is "+daoUser.getEnabled()+"</message>").build();
     }
 
 }
