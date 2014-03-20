@@ -73,4 +73,18 @@ public class Messages {
         return this.message;
     }
 
+    public void setMessages(ArrayList<Message> aMessages){
+        if (message == null) {
+            message = new ArrayList<Message>();
+        }
+        message = aMessages;
+    }
+
+    public void setMessage(Message aDtoMessage) {
+        if (message == null) {
+            message = new ArrayList<Message>();
+        }
+        this.message.add(aDtoMessage);
+    }
+
 }

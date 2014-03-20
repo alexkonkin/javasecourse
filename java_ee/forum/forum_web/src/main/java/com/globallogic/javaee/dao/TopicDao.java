@@ -49,7 +49,7 @@ public class TopicDao extends HibernateDaoSupport
         return Id;
     }
 
-    public Topic getTopicById(Integer anId){
+    public Topic getTopicById(Integer anId) throws TopicWithGivenIdNotFound {
         SessionFactory sessionFactory = getSessionFactory();
         Session aSession = sessionFactory.openSession();
         String hql = "from TOPICS t where t.id = :id";
@@ -57,6 +57,10 @@ public class TopicDao extends HibernateDaoSupport
                 .setParameter("id", anId)
                 .list();
         aSession.close();
+
+        if(topic.size() == 0 ) {
+            throw new TopicWithGivenIdNotFound(anId);
+        }
         return topic.get(0);
     }
 

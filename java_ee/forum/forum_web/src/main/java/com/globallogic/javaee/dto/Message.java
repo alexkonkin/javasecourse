@@ -49,9 +49,9 @@ import javax.xml.bind.annotation.XmlType;
 public class Message {
 
     @XmlElement(required = true)
-    protected List<User> user;
+    protected User user;
     @XmlElement(required = true)
-    protected List<String> text;
+    protected String text;
     @XmlAttribute(name = "message_id", required = true)
     protected BigInteger messageId;
 
@@ -77,12 +77,20 @@ public class Message {
      * 
      * 
      */
-    public List<User> getUser() {
+    public User getUser() {
         if (user == null) {
-            user = new ArrayList<User>();
+            user = new User();
         }
         return this.user;
     }
+
+    public void setUser(User aUser) {
+        if (user == null) {
+            user = new User();
+        }
+        this.user = aUser;
+    }
+
 
     /**
      * Gets the value of the text property.
@@ -106,12 +114,21 @@ public class Message {
      * 
      * 
      */
-    public List<String> getText() {
+    public String getText() {
         if (text == null) {
-            text = new ArrayList<String>();
+            text = new String();
         }
         return this.text;
     }
+
+    public void setText(String aText) {
+        if (text == null) {
+            text = new String();
+        }
+        this.text = aText;
+    }
+
+
 
     /**
      * Gets the value of the messageId property.

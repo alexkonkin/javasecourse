@@ -1,5 +1,6 @@
 package com.globallogic.javaee.controllers;
 
+import com.globallogic.javaee.exceptions.TopicWithGivenIdNotFound;
 import com.globallogic.javaee.model.Message;
 import com.globallogic.javaee.model.Topic;
 import com.globallogic.javaee.model.User;
@@ -46,7 +47,12 @@ public class TopicsPageController {
     @RequestMapping(method = RequestMethod.GET)
     public String printForumTopics(@RequestParam("topicId") Integer topicId, ModelMap model) {
         System.out.println("topic get controller : "+ topicId);
-        Topic aTopic = topicService.getTopicById(topicId);
+        Topic aTopic = null;
+        try {
+            aTopic = topicService.getTopicById(topicId);
+        } catch (TopicWithGivenIdNotFound topicWithGivenIdNotFound) {
+            topicWithGivenIdNotFound.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
 
         List<Message> aMessages =  messageService.getMessageByTopicId(aTopic);
 

@@ -73,4 +73,11 @@ public class Topics {
         return this.topic;
     }
 
+    public void addTopic(Topic aDtoTopic) {
+        if (topic == null) {
+            topic = new ArrayList<Topic>();
+        }
+        this.topic.add(aDtoTopic);
+    }
+
 }
