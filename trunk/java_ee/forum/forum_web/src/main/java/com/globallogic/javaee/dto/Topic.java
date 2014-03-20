@@ -51,9 +51,9 @@ import javax.xml.bind.annotation.XmlType;
 public class Topic {
 
     @XmlElement(name = "topic_name", required = true)
-    protected List<String> topicName;
+    protected String topicName;
     @XmlElement(required = true)
-    protected List<User> user;
+    protected User user;
     protected List<Messages> messages;
     @XmlAttribute(name = "topic_id")
     protected BigInteger topicId;
@@ -80,11 +80,15 @@ public class Topic {
      * 
      * 
      */
-    public List<String> getTopicName() {
+    public String getTopicName() {
         if (topicName == null) {
-            topicName = new ArrayList<String>();
+            topicName = new String();
         }
         return this.topicName;
+    }
+
+    public void setTopicName(String aTopicName){
+        this.topicName = aTopicName;
     }
 
     /**
@@ -109,12 +113,20 @@ public class Topic {
      * 
      * 
      */
-    public List<User> getUser() {
+    public User getUser() {
         if (user == null) {
-            user = new ArrayList<User>();
+            user = new User();
         }
         return this.user;
     }
+
+    public void setUser(User aUser) {
+        if (user == null) {
+            user = new User();
+        }
+        this.user = aUser;
+    }
+
 
     /**
      * Gets the value of the messages property.

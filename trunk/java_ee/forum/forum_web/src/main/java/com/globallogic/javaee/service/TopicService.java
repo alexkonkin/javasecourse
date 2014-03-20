@@ -34,7 +34,7 @@ public class TopicService
         return topicDao.createTopic(aTopic);
     }
 
-    public Topic getTopicById (Integer anId){
+    public Topic getTopicById (Integer anId) throws TopicWithGivenIdNotFound{
         return topicDao.getTopicById(anId);
     }
 
