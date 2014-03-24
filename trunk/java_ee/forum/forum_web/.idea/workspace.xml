@@ -154,7 +154,7 @@
       <file leaf-file-name="TopicRestService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/rest/TopicRestService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="30" selection-start="4811" selection-end="4811" vertical-scroll-proportion="0.3428064">
+            <state line="40" column="0" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.28241563">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1443,7 +1443,11 @@
       <created>1395336762131</created>
       <updated>1395336762131</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="forum_web: Topic/Messages REST service - delete topic method has been implemented">
+      <created>1395676136112</created>
+      <updated>1395676136112</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1698,7 +1702,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/rest/TopicRestService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="30" selection-start="4811" selection-end="4811" vertical-scroll-proportion="0.3428064">
+        <state line="40" column="0" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.28241563">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
