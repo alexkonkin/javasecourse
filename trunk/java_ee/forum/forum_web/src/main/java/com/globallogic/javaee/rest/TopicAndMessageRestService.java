@@ -22,7 +22,7 @@ import java.util.List;
 @Path("/topics")
 @Component
 @Produces(MediaType.APPLICATION_XML)
-public class TopicRestService {
+public class TopicAndMessageRestService {
     @InjectParam
     TopicService topicService;
     @InjectParam
@@ -174,4 +174,13 @@ public class TopicRestService {
         }
         return Response.status(responseCode).entity(output).build();
     }
+
+    @PUT
+    @Path("/{topicId}/messages")
+    @Consumes(MediaType.APPLICATION_XML)
+    public Response putMessage(com.globallogic.javaee.dto.Message aDtoMessage) {
+
+        return Response.status(200).entity("test").build();
+    }
+
 }
