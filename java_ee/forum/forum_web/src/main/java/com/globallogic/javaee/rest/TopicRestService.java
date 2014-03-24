@@ -39,8 +39,6 @@ public class TopicRestService {
         Forum aForum = new Forum();
         Topics aDtoTopics = new Topics();
 
-        System.out.println("number of topics is "+ aTopics.size());
-
         for (int i = 0; i< aTopics.size(); i++){
             com.globallogic.javaee.dto.Topic aDtoTopic = new com.globallogic.javaee.dto.Topic();
             aDtoTopic.setTopicId(BigInteger.valueOf(aTopics.get(i).getId()));
@@ -93,7 +91,6 @@ public class TopicRestService {
         }
 
         List<Message> aMessages = messageService.getMessageByTopicId(aTopic);
-        System.out.println("number of messages is "+aMessages.size());
 
         com.globallogic.javaee.dto.Messages aDtoMessages = new com.globallogic.javaee.dto.Messages();
         com.globallogic.javaee.dto.Topic aDtoTopic = new com.globallogic.javaee.dto.Topic();
@@ -119,19 +116,6 @@ public class TopicRestService {
     @Path("/")
     @Consumes(MediaType.APPLICATION_XML)
     public Response putTopic(com.globallogic.javaee.dto.Topic aDtoTopic) {
-        //to check this method you can execute the rest request from the restclient third part application
-        //http://localhost:8181/rest/topics
-        /*
-        <topic topic_id="0">
-        <topic_name>test1</topic_name>
-        <user user_id="18">
-        <login>admin</login>
-        <password>123456</password>
-        <enabled>true</enabled>
-        </user>
-        </topic>
-        */
-
         Topic aDaoTopic = new Topic();
         com.globallogic.javaee.model.User aDaoUser = new com.globallogic.javaee.model.User();
 
