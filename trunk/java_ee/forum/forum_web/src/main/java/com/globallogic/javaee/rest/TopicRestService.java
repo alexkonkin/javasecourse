@@ -2,7 +2,7 @@ package com.globallogic.javaee.rest;
 
 import com.globallogic.javaee.dto.*;
 import com.globallogic.javaee.dto.User;
-import com.globallogic.javaee.exceptions.TopicWithGivenIdNotFound;
+import com.globallogic.javaee.exceptions.*;
 import com.globallogic.javaee.model.*;
 import com.globallogic.javaee.model.Message;
 import com.globallogic.javaee.model.Topic;
@@ -27,6 +27,8 @@ public class TopicRestService {
     TopicService topicService;
     @InjectParam
     MessageService messageService;
+    @InjectParam
+    UserService userService;
 
     @GET
     @Path("/")
@@ -80,7 +82,7 @@ public class TopicRestService {
 
     @GET
     @Path("/{topicId}/messages/")
-    public Response getMessagesByTopicId(@PathParam("topicId") Integer topicId) {
+    public Response getAllMessagesByTopicId(@PathParam("topicId") Integer topicId) {
 
         Topic aTopic = null;
         try {
@@ -112,56 +114,80 @@ public class TopicRestService {
     }
 
 
-    /*
+
     @PUT
     @Path("/")
     @Consumes(MediaType.APPLICATION_XML)
-    public Response putUserById(com.globallogic.javaee.dto.User aUser) {
-        //String inputXmlString = new Scanner(input,"UTF-8").useDelimiter("\\A").next();
-        Roles aDtoRoles = aUser.getRoles();
-        String output = "";
-        Integer statusCode = 0;
-        if (aDtoRoles == null){
-            output = "<?xml version=\"1.0\"?>" + "<message> PUT method : please add roles to the user's description</message>";
-            statusCode = 404;
-        }
-        else
-        if(aDtoRoles.size() > 0){
-            User daoUser = new User();
-            daoUser.setEnabled(aUser.isEnabled());
-            daoUser.setLogin(aUser.getLogin());
-            daoUser.setPassword(aUser.getPassword());
-            userService.register(daoUser);
+    public Response putTopic(com.globallogic.javaee.dto.Topic aDtoTopic) {
+        //to check this method you can execute the rest request from the restclient third part application
+        //http://localhost:8181/rest/topics
+        /*
+        <topic topic_id="0">
+        <topic_name>test1</topic_name>
+        <user user_id="18">
+        <login>admin</login>
+        <password>123456</password>
+        <enabled>true</enabled>
+        </user>
+        </topic>
+        */
 
-            User addedUser = userService.findUserByLoginPassword(daoUser);
+        Topic aDaoTopic = new Topic();
+        com.globallogic.javaee.model.User aDaoUser = new com.globallogic.javaee.model.User();
 
-            UserRoles aUserRoles = new UserRoles();
-
-            for (int userRoles = 0; userRoles < aDtoRoles.size(); userRoles++){
-                aUserRoles.setRole(aDtoRoles.getRole(userRoles).getRoleName());
-                aUserRoles.setUser(addedUser);
-                userRolesService.createUserRole(aUserRoles);
-            }
-            output = "<?xml version=\"1.0\"?>" + "<message> User with login " + aUser.getLogin() + " successfully added to the database</message>";
-            statusCode = 200;
-        }
-        return Response.status(statusCode).entity(output).build();
-    }
-
-    @POST
-    @Path("/{userId}")
-    @Consumes(MediaType.APPLICATION_XML)
-    public Response manageUserById(@PathParam("userId") Integer userId, @QueryParam("isEnabled") Boolean isEnabled) {
-        //http://localhost:8181/rest/users/11?isEnabled=true
-        User daoUser = new User();
         try {
-            daoUser = userService.findUserById(userId);
+            aDaoUser = userService.findUserById(aDtoTopic.getUser().getUserId().intValue());
         } catch (UserWithGivenIdNotFound userWithGivenIdNotFound) {
-            return Response.status(404).entity("<error>User with given indentified not found</error>").build();
+            userWithGivenIdNotFound.printStackTrace();
         }
-        daoUser.setEnabled(isEnabled);
-        userService.setAccountStatus(daoUser);
-        return Response.status(201).entity("<message>User with login"+daoUser.getLogin()+" enabled status is "+daoUser.getEnabled()+"</message>").build();
+
+        aDaoUser.setId(aDtoTopic.getUser().getUserId().intValue());
+
+        aDaoTopic.setUser(aDaoUser);
+        aDaoTopic.setName(aDtoTopic.getTopicName());
+
+        String output = new String();
+        Integer responseCode = 0;
+        try {
+            topicService.getTopicByName(aDtoTopic.getTopicName());
+        } catch (TopicWithGivenNameNotFound topicWithGivenNameNotFound) {
+            topicService.createTopic(aDaoTopic);
+            output = "<?xml version=\"1.0\"?>" + "<message> Topic with specified name successfully created</message>";
+            responseCode = 200;
+        } catch (TopicWithGivenNameAlreadyExists topicWithGivenNameAlreadyExists) {
+            output = "<?xml version=\"1.0\"?>" + "<message> Topic with specified name already exists</message>";
+            responseCode = 400;
+        } catch (TopicEmptyNameProhibited topicEmptyNameProhibited) {
+            output = "<?xml version=\"1.0\"?>" + "<message> Creation of Topic with an empty name prohibited</message>";
+            responseCode = 400;
+        }
+
+        return Response.status(responseCode).entity(output).build();
     }
-    */
+
+    @DELETE
+    @Path("/{topicId}")
+    public Response deleteTopicWithId(@PathParam("topicId") Integer topicId) {
+        Topic aTopic = new Topic();
+        try {
+            aTopic = topicService.getTopicById(topicId);
+        } catch (TopicWithGivenIdNotFound topicWithGivenIdNotFound) {
+            topicWithGivenIdNotFound.printStackTrace();
+        }
+
+        List<Message> aMessagesList =  messageService.getMessageByTopicId(aTopic);
+
+        String output = new String();
+        Integer responseCode = 0;
+        if(aMessagesList.size() == 0){
+            topicService.deleteTopicById(topicId);
+            output = "<?xml version=\"1.0\"?>" + "<message> Topic "+aTopic.getName()+" has been successfully deleted</message>";
+            responseCode = 200;
+        }
+        else{
+            output = "<?xml version=\"1.0\"?>" + "<message> Topic has the nested messages. Delete the nested messages before deleting this topic</message>";
+            responseCode = 400;
+        }
+        return Response.status(responseCode).entity(output).build();
+    }
 }
