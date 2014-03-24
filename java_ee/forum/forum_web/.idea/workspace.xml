@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/rest/TopicRestService.java" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/rest/TopicRestService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\forum\forum_web\src\main\java\com\globallogic\javaee\rest\TopicRestService.java" afterPath="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/rest/TopicAndMessageRestService.java" />
     </list>
     <ignored path="forum_web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -15,7 +15,7 @@
     <file path="$PROJECT_DIR$/src/test/java/javaee/dao/TopicDaoTest.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1386951493741" ignored="false" />
     <file path="$PROJECT_DIR$/src/test/java/javaee/dao/UserDaoTest.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1386951493744" ignored="false" />
     <file path="/fragment.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1395325539901" ignored="false" />
-    <file path="/Dummy.txt" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1395676120010" ignored="false" />
+    <file path="/Dummy.txt" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1395676226223" ignored="false" />
     <file path="/a.txt" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1388417150172" ignored="false" />
     <file path="/mvc-dispatcher-servlet.xml" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1392305931623" ignored="false" />
     <file path="/web.xml" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1392310547116" ignored="false" />
@@ -71,7 +71,7 @@
     <file path="/Users.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1392391225314" ignored="false" />
     <file path="/Roles.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1392824907244" ignored="false" />
     <file path="/UserWithGivenIdNotFound.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1392715154415" ignored="false" />
-    <file path="/TopicRestService.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1395674880566" ignored="false" />
+    <file path="/TopicRestService.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1395678468328" ignored="false" />
     <file path="/Topics.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1395323641544" ignored="false" />
     <file path="/TopicWithGivenIdNotFound.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1395325604810" ignored="false" />
     <file path="/Messages.java" changelist="8879d8a6-67dd-49aa-bfe2-a09a6d19c9a0" time="1395335590262" ignored="false" />
@@ -151,13 +151,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopicRestService.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/rest/TopicRestService.java">
+      <file leaf-file-name="TopicAndMessageRestService.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/rest/TopicAndMessageRestService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.28241563">
+            <state line="180" column="60" selection-start="7228" selection-end="7228" vertical-scroll-proportion="0.73609316">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Message.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dto/Message.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="13" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/MessageService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="33" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -192,7 +210,7 @@
       <file leaf-file-name="Topic.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/Topic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="35" selection-start="948" selection-end="948" vertical-scroll-proportion="0.0">
+            <state line="44" column="25" selection-start="948" selection-end="948" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -207,28 +225,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Message.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dto/Message.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="8" selection-start="2562" selection-end="2562" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserRolesService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserRolesService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="45" column="6" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Topic.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dto/Topic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="13" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -244,9 +244,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/exceptions/UserWithGivenIdNotFound.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/controllers/AdminPageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dto/ForumWebXmlProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dto/Roles.java" />
@@ -259,7 +256,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dto/Topic.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dto/Messages.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dto/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/rest/MessagesRestService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/rest/TopicRestService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/rest/TopicMessageRestService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/globallogic/javaee/rest/TopicAndMessageRestService.java" />
       </list>
     </option>
   </component>
@@ -364,56 +364,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppTests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forum_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forum_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaee" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -523,44 +473,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="rest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UserRestService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forum_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forum_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TopicRestService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1447,7 +1359,11 @@
       <created>1395676136112</created>
       <updated>1395676136112</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="forum_web: Topic/Messages REST service - extra output messages have been removed">
+      <created>1395676237112</created>
+      <updated>1395676237112</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1477,6 +1393,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7591973" sideWeight="0.68676627" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42737094" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24866596" sideWeight="0.67001116" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34813926" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1493,14 +1410,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2509434" sideWeight="0.7322929" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26770708" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2981132" sideWeight="0.57262903" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26770708" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3337335" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42809364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19509476" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1546,7 +1462,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="forum_web: Topic/Messages REST service - delete topic method has been implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="forum_web: Topic/Messages REST service - extra output messages have been removed" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1582,6 +1498,7 @@
     <MESSAGE value="forum_web: User REST service - POST method has been implemented (enable/disable user)" />
     <MESSAGE value="forum_web: Topic/Messages REST service - get/set topics/messages methods have been implemented" />
     <MESSAGE value="forum_web: Topic/Messages REST service - delete topic method has been implemented" />
+    <MESSAGE value="forum_web: Topic/Messages REST service - extra output messages have been removed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1595,20 +1512,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/MessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="13" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dao/MessageDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="110" column="4" selection-start="3470" selection-end="3470" vertical-scroll-proportion="0.0">
@@ -1633,13 +1536,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dto/Messages.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="84" column="43" selection-start="2399" selection-end="2399" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dto/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="8" selection-start="2562" selection-end="2562" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1674,7 +1570,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/model/Topic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="35" selection-start="948" selection-end="948" vertical-scroll-proportion="0.0">
+        <state line="44" column="25" selection-start="948" selection-end="948" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1700,9 +1596,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/rest/TopicRestService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/service/MessageService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.28241563">
+        <state line="41" column="33" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/dto/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="13" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/globallogic/javaee/rest/TopicAndMessageRestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="60" selection-start="7228" selection-end="7228" vertical-scroll-proportion="0.73609316">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
