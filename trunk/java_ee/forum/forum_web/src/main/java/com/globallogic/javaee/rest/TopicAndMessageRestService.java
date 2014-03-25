@@ -178,9 +178,38 @@ public class TopicAndMessageRestService {
     @PUT
     @Path("/{topicId}/messages")
     @Consumes(MediaType.APPLICATION_XML)
-    public Response putMessage(com.globallogic.javaee.dto.Message aDtoMessage) {
+    public Response putMessage(@PathParam("topicId") Integer topicId,com.globallogic.javaee.dto.Message aDtoMessage) {
+        Message aDaoMessage = new Message();
+        com.globallogic.javaee.model.User aDaoUser = new com.globallogic.javaee.model.User();
+        com.globallogic.javaee.model.Topic aDaoTopic = new com.globallogic.javaee.model.Topic();
 
-        return Response.status(200).entity("test").build();
+        String output = new String();
+        Integer responseCode = 0;
+
+        try {
+            aDaoUser = userService.findUserById(aDtoMessage.getUser().getUserId().intValue());
+        } catch (UserWithGivenIdNotFound userWithGivenIdNotFound) {
+            output = "<?xml version=\"1.0\"?>" + "<message> User with specified Id "+aDaoMessage.getUser().getId()+" has not found in the database</message>";
+            responseCode = 404;
+        }
+
+        try {
+            aDaoTopic = topicService.getTopicById(topicId);
+        } catch (TopicWithGivenIdNotFound topicWithGivenIdNotFound) {
+            output = "<?xml version=\"1.0\"?>" + "<message> Topic with specified Id "+topicId+" has not found in the database</message>";
+            responseCode = 404;
+        }
+
+        aDaoMessage.setUser(aDaoUser);
+        aDaoMessage.setTopic(aDaoTopic);
+        aDaoMessage.setContent(aDtoMessage.getText());
+
+        Integer messageId = messageService.createMessage(aDaoMessage);
+
+        output = "<?xml version=\"1.0\"?>" + "<message> Message with Id "+messageId+" has been added to the database</message>";
+        responseCode = 200;
+
+        return Response.status(responseCode).entity(output).build();
     }
 
 }
