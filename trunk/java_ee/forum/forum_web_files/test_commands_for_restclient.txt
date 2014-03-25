@@ -1,0 +1,22 @@
+//CREATE TOPIC
+//to check this method you can execute the rest request from the restclient third part application
+//http://localhost:8181/rest/topics
+<topic topic_id="0">
+<topic_name>test1</topic_name>
+<user user_id="18">
+<login>admin</login>
+<password>123456</password>
+<enabled>true</enabled>
+</user>
+</topic>
+
+PUT MESSAGE
+http://localhost:8181/rest/topics/22/messages/
+
+<message message_id="0">
+<user user_id="18">
+<login>admin</login>
+</user>
+<text>simple message rest service PUT test</text>
+</message>
+
