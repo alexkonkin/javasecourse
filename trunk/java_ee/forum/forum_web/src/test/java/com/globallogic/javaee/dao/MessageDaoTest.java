@@ -1,6 +1,7 @@
 package com.globallogic.javaee.dao;
 
 import com.globallogic.javaee.AbstractTest;
+import com.globallogic.javaee.exceptions.MessageWithGivenIdNotFound;
 import com.globallogic.javaee.model.Message;
 import com.globallogic.javaee.model.Topic;
 import com.globallogic.javaee.model.User;
@@ -129,7 +130,12 @@ public class MessageDaoTest extends AbstractTest
         List<Message> allMessages = messageDao.findAllMessages();
 
         Message aTempMessage = new Message();
-        aTempMessage = messageDao.getMessageById(allMessages.get(0).getId());
+
+        try {
+            aTempMessage = messageDao.getMessageById(allMessages.get(0).getId());
+        } catch (MessageWithGivenIdNotFound messageWithGivenIdNotFound) {
+            messageWithGivenIdNotFound.printStackTrace();
+        }
 
         Assert.assertEquals(allMessages.get(0).getId() , aTempMessage.getId());
     }

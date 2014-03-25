@@ -9,6 +9,8 @@ package com.globallogic.javaee.dao;
  */
 
 
+import com.globallogic.javaee.exceptions.MessageWithGivenIdNotFound;
+import com.globallogic.javaee.exceptions.TopicWithGivenIdNotFound;
 import com.globallogic.javaee.model.Message;
 import com.globallogic.javaee.model.Topic;
 import org.hibernate.Criteria;
@@ -58,7 +60,7 @@ public class MessageDao extends HibernateDaoSupport
         return Id;
     }
 
-    public Message getMessageById(Integer anId){
+    public Message getMessageById(Integer anId) throws MessageWithGivenIdNotFound {
         SessionFactory sessionFactory = getSessionFactory();
         Session aSession = sessionFactory.openSession();
         String hql = "from MESSAGES m where m.id = :id";
@@ -66,6 +68,9 @@ public class MessageDao extends HibernateDaoSupport
                 .setParameter("id", anId)
                 .list();
         //aSession.close();
+        if(message.size() == 0 ) {
+            throw new MessageWithGivenIdNotFound(anId);
+        }
         return message.get(0);
     }
 
