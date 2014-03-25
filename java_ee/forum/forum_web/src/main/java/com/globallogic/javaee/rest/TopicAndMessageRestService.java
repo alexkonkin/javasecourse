@@ -191,6 +191,7 @@ public class TopicAndMessageRestService {
         } catch (UserWithGivenIdNotFound userWithGivenIdNotFound) {
             output = "<?xml version=\"1.0\"?>" + "<message> User with specified Id "+aDaoMessage.getUser().getId()+" has not found in the database</message>";
             responseCode = 404;
+            return Response.status(responseCode).entity(output).build();
         }
 
         try {
@@ -198,6 +199,7 @@ public class TopicAndMessageRestService {
         } catch (TopicWithGivenIdNotFound topicWithGivenIdNotFound) {
             output = "<?xml version=\"1.0\"?>" + "<message> Topic with specified Id "+topicId+" has not found in the database</message>";
             responseCode = 404;
+            return Response.status(responseCode).entity(output).build();
         }
 
         aDaoMessage.setUser(aDaoUser);
@@ -209,6 +211,35 @@ public class TopicAndMessageRestService {
         output = "<?xml version=\"1.0\"?>" + "<message> Message with Id "+messageId+" has been added to the database</message>";
         responseCode = 200;
 
+        return Response.status(responseCode).entity(output).build();
+    }
+
+    @DELETE
+    @Path("/{topicId}/messages/{messageId}")
+    public Response deleteTopicWithId(@PathParam("topicId") Integer topicId, @PathParam("messageId") Integer messageId) {
+        String output = new String();
+        Integer responseCode = 0;
+
+        Topic aTopic = new Topic();
+        try {
+            aTopic = topicService.getTopicById(topicId);
+        } catch (TopicWithGivenIdNotFound topicWithGivenIdNotFound) {
+            output = "<?xml version=\"1.0\"?>" + "<message> Topic with specified Id "+topicId+" has not found in the database</message>";
+            responseCode = 404;
+            return Response.status(responseCode).entity(output).build();
+        }
+
+        try {
+            Message aMessage =  messageService.getMessageById(messageId);
+        } catch (MessageWithGivenIdNotFound messageWithGivenIdNotFound) {
+            output = "<?xml version=\"1.0\"?>" + "<message> Message "+ messageId+" has not found in the database</message>";
+            responseCode = 404;
+            return Response.status(responseCode).entity(output).build();
+        }
+
+        messageService.deleteMessageById(messageId);
+        output = "<?xml version=\"1.0\"?>" + "<message>Message with id : "+messageId+" has been deleted</message>";
+        responseCode = 200;
         return Response.status(responseCode).entity(output).build();
     }
 

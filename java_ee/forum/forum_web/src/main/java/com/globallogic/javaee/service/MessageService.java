@@ -1,6 +1,7 @@
 package com.globallogic.javaee.service;
 
 import com.globallogic.javaee.dao.MessageDao;
+import com.globallogic.javaee.exceptions.MessageWithGivenIdNotFound;
 import com.globallogic.javaee.model.Message;
 import com.globallogic.javaee.model.Topic;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,7 @@ public class MessageService
         return messageDao.findAllMessages();
     }
 
-    public Message getMessageById (Integer anId){
+    public Message getMessageById (Integer anId) throws MessageWithGivenIdNotFound {
         return messageDao.getMessageById(anId);
     }
 
