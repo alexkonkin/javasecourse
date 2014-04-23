@@ -103,4 +103,9 @@
             </list>
         </property>
     </bean>
+
+    <!--bean id="restCallbackFilter" class="com.globallogic.javaee.service.PlainTextBasicAuthenticationEntryPoint" init-method="init">
+        <property name="realmName" value="test.com" />
+    </bean-->
+
 </beans>

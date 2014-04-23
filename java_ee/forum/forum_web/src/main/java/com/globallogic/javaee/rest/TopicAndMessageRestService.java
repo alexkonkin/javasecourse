@@ -11,6 +11,7 @@ import com.globallogic.javaee.service.TopicService;
 import com.globallogic.javaee.service.UserRolesService;
 import com.globallogic.javaee.service.UserService;
 import com.sun.jersey.api.core.InjectParam;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Component;
 
 import javax.ws.rs.*;
