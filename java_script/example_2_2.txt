@@ -1,0 +1,12 @@
+var power=1;
+while (power <=10)
+{
+  var value=2;
+  for (var n = 1; n <power;n++)
+  {  
+    value*=2;
+  }
+  print ("the power is : " + power + " the value is " + value);  
+  power++;
+
+}

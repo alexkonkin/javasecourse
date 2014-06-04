@@ -1,0 +1,9 @@
+for (var spaces = 1; spaces <= 10; spaces++)
+{
+  value="";
+  for (var n = 1; n <= spaces;n++)
+  {  
+    value+="#";
+  }
+  print(value);
+}
