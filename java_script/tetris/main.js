@@ -34,7 +34,7 @@ function generateTable(){
     }
     myTableDiv.appendChild(table);
     detectTableCoordinates();
-    //generateObject();
+    generateObject();
 }
 
 function detectTableCoordinates(){
@@ -46,8 +46,6 @@ function detectTableCoordinates(){
         document.getElementById("row").innerHTML = cell.parentNode.rowIndex;
         document.getElementById("column").innerHTML = cell.cellIndex;
         document.getElementById("td_tag").innerHTML = this.id;
-        //this.bgColor = "red";
-        //alert(generateObject());
     }
 
     for ( var i = 0; i < cls.length; i++ ) {
@@ -60,11 +58,40 @@ function detectTableCoordinates(){
 }
 
 function leftArrowPressed() {
-    alert("left");
+
+    var aTag = currObject.current_tag;
+    var aRow = parseInt(aTag.split("_")[1]);
+    var aColumn = parseInt(aTag.split("_")[2]);
+
+    if (aColumn > 0) {
+        aColumn -= 1;
+        var newTag = "td_" + aRow + "_" + aColumn;
+
+        currObject.previous_tag = aTag;
+        currObject.current_tag = newTag;
+        var previousObject = document.getElementById(aTag);
+        previousObject.bgColor = "white";
+        var newObject = document.getElementById(newTag);
+        newObject.bgColor = "red";
+    }
 }
 
 function rightArrowPressed() {
-    alert("right");
+    var aTag = currObject.current_tag;
+    var aRow = parseInt(aTag.split("_")[1]);
+    var aColumn = parseInt(aTag.split("_")[2]);
+
+    if (aColumn < 9) {
+        aColumn += 1;
+        var newTag = "td_" + aRow + "_" + aColumn;
+
+        currObject.previous_tag = aTag;
+        currObject.current_tag = newTag;
+        var previousObject = document.getElementById(aTag);
+        previousObject.bgColor = "white";
+        var newObject = document.getElementById(newTag);
+        newObject.bgColor = "red";
+    }
 }
 
 document.onkeydown = function(evt) {
@@ -90,8 +117,6 @@ function generateObject(){
     tmpObject.bgColor = "red";
 
     currObject.current_tag = tag_name;
-    //currObject.bgColor = "red";
-
 }
 
 var intervalID;
@@ -100,7 +125,7 @@ var aRow;
 
 function startMovement(){
     generateObject();
-    intervalID = setInterval(testMovement, 100);
+    intervalID = setInterval(testMovement, 1000);
 }
 
 function testMovement(){
@@ -120,6 +145,7 @@ function testMovement(){
             if (nextObject.bgColor == "red") {
                 console.log("bgColor " + nextObject.bgColor);
                 clearInterval(intervalID);
+
                 //generate and start new object
                 startMovement();
             }
@@ -134,7 +160,6 @@ function testMovement(){
         }
         else{
             clearInterval(intervalID);
-            //generate and start new object
             startMovement();
         }
     //}
