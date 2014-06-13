@@ -6,11 +6,16 @@
     <script src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
-<body onLoad="generateTable()">
+<body onLoad="generateTable(), generateFiguresField()">
 <h2> simple tetris game</h2>
 <div id="table"></div>
 <div id="row">row</div><div id="column">cell</div><div id="td_tag">td_tag</div>
+<div id="figure">test</div>
 <button onclick="startMovement()">test movement</button>
+<br>
+<button onclick="testFigureGeneration()">test firgure generation</button>
+<br>
+<!--button onclick="formatValue()">format value</button-->
 <!--button onclick="detectTableCoordinates()">generate table</button-->
 </body>
 </html>
