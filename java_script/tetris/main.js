@@ -38,6 +38,8 @@ function generateTable(){
     //startMovement();
 }
 
+
+//this function draws the test cell
 function generateFiguresField(){
     var myTableDiv = document.getElementById("figure");
     var table = document.createElement('TABLE');
@@ -209,14 +211,18 @@ var GameField = function (aRow, aColumn){
         for (var col=0; col < gameArray.length; col++)
             gameArray[row].push(0);
     }
-    // private constructor
     console.log(gameArray);
 }
+
+GameField.prototype.getRowCount = function(){ return this.row; };
+GameField.prototype.getColumnCount = function(){ return this.column; };
 
 var RandomFigure = function (){
     this.position;
     this.letter = "";
     this.figureArray = [];
+    this.x=0
+    this.y=0
 
     function getRandomInt(min, max) {
         //return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -228,7 +234,10 @@ var RandomFigure = function (){
         switch (aNum) {
             // letter I
             case 1:
-                this.figureArray = [[0,1,0,0],[0,1,0,0],[0,1,0,0],[0,1,0,0]];
+                this.figureArray = [[0, 1, 0, 0],
+                                    [0, 1, 0, 0],
+                                    [0, 1, 0, 0],
+                                    [0, 1, 0, 0]];
                 this.letter = "I";
                 this.position = 1;
             break;
@@ -259,30 +268,217 @@ var RandomFigure = function (){
         }
     }
 
+    function rotateFigure() {
+        switch (this.letter) {
+            case "I":
+                if (this.position == 1) {
+                    this.figureArray = [
+                        [0, 0, 0, 0],
+                        [1, 1, 1, 1],
+                        [0, 0, 0, 0],
+                        [0, 0, 0, 0]
+                    ];
+                }
+                else if (this.position == 2) {
+                    this.figureArray = [
+                        [0, 0, 1, 0],
+                        [0, 0, 1, 0],
+                        [0, 0, 1, 0],
+                        [0, 0, 1, 0]
+                    ];
+                }
+                else if (this.position == 3) {
+                    this.figureArray = [
+                        [0, 0, 0, 0],
+                        [0, 0, 0, 0],
+                        [1, 1, 1, 1],
+                        [0, 0, 0, 0]
+                    ];
+                }
+                else if (this.position == 4) {
+                    this.figureArray = [
+                        [0, 0, 1, 0],
+                        [0, 0, 1, 0],
+                        [0, 0, 1, 0],
+                        [0, 0, 1, 0]
+                    ];
+                    break;
+                }
+        }
+    }
+
     this.figure = getRandomInt(1,7);
     defineFigureType(this.figure);
     console.log(this.letter);
     console.log(this.figureArray);
 }
 
-function testFigureGeneration(){
-    //var gameField = GameField(4,4);
-    var aFigure = RandomFigure();
-}
-
-//"function(){ if (this.y > 1000000) { result = Math.floor(this.y / 1000000) + \"M\" }else if (this.y > 1000) { result = Math.floor(this.y / 1000) + \"K\" } return result; }"
-//plotOptions.series.dataLabels.formatter
 /*
-function formatValue() {
-    this.value = 10000000;
-    if (this.value > 1000000) {
-        result = Math.floor(this.value / 1000000) + "M"
+var GameController = function(){
+    //drawGameField: function (IGameField){
+    function drawGameField (IGameField){
+        this.myTableDiv = document.getElementById("figure");
+        this.table = document.createElement('TABLE');
+        this.tableBody = document.createElement('TBODY');
+        this.table.appendChild(this.tableBody);
+        //for (var row=0; row<4; row++){
+        for (var row=0; row< IGameField.getRowCount; row++){
+            var tr = document.createElement('TR');
+            tableBody.appendChild(tr);
+            //for (var column=0; column<4; column++){
+            for (var column=0; column< IGameField.getColumnCount; column++){
+                var td = document.createElement('TD');
+                td.id = "td_"+row+"_"+column;
+                tr.appendChild(td);
+            }
+        }
+        //this.myTableDiv.appendChild(this.table);
     }
-    else if (this.value > 1000) {
-        result = Math.floor(this.value / 1000) + "K"
-    }
-    return result;
 }
 
-console.log(formatValue(1000000));
+GameController.drawGameField(GameField);
 */
+
+
+var gameArray = [];
+var figureArray = [];
+var figureType;
+var figurePosition = 1;
+var valueX;
+var valueY;
+
+function initGameField(aRow, aColumn){
+    this.row = aRow;
+    this.column = aColumn;
+    //var gameArray = [];
+    if(gameArray.length == 0) {
+        while (gameArray.push([]) < aRow);
+        for (var row = 0; row < gameArray.length; row++) {
+            for (var col = 0; col < gameArray.length; col++)
+                gameArray[row].push(0);
+        }
+    }
+    else{
+        console.log("game array is already initialized");
+    }
+}
+
+function drawGameField(){
+    var myTableDiv = document.getElementById("game_field");
+    var table = document.createElement('TABLE');
+
+    var tableBody = document.createElement('TBODY');
+    table.appendChild(tableBody);
+
+    for (var row=0; row < gameArray.length; row++){
+        var tr = document.createElement('TR');
+        tableBody.appendChild(tr);
+
+        for (var column=0; column<gameArray.length; column++){
+            var td = document.createElement('TD');
+            td.id = "td_"+row+"_"+column;
+            //td.appendChild(document.createTextNode(row + "," + column));
+            tr.appendChild(td);
+        }
+    }
+    myTableDiv.appendChild(table);
+}
+
+generateRandomFigure = function () {
+    function getRandomInt(min, max) {
+        //return Math.floor(Math.random() * (max - min + 1)) + min;
+        // return I
+        return 1;
+    }
+
+    //var aNum = getRandomInt(1,7);
+    aNum = 1;
+
+    switch (aNum) {
+            // letter I
+            case 1:
+                figureArray = [
+                    [0, 1, 0, 0],
+                    [0, 1, 0, 0],
+                    [0, 1, 0, 0],
+                    [0, 1, 0, 0]
+                ];
+                figureType = "I";
+                figurePosition = 1;
+                valueX = 0;
+                valueY = 0;
+                break;
+            // letter J
+            case 2:
+                ;
+                break;
+            // letter L
+            case 3:
+                ;
+                break;
+            // letter S
+            case 4:
+                ;
+                break;
+            // letter T
+            case 5:
+                ;
+                break;
+            // letter S
+            case 6:
+                ;
+                break;
+            // letter Z
+            case 7:
+                ;
+                break;
+    }
+}
+
+function putFigureToGameField(){
+    //gameArray = figureArray.slice();
+    console.log("figure array " + figureArray);
+    for (var row = 0; row < figureArray.length; row++) {
+        //console.log(figureArray[row]);
+        for (var column = 0; column < figureArray.length; column++) {
+            //console.log("column "+figureArray[row][column]);
+            gameArray[row][column] = figureArray[row][column]
+        }
+    }
+}
+
+function refreshGameField(){
+    for (var row = 0; row < gameArray.length; row++) {
+        //console.log(figureArray[row]);
+        for (var column = 0; column < gameArray.length; column++) {
+            //console.log("column "+figureArray[row][column]);
+            if (gameArray[row][column] != 0){
+                //TODO - copy contents of the figure array to game array?
+                //TODO - html grid should be repainted with the cells marked in red if array contains 1
+                var tagThatShouldBePainted = "td_" + row + "_" + column;
+                var gameCell = document.getElementById(tagThatShouldBePainted);
+                gameCell.bgColor = 'red';
+            }
+        }
+    }
+}
+
+function testFigureGeneration() {
+    /*
+    var gameField = GameField(4,4);
+    var aFigure = RandomFigure();
+    var aGameController = GameController();
+    aGameController.drawGameField(gameField);
+    */
+
+    //console.log("empty game array" + gameArray.length);
+    initGameField(8,8);
+    //console.log("init game array " + gameArray);
+    drawGameField();
+    generateRandomFigure();
+    //console.log("figure array "+ figureArray);
+    putFigureToGameField();
+    //console.log("game array " + gameArray);
+    refreshGameField();
+
+}
