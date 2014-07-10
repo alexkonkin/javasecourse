@@ -1,16 +1,40 @@
 /* remove spaces between lines which surrounds rows and columns*/
-table {
+#game_field table {
     border-collapse:collapse;
     font-size: 10px;
     float: left;
 }
 
-table tr td {
+#game_field table tr td {
     border: solid #1b1ecc 1px;
     padding: 5px 7px;
-}
-
-tr,td {
     height: 20px;
     width: 20px;
 }
+
+
+#navigation{
+    border-style: solid;
+    border-color: deepskyblue;
+    border-radius: 10px;
+    margin-left: 50px;
+    float: left;
+    /*
+    outline:blueviolet solid 2px;
+    */
+}
+
+
+#navigation td {
+    vertical-align: middle;
+    text-align: center;
+    margin-left: 50%;
+}
+
+
+/*
+#game_field tr,td {
+    height: 20px;
+    width: 20px;
+}
+*/

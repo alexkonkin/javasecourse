@@ -3,17 +3,44 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Tetris</title>
-    <script src="main.js"></script>
+    <script src="tetris.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
-<body onLoad="generateTable(), generateFiguresField()">
+<!-- needed for the first version of game -->
+<!--body onLoad="generateTable(), generateFiguresField()"-->
+<body>
 <h2> simple tetris game</h2>
 <div id="table"></div>
 <div id="row">row</div><div id="column">cell</div><div id="td_tag">td_tag</div>
 <div id="figure">test</div>
-<button onclick="startMovement()">test movement</button>
-<br>
-<button onclick="testFigureGeneration()">test firgure generation</button>
+<p>
+<div id="game_field"></div>
+
+
+&nbsp
+
+
+<table id="navigation">
+    <tr>
+        <td></td><td><button onclick="testFigureGeneration()"> start&nbsp&nbsp </button></td><td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button onclick="rotateFigure()"> rotate </button></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><button onclick="moveFigureLeft()"> < </button></td>
+        <td><button onclick="placeFigureDown()"> v </button></td>
+        <td><button onclick="moveFigureRight()"> > </button></td>
+    </tr>
+</table>
+
+<!--button onclick="startMovement()">test movement</button-->
+<!--br>
+<button onclick="testFigureGeneration()">start</button>
+<br-->
+
 <br>
 <!--button onclick="formatValue()">format value</button-->
 <!--button onclick="detectTableCoordinates()">generate table</button-->
