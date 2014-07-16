@@ -9,6 +9,11 @@ var valueX;
 var valueY;
 var ROW=20;
 var COLUMN=12;
+var borderIsHitted=false;
+var movementLeftIsAllowed=true;
+var movementRightIsAllowed=true;
+
+// http://www.hunlock.com/blogs/Mastering_Javascript_Arrays#filter
 
 function initGameField(aRow, aColumn){
     this.row = aRow;
@@ -51,13 +56,13 @@ function drawGameField(){
 
 generateRandomFigure = function () {
     function getRandomInt(min, max) {
-        //return Math.floor(Math.random() * (max - min + 1)) + min;
-        // return I
-        return 1;
+         return Math.floor(Math.random() * (max - min + 1)) + min;
+         return I
+        //return 1;
     }
 
-    //var aNum = getRandomInt(1,7);
-    aNum = 1;
+    var aNum = getRandomInt(1,7);
+    //aNum = 1;
 
     switch (aNum) {
         // letter I
@@ -75,28 +80,282 @@ generateRandomFigure = function () {
             break;
         // letter J
         case 2:
+            figureArray = [
+                [0, 0, 1],
+                [0, 0, 1],
+                [0, 1, 1]
+            ];
+            figureType = "J";
+            figurePosition = 1;
+            valueX = 0;
+            valueY = 0;
+
             ;
             break;
         // letter L
         case 3:
+            figureArray = [
+                [1, 0, 0],
+                [1, 0, 0],
+                [1, 1, 0]
+            ];
+            figureType = "L";
+            figurePosition = 1;
+            valueX = 0;
+            valueY = 0;
             ;
             break;
         // letter S
         case 4:
+            figureArray = [
+                [0, 1, 1],
+                [1, 1, 0],
+                [0, 0, 0]
+            ];
+            figureType = "S";
+            figurePosition = 1;
+            valueX = 0;
+            valueY = 0;
             ;
             break;
         // letter T
         case 5:
+            figureArray = [
+                [1, 1, 1],
+                [0, 1, 0],
+                [0, 0, 0]
+            ];
+            figureType = "T";
+            figurePosition = 1;
+            valueX = 0;
+            valueY = 0;
             ;
             break;
-        // letter S
+        // letter Z
         case 6:
+            figureArray = [
+                [1, 1, 0],
+                [0, 1, 1],
+                [0, 0, 0]
+            ];
+            figureType = "Z";
+            figurePosition = 1;
+            valueX = 0;
+            valueY = 0;
+
             ;
             break;
         // letter Z
         case 7:
+            figureArray = [
+                [1, 1],
+                [1, 1]
+            ];
+            figureType = "0";
+            figurePosition = 1;
+            valueX = 0;
+            valueY = 0;
+
             ;
             break;
+    }
+}
+
+function rotateFigure(){
+    console.log("figure rotation");
+    if(!borderIsHitted) {
+        switch (figureType) {
+            case "I":
+                switch (figurePosition) {
+                    case 1:
+                        figureArray = [
+                            [0, 0, 0, 0],
+                            [1, 1, 1, 1],
+                            [0, 0, 0, 0],
+                            [0, 0, 0, 0]
+                        ];
+                        figurePosition = 2;
+                        break;
+                    case 2:
+                        figureArray = [
+                            [0, 0, 1, 0],
+                            [0, 0, 1, 0],
+                            [0, 0, 1, 0],
+                            [0, 0, 1, 0]
+                        ];
+                        figurePosition = 3;
+                        break;
+                    case 3:
+                        figureArray = [
+                            [0, 0, 0, 0],
+                            [0, 0, 0, 0],
+                            [1, 1, 1, 1],
+                            [0, 0, 0, 0]
+                        ];
+                        figurePosition = 4;
+                        break;
+                    case 4:
+                        figureArray = [
+                            [0, 1, 0, 0],
+                            [0, 1, 0, 0],
+                            [0, 1, 0, 0],
+                            [0, 1, 0, 0]
+                        ];
+                        figurePosition = 1;
+                        break;
+                }
+            break;
+            case "J":
+                switch (figurePosition) {
+                    case 1:
+                        figureArray = [
+                            [0, 0, 0],
+                            [1, 0, 0],
+                            [1, 1, 1]
+                        ];
+                        figurePosition = 2;
+                        break;
+                    case 2:
+                        figureArray = [
+                            [1, 1, 0],
+                            [1, 0, 0],
+                            [1, 0, 0]
+                        ];
+                        figurePosition = 3;
+                        break;
+                    case 3:
+                        figureArray = [
+                            [1, 1, 1],
+                            [0, 0, 1],
+                            [0, 0, 0]
+                        ];
+                        figurePosition = 4;
+                        break;
+                    case 4:
+                        figureArray = [
+                            [0, 0, 1],
+                            [0, 0, 1],
+                            [0, 1, 1]
+                        ];
+                        figurePosition = 1;
+                        break;
+                }
+            break;
+            case "L":
+                switch (figurePosition) {
+                    case 1:
+                        figureArray = [
+                            [1, 1, 1],
+                            [1, 0, 0],
+                            [0, 0, 0]
+                        ];
+                        figurePosition = 2;
+                        break;
+                    case 2:
+                        figureArray = [
+                            [0, 1, 1],
+                            [0, 0, 1],
+                            [0, 0, 1]
+                        ];
+                        figurePosition = 3;
+                        break;
+                    case 3:
+                        figureArray = [
+                            [0, 0, 0],
+                            [0, 0, 1],
+                            [1, 1, 1]
+                        ];
+                        figurePosition = 4;
+                        break;
+                    case 4:
+                        figureArray = [
+                            [1, 0, 0],
+                            [1, 0, 0],
+                            [1, 1, 0]
+                        ];
+                        figurePosition = 1;
+                        break;
+                }
+            break;
+            case "S":
+                switch (figurePosition) {
+                    case 1:
+                        figureArray = [
+                            [1, 0, 0],
+                            [1, 1, 0],
+                            [0, 1, 0]
+                        ];
+                        figurePosition = 2;
+                        break;
+                    case 2:
+                        figureArray = [
+                            [0, 1, 1],
+                            [1, 1, 0],
+                            [0, 0, 0]
+                        ];
+                        figurePosition = 1;
+                        break;
+                }
+            break;
+            case "T":
+                switch (figurePosition) {
+                    case 1:
+                        figureArray = [
+                            [0, 0, 1],
+                            [0, 1, 1],
+                            [0, 0, 1]
+                        ];
+                        figurePosition = 2;
+                        break;
+                    case 2:
+                        figureArray = [
+                            [0, 0, 0],
+                            [0, 1, 0],
+                            [1, 1, 1]
+                        ];
+                        figurePosition = 3;
+                        break;
+                    case 3:
+                        figureArray = [
+                            [1, 0, 0],
+                            [1, 1, 0],
+                            [1, 0, 0]
+                        ];
+                        figurePosition = 4;
+                        break;
+                    case 4:
+                        figureArray = [
+                            [1, 1, 1],
+                            [0, 1, 0],
+                            [0, 0, 0]
+                        ];
+                        figurePosition = 1;
+                        break;
+                }
+            break;
+            case "Z":
+                switch (figurePosition) {
+                    case 1:
+                        figureArray = [
+                            [0, 1, 0],
+                            [1, 1, 0],
+                            [1, 0, 0]
+                        ];
+                        figurePosition = 2;
+                        break;
+                    case 2:
+                        figureArray = [
+                            [1, 1, 0],
+                            [0, 1, 1],
+                            [0, 0, 0]
+                        ];
+                        figurePosition = 1;
+                        break;
+                }
+                break;
+        }
+        putFigureToGameField();
+        refreshGameField();
     }
 }
 
@@ -155,69 +414,80 @@ function testFigureGeneration() {
 }
 
 function moveFigureRight(){
-    //detect if we don't hit the border of our game field
-    if(valueX < gameArray[0].length - (figureArray.length-1) && false) {
-        valueX += 1;
-        for (var row = 0; row < figureArray.length; row++) {
-            for (var column = 0; column < figureArray.length; column++) {
-                gameArray[row][column + valueX] = figureArray[row][column]
-            }
-        }
-    }
-    else{
-    //we have hit a border of our game field, we should add one hidden column to allow movement
-    // in the right direction, however we should stop the figure when it hits our border
-        var flag = false;
-        var firstOccupiedCellPosition=0;
-
-        for (var row = 0; row < figureArray.length; row++) {
-            for (var column = (figureArray.length-1) ; column >= 0; column--) {
-                if (figureArray[row][column] == 1){
-                    firstOccupiedCellPosition=column+1;
-                    if ((column+1+valueX) >= COLUMN){
-                        flag = false;
-                        console.log("we hit the right border!");
-                        console.log("first occupied element is "+firstOccupiedCellPosition);
-                        break;
-                    }
-                    else{
-                        flag = true;
-                        break;
-                    }
-                }
-            }
-        }
-
-        if(/* valueX < gameArray[0].length - figureArray.length &&*/ flag == true) {
-            for (var row = 0; row < gameArray.length; row++) {
-                gameArray[row].push(0);
-            }
-
+        detectIfMovementRightIsAllowed();
+        if(/*valueX < COLUMN-2*/movementRightIsAllowed) {
             valueX += 1;
             for (var row = 0; row < figureArray.length; row++) {
                 for (var column = 0; column < figureArray.length; column++) {
                     gameArray[row][column + valueX] = figureArray[row][column];
+                    gameArray[row][ valueX- 1] = 0;
                }
             }
         }
         console.log("figure array " +figureArray);
-        console.log("test for moving array right in the figure array " + flag);
-    }
+
+    detectIfRotationIsAllowed();
+
     refreshGameField();
-    console.log(gameArray);
+    //console.log(gameArray);
 }
 
 function moveFigureLeft(){
-    if(valueX > 0) {
+    detectIfMovementLeftIsAllowed();
+    if(/*valueX >= 0*/movementLeftIsAllowed) {
         valueX -= 1;
         for (var row = 0; row < figureArray.length; row++) {
             //console.log(figureArray[row]);
             for (var column = 0; column < figureArray.length; column++) {
                 //console.log("column "+figureArray[row][column]);
-                gameArray[row][column + valueX] = figureArray[row][column]
+                gameArray[row][column + valueX] = figureArray[row][column];
+                gameArray[row][column + valueX + 1] = 0;
+
             }
         }
         refreshGameField();
     }
-    console.log(gameArray);
+
+    detectIfRotationIsAllowed();
+
+    //console.log(gameArray);
+}
+
+function detectIfRotationIsAllowed(){
+    if(valueX < 0 || (valueX > COLUMN-1-(figureArray.length-1))){
+        borderIsHitted = true;
+        console.log("we hit the border");
+    }
+    else{
+        borderIsHitted = false;
+        console.log("we don't touch the border");
+    }
+}
+
+function detectIfMovementLeftIsAllowed(){
+    for (var row = 0; row < figureArray.length; row++) {
+        if(gameArray[row][0] == 1){
+            movementLeftIsAllowed = false;
+            console.log("movement is not allowed");
+            break;
+        }
+        else{
+            movementLeftIsAllowed = true;
+        }
+    }
+    console.log(gameArray[column]);
+}
+
+function detectIfMovementRightIsAllowed(){
+    for (var row = 0; row < figureArray.length; row++) {
+        if(gameArray[row][COLUMN-1] == 1){
+            movementRightIsAllowed = false;
+            console.log("movement is not allowed");
+            break;
+        }
+        else{
+            movementRightIsAllowed = true;
+        }
+    }
+    console.log(gameArray[column]);
 }
