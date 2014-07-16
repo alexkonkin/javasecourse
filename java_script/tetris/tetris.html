@@ -8,8 +8,10 @@
 </head>
 <!-- needed for the first version of game -->
 <!--body onLoad="generateTable(), generateFiguresField()"-->
+<!--body onLoad="generateTable(), generateFiguresField()"-->
+<body onLoad="testFigureGeneration()">
 <body>
-<h2> simple tetris game</h2>
+<h2>tetris</h2>
 <div id="table"></div>
 <div id="row">row</div><div id="column">cell</div><div id="td_tag">td_tag</div>
 <div id="figure">test</div>
@@ -21,9 +23,9 @@
 
 
 <table id="navigation">
-    <tr>
+    <!--tr>
         <td></td><td><button onclick="testFigureGeneration()"> start&nbsp&nbsp </button></td><td></td>
-    </tr>
+    </tr-->
     <tr>
         <td></td>
         <td><button onclick="rotateFigure()"> rotate </button></td>
