@@ -12,13 +12,14 @@ var COLUMN=12;
 var borderIsHitted=false;
 var movementLeftIsAllowed=true;
 var movementRightIsAllowed=true;
+var movementDownIsAllowed=true;
 
 // http://www.hunlock.com/blogs/Mastering_Javascript_Arrays#filter
 
 function initGameField(aRow, aColumn){
     this.row = aRow;
     this.column = aColumn;
-    //var gameArray = [];
+
     if(gameArray.length == 0) {
         while (gameArray.push([]) < aRow);
 
@@ -26,7 +27,6 @@ function initGameField(aRow, aColumn){
             for (var col = 0; col < aColumn; col++)
                 gameArray[row].push(0);
         }
-
     }
     else{
         console.log("game array is already initialized");
@@ -47,22 +47,26 @@ function drawGameField(){
         for (var column=0; column < gameArray[row].length; column++){
             var td = document.createElement('TD');
             td.id = "td_"+row+"_"+column;
-            //td.appendChild(document.createTextNode(row + "," + column));
             tr.appendChild(td);
         }
     }
     myTableDiv.appendChild(table);
+
+    increaseSizeOfTheGameFieldInTwoExtraRows ();
 }
 
 generateRandomFigure = function () {
     function getRandomInt(min, max) {
          return Math.floor(Math.random() * (max - min + 1)) + min;
          return I
-        //return 1;
     }
 
     var aNum = getRandomInt(1,7);
-    //aNum = 1;
+
+    var borderIsHitted=false;
+    var movementLeftIsAllowed=true;
+    var movementRightIsAllowed=true;
+    var movementDownIsAllowed=true;
 
     switch (aNum) {
         // letter I
@@ -357,23 +361,21 @@ function rotateFigure(){
         putFigureToGameField();
         refreshGameField();
     }
+    else{
+        console.log("rotation is not allowed");
+    }
 }
 
 function putFigureToGameField(){
-    //gameArray = figureArray.slice();
-    console.log("figure array " + figureArray);
     for (var row = 0; row < figureArray.length; row++) {
-        //console.log(figureArray[row]);
         for (var column = 0; column < figureArray.length; column++) {
-            //console.log("column "+figureArray[row][column]);
-            gameArray[row][column + valueX] = figureArray[row][column]
+            gameArray[row + valueY][column + valueX] = figureArray[row][column]
         }
     }
 }
 
 function refreshGameField(){
-    for (var row = 0; row < gameArray.length; row++) {
-        //console.log(figureArray[row]);
+    for (var row = 0; row < /*gameArray.length*/ROW ; row++) {
         for (var column = 0; column < gameArray[row].length; column++) {
             //console.log("column "+figureArray[row][column]);
             var tagThatShouldBePainted = "td_" + row + "_" + column;
@@ -391,36 +393,25 @@ function refreshGameField(){
 }
 
 function testFigureGeneration() {
-    /*
-     var gameField = GameField(4,4);
-     var aFigure = RandomFigure();
-     var aGameController = GameController();
-     aGameController.drawGameField(gameField);
-     */
-
-    //console.log("empty game array" + gameArray.length);
     initGameField(ROW,COLUMN);
     console.log("init game array " + gameArray);
-
 
     drawGameField();
 
     generateRandomFigure();
-    //console.log("figure array "+ figureArray);
     putFigureToGameField();
-    //console.log("game array " + gameArray);
     refreshGameField();
 
 }
 
 function moveFigureRight(){
         detectIfMovementRightIsAllowed();
-        if(/*valueX < COLUMN-2*/movementRightIsAllowed) {
+        if(movementRightIsAllowed) {
             valueX += 1;
             for (var row = 0; row < figureArray.length; row++) {
                 for (var column = 0; column < figureArray.length; column++) {
-                    gameArray[row][column + valueX] = figureArray[row][column];
-                    gameArray[row][ valueX- 1] = 0;
+                    gameArray[row + valueY][column + valueX] = figureArray[row][column];
+                    gameArray[row + valueY][ valueX- 1] = 0;
                }
             }
         }
@@ -429,32 +420,26 @@ function moveFigureRight(){
     detectIfRotationIsAllowed();
 
     refreshGameField();
-    //console.log(gameArray);
 }
 
 function moveFigureLeft(){
     detectIfMovementLeftIsAllowed();
-    if(/*valueX >= 0*/movementLeftIsAllowed) {
+    if(movementLeftIsAllowed) {
         valueX -= 1;
         for (var row = 0; row < figureArray.length; row++) {
-            //console.log(figureArray[row]);
             for (var column = 0; column < figureArray.length; column++) {
-                //console.log("column "+figureArray[row][column]);
-                gameArray[row][column + valueX] = figureArray[row][column];
-                gameArray[row][column + valueX + 1] = 0;
+                gameArray[row + valueY][column + valueX] = figureArray[row][column];
+                gameArray[row + valueY][column + valueX + 1] = 0;
 
             }
         }
         refreshGameField();
     }
-
     detectIfRotationIsAllowed();
-
-    //console.log(gameArray);
 }
 
 function detectIfRotationIsAllowed(){
-    if(valueX < 0 || (valueX > COLUMN-1-(figureArray.length-1))){
+    if(valueX < 0 || (valueX > COLUMN-1-(figureArray.length-1)) || (valueY > ROW-1-(figureArray.length-1))){
         borderIsHitted = true;
         console.log("we hit the border");
     }
@@ -466,7 +451,7 @@ function detectIfRotationIsAllowed(){
 
 function detectIfMovementLeftIsAllowed(){
     for (var row = 0; row < figureArray.length; row++) {
-        if(gameArray[row][0] == 1){
+        if(gameArray[row + valueY][0] == 1){
             movementLeftIsAllowed = false;
             console.log("movement is not allowed");
             break;
@@ -480,14 +465,60 @@ function detectIfMovementLeftIsAllowed(){
 
 function detectIfMovementRightIsAllowed(){
     for (var row = 0; row < figureArray.length; row++) {
-        if(gameArray[row][COLUMN-1] == 1){
+        if(gameArray[row+valueY][COLUMN-1] == 1){
             movementRightIsAllowed = false;
+            console.log("gameArray["+ (row+valueY)+"]["+(COLUMN-1)+"] "+gameArray[row+valueY][COLUMN-1]);
             console.log("movement is not allowed");
             break;
         }
         else{
             movementRightIsAllowed = true;
+            console.log("gameArray["+ (row+valueY)+"]["+(COLUMN-1)+"] "+gameArray[row+valueY][COLUMN-1]);
+            console.log("movement right is allowed");
         }
     }
     console.log(gameArray[column]);
+}
+
+function placeFigureDown(){
+    detectIfMovementDownIsAllowed();
+    detectIfRotationIsAllowed();
+    if(movementDownIsAllowed){
+        valueY += 1;
+        for (var row = 0; row < figureArray.length; row++) {
+            for (var column = 0; column < figureArray.length; column++) {
+                gameArray[valueY - 1][column + valueX] = 0;
+                gameArray[row + valueY][column + valueX] = figureArray[row][column];
+            }
+        }
+        refreshGameField();
+    }
+}
+
+function increaseSizeOfTheGameFieldInTwoExtraRows (){
+    var tmpArray = [];
+    for (var column = 0; column < COLUMN; column++) {
+        tmpArray.push(0);
+    }
+    gameArray.push(tmpArray);
+    gameArray.push(tmpArray);
+}
+
+function detectIfMovementDownIsAllowed(){
+    for (var column = 0; column < figureArray.length; column++) {
+        if(gameArray[ROW-1][column + valueX] == 1){
+            movementDownIsAllowed = false;
+            console.log("movement down is not allowed");
+            break;
+        }
+        else{
+            movementDownIsAllowed = true;
+        }
+    }
+}
+
+function test(){
+    generateRandomFigure();
+    putFigureToGameField();
+    refreshGameField();
 }
