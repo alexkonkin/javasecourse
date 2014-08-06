@@ -464,11 +464,12 @@ function detectIfMovementLeftIsAllowed(){
 }
 
 function detectIfMovementRightIsAllowed(){
+    /*
     for (var row = 0; row < figureArray.length; row++) {
         if(gameArray[row+valueY][COLUMN-1] == 1){
             movementRightIsAllowed = false;
             console.log("gameArray["+ (row+valueY)+"]["+(COLUMN-1)+"] "+gameArray[row+valueY][COLUMN-1]);
-            console.log("movement is not allowed");
+            console.log("right movement is not allowed");
             break;
         }
         else{
@@ -478,6 +479,22 @@ function detectIfMovementRightIsAllowed(){
         }
     }
     console.log(gameArray[column]);
+    */
+    for (var row = 0; row < figureArray.length; row++) {
+        if(gameArray[row+valueY][valueX+figureArray.length-1] == 1){
+            movementRightIsAllowed = false;
+            console.log("gameArray["+ (row+valueY)+"]["+(valueX+figureArray.length-1)+"] "+figureArray[row+valueY][valueX+figureArray.length-1]);
+            console.log("right movement is not allowed");
+            break;
+        }
+        else{
+            movementRightIsAllowed = true;
+            console.log("gameArray["+ (row+valueY)+"]["+(valueX+figureArray.length-1)+"] "+figureArray[row+valueY][valueX+figureArray.length-1]);
+            console.log("movement right is allowed");
+        }
+    }
+    console.log(gameArray[column]);
+
 }
 
 function placeFigureDown(){
