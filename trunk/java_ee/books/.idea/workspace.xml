@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" name="Default" comment="" />
+    <list default="true" readonly="true" id="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="xmlBooksProcessor.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Main.java" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1378996566525" ignored="false" />
@@ -12,6 +15,26 @@
     <file path="/FileHelper.java" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1378916929348" ignored="false" />
     <file path="/BooksXmlProcessor.java" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1378993969409" ignored="false" />
     <file path="/BooksXmlProcessorTest.java" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1378998899239" ignored="false" />
+    <file path="$PROJECT_DIR$/../forum/forum_web/src/main/java/com/globallogic/javaee/rest/UserRestService.java" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392888722346" ignored="false" />
+    <file path="$PROJECT_DIR$/../forum/forum_web/.idea/workspace.xml" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392907315840" ignored="false" />
+    <file path="/UserRestService.java" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392888104372" ignored="false" />
+    <file path="$PROJECT_DIR$/../forum/forum_web/src/main/webapp/WEB-INF/applicationContext.xml" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392310723209" ignored="false" />
+    <file path="/applicationContext.xml" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392305494583" ignored="false" />
+    <file path="$PROJECT_DIR$/../forum/forum_web/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392309319452" ignored="false" />
+    <file path="/mvc-dispatcher-servlet.xml" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392305931623" ignored="false" />
+    <file path="$PROJECT_DIR$/../forum/forum_web/src/main/java/com/globallogic/javaee/rest/HelloWorldService.java" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392309665940" ignored="false" />
+    <file path="/HelloWorldService.java" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392309639410" ignored="false" />
+    <file path="$PROJECT_DIR$/../forum/forum_web/pom.xml" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392310246400" ignored="false" />
+    <file path="$PROJECT_DIR$/../forum/forum_web/src/main/webapp/WEB-INF/web.xml" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392310926654" ignored="false" />
+    <file path="/web.xml" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392310547116" ignored="false" />
+    <file path="$PROJECT_DIR$/../forum/forum_web/src/main/java/com/globallogic/javaee/dto/Users.java" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392391471771" ignored="false" />
+    <file path="/Users.java" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392391225314" ignored="false" />
+    <file path="$PROJECT_DIR$/../forum/forum_web/src/main/java/com/globallogic/javaee/dto/Roles.java" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392824914477" ignored="false" />
+    <file path="/Roles.java" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392824907244" ignored="false" />
+    <file path="$PROJECT_DIR$/../forum/forum_web/src/main/java/com/globallogic/javaee/dto/User.java" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392388393381" ignored="false" />
+    <file path="/User.java" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392388384046" ignored="false" />
+    <file path="$PROJECT_DIR$/../forum/forum_web/src/main/java/com/globallogic/javaee/dto/ForumWebXmlProcessor.java" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392818231541" ignored="false" />
+    <file path="/ForumWebXmlProcessor.java" changelist="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" time="1392817079737" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +49,8 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -62,8 +87,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -82,21 +105,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BooksXmlProcessorTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BooksXmlProcessorTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/com/globallogic/javaee/books/BooksXmlProcessorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="13" selection-start="738" selection-end="738" vertical-scroll-proportion="-5.92">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="205" column="58" selection-start="8257" selection-end="8257" vertical-scroll-proportion="0.5792593">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BooksXmlProcessor.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BooksXmlProcessor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/globallogic/javaee/books/BooksXmlProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="28" selection-start="550" selection-end="567" vertical-scroll-proportion="0.3970276">
+            <state line="65" column="52" selection-start="2348" selection-end="2348" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -185,8 +206,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="177" />
-    <option name="y" value="158" />
+    <option name="x" value="-1751" />
+    <option name="y" value="88" />
     <option name="width" value="1610" />
     <option name="height" value="881" />
   </component>
@@ -216,34 +237,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xmlBooksProcessor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xmlBooksProcessor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xmlBooksProcessor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xmlBooksProcessor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -318,7 +312,34 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xmlBooksProcessor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xmlBooksProcessor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xmlBooksProcessor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xmlBooksProcessor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -327,10 +348,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../lib/junit-4.10.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
@@ -343,6 +365,7 @@
   </component>
   <component name="RunManager" selected="JUnit.BooksXmlProcessorTest">
     <configuration default="false" name="All in xmlBooksProcessor" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="xmlBooksProcessor" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -365,6 +388,7 @@
       <method />
     </configuration>
     <configuration default="false" name="BooksXmlProcessorTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="xmlBooksProcessor" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -387,6 +411,7 @@
       <method />
     </configuration>
     <configuration default="false" name="BooksXmlProcessorTest.testMarshalToXmlFile" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="xmlBooksProcessor" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -409,6 +434,7 @@
       <method />
     </configuration>
     <configuration default="false" name="BooksXmlProcessorTest.testUnMarshalFromClassPath" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="xmlBooksProcessor" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -437,6 +463,7 @@
       <method />
     </configuration>
     <configuration default="false" name="com.globallogic.javaee.books in xmlBooksProcessor" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="xmlBooksProcessor" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -486,6 +513,7 @@
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -513,6 +541,7 @@
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -527,6 +556,7 @@
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -587,6 +617,28 @@
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
     <supportedVersion>125</supportedVersion>
   </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\books" />
+          <option name="myCopyRoot" value="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\books" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\books\.idea" />
+          <option name="myCopyRoot" value="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\books\.idea" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\books" />
+          <option name="myCopyRoot" value="D:\oleksiy.konkin\Documents\JAVA\JAVA_SE\java_ee\books" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="8b14a9b1-c602-480c-ba4b-51e2ad5e73e6" name="Default" comment="" />
@@ -596,28 +648,33 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="177" y="158" width="1610" height="881" extended-state="0" />
+    <frame x="-1751" y="88" width="1610" height="881" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48618785" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24585636" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.7154696" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19702843" sideWeight="0.7154696" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2845304" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2845304" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32859176" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -780,18 +837,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/globallogic/javaee/books/BooksXmlProcessorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/globallogic/javaee/books/BooksXmlProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="13" selection-start="738" selection-end="738" vertical-scroll-proportion="-5.92">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="65" column="52" selection-start="2348" selection-end="2348" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/globallogic/javaee/books/BooksXmlProcessor.java">
+    <entry file="file://$PROJECT_DIR$/tests/com/globallogic/javaee/books/BooksXmlProcessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="28" selection-start="550" selection-end="567" vertical-scroll-proportion="0.3970276">
+        <state line="205" column="58" selection-start="8257" selection-end="8257" vertical-scroll-proportion="0.5792593">
           <folding />
         </state>
       </provider>

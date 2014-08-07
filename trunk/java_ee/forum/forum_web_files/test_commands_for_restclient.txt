@@ -10,6 +10,7 @@
 </user>
 </topic>
 
+
 PUT MESSAGE
 http://localhost:8181/rest/topics/22/messages/
 
@@ -19,4 +20,8 @@ http://localhost:8181/rest/topics/22/messages/
 </user>
 <text>simple message rest service PUT test</text>
 </message>
+
+DELETE MESSAGE
+
+http://localhost:8181/rest/topics/22/messages/57
 

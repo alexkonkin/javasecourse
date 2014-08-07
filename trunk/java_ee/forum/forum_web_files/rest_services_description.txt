@@ -30,15 +30,6 @@ Should return the information about the reason of the failure
 Updating the user's information:
 Method : POST
 URL : http://<host>:<port>/rest/user/<userID>/
-Content: text/plain
-<user>
-	<username>user</username>
-	<password>password</password>
-	<enabled>true</enabled>
-	<roles>
-		<roleName>ROLE_USER</roleName>
-	</roles>
-</user>
 
 Return value on Success:
 201 Updated
