@@ -13,8 +13,10 @@ var borderIsHitted=false;
 var movementLeftIsAllowed=true;
 var movementRightIsAllowed=true;
 var movementDownIsAllowed=true;
+var surfaceIsNotEmpty=false;
 
 // http://www.hunlock.com/blogs/Mastering_Javascript_Arrays#filter
+// http://wiki.jetbrains.net/intellij/Debugging_JavaScript_locally_in_Firefox_with_WebStorm_and_PhpStorm
 
 function initGameField(aRow, aColumn){
     this.row = aRow;
@@ -406,8 +408,11 @@ function testFigureGeneration() {
 
 function moveFigureRight(){
         detectIfMovementRightIsAllowed();
+        console.log("movement right is allowed : " + movementRightIsAllowed);
+        //if(movementRightIsAllowed) {
         if(movementRightIsAllowed) {
             valueX += 1;
+
             for (var row = 0; row < figureArray.length; row++) {
                 for (var column = 0; column < figureArray.length; column++) {
                     gameArray[row + valueY][column + valueX] = figureArray[row][column];
@@ -439,13 +444,16 @@ function moveFigureLeft(){
 }
 
 function detectIfRotationIsAllowed(){
-    if(valueX < 0 || (valueX > COLUMN-1-(figureArray.length-1)) || (valueY > ROW-1-(figureArray.length-1))){
+    console.log("valueX "+valueX);
+    console.log("valueX > COLUMN-1-(figureArray.length-1)"+(valueX > COLUMN-1-(figureArray.length-1)));
+    console.log("valueY > ROW-1-(figureArray.length-1)"+(valueY > ROW-1-(figureArray.length-1)));
+    if(valueX < 0 || valueX > COLUMN-1-(figureArray.length-1) || valueY > ROW-1-(figureArray.length-1)){
         borderIsHitted = true;
-        console.log("we hit the border");
+        console.log("detectIfRotationIsAllowed: we hit the border");
     }
     else{
         borderIsHitted = false;
-        console.log("we don't touch the border");
+        console.log("detectIfRotationIsAllowed: we don't touch the border");
     }
 }
 
@@ -464,37 +472,19 @@ function detectIfMovementLeftIsAllowed(){
 }
 
 function detectIfMovementRightIsAllowed(){
-    /*
     for (var row = 0; row < figureArray.length; row++) {
-        if(gameArray[row+valueY][COLUMN-1] == 1){
+        console.log("detectIfMovementRightIsAllowed row + valueY"+ (row + valueY));
+        console.log("detectIfMovementRightIsAllowed (COLUMN-1)" + (COLUMN-1));
+        if(gameArray[row + valueY][COLUMN-1] == 1){
             movementRightIsAllowed = false;
-            console.log("gameArray["+ (row+valueY)+"]["+(COLUMN-1)+"] "+gameArray[row+valueY][COLUMN-1]);
-            console.log("right movement is not allowed");
+            console.log("movement is not allowed");
             break;
         }
         else{
             movementRightIsAllowed = true;
-            console.log("gameArray["+ (row+valueY)+"]["+(COLUMN-1)+"] "+gameArray[row+valueY][COLUMN-1]);
-            console.log("movement right is allowed");
         }
     }
     console.log(gameArray[column]);
-    */
-    for (var row = 0; row < figureArray.length; row++) {
-        if(gameArray[row+valueY][valueX+figureArray.length-1] == 1){
-            movementRightIsAllowed = false;
-            console.log("gameArray["+ (row+valueY)+"]["+(valueX+figureArray.length-1)+"] "+figureArray[row+valueY][valueX+figureArray.length-1]);
-            console.log("right movement is not allowed");
-            break;
-        }
-        else{
-            movementRightIsAllowed = true;
-            console.log("gameArray["+ (row+valueY)+"]["+(valueX+figureArray.length-1)+"] "+figureArray[row+valueY][valueX+figureArray.length-1]);
-            console.log("movement right is allowed");
-        }
-    }
-    console.log(gameArray[column]);
-
 }
 
 function placeFigureDown(){
@@ -510,6 +500,7 @@ function placeFigureDown(){
         }
         refreshGameField();
     }
+    dumpGameField();
 }
 
 function increaseSizeOfTheGameFieldInTwoExtraRows (){
@@ -522,16 +513,95 @@ function increaseSizeOfTheGameFieldInTwoExtraRows (){
 }
 
 function detectIfMovementDownIsAllowed(){
+
     for (var column = 0; column < figureArray.length; column++) {
-        if(gameArray[ROW-1][column + valueX] == 1){
-            movementDownIsAllowed = false;
-            console.log("movement down is not allowed");
+        console.log("---===< detectIfMovementDownIsAllowed >===---");
+        console.log("valueY -1 "+ (valueY-1));
+        console.log("column + valueX "+(column + valueX));
+
+
+        if((valueY+figureArray.length)>=ROW ){
+            console.log("we should check if we can move the figure inside its own array down");
+            row = figureArray.length-1;
+            for (var column = 0; column <= figureArray.length-1; column++) {
+                if (figureArray[row][column] == 0){
+                    if(figureArray[row-1][column]==1){
+                        if(valueY+(row-1) < ROW-1){
+                            console.log("movement down is still allowed row " + row + "column "+column);
+                            movementDownIsAllowed = true;
+                            console.log("movement down is allowed I will try to copy elements inside array");
+                        }
+                        else
+                        {
+                            movementDownIsAllowed = false;
+                            console.log ("556: if(valueY+(row-1) < ROW-1): movement down is not allowed");
+                            for (var row = 0; row < figureArray.length; row++) {
+                                for (var column = 0; column < figureArray.length; column++) {
+                                    if(gameArray[valueY + row][column + valueX] == 1){
+                                        //mark this element as the placed on the flor
+                                        gameArray[valueY + row][column + valueX] = 2;
+                                        console.log("gameArray[valueY + row][column + valueX]"+gameArray[valueY + row][column + valueX]);
+                                    }
+                                }
+                            }
+                            console.log(gameArray);
+                        }
+                    }
+                }
+                else{
+                    movementDownIsAllowed = false;
+
+                    console.log("562: if (figureArray[row][column] == 0): movement down is not allowed");
+                    for (var row = 0; row < figureArray.length; row++) {
+                        for (var column = 0; column < figureArray.length; column++) {
+                            if(gameArray[valueY + row][column + valueX] == 1){
+                                //mark this element as the placed on the flor
+                                gameArray[valueY + row][column + valueX] = 2;
+                            }
+                        }
+                    }
+                    console.log(gameArray);
+                }
+            }
+
             break;
         }
         else{
-            movementDownIsAllowed = true;
+            //at this point we should check if we have any figures between our figure and the bottom of the game field
+            //check if we move down with the surface that is filled with 1-s or which is empty
+            for (var column = 0; column < figureArray.length; column++) {
+                if(figureArray[figureArray.length-1][column] == 1){
+                        surfaceIsNotEmpty=true;
+                 }
+            }
+
+            
+
+            if(surfaceIsNotEmpty){
+                //we should check if we have
+
+
+
+            }
+            else {
+            //TODO important don't forget that this is only the location where we allow movement down
+                movementDownIsAllowed = true;
+            }
+            console.log("movement down is allowed but we need to check for the neigboring objects");
         }
     }
+}
+
+function dumpGameField(){
+    console.log("-------------------------");
+    for (var row = 0; row <= ROW-1; row++) {
+        oneRow = "";
+        for (var column = 0; column <= COLUMN-1; column++) {
+            oneRow+= gameArray[row][column]+" ";
+        }
+        console.log(oneRow);
+    }
+    console.log("--------------------------");
 }
 
 function test(){
