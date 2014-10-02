@@ -14,9 +14,14 @@ var movementLeftIsAllowed=true;
 var movementRightIsAllowed=true;
 var movementDownIsAllowed=true;
 var nextRowIsEmpty=true;
+var transformOneToTwo=false;
 
 // http://www.hunlock.com/blogs/Mastering_Javascript_Arrays#filter
 // http://wiki.jetbrains.net/intellij/Debugging_JavaScript_locally_in_Firefox_with_WebStorm_and_PhpStorm
+
+//console log to html page
+//http://jsfiddle.net/arunpjohny/mGDet/
+//http://stackoverflow.com/questions/20256760/javascript-console-log-to-html
 
 function initGameField(aRow, aColumn){
     this.row = aRow;
@@ -78,10 +83,9 @@ generateRandomFigure = function () {
         // letter I
         case 1:
             figureArray = [
-                [0, 1, 0, 0],
-                [0, 1, 0, 0],
-                [0, 1, 0, 0],
-                [0, 1, 0, 0]
+                [0, 1, 0],
+                [0, 1, 0],
+                [0, 1, 0]
             ];
             figureType = "I";
             figurePosition = 1;
@@ -179,37 +183,17 @@ function rotateFigure(){
                 switch (figurePosition) {
                     case 1:
                         figureArray = [
-                            [0, 0, 0, 0],
-                            [1, 1, 1, 1],
-                            [0, 0, 0, 0],
-                            [0, 0, 0, 0]
+                            [0, 0, 0],
+                            [1, 1, 1],
+                            [0, 0, 0]
                         ];
                         figurePosition = 2;
                         break;
                     case 2:
                         figureArray = [
-                            [0, 0, 1, 0],
-                            [0, 0, 1, 0],
-                            [0, 0, 1, 0],
-                            [0, 0, 1, 0]
-                        ];
-                        figurePosition = 3;
-                        break;
-                    case 3:
-                        figureArray = [
-                            [0, 0, 0, 0],
-                            [0, 0, 0, 0],
-                            [1, 1, 1, 1],
-                            [0, 0, 0, 0]
-                        ];
-                        figurePosition = 4;
-                        break;
-                    case 4:
-                        figureArray = [
-                            [0, 1, 0, 0],
-                            [0, 1, 0, 0],
-                            [0, 1, 0, 0],
-                            [0, 1, 0, 0]
+                            [0, 1, 0],
+                            [0, 1, 0],
+                            [0, 1, 0]
                         ];
                         figurePosition = 1;
                         break;
@@ -510,6 +494,13 @@ function placeFigureDown(){
     detectIfRotationIsAllowed();
     console.log("placeFigureDown()");
     console.log("-------------------------");
+    //TODO implement method that should detect if this is not a bottom of the game field but the space below
+    //TODO is occupied with the previous elements (2), if this is the truth - transform all 1 to 2
+    if(transformOneToTwo){
+        console.log("we should start transformation");
+        transformFigureToBottomSurface();
+    }
+
     if(movementDownIsAllowed){
 
         valueY += 1;
@@ -562,28 +553,34 @@ function increaseSizeOfTheGameFieldInTwoExtraRows (){
 function detectIfMovementDownIsAllowed(){
     //this part is dedicated to detect the very bottom of the game field
     //for (var column = 0; column < figureArray.length; column++) {
-        if((valueY+figureArray.length)>=ROW ){
+    //TODO scan if we have a space to move down, if no we should exit from
+    //TODO the function and transform this figure to the bottom of the game field
+    console.log("should we start transformation of 1 to 2 " + testIfFigureShouldBeTransformedToSurface());
+    if(testIfFigureShouldBeTransformedToSurface()){
+        movementDownIsAllowed = false;
+    }
+    else {
+        if ((valueY + figureArray.length) >= ROW) {
             console.log("valueY+figureArray.length)>=ROW");
             console.log("we should check if we can move the figure inside its own array down");
-            row = figureArray.length-1;
-            for (var column = 0; column <= figureArray.length-1; column++) {
-                if (figureArray[row][column] == 0){
-                    if(figureArray[row-1][column]==1){
-                        if(valueY+(row-1) < ROW-1){
-                            console.log("movement down is still allowed row " + row + "column "+column);
+            row = figureArray.length - 1;
+            for (var column = 0; column <= figureArray.length - 1; column++) {
+                if (figureArray[row][column] == 0) {
+                    if (figureArray[row - 1][column] == 1) {
+                        if (valueY + (row - 1) < ROW - 1) {
+                            console.log("movement down is still allowed row " + row + "column " + column);
                             movementDownIsAllowed = true;
                             console.log("movement down is allowed I will try to copy elements inside array");
                         }
-                        else
-                        {
+                        else {
                             movementDownIsAllowed = false;
-                            console.log ("556: if(valueY+(row-1) < ROW-1): movement down is not allowed");
+                            console.log("556: if(valueY+(row-1) < ROW-1): movement down is not allowed");
                             for (var row = 0; row < figureArray.length; row++) {
                                 for (var column = 0; column < figureArray.length; column++) {
-                                    if(gameArray[valueY + row][column + valueX] == 1){
+                                    if (gameArray[valueY + row][column + valueX] == 1) {
                                         //mark this element as the placed on the flor
                                         gameArray[valueY + row][column + valueX] = 2;
-                                        console.log("gameArray[valueY + row][column + valueX]"+gameArray[valueY + row][column + valueX]);
+                                        console.log("gameArray[valueY + row][column + valueX]" + gameArray[valueY + row][column + valueX]);
                                     }
                                 }
                             }
@@ -591,16 +588,16 @@ function detectIfMovementDownIsAllowed(){
                         }
                     }
                 }
-                else{
+                else {
                     movementDownIsAllowed = false;
                     // we have touched the bottom with the side that is filled with 1, we have to overwrite it with 2
                     console.log("562: if (figureArray[row][column] == 0): movement down is not allowed");
                     for (var row = 0; row < figureArray.length; row++) {
                         for (var column = 0; column < figureArray.length; column++) {
-                            if(gameArray[valueY + row][column + valueX] == 1){
+                            if (gameArray[valueY + row][column + valueX] == 1) {
                                 //mark this element as the placed on the flor
                                 gameArray[valueY + row][column + valueX] = 2;
-                                console.log("gameArray[valueY + row][column + valueX]"+gameArray[valueY + row][column + valueX]);
+                                console.log("gameArray[valueY + row][column + valueX]" + gameArray[valueY + row][column + valueX]);
                             }
                         }
                     }
@@ -611,118 +608,114 @@ function detectIfMovementDownIsAllowed(){
             //break;
         }
 
-
-    if((valueY+figureArray.length)< ROW ){
-        console.log("valueY+figureArray.length)<ROW");
-        console.log("------------------------------");
-        console.log("we have not touched the bottom of the game field");
-        console.log("valueX "+valueX);
-        console.log("valueY "+valueY);
-        //check if the next row is occupied with the figure
-        nextRowIsEmpty=true;
-        for (var row = figureArray.length; row > 0; row--) {
-            for (var column = 0; column < figureArray.length; column++) {
-                if(gameArray[valueY + row][column + valueX] == 2){
-                    //mark this element as the placed on the flor
-                    console.log("inetrnal cycle "+gameArray[valueY + row][column + valueX]);
-                    //console.log("");
-                    nextRowIsEmpty = false;
-                }
-            }
-            break;
-        }
-
-        if(nextRowIsEmpty == false){
-            console.log("---===< we have not touched the border, next row is not empty - let's check if we can move >===---");
-            //we have to check if the meaning values in the figure don't collide with the bottom,
-            // if we collide - don't move, if no we can move, but we should not overwrite the bottom values
-            for (var row = figureArray.length-1; row > 0; row--) {
+        if ((valueY + figureArray.length) < ROW) {
+            console.log("valueY+figureArray.length)<ROW");
+            console.log("------------------------------");
+            console.log("we have not touched the bottom of the game field");
+            console.log("valueX " + valueX);
+            console.log("valueY " + valueY);
+            //check if the next row is occupied with the figure
+            nextRowIsEmpty = true;
+            for (var row = figureArray.length; row > 0; row--) {
                 for (var column = 0; column < figureArray.length; column++) {
-                    //valueY + row +1 - I want to check the row which is under the very first row of my figure
-                    if((gameArray[valueY + row +1][column + valueX] == 2 && figureArray[row][column]==0) ||
-                       (gameArray[valueY + row +1][column + valueX] == 0 && figureArray[row][column]==1) ||
-                       (gameArray[valueY + row +1][column + valueX] == 0 && figureArray[row][column]==0) ||
-                        //this check is strange because it is related to test inside figure's body, maybe this should be improved
-                        (gameArray[valueY + row +1][column + valueX] == 1 && figureArray[row][column]==1)){
-                        //let's try to detect if we can move down
-                        //gameArray[valueY + row][column + valueX] = 2;
-                        console.log("movement down is allowed we should not collide with the bottom elements");
-                        //console.log("gameArray[valueY + row][column + valueX]"+gameArray[valueY + row][column + valueX]);
-                        movementDownIsAllowed = true;
-                    }
-                    else{
-                        movementDownIsAllowed = false;
+                    if (gameArray[valueY + row][column + valueX] == 2) {
+                        //mark this element as the placed on the flor
+                        console.log("inetrnal cycle " + gameArray[valueY + row][column + valueX]);
+                        //console.log("");
+                        nextRowIsEmpty = false;
                     }
                 }
+                break;
             }
 
-
-            if(movementDownIsAllowed == true){
-                console.log("let's try to move down on one position");
-                valueY += 1;
-
-                for (var row = 0; row < figureArray.length; row++) {
+            if (nextRowIsEmpty == false) {
+                console.log("---===< we have not touched the border, next row is not empty - let's check if we can move >===---");
+                //we have to check if the meaning values in the figure don't collide with the bottom,
+                // if we collide - don't move, if no we can move, but we should not overwrite the bottom values
+                for (var row = figureArray.length - 1; row > 0; row--) {
                     for (var column = 0; column < figureArray.length; column++) {
-                        gameArray[valueY - 1][column + valueX] = 0;
-                        if(gameArray[row + valueY ][column + valueX]==0 || gameArray[row + valueY ][column + valueX]==1) {
-                            gameArray[row + valueY][column + valueX] = figureArray[row][column];
+                        //valueY + row +1 - I want to check the row which is under the very first row of my figure
+                        if ((gameArray[valueY + row + 1][column + valueX] == 2 && figureArray[row][column] == 0) ||
+                            (gameArray[valueY + row + 1][column + valueX] == 0 && figureArray[row][column] == 1) ||
+                            (gameArray[valueY + row + 1][column + valueX] == 0 && figureArray[row][column] == 0) ||
+                            //this check is strange because it is related to test inside figure's body, maybe this should be improved
+                            (gameArray[valueY + row + 1][column + valueX] == 1 && figureArray[row][column] == 1)) {
+                            //let's try to detect if we can move down
+                            //gameArray[valueY + row][column + valueX] = 2;
+                            console.log("movement down is allowed we should not collide with the bottom elements");
+                            //console.log("gameArray[valueY + row][column + valueX]"+gameArray[valueY + row][column + valueX]);
+                            movementDownIsAllowed = true;
                         }
-                        else{
-                            console.log(gameArray[row + valueY][column + valueX]);
+                        else {
+                            movementDownIsAllowed = false;
                         }
-                }
-
-
-
-                /*
-                for (var row = figureArray.length-1; row > 0; row--) {
-                    for (var column = 0; column < figureArray.length; column++) {
-                        //we should not overwrite non empty cells
-                        //gameArray[valueY - 1][column + valueX] = 0;
-                        //if(gameArray[row + valueY][column + valueX] != 2){
-
-                        //bottom not empty , fiture row is empty, we should not overwrite this value
-                        if((gameArray[row + valueY][column + valueX] == 2) && (figureArray[row][column] ==0 )){
-
-                            //gameArray[row + valueY][column + valueX] = figureArray[row][column];
-                            console.log("do nothing we should not overwrite 2 with 0");
-                        }
-
-                        if((gameArray[row + valueY][column + valueX] == 0) && (figureArray[row][column] ==0 )){
-
-                            //gameArray[row + valueY][column + valueX] = figureArray[row][column];
-                            console.log("do nothing we should not overwrite 0 with 0");
-                        }
-
-                        if((gameArray[row + valueY][column + valueX] == 0) && (figureArray[row][column] == 1 )){
-
-                            console.log("move value in game array 1 position down and 0->1")
-                            gameArray[row + valueY][column + valueX] = figureArray[row][column];
-
-                        }
-                        //clear one string above figure
-                        gameArray[valueY -1][column + valueX] = 0;
-
-
-
                     }
-                 */
-                    dumpGameField();
                 }
-                refreshGameField();
+
+
+                if (movementDownIsAllowed == true) {
+                    console.log("let's try to move down on one position");
+                    valueY += 1;
+
+                    for (var row = 0; row < figureArray.length; row++) {
+                        for (var column = 0; column < figureArray.length; column++) {
+                            gameArray[valueY - 1][column + valueX] = 0;
+                            if (gameArray[row + valueY ][column + valueX] == 0 || gameArray[row + valueY ][column + valueX] == 1) {
+                                gameArray[row + valueY][column + valueX] = figureArray[row][column];
+                            }
+                            else {
+                                console.log(gameArray[row + valueY][column + valueX]);
+                            }
+                        }
+                        dumpGameField();
+                    }
+                    refreshGameField();
+                }
+
+
+                movementDownIsAllowed = false;
+            }
+            else {
+                movementDownIsAllowed = true;
             }
 
-
-
-            movementDownIsAllowed = false;
         }
-        else{
-            movementDownIsAllowed = true;
-        }
+    }//testIfFigureShouldBeTransformedToSurface
+}
 
+function testIfFigureShouldBeTransformedToSurface(){
+    transformOneToTwo=false;
+    for (var row = 0; row < figureArray.length; row++) {
+        for (var column = 0; column < figureArray.length; column++) {
+            if(gameArray[row + valueY ][column + valueX]==1 && gameArray[row + valueY +1][column + valueX]==2) {
+                //gameArray[row + valueY][column + valueX] = figureArray[row][column];
+                console.log("we should start transformation process");
+                transformOneToTwo = true;
+                return transformOneToTwo;
+                //break;
+            }
+            else{
+                console.log("the figure is still ok");
+            }
+        }
+        dumpGameField();
     }
+    return transformOneToTwo;
+}
 
-
+function transformFigureToBottomSurface(){
+    for (var row = 0; row < figureArray.length; row++) {
+        for (var column = 0; column < figureArray.length; column++) {
+            if(gameArray[row + valueY ][column + valueX]==1) {
+                gameArray[row + valueY][column + valueX] = 2;
+            }
+        }
+    }
+    //we attached the figure to the bottom surface of the game field, now
+    //we should disconnect from the current figure
+    valueX=0;
+    valueY=0;
+    dumpGameField();
 }
 
 function dumpGameField(){
