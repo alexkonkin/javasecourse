@@ -64,8 +64,10 @@ generateRandomFigure = function () {
     }
 
     //TODO uncomment random generation when issue with Z letter is solved
-    //var aNum = getRandomInt(1,7);
-    var aNum = 5;
+    var aNum = getRandomInt(1,7);
+    //TODO issue with Z and S (6 and 4) figures one extra segment is added if this figure touches the bottom of the game field
+    //TODO in the condition below could be defined numbers between 1 and 7 to debug one particular element of the game
+    //var aNum = 6;
 
     var borderIsHitted=false;
     var movementLeftIsAllowed=true;
@@ -526,7 +528,15 @@ function placeFigureDown(){
                     gameArray[valueY - 1][column + valueX] = 0;
                     //attempt to skip copying empty value to 2
                     if(figureArray[row][column]==1) {
+                        //try to reset the 1 in the previous position
+                        if(row>0) {
+                            if (figureArray[row - 1][column] == 0) {
+                                console.log("we should set the the cell above to 0");
+                                gameArray[row + valueY -1][column + valueX] = 0;
+                            }
+                        }
                         gameArray[row + valueY][column + valueX] = figureArray[row][column];
+
                     }
                 }
                 //we have touched the bottom
