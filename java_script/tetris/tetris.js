@@ -15,7 +15,7 @@ var movementRightIsAllowed=true;
 var movementDownIsAllowed=true;
 var nextRowIsEmpty=true;
 var transformOneToTwo=false;
-
+var oneRowIsFull=false;
 // http://www.hunlock.com/blogs/Mastering_Javascript_Arrays#filter
 // http://wiki.jetbrains.net/intellij/Debugging_JavaScript_locally_in_Firefox_with_WebStorm_and_PhpStorm
 
@@ -414,8 +414,6 @@ function moveFigureRight(){
                }
             }
         }
-        console.log("figure array " +figureArray);
-
     detectIfRotationIsAllowed();
     refreshGameField();
     console.log("valueX "+valueX);
@@ -446,8 +444,6 @@ function moveFigureLeft(){
 function detectIfRotationIsAllowed(){
     console.log("detectIfRotationIsAllowed");
     console.log("-------------------------");
-    //console.log("valueX > COLUMN-1-(figureArray.length-1)"+(valueX > COLUMN-1-(figureArray.length-1)));
-    //console.log("valueY > ROW-1-(figureArray.length-1)"+(valueY > ROW-1-(figureArray.length-1)));
     if(valueX < 0 || valueX > COLUMN-1-(figureArray.length-1) || valueY > ROW-1-(figureArray.length-1)){
         borderIsHitted = true;
         console.log("detectIfRotationIsAllowed: we hit the border");
@@ -456,7 +452,6 @@ function detectIfRotationIsAllowed(){
         borderIsHitted = false;
         console.log("detectIfRotationIsAllowed: we don't touch the border");
     }
-
 }
 
 function detectIfMovementLeftIsAllowed(){
@@ -470,13 +465,10 @@ function detectIfMovementLeftIsAllowed(){
             movementLeftIsAllowed = true;
         }
     }
-    //console.log(gameArray[column]);
 }
 
 function detectIfMovementRightIsAllowed(){
     for (var row = 0; row < figureArray.length; row++) {
-        //console.log("detectIfMovementRightIsAllowed row + valueY"+ (row + valueY));
-        //console.log("detectIfMovementRightIsAllowed (COLUMN-1)" + (COLUMN-1));
         if(gameArray[row + valueY][COLUMN-1] == 1){
             movementRightIsAllowed = false;
             console.log("movement is not allowed");
@@ -486,7 +478,6 @@ function detectIfMovementRightIsAllowed(){
             movementRightIsAllowed = true;
         }
     }
-    //console.log(gameArray[column]);
 }
 
 function placeFigureDown(){
@@ -501,15 +492,19 @@ function placeFigureDown(){
         transformFigureToBottomSurface();
     }
 
+    //check if the figure that we have been placed to the bottom of the game field managed to
+    //fill the gap and created the full line, in such case we can remove it from the game surface
+    //var theLineIsFull = testIfOneFullLineIsPresentInTheGameField();
+    if(/*theLineIsFull*/testIfOneFullLineIsPresentInTheGameField()){
+        console.log("we have one full line in the game surface, we can remove this like and increase our score");
+        scanGameSurfaceAndRemoveFullRow();
+    }
+
     if(movementDownIsAllowed){
 
         valueY += 1;
         for (var row = 0; row < figureArray.length; row++) {
             for (var column = 0; column < figureArray.length; column++) {
-                //                if(gameArray[row + valueY][column + valueX]!=2 && figureArray[row][column]==0)
-                //we have not touched the bottom
-
-                //gameArray[valueY - 1][column + valueX] = 0;
                 if((valueY+figureArray.length)<= ROW) {
                     //this is not the bottom of the page so we don't need any extra conditions
                     gameArray[valueY - 1][column + valueX] = 0;
@@ -527,11 +522,8 @@ function placeFigureDown(){
                             }
                         }
                         gameArray[row + valueY][column + valueX] = figureArray[row][column];
-
                     }
                 }
-                //we have touched the bottom
-
             }
         }
         refreshGameField();
@@ -688,11 +680,9 @@ function testIfFigureShouldBeTransformedToSurface(){
     for (var row = 0; row < figureArray.length; row++) {
         for (var column = 0; column < figureArray.length; column++) {
             if(gameArray[row + valueY ][column + valueX]==1 && gameArray[row + valueY +1][column + valueX]==2) {
-                //gameArray[row + valueY][column + valueX] = figureArray[row][column];
                 console.log("we should start transformation process");
                 transformOneToTwo = true;
                 return transformOneToTwo;
-                //break;
             }
             else{
                 console.log("the figure is still ok");
@@ -716,6 +706,33 @@ function transformFigureToBottomSurface(){
     valueX=0;
     valueY=0;
     dumpGameField();
+}
+
+function testIfOneFullLineIsPresentInTheGameField(){
+    for (var row = ROW-1; row > 0; row--) {
+        //we have to reset the counter for each separate row
+        var fullCellsCounter = 0;
+        for (var column = 0; column < COLUMN; column++) {
+            if(gameArray[row][column]==2){
+                fullCellsCounter+=1;
+            }
+        }
+        if (fullCellsCounter == COLUMN){
+            break;
+        }
+    }
+    if(fullCellsCounter == COLUMN){
+        console.log("fullCellsCounter "+fullCellsCounter);
+        oneRowIsFull = true;
+    }
+    else{
+        oneRowIsFull = false;
+    }
+    return oneRowIsFull;
+}
+
+function scanGameSurfaceAndRemoveFullRow(){
+    console.log("scanGameSurfaceEndRemoveFullRow()");
 }
 
 function dumpGameField(){
