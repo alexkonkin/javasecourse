@@ -39,11 +39,14 @@
       <file leaf-file-name="tetris.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tetris.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52110094" vertical-offset="9848" max-vertical-offset="10625">
-              <caret line="713" column="16" selection-start-line="713" selection-start-column="16" selection-end-line="713" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.19614711" vertical-offset="5498" max-vertical-offset="10047">
+              <caret line="498" column="14" selection-start-line="498" selection-start-column="14" selection-end-line="498" selection-end-column="14" />
               <folding>
-                <element signature="e#18044#20801#0" expanded="false" />
-                <element signature="e#20852#24787#0" expanded="false" />
+                <element signature="n#!!block;n#initGameField#0" expanded="false" />
+                <element signature="n#!!block;n#drawGameField#0" expanded="false" />
+                <element signature="e#1802#4546#0" expanded="false" />
+                <element signature="n#!!block;n#detectIfMovementLeftIsAllowed#0" expanded="false" />
+                <element signature="n#!!block;n#detectIfMovementRightIsAllowed#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -222,7 +225,11 @@
       <created>1412241332538</created>
       <updated>1412241332538</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="java_script: function which detects if we touched the border and which should transform our figure and make it the part&#10;                    of the bottom surface has been implemented (figure which contains 1 is transformed to array of 2)">
+      <created>1412255303989</created>
+      <updated>1412255303989</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -255,9 +262,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.69036335" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1484992" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16535018" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3827027" sideWeight="0.89942074" order="3" side_tool="false" content_ui="tabs" x="1" y="517" width="1920" height="697" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3545946" sideWeight="0.89942074" order="3" side_tool="false" content_ui="tabs" x="1" y="517" width="1920" height="697" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3827027" sideWeight="0.100579254" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3545946" sideWeight="0.100579254" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -286,23 +293,13 @@
     </option>
     <MESSAGE value="java_script: added conditions that should help to detect if it is allowed to copy the figure if the bottom of the game field is occupied" />
     <MESSAGE value="java_script: to the game has been added the additional condition block which allowed to fix the problem related to one extra&#10;                    painted cell if the cell on the top is equal to 0 (z and s elements of tetris was affected with this problem)" />
-    <option name="LAST_COMMIT_MESSAGE" value="java_script: to the game has been added the additional condition block which allowed to fix the problem related to one extra&#10;                    painted cell if the cell on the top is equal to 0 (z and s elements of tetris was affected with this problem)" />
+    <MESSAGE value="java_script: function which detects if we touched the border and which should transform our figure and make it the part&#10;                    of the bottom surface has been implemented (figure which contains 1 is transformed to array of 2)" />
+    <MESSAGE value="java_script: function that detects if we have the full line has been added to the project, a stub for the function that&#10;                    should remove the full line has been added to the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="java_script: function that detects if we have the full line has been added to the project, a stub for the function that&#10;                    should remove the full line has been added to the project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tetris.js</url>
-          <line>691</line>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tetris.js</url>
-          <line>499</line>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="70" />
+      <option name="time" value="90" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -319,8 +316,11 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="10077" max-vertical-offset="11237">
           <caret line="620" column="0" selection-start-line="620" selection-start-column="0" selection-end-line="620" selection-end-column="0" />
           <folding>
-            <element signature="e#18044#20801#0" expanded="false" />
-            <element signature="e#20852#24787#0" expanded="false" />
+            <element signature="n#!!block;n#initGameField#0" expanded="false" />
+            <element signature="n#!!block;n#drawGameField#0" expanded="false" />
+            <element signature="e#1802#4546#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementLeftIsAllowed#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementRightIsAllowed#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -346,8 +346,11 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="10077" max-vertical-offset="11237">
           <caret line="620" column="0" selection-start-line="620" selection-start-column="0" selection-end-line="620" selection-end-column="0" />
           <folding>
-            <element signature="e#18044#20801#0" expanded="false" />
-            <element signature="e#20852#24787#0" expanded="false" />
+            <element signature="n#!!block;n#initGameField#0" expanded="false" />
+            <element signature="n#!!block;n#drawGameField#0" expanded="false" />
+            <element signature="e#1802#4546#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementLeftIsAllowed#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementRightIsAllowed#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -373,8 +376,11 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="10291" max-vertical-offset="11526">
           <caret line="633" column="47" selection-start-line="633" selection-start-column="47" selection-end-line="633" selection-end-column="47" />
           <folding>
-            <element signature="e#18044#20801#0" expanded="false" />
-            <element signature="e#20852#24787#0" expanded="false" />
+            <element signature="n#!!block;n#initGameField#0" expanded="false" />
+            <element signature="n#!!block;n#drawGameField#0" expanded="false" />
+            <element signature="e#1802#4546#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementLeftIsAllowed#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementRightIsAllowed#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -400,8 +406,11 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="11050">
           <caret line="1" column="41" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
           <folding>
-            <element signature="e#18044#20801#0" expanded="false" />
-            <element signature="e#20852#24787#0" expanded="false" />
+            <element signature="n#!!block;n#initGameField#0" expanded="false" />
+            <element signature="n#!!block;n#drawGameField#0" expanded="false" />
+            <element signature="e#1802#4546#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementLeftIsAllowed#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementRightIsAllowed#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -427,8 +436,11 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="10126" max-vertical-offset="11050">
           <caret line="505" column="0" selection-start-line="505" selection-start-column="0" selection-end-line="505" selection-end-column="0" />
           <folding>
-            <element signature="e#18044#20801#0" expanded="false" />
-            <element signature="e#20852#24787#0" expanded="false" />
+            <element signature="n#!!block;n#initGameField#0" expanded="false" />
+            <element signature="n#!!block;n#drawGameField#0" expanded="false" />
+            <element signature="e#1802#4546#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementLeftIsAllowed#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementRightIsAllowed#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -454,8 +466,11 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="9421" max-vertical-offset="10234">
           <caret line="571" column="21" selection-start-line="571" selection-start-column="21" selection-end-line="571" selection-end-column="21" />
           <folding>
-            <element signature="e#18044#20801#0" expanded="false" />
-            <element signature="e#20852#24787#0" expanded="false" />
+            <element signature="n#!!block;n#initGameField#0" expanded="false" />
+            <element signature="n#!!block;n#drawGameField#0" expanded="false" />
+            <element signature="e#1802#4546#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementLeftIsAllowed#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementRightIsAllowed#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -488,8 +503,11 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="6708" max-vertical-offset="9316">
           <caret line="411" column="64" selection-start-line="411" selection-start-column="64" selection-end-line="411" selection-end-column="64" />
           <folding>
-            <element signature="e#18044#20801#0" expanded="false" />
-            <element signature="e#20852#24787#0" expanded="false" />
+            <element signature="n#!!block;n#initGameField#0" expanded="false" />
+            <element signature="n#!!block;n#drawGameField#0" expanded="false" />
+            <element signature="e#1802#4546#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementLeftIsAllowed#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementRightIsAllowed#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -522,8 +540,11 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="554" max-vertical-offset="9265">
           <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
           <folding>
-            <element signature="e#18044#20801#0" expanded="false" />
-            <element signature="e#20852#24787#0" expanded="false" />
+            <element signature="n#!!block;n#initGameField#0" expanded="false" />
+            <element signature="n#!!block;n#drawGameField#0" expanded="false" />
+            <element signature="e#1802#4546#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementLeftIsAllowed#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementRightIsAllowed#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -556,8 +577,11 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="7879" max-vertical-offset="9248">
           <caret line="482" column="42" selection-start-line="482" selection-start-column="42" selection-end-line="482" selection-end-column="42" />
           <folding>
-            <element signature="e#18044#20801#0" expanded="false" />
-            <element signature="e#20852#24787#0" expanded="false" />
+            <element signature="n#!!block;n#initGameField#0" expanded="false" />
+            <element signature="n#!!block;n#drawGameField#0" expanded="false" />
+            <element signature="e#1802#4546#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementLeftIsAllowed#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementRightIsAllowed#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -590,8 +614,11 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="7879" max-vertical-offset="9248">
           <caret line="482" column="42" selection-start-line="482" selection-start-column="42" selection-end-line="482" selection-end-column="42" />
           <folding>
-            <element signature="e#18044#20801#0" expanded="false" />
-            <element signature="e#20852#24787#0" expanded="false" />
+            <element signature="n#!!block;n#initGameField#0" expanded="false" />
+            <element signature="n#!!block;n#drawGameField#0" expanded="false" />
+            <element signature="e#1802#4546#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementLeftIsAllowed#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementRightIsAllowed#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -705,11 +732,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tetris.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52110094" vertical-offset="9848" max-vertical-offset="10625">
-          <caret line="713" column="16" selection-start-line="713" selection-start-column="16" selection-end-line="713" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.19614711" vertical-offset="5498" max-vertical-offset="10047">
+          <caret line="498" column="14" selection-start-line="498" selection-start-column="14" selection-end-line="498" selection-end-column="14" />
           <folding>
-            <element signature="e#18044#20801#0" expanded="false" />
-            <element signature="e#20852#24787#0" expanded="false" />
+            <element signature="n#!!block;n#initGameField#0" expanded="false" />
+            <element signature="n#!!block;n#drawGameField#0" expanded="false" />
+            <element signature="e#1802#4546#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementLeftIsAllowed#0" expanded="false" />
+            <element signature="n#!!block;n#detectIfMovementRightIsAllowed#0" expanded="false" />
           </folding>
         </state>
       </provider>
