@@ -8,20 +8,26 @@ var figurePosition = 1;
 var valueX;
 var valueY;
 var ROW=8;
+//var ROW=4;
 var COLUMN=12;
+//var COLUMN=6;
 var borderIsHitted=false;
 var movementLeftIsAllowed=true;
 var movementRightIsAllowed=true;
 var movementDownIsAllowed=true;
 var nextRowIsEmpty=true;
+var nextColumnIsEmpty=true;
 var transformOneToTwo=false;
-var oneRowIsFull=false;
+var oneRowIsFull=-1;
 // http://www.hunlock.com/blogs/Mastering_Javascript_Arrays#filter
 // http://wiki.jetbrains.net/intellij/Debugging_JavaScript_locally_in_Firefox_with_WebStorm_and_PhpStorm
 
 //console log to html page
 //http://jsfiddle.net/arunpjohny/mGDet/
 //http://stackoverflow.com/questions/20256760/javascript-console-log-to-html
+
+//jasmine framework
+//https://www.youtube.com/watch?v=9xkfgprKTmY
 
 function initGameField(aRow, aColumn){
     this.row = aRow;
@@ -69,10 +75,10 @@ generateRandomFigure = function () {
     }
 
     //TODO uncomment random generation when issue with Z letter is solved
-    var aNum = getRandomInt(1,7);
+    //var aNum = getRandomInt(1,7);
     //TODO issue with Z and S (6 and 4) figures one extra segment is added if this figure touches the bottom of the game field
     //TODO in the condition below could be defined numbers between 1 and 7 to debug one particular element of the game
-    //var aNum = 6;
+    var aNum = 5;
 
     var borderIsHitted=false;
     var movementLeftIsAllowed=true;
@@ -468,16 +474,81 @@ function detectIfMovementLeftIsAllowed(){
 }
 
 function detectIfMovementRightIsAllowed(){
+/*
+    if(valueX < COLUMN - figureArray.length){
+        console.log("---===< detectIfMovementRightIsAllowed valueX < COLUMN - figureArray.length:  >===---");
+        //detect if we have a free space on the right side of the figure and if we can move it
+        //one position forward
+        nextColumnIsEmptyIsEmpty = true;
+        for (var row = 0; row < figureArray.length; row++) {
+            column = figureArray.length;
+            //for (var column = figureArray.length; column > 0 ; column--) {
+                if (gameArray[valueY + row][valueX + column] == 2) {
+                    //mark this element as the placed on the flor
+                    console.log("movement to RIGHT inetrnal cycle " + gameArray[valueY + row][column + valueX]);
+                    //console.log("");
+                    nextColumnIsEmpty = false;
+                    break;
+                }
+            //}
+            //break;
+        }
+
+        //next column is not empty, we have to check if we can move forward and not collide with
+        // the cells that had been occupied with the game surface
+        //TODO MOVEMENT RIGHT we have to check the complex condition that should assure that we don't collide with the game surface on the right side
+        if(nextColumnIsEmpty == false){
+            column = figureArray.length;
+            for (var row = 0; row < figureArray.length - 1; row++) {
+                for (var column = figureArray.length-1; column > 0; column--) {
+                    //valueY + row +1 - I want to check the row which is under the very first row of my figure
+                    if ((gameArray[valueY + row][column + valueX + 1] == 2 && figureArray[row][column] == 0) ||
+                        (gameArray[valueY + row][column + valueX + 1] == 0 && figureArray[row][column] == 1) ||
+                        (gameArray[valueY + row][column + valueX + 1] == 0 && figureArray[row][column] == 0) ||
+                        //this check is strange because it is related to test inside figure's body, maybe this should be improved
+                        (gameArray[valueY + row][column + valueX + 1] == 1 && figureArray[row][column] == 1)) {
+                        //let's try to detect if we can move down
+                        //gameArray[valueY + row][column + valueX] = 2;
+                        console.log("movement down is allowed we should not collide with the bottom elements");
+                        //console.log("gameArray[valueY + row][column + valueX]"+gameArray[valueY + row][column + valueX]);
+                        movementDownIsAllowed = true;
+                    }
+                }
+            }
+        }
+
+        movementRightIsAllowed = true;
+    }
+    else {
+        //this is a right border condition
+        movementRightIsAllowed = false;
+        for (var row = 0; row < figureArray.length; row++) {
+            if (gameArray[row + valueY][COLUMN - 1] == 1) {
+                movementRightIsAllowed = false;
+                console.log("movement is not allowed");
+                break;
+            }
+            else {
+                movementRightIsAllowed = true;
+            }
+        }
+    }
+*/
+
+
+    //initial part of code
+
     for (var row = 0; row < figureArray.length; row++) {
-        if(gameArray[row + valueY][COLUMN-1] == 1){
+        if (gameArray[row + valueY][COLUMN - 1] == 1) {
             movementRightIsAllowed = false;
             console.log("movement is not allowed");
             break;
         }
-        else{
+        else {
             movementRightIsAllowed = true;
         }
     }
+
 }
 
 function placeFigureDown(){
@@ -485,8 +556,6 @@ function placeFigureDown(){
     detectIfRotationIsAllowed();
     console.log("placeFigureDown()");
     console.log("-------------------------");
-    //TODO implement method that should detect if this is not a bottom of the game field but the space below
-    //TODO is occupied with the previous elements (2), if this is the truth - transform all 1 to 2
     if(transformOneToTwo){
         console.log("we should start transformation");
         transformFigureToBottomSurface();
@@ -495,9 +564,10 @@ function placeFigureDown(){
     //check if the figure that we have been placed to the bottom of the game field managed to
     //fill the gap and created the full line, in such case we can remove it from the game surface
     //var theLineIsFull = testIfOneFullLineIsPresentInTheGameField();
-    if(/*theLineIsFull*/testIfOneFullLineIsPresentInTheGameField()){
+    if(/*theLineIsFull*/testIfOneFullLineIsPresentInTheGameField() > 0){
         console.log("we have one full line in the game surface, we can remove this like and increase our score");
         scanGameSurfaceAndRemoveFullRow();
+        dumpGameField();
     }
 
     if(movementDownIsAllowed){
@@ -506,9 +576,12 @@ function placeFigureDown(){
         for (var row = 0; row < figureArray.length; row++) {
             for (var column = 0; column < figureArray.length; column++) {
                 if((valueY+figureArray.length)<= ROW) {
-                    //this is not the bottom of the page so we don't need any extra conditions
+                    console.log("---===<(valueY+figureArray.length)<= ROW)  clearing one row above>===---");
                     gameArray[valueY - 1][column + valueX] = 0;
-                    gameArray[row + valueY][column + valueX] = figureArray[row][column];
+                    //we should not override 2 with 0
+                    if(gameArray[row + valueY][column + valueX]!=2) {
+                        gameArray[row + valueY][column + valueX] = figureArray[row][column];
+                    }
                 }
                 if((valueY+figureArray.length) > ROW) {
                     gameArray[valueY - 1][column + valueX] = 0;
@@ -518,6 +591,7 @@ function placeFigureDown(){
                         if(row>0) {
                             if (figureArray[row - 1][column] == 0) {
                                 console.log("we should set the the cell above to 0");
+                                console.log("---===< (valueY+figureArray.length) > ROW  clearing one row above>===---");
                                 gameArray[row + valueY -1][column + valueX] = 0;
                             }
                         }
@@ -545,9 +619,8 @@ function increaseSizeOfTheGameFieldInTwoExtraRows (){
 function detectIfMovementDownIsAllowed(){
     //this part is dedicated to detect the very bottom of the game field
     //for (var column = 0; column < figureArray.length; column++) {
-    //TODO scan if we have a space to move down, if no we should exit from
-    //TODO the function and transform this figure to the bottom of the game field
     console.log("should we start transformation of 1 to 2 " + testIfFigureShouldBeTransformedToSurface());
+    //TODO maybe here we can organize a cycle and not the simple condition
     if(testIfFigureShouldBeTransformedToSurface()){
         movementDownIsAllowed = false;
     }
@@ -639,7 +712,11 @@ function detectIfMovementDownIsAllowed(){
                             movementDownIsAllowed = true;
                         }
                         else {
-                            movementDownIsAllowed = false;
+                            //one extra condition check for I item, if it hits right border with its row of 1-s the very right column is out of the border
+                            //so we should not check the very right row, it is not visible in the game field
+                            if(gameArray[valueY + row + 1][column + valueX] != undefined ) {
+                                movementDownIsAllowed = false;
+                            }
                         }
                     }
                 }
@@ -651,7 +728,11 @@ function detectIfMovementDownIsAllowed(){
 
                     for (var row = 0; row < figureArray.length; row++) {
                         for (var column = 0; column < figureArray.length; column++) {
-                            gameArray[valueY - 1][column + valueX] = 0;
+                            //we should not clear the field if it is occupied with the figure that has been already
+                            //attached to the bottom of the game field, we need just to slide down
+                            if(gameArray[valueY - 1][column + valueX] != 2) {
+                                gameArray[valueY - 1][column + valueX] = 0;
+                            }
                             if (gameArray[row + valueY ][column + valueX] == 0 || gameArray[row + valueY ][column + valueX] == 1) {
                                 gameArray[row + valueY][column + valueX] = figureArray[row][column];
                             }
@@ -722,17 +803,24 @@ function testIfOneFullLineIsPresentInTheGameField(){
         }
     }
     if(fullCellsCounter == COLUMN){
-        console.log("fullCellsCounter "+fullCellsCounter);
-        oneRowIsFull = true;
+        oneRowIsFull = row;
     }
     else{
-        oneRowIsFull = false;
+        oneRowIsFull = -1;
     }
     return oneRowIsFull;
 }
 
 function scanGameSurfaceAndRemoveFullRow(){
-    console.log("scanGameSurfaceEndRemoveFullRow()");
+    console.log(" ---===< scanGameSurfaceEndRemoveFullRow() >===--- ");
+    for (var row = oneRowIsFull; row > 0; row--) {
+        //we have to reset the counter for each separate row
+        for (var column = 0; column < COLUMN; column++) {
+            if(gameArray[row][column]==2){
+                gameArray[row][column] = gameArray[row-1][column];
+            }
+        }
+    }
 }
 
 function dumpGameField(){
