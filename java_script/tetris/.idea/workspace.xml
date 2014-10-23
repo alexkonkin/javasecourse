@@ -29,8 +29,8 @@
       <file leaf-file-name="tetris.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tetris.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.3846154" vertical-offset="310" max-vertical-offset="714">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.307693" vertical-offset="173" max-vertical-offset="714">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -39,18 +39,8 @@
       <file leaf-file-name="tetris.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tetris.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6409449" vertical-offset="7005" max-vertical-offset="16371">
-              <caret line="436" column="24" selection-start-line="436" selection-start-column="24" selection-end-line="436" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EcmaScript5.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="3247">
-              <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.44343302" vertical-offset="6816" max-vertical-offset="14603">
+              <caret line="421" column="30" selection-start-line="421" selection-start-column="30" selection-end-line="421" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -277,7 +267,11 @@
       <created>1413450973383</created>
       <updated>1413450973383</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="java_script: conditions tha detect that movement left and right allowed have been&#10;                    implemented, movement left and right methods have been implemented">
+      <created>1414051200070</created>
+      <updated>1414051200070</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -310,9 +304,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.69036335" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23644023" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16535018" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2583784" sideWeight="0.89942074" order="3" side_tool="false" content_ui="tabs" x="1" y="517" width="1920" height="697" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.113513514" sideWeight="0.89942074" order="3" side_tool="false" content_ui="tabs" x="1" y="517" width="1920" height="697" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2583784" sideWeight="0.100579254" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.113513514" sideWeight="0.100579254" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.63349134" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -349,19 +343,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tetris.js</url>
-          <line>470</line>
-          <option name="timeStamp" value="135" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tetris.js</url>
-          <line>498</line>
-          <option name="timeStamp" value="136" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="137" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="145" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -740,26 +725,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tetris.html">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.3846154" vertical-offset="310" max-vertical-offset="714">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.66818184" vertical-offset="545" max-vertical-offset="3247">
+          <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
+    <entry file="file://$PROJECT_DIR$/tetris.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="3247">
-          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        <state vertical-scroll-proportion="-12.307693" vertical-offset="173" max-vertical-offset="714">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tetris.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6409449" vertical-offset="7005" max-vertical-offset="16371">
-          <caret line="436" column="24" selection-start-line="436" selection-start-column="24" selection-end-line="436" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.44343302" vertical-offset="6816" max-vertical-offset="14603">
+          <caret line="421" column="30" selection-start-line="421" selection-start-column="30" selection-end-line="421" selection-end-column="30" />
           <folding />
         </state>
       </provider>
