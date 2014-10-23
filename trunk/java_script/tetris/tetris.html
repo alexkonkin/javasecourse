@@ -11,10 +11,11 @@
 <!--body onLoad="generateTable(), generateFiguresField()"-->
 <body onLoad="testFigureGeneration()">
 <body>
-<h2>tetris</h2>
+<div id="caption">SIMPLE TETRIS</div>
 <div id="table"></div>
 <div id="game_field"></div>
 
+<div id="wrapper">
 <table id="navigation">
     <tr>
         <td></td><td><button onclick="test()"> new figure </button></td><td></td>
@@ -30,6 +31,18 @@
         <td><button onclick="moveFigureRight()"> > </button></td>
     </tr>
 </table>
+
+<table id="score">
+    <tr>
+        <td colspan="2">YOU COLLECTED</td>
+     </tr>
+    <tr>
+        <td id="collected_rows">0</td>
+        <td id="row_label">rows</td>
+    </tr>
+
+</table>
+</div>
 
 <br>
 

@@ -1,6 +1,21 @@
+#caption{
+    border-style: solid;
+    text-align: center;
+    font-size: 40px;
+    font-family: sans-serif;
+    border-color: deepskyblue;
+    background-color: palegoldenrod;
+    width: 420px;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    float: none;
+}
+
 /* remove spaces between lines which surrounds rows and columns*/
 #game_field table {
     border-collapse:collapse;
+    margin-left: 50px;
     font-size: 10px;
     float: left;
 }
@@ -12,13 +27,13 @@
     width: 20px;
 }
 
-
 #navigation{
     border-style: solid;
     border-color: deepskyblue;
     border-radius: 10px;
     margin-left: 50px;
-    float: left;
+    width: inherit;
+    float: none;
     /*
     outline:blueviolet solid 2px;
     */
@@ -31,10 +46,28 @@
     margin-left: 50%;
 }
 
+#score{
+    border-style: solid;
+    border-color: deepskyblue;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 20px;
+    width: inherit;
+    float: none;
+    text-align: center;
 
+    /*
+    outline:blueviolet solid 2px;
+    */
+}
 /*
 #game_field tr,td {
     height: 20px;
     width: 20px;
 }
 */
+#wrapper {
+    float: left;
+    height: 200px;
+    width: 180px;
+}
