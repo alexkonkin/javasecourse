@@ -76,10 +76,10 @@ generateRandomFigure = function () {
     }
 
     //TODO uncomment random generation when issue with Z letter is solved
-    //var aNum = getRandomInt(1,7);
+    var aNum = getRandomInt(1,7);
     //TODO issue with Z and S (6 and 4) figures one extra segment is added if this figure touches the bottom of the game field
     //TODO in the condition below could be defined numbers between 1 and 7 to debug one particular element of the game
-    var aNum = 5;
+    //var aNum = 5;
 
     borderIsHitted=false;
     movementLeftIsAllowed=true;
@@ -458,6 +458,7 @@ function moveFigureLeft(){
     detectIfRotationIsAllowed();
     console.log("valueX "+valueX);
     console.log("valueY "+valueY);
+    dumpGameField();
 }
 
 function detectIfRotationIsAllowed(){
@@ -468,36 +469,51 @@ function detectIfRotationIsAllowed(){
         console.log("detectIfRotationIsAllowed: we hit the border");
     }
     else{
+        //now we have to check if a part of the bottom surface is present in the scope of our figure
         borderIsHitted = false;
-        console.log("detectIfRotationIsAllowed: we don't touch the border");
+        for (var row = 0; row < figureArray.length; row++) {
+            for (var column = 0; column < figureArray.length; column++) {
+                if(gameArray[row + valueY][column + valueX] == 2) {
+                    borderIsHitted = true;
+                    console.log("detectIfRotationIsAllowed: we hit the border");
+                }
+            }
+        }
     }
 }
 
 function detectIfMovementLeftIsAllowed(){
-    if(valueX > figureArray.length-1){
+    if(valueX > /*figureArray.length-1*/0){
         console.log("---===< detectIfMovementRightIsAllowed valueX < COLUMN - figureArray.length:  >===---");
         movementLeftIsAllowed = false;
-        column = 0;
-        for (var row = 0; row < figureArray.length; row++) {
-             if ((gameArray[valueY + row][column + valueX - 1] == 2 && gameArray[valueY + row][column  + valueX] == 0) ||
-                (gameArray[valueY + row][column + valueX - 1] == 0 && gameArray[valueY + row][column  + valueX] == 1) ||
-                (gameArray[valueY + row][column + valueX - 1] == 0 && gameArray[valueY + row][column + valueX] == 0) ||
-                //this check is strange because it is related to test inside figure's body, maybe this should be improved
-                (gameArray[valueY + row][column + valueX - 1] == 1 && gameArray[valueY + row][column + valueX] == 1)||
-                (gameArray[valueY + row][column + valueX - 1] == 0 && gameArray[valueY + row][column + valueX] == 2)) {
-                //let's try to detect if we can move down
-                //gameArray[valueY + row][column + valueX] = 2;
-                console.log("movement down is allowed we should not collide with the bottom elements");
-                //console.log("gameArray[valueY + row][column + valueX]"+gameArray[valueY + row][column + valueX]);
-                movementLeftIsAllowed = true;
+        //column = 0;
+        var abort = false;
+        for (var row = 0; row < figureArray.length && abort != true; row++) {
+            //TODO we scan only two first columns of the figure
+            for(var column = 0; column < figureArray.length-1 && abort != true; column++) {
+                if ((gameArray[valueY + row][column + valueX - 1] == 2 && gameArray[valueY + row][column + valueX] == 0) ||
+                    (gameArray[valueY + row][column + valueX - 1] == 0 && gameArray[valueY + row][column + valueX] == 1) ||
+                    (gameArray[valueY + row][column + valueX - 1] == 0 && gameArray[valueY + row][column + valueX] == 0) ||
+                    //this check is strange because it is related to test inside figure's body, maybe this should be improved
+                    (gameArray[valueY + row][column + valueX - 1] == 1 && gameArray[valueY + row][column + valueX] == 1) ||
+                    (gameArray[valueY + row][column + valueX - 1] == 0 && gameArray[valueY + row][column + valueX] == 2) ||
+                    (gameArray[valueY + row][column + valueX - 1] == 2 && gameArray[valueY + row][column + valueX] == 2)) {
+                    //let's try to detect if we can move down
+                    //gameArray[valueY + row][column + valueX] = 2;
+                    console.log("movement down is allowed we should not collide with the bottom elements");
+                    //console.log("gameArray[valueY + row][column + valueX]"+gameArray[valueY + row][column + valueX]);
+                    movementLeftIsAllowed = true;
+                }
+                else {
+                    //for example gameArray[valueY + row][column + valueX + 1] == 2 && gameArray[valueY + row][column + valueX] == 2)
+                    console.log("MOVEMENT LEFT IS PROHIBITED!");
+                    movementLeftIsAllowed = false;
+                    abort = true;
+                    //break;
+                }
             }
-            else{
-                //for example gameArray[valueY + row][column + valueX + 1] == 2 && gameArray[valueY + row][column + valueX] == 2)
-                 movementLeftIsAllowed = false;
-                break;
-            }
-            //}
         }
+
     }
     else {
         //this is a left border condition
@@ -514,6 +530,7 @@ function detectIfMovementLeftIsAllowed(){
 
             }
     }
+
     dumpGameField();
 }
 
@@ -541,6 +558,7 @@ function detectIfMovementRightIsAllowed(){
                     break;
                 }
             }
+
     }
     else {
         //this is a right border condition
