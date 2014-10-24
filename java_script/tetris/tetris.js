@@ -20,6 +20,7 @@ var nextRowIsEmpty=true;
 var nextColumnIsEmpty=true;
 var transformOneToTwo=false;
 var oneRowIsFull=-1;
+var collectedRowsCounter=0;
 // http://www.hunlock.com/blogs/Mastering_Javascript_Arrays#filter
 // http://wiki.jetbrains.net/intellij/Debugging_JavaScript_locally_in_Firefox_with_WebStorm_and_PhpStorm
 
@@ -388,6 +389,7 @@ function refreshGameField(){
             }
         }
     }
+    refreshGuiRowCounter();
 }
 
 function testFigureGeneration() {
@@ -497,7 +499,9 @@ function detectIfMovementLeftIsAllowed(){
                     //this check is strange because it is related to test inside figure's body, maybe this should be improved
                     (gameArray[valueY + row][column + valueX - 1] == 1 && gameArray[valueY + row][column + valueX] == 1) ||
                     (gameArray[valueY + row][column + valueX - 1] == 0 && gameArray[valueY + row][column + valueX] == 2) ||
-                    (gameArray[valueY + row][column + valueX - 1] == 2 && gameArray[valueY + row][column + valueX] == 2)) {
+                    (gameArray[valueY + row][column + valueX - 1] == 2 && gameArray[valueY + row][column + valueX] == 2)||
+                    //we check the internal part of the figure
+                    (gameArray[valueY + row][column + valueX - 1] == 1 && gameArray[valueY + row][column + valueX] == 0)){
                     //let's try to detect if we can move down
                     //gameArray[valueY + row][column + valueX] = 2;
                     console.log("movement down is allowed we should not collide with the bottom elements");
@@ -848,6 +852,15 @@ function scanGameSurfaceAndRemoveFullRow(){
             }
         }
     }
+    scoreOneFullRow();
+}
+
+function scoreOneFullRow(){
+    collectedRowsCounter += 1;
+}
+
+function refreshGuiRowCounter(){
+    document.getElementById("collected_rows").innerHTML = collectedRowsCounter.toString();
 }
 
 function dumpGameField(){

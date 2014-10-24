@@ -28,21 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="tetris.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="tetris.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tetris.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6122807" vertical-offset="297" max-vertical-offset="935">
-              <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+            <state vertical-scroll-proportion="-11.461538" vertical-offset="365" max-vertical-offset="935">
+              <caret line="39" column="30" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tetris.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="tetris.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tetris.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.28" vertical-offset="7783" max-vertical-offset="14909">
-              <caret line="470" column="9" selection-start-line="470" selection-start-column="9" selection-end-line="470" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.4938704" vertical-offset="6229" max-vertical-offset="15130">
+              <caret line="383" column="43" selection-start-line="383" selection-start-column="43" selection-end-line="383" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -51,8 +51,8 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="730" max-vertical-offset="1326">
-              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="917" max-vertical-offset="1581">
+              <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="73" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -69,9 +69,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/tetris.html" />
         <option value="$PROJECT_DIR$/tetris.js" />
         <option value="$PROJECT_DIR$/main.css" />
-        <option value="$PROJECT_DIR$/tetris.html" />
       </list>
     </option>
   </component>
@@ -277,7 +277,11 @@
       <created>1414064608724</created>
       <updated>1414064608724</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="java_script: css and html files have been updated, main caption and&#10;                    a table that should reflect the number of collected rows&#10;                    have been added to the project">
+      <created>1414083023870</created>
+      <updated>1414083023870</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -302,7 +306,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.121081084" sideWeight="0.31595576" order="7" side_tool="false" content_ui="tabs" />
@@ -346,26 +350,16 @@
     <MESSAGE value="java_script: fixed one bug with the movement down figures should not overwrite each other" />
     <MESSAGE value="java_script: conditions tha detect that movement left and right allowed have been&#10;                    implemented, movement left and right methods have been implemented" />
     <MESSAGE value="java_script: if figure placed down, its movement should be disabled, figure should be&#10;                    associated with the bottom of the game field" />
-    <option name="LAST_COMMIT_MESSAGE" value="java_script: if figure placed down, its movement should be disabled, figure should be&#10;                    associated with the bottom of the game field" />
+    <MESSAGE value="java_script: css and html files have been updated, main caption and&#10;                    a table that should reflect the number of collected rows&#10;                    have been added to the project" />
+    <MESSAGE value="java_script: added collected rows counter logic to the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="java_script: added collected rows counter logic to the project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tetris.js</url>
-          <line>508</line>
-          <option name="timeStamp" value="149" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tetris.js</url>
-          <line>485</line>
-          <option name="timeStamp" value="151" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="152" />
+      <option name="time" value="153" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -746,24 +740,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="730" max-vertical-offset="1326">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tetris.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.28" vertical-offset="7783" max-vertical-offset="14909">
-          <caret line="470" column="9" selection-start-line="470" selection-start-column="9" selection-end-line="470" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="917" max-vertical-offset="1581">
+          <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="73" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tetris.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6122807" vertical-offset="297" max-vertical-offset="935">
-          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+        <state vertical-scroll-proportion="-11.461538" vertical-offset="365" max-vertical-offset="935">
+          <caret line="39" column="30" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tetris.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4938704" vertical-offset="6229" max-vertical-offset="15130">
+          <caret line="383" column="43" selection-start-line="383" selection-start-column="43" selection-end-line="383" selection-end-column="43" />
           <folding />
         </state>
       </provider>
