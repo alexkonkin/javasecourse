@@ -55,11 +55,15 @@
     width: inherit;
     float: none;
     text-align: center;
-
     /*
     outline:blueviolet solid 2px;
     */
 }
+
+#score table th td {
+    width: 40px;
+}
+
 /*
 #game_field tr,td {
     height: 20px;
@@ -70,4 +74,14 @@
     float: left;
     height: 200px;
     width: 180px;
+    font-weight: bold;
+}
+
+#collected_rows {
+    width: 60px;
+    text-align: right;
+}
+
+#row_label {
+    text-align: center;
 }
