@@ -21,6 +21,8 @@ var nextColumnIsEmpty=true;
 var transformOneToTwo=false;
 var oneRowIsFull=-1;
 var collectedRowsCounter=0;
+var letterCounter = new LetterCounter();
+
 // http://www.hunlock.com/blogs/Mastering_Javascript_Arrays#filter
 // http://wiki.jetbrains.net/intellij/Debugging_JavaScript_locally_in_Firefox_with_WebStorm_and_PhpStorm
 
@@ -174,7 +176,7 @@ generateRandomFigure = function () {
                 [1, 1],
                 [1, 1]
             ];
-            figureType = "0";
+            figureType = "O";
             figurePosition = 1;
             valueX = 0;
             valueY = 0;
@@ -182,6 +184,8 @@ generateRandomFigure = function () {
             ;
             break;
     }
+    console.log("figure type is "+figureType);
+    letterCounter.incLetterCounterAndUpdateGUI(figureType.toString());
 }
 
 function rotateFigure(){
@@ -1007,6 +1011,25 @@ function LetterTableGenerator(letter) {
     this.placeFigureToLetterArray = placeFigureToLetterArray;
 }
 
+function incLetterCounterAndUpdateGUI(aLetter){
+    this.letterCounters[aLetter]+=1;
+    document.getElementById(aLetter.toString().toLowerCase()+"_cnt").innerHTML = this.letterCounters[aLetter];
+    console.log(this.letterCounters[aLetter]);
+}
+
+function LetterCounter(){
+    //this.aLetter = aLetter;
+    this.letterCounters = {'I': 0,
+                           'J': 0,
+                           'L': 0,
+                           'O': 0,
+                           'S': 0,
+                           'T': 0,
+                           'Z': 0
+                          };
+    this.incLetterCounterAndUpdateGUI = incLetterCounterAndUpdateGUI;
+}
+
 function generateStatisticsTable(){
     var tagsArray = ["I",
                      "J",
@@ -1020,8 +1043,13 @@ function generateStatisticsTable(){
         letter = new LetterTableGenerator(tagsArray[letterCnt]);
         letter.initLetterArray(3,3);
         letter.placeFigureToLetterArray();
-        console.log(tagsArray[letterCnt].toLowerCase()+"_div");
         letter.drawLetterArray(tagsArray[letterCnt].toLowerCase()+"_div");
     }
+}
+
+function testNewFeature(){
+    var lc = new LetterCounter();
+    lc.incLetterCounterAndUpdateGUI("I");
+    //console.log(lc.letterCounters['I']);
 
 }
