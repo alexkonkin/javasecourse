@@ -64,24 +64,53 @@
     width: 40px;
 }
 
-/*
-#game_field tr,td {
-    height: 20px;
-    width: 20px;
+
+#game_statistics{
+    border-style: solid;
+    border-color: deepskyblue;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 20px;
+    width: inherit;
+    float: none;
+    text-align: center;
+    /*
+    outline:blueviolet solid 2px;
+    */
 }
-*/
+
+#game_statistics table th td {
+    width: 40px;
+}
+
 #wrapper {
     float: left;
     height: 200px;
-    width: 180px;
+    width: 240px;
     font-weight: bold;
 }
 
 #collected_rows {
-    width: 60px;
-    text-align: right;
+    width: 50px;
+    text-align: center;
 }
 
 #row_label {
-    text-align: center;
+    width: 150px;
+    text-align: right;
+
+}
+
+div [id*="_div"] table{
+    border-collapse:collapse;
+    margin-left: 50px;
+    font-size: 10px;
+    float: left;
+}
+
+div [id*="_div"] table tr td{
+    border: solid #1b1ecc 1px;
+    height: 8px;
+    width: 8px;
+    text-align: left;
 }

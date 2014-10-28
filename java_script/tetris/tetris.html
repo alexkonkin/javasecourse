@@ -9,9 +9,11 @@
 <!-- needed for the first version of game -->
 <!--body onLoad="generateTable(), generateFiguresField()"-->
 <!--body onLoad="generateTable(), generateFiguresField()"-->
-<body onLoad="testFigureGeneration()">
-<body>
+<body onLoad="testFigureGeneration(), generateStatisticsTable()">
+
 <div id="caption">SIMPLE TETRIS</div>
+
+</div>
 <div id="table"></div>
 <div id="game_field"></div>
 
@@ -32,7 +34,7 @@
     </tr>
 </table>
 
-<table id="score">
+<!--table id="score">
     <tr>
         <td colspan="2">YOU COLLECTED</td>
      </tr>
@@ -40,10 +42,66 @@
         <td id="collected_rows">0</td>
         <td id="row_label">ROWS</td>
     </tr>
+</table-->
 
-</table>
+    <table id="game_statistics">
+        <tr>
+            <td colspan="2">GAME STATISTICS</td>
+        </tr>
+        <tr><td>&nbsp</td></tr>
+        <tr>
+            <td id="row_label">COLLECTED ROWS</td>
+            <td id="collected_rows">0</td>
+        </tr>
+        <tr><td>&nbsp</td></tr>
+        <tr>
+            <td colspan="2">COLLECTED FIGURES</td>
+        </tr>
+        <tr>
+            <td id="j">
+                <div id="j_div"></div>
+            </td>
+            <td id="j_cnt">0</td>
+        </tr>
+        <tr>
+            <td id="i">
+                <div id="i_div"></div>
+            </td>
+            <td id="i_cnt">0</td>
+        </tr>
+        <tr>
+            <td id="l">
+                <div id="l_div"></div>
+            </td>
+            <td id="l_cnt">0</td>
+        </tr>
+        <tr>
+            <td id="o">
+                <div id="o_div"></div>
+            </td>
+            <td id="o_cnt">0</td>
+        </tr>
+        <tr>
+            <td id="s">
+                <div id="s_div"></div>
+            </td>
+            <td id="s_cnt">0</td>
+        </tr>
+        <tr>
+            <td id="t">
+                <div id="t_div"></div>
+            </td>
+            <td id="t_cnt">0</td>
+        </tr>
+        <tr>
+            <td id="z">
+                <div id="z_div"></div>
+            </td>
+            <td id="z_cnt">0</td>
+        </tr>
+    </table>
+
 </div>
-
 <br>
 
 </body>
