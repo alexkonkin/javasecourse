@@ -882,3 +882,146 @@ function test(){
     refreshGameField();
 }
 
+
+/*
+* LetterTableGenerator
+* This class should process everything that is related to statistics table
+* */
+
+function getName(){
+    return result = this.letter;
+}
+
+function initLetterArray(aRow, aColumn){
+    this.row = aRow;
+    this.column = aColumn;
+
+    while (this.sampleArray.push([]) < aRow);
+
+    for (var row = 0; row < this.sampleArray.length; row++) {
+            for (var col = 0; col < aColumn; col++)
+                this.sampleArray[row].push(0);
+    }
+}
+
+function drawLetterArray(letterTag){
+    var myTableDiv = document.getElementById(letterTag);
+    var table = document.createElement('TABLE');
+
+    var tableBody = document.createElement('TBODY');
+    table.appendChild(tableBody);
+
+    for (var row=0; row < this.sampleArray.length; row++){
+        var tr = document.createElement('TR');
+        tableBody.appendChild(tr);
+
+        for (var column=0; column < this.sampleArray[row].length; column++){
+            var td = document.createElement('TD');
+            td.id = "td_"+row+"_"+column;
+            tr.appendChild(td);
+            if(this.sampleArray[row][column] == 1){
+                td.bgColor = 'red';
+            }
+        }
+    }
+    myTableDiv.appendChild(table);
+
+
+}
+
+function placeFigureToLetterArray(){
+    switch (this.getName()) {
+        // letter I
+        case "I":
+            this.sampleArray = [
+                [0, 1, 0],
+                [0, 1, 0],
+                [0, 1, 0]
+            ];
+            break;
+        // letter J
+        case "J":
+            this.sampleArray = [
+                [0, 0, 1],
+                [0, 0, 1],
+                [0, 1, 1]
+            ];
+            ;
+            break;
+        // letter L
+        case "L":
+            this.sampleArray = [
+                [1, 0, 0],
+                [1, 0, 0],
+                [1, 1, 0]
+            ];
+            ;
+            break;
+        // letter S
+        case "S":
+            this.sampleArray = [
+                [0, 1, 1],
+                [1, 1, 0],
+                [0, 0, 0]
+            ];
+            ;
+            break;
+        // letter T
+        case "T":
+            this.sampleArray = [
+                [1, 1, 1],
+                [0, 1, 0],
+                [0, 0, 0]
+            ];
+            ;
+            break;
+        // letter Z
+        case "Z":
+            this.sampleArray = [
+                [1, 1, 0],
+                [0, 1, 1],
+                [0, 0, 0]
+            ];
+            ;
+            break;
+        // letter O
+        case "O":
+            this.sampleArray = [
+                [1, 1, 0],
+                [1, 1, 0],
+                [0, 0, 0]
+            ];
+            ;
+            break;
+    }
+}
+
+function LetterTableGenerator(letter) {
+    this.letter = letter;
+    this.row;
+    this.column;
+    this.getName = getName;
+    this.sampleArray = [];
+    this.initLetterArray = initLetterArray;
+    this.drawLetterArray = drawLetterArray;
+    this.placeFigureToLetterArray = placeFigureToLetterArray;
+}
+
+function generateStatisticsTable(){
+    var tagsArray = ["I",
+                     "J",
+                     "L",
+                     "O",
+                     "S",
+                     "T",
+                     "Z"];
+    //var letter;
+    for (var letterCnt = 0; letterCnt < tagsArray.length; letterCnt++){
+        letter = new LetterTableGenerator(tagsArray[letterCnt]);
+        letter.initLetterArray(3,3);
+        letter.placeFigureToLetterArray();
+        console.log(tagsArray[letterCnt].toLowerCase()+"_div");
+        letter.drawLetterArray(tagsArray[letterCnt].toLowerCase()+"_div");
+    }
+
+}
