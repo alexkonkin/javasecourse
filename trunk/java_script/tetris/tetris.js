@@ -25,6 +25,7 @@ var transformOneToTwo=false;
 var oneRowIsFull=-1;
 var collectedRowsCounter=0;
 var letterCounter = new LetterCounter();
+var gameIsPaused = false;
 
 // http://www.hunlock.com/blogs/Mastering_Javascript_Arrays#filter
 // http://wiki.jetbrains.net/intellij/Debugging_JavaScript_locally_in_Firefox_with_WebStorm_and_PhpStorm
@@ -602,7 +603,7 @@ function placeFigureDown(){
         dumpGameField();
     }
 
-    if(movementDownIsAllowed){
+    if(movementDownIsAllowed && (gameIsPaused == false)){
 
         valueY += 1;
         for (var row = 0; row < figureArray.length; row++) {
@@ -1046,4 +1047,16 @@ function testNewFeature(){
 
 function startGame(){
     intervalID = setInterval(placeFigureDown, 1000);
+}
+
+function pauseGameContinueGame(){
+    if (gameIsPaused == false){
+        gameIsPaused = true;
+        document.getElementById("pause_button").innerHTML = "continue game";
+    }
+    else{
+        gameIsPaused = false;
+        document.getElementById("pause_button").innerHTML = "pause game";
+    }
+
 }
