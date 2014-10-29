@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="b59ce25a-39a2-430c-bda4-6b6f977fcb27" name="Default" comment="java_script: function which allows to move figure automatically according to the timers has been added">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
+    <list default="true" readonly="true" id="b59ce25a-39a2-430c-bda4-6b6f977fcb27" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tetris.html" afterPath="$PROJECT_DIR$/tetris.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tetris.js" afterPath="$PROJECT_DIR$/tetris.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -31,8 +30,8 @@
       <file leaf-file-name="tetris.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tetris.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-27.461538" vertical-offset="0" max-vertical-offset="1870">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state vertical-scroll-proportion="-13.384615" vertical-offset="111" max-vertical-offset="1904">
+              <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -41,8 +40,8 @@
       <file leaf-file-name="tetris.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tetris.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334" vertical-offset="1219" max-vertical-offset="17918">
-              <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.82474226" vertical-offset="17426" max-vertical-offset="18139">
+              <caret line="1058" column="64" selection-start-line="1058" selection-start-column="64" selection-end-line="1058" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -69,8 +68,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/main.js" />
-        <option value="$PROJECT_DIR$/tetris.html" />
         <option value="$PROJECT_DIR$/main.css" />
+        <option value="$PROJECT_DIR$/tetris.html" />
         <option value="$PROJECT_DIR$/tetris.js" />
       </list>
     </option>
@@ -281,7 +280,11 @@
       <created>1414505353286</created>
       <updated>1414505353287</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="java_script: function which allows to move figure automatically according to the timers has been added">
+      <created>1414580413857</created>
+      <updated>1414580413857</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -308,7 +311,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5263713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25632912" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.121081084" sideWeight="0.31595576" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756758" sideWeight="0.49921012" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.69036335" order="6" side_tool="false" content_ui="tabs" />
@@ -316,7 +319,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16535018" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3755274" sideWeight="0.8989583" order="3" side_tool="false" content_ui="tabs" x="1" y="517" width="1920" height="697" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5263713" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25632912" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.63349134" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -355,7 +358,8 @@
     <MESSAGE value="java_script: score table has been added to the project,&#10;                    css rules for score table have been added" />
     <MESSAGE value="java_script: figure counter feature which can score the number of    generated figures has been added to the project" />
     <MESSAGE value="java_script: function which allows to move figure automatically according to the timers has been added" />
-    <option name="LAST_COMMIT_MESSAGE" value="java_script: function which allows to move figure automatically according to the timers has been added" />
+    <MESSAGE value="java_script: pause game and continue game features have been added to the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="java_script: pause game and continue game features have been added to the project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -752,16 +756,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tetris.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.461538" vertical-offset="0" max-vertical-offset="1870">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state vertical-scroll-proportion="-13.384615" vertical-offset="111" max-vertical-offset="1904">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tetris.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="1219" max-vertical-offset="17918">
-          <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.82474226" vertical-offset="17426" max-vertical-offset="18139">
+          <caret line="1058" column="64" selection-start-line="1058" selection-start-column="64" selection-end-line="1058" selection-end-column="64" />
           <folding />
         </state>
       </provider>
