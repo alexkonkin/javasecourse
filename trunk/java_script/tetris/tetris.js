@@ -7,10 +7,13 @@ var figureType;
 var figurePosition = 1;
 var valueX;
 var valueY;
-var ROW=8;
+
+//These adjustments define a size of the game field
+var ROW=20;
 //var ROW=4;
 var COLUMN=12;
 //var COLUMN=6;
+
 var borderIsHitted=false;
 var movementLeftIsAllowed=true;
 var movementRightIsAllowed=true;
@@ -114,8 +117,6 @@ generateRandomFigure = function () {
             figurePosition = 1;
             valueX = 0;
             valueY = 0;
-
-            ;
             break;
         // letter L
         case 3:
@@ -128,7 +129,6 @@ generateRandomFigure = function () {
             figurePosition = 1;
             valueX = 0;
             valueY = 0;
-            ;
             break;
         // letter S
         case 4:
@@ -141,7 +141,6 @@ generateRandomFigure = function () {
             figurePosition = 1;
             valueX = 0;
             valueY = 0;
-            ;
             break;
         // letter T
         case 5:
@@ -154,7 +153,6 @@ generateRandomFigure = function () {
             figurePosition = 1;
             valueX = 0;
             valueY = 0;
-            ;
             break;
         // letter Z
         case 6:
@@ -167,8 +165,6 @@ generateRandomFigure = function () {
             figurePosition = 1;
             valueX = 0;
             valueY = 0;
-
-            ;
             break;
         // letter Z
         case 7:
@@ -180,8 +176,6 @@ generateRandomFigure = function () {
             figurePosition = 1;
             valueX = 0;
             valueY = 0;
-
-            ;
             break;
     }
     console.log("figure type is "+figureType);
@@ -822,6 +816,8 @@ function transformFigureToBottomSurface(){
     console.log("movementDownIsAllowed " + movementDownIsAllowed);
 
     dumpGameField();
+    //we have finished with the current figure, now we need to generate a new one
+    generateNewFigureAndPlaceItToTheGameField();
 }
 
 function testIfOneFullLineIsPresentInTheGameField(){
@@ -880,7 +876,7 @@ function dumpGameField(){
 }
 
 
-function test(){
+function generateNewFigureAndPlaceItToTheGameField(){
     generateRandomFigure();
     putFigureToGameField();
     refreshGameField();
@@ -950,7 +946,6 @@ function placeFigureToLetterArray(){
                 [0, 0, 1],
                 [0, 1, 1]
             ];
-            ;
             break;
         // letter L
         case "L":
@@ -959,7 +954,6 @@ function placeFigureToLetterArray(){
                 [1, 0, 0],
                 [1, 1, 0]
             ];
-            ;
             break;
         // letter S
         case "S":
@@ -968,7 +962,6 @@ function placeFigureToLetterArray(){
                 [1, 1, 0],
                 [0, 0, 0]
             ];
-            ;
             break;
         // letter T
         case "T":
@@ -977,7 +970,6 @@ function placeFigureToLetterArray(){
                 [0, 1, 0],
                 [0, 0, 0]
             ];
-            ;
             break;
         // letter Z
         case "Z":
@@ -986,7 +978,6 @@ function placeFigureToLetterArray(){
                 [0, 1, 1],
                 [0, 0, 0]
             ];
-            ;
             break;
         // letter O
         case "O":
@@ -995,7 +986,6 @@ function placeFigureToLetterArray(){
                 [1, 1, 0],
                 [0, 0, 0]
             ];
-            ;
             break;
     }
 }
@@ -1052,4 +1042,8 @@ function testNewFeature(){
     lc.incLetterCounterAndUpdateGUI("I");
     //console.log(lc.letterCounters['I']);
 
+}
+
+function startGame(){
+    intervalID = setInterval(placeFigureDown, 1000);
 }
