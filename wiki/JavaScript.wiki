@@ -1,4 +1,4 @@
-#Java Script cource: Tetris game implementation.
+#Java Script course: Tetris game implementation.
 
 = Introduction =
 
