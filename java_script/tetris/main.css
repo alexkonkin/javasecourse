@@ -12,6 +12,23 @@
     float: none;
 }
 
+#pause{
+    border-style: solid;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+    border-color: deepskyblue;
+    background-color: palegoldenrod;
+    width: 250px;
+    border-radius: 10px;
+    margin-left: 140px;
+    margin-top: 200px;
+    margin-bottom: 20px;
+    float: none;
+    position: absolute;
+    display: none;
+}
+
 /* remove spaces between lines which surrounds rows and columns*/
 #game_field table {
     border-collapse:collapse;
