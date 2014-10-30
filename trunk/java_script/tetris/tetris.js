@@ -1048,10 +1048,12 @@ function pauseGameContinueGame(){
     if (gameIsPaused == false){
         gameIsPaused = true;
         document.getElementById("pause_button").innerHTML = "continue game";
+        document.getElementById("pause").style.display = "block";
     }
     else{
         gameIsPaused = false;
         document.getElementById("pause_button").innerHTML = "pause game";
+        document.getElementById("pause").style.display = "none";
     }
 
 }
