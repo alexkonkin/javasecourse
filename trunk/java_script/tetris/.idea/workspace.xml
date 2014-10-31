@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="b59ce25a-39a2-430c-bda4-6b6f977fcb27" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tetris.html" afterPath="$PROJECT_DIR$/tetris.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tetris.js" afterPath="$PROJECT_DIR$/tetris.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tetris.iws" />
@@ -33,8 +32,8 @@
       <file leaf-file-name="tetris.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tetris.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8484398" vertical-offset="126" max-vertical-offset="1938">
-              <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.5304606" vertical-offset="0" max-vertical-offset="1785">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -43,8 +42,8 @@
       <file leaf-file-name="tetris.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tetris.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.6" vertical-offset="17541" max-vertical-offset="18241">
-              <caret line="1043" column="1" selection-start-line="1043" selection-start-column="1" selection-end-line="1043" selection-end-column="1" />
+            <state vertical-scroll-proportion="-8.96" vertical-offset="762" max-vertical-offset="18241">
+              <caret line="58" column="59" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -309,7 +308,11 @@
       <created>1414682538739</created>
       <updated>1414682538739</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="java_script: feature that boosts movement of figure down when user clicks on down button has been added to the project">
+      <created>1414763593963</created>
+      <updated>1414763593963</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -336,6 +339,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23523207" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.121081084" sideWeight="0.31595576" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756758" sideWeight="0.49921012" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.69036335" order="6" side_tool="false" content_ui="tabs" />
@@ -350,7 +354,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23523207" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59599155" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39978904" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -386,7 +389,8 @@
     <MESSAGE value="java_script: function which allows to move figure automatically according to the timers has been added" />
     <MESSAGE value="java_script: pause game and continue game features have been added to the project" />
     <MESSAGE value="java_script: feature that shows Game is paused caption inside game field if game &#10;is paused has been added to the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="java_script: feature that shows Game is paused caption inside game field if game &#10;is paused has been added to the project" />
+    <MESSAGE value="java_script: feature that boosts movement of figure down when user clicks on down button has been added to the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="java_script: feature that boosts movement of figure down when user clicks on down button has been added to the project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -783,16 +787,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tetris.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.6" vertical-offset="17541" max-vertical-offset="18241">
-          <caret line="1043" column="1" selection-start-line="1043" selection-start-column="1" selection-end-line="1043" selection-end-column="1" />
+        <state vertical-scroll-proportion="-8.96" vertical-offset="762" max-vertical-offset="18241">
+          <caret line="58" column="59" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tetris.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8484398" vertical-offset="126" max-vertical-offset="1938">
-          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.5304606" vertical-offset="0" max-vertical-offset="1785">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
           <folding />
         </state>
       </provider>

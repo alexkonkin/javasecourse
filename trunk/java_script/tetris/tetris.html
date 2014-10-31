@@ -6,32 +6,23 @@
     <script src="tetris.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
-<!-- needed for the first version of game -->
-<!--body onLoad="generateTable(), generateFiguresField()"-->
-<!--body onLoad="generateTable(), generateFiguresField()"-->
+
 <body onLoad="testFigureGeneration(), generateStatisticsTable()">
 
 <div id="caption">SIMPLE TETRIS</div>
 
 <div id="pause">Game is paused</div>
 
-<div id="table"></div>
 <div id="game_field"></div>
 
 <div id="wrapper">
 <table id="navigation">
-    <!--tr>
-        <td></td><td><button onclick="testNewFeature()"> test new feature </button></td><td></td>
-    </tr-->
     <tr>
         <td></td><td><button onclick="startMovement()"> start game </button></td><td></td>
     </tr>
     <tr>
         <td></td><td><button id="pause_button" onclick="pauseGameContinueGame()"> pause game </button></td><td></td>
     </tr>
-    <!--tr>
-        <td></td><td><button onclick="generateNewFigureAndPlaceItToTheGameField()"> new figure </button></td><td></td>
-    </tr-->
     <tr>
         <td></td>
         <td><button onclick="rotateFigure()"> rotate </button></td>
