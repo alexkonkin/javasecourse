@@ -25,6 +25,8 @@ var oneRowIsFull=-1;
 var collectedRowsCounter=0;
 var letterCounter = new LetterCounter();
 var gameIsPaused = false;
+var intervalID;
+
 
 // http://www.hunlock.com/blogs/Mastering_Javascript_Arrays#filter
 // http://wiki.jetbrains.net/intellij/Debugging_JavaScript_locally_in_Firefox_with_WebStorm_and_PhpStorm
@@ -818,6 +820,7 @@ function transformFigureToBottomSurface(){
     dumpGameField();
     //we have finished with the current figure, now we need to generate a new one
     generateNewFigureAndPlaceItToTheGameField();
+    startMovement();
 }
 
 function testIfOneFullLineIsPresentInTheGameField(){
@@ -1040,8 +1043,14 @@ function generateStatisticsTable(){
     }
 }
 
-function startGame(){
-    var intervalID = setInterval(placeFigureDown, 1000);
+function startMovement(){
+    clearInterval(intervalID);
+    intervalID = setInterval(placeFigureDown, 1000);
+}
+
+function dropFigureDown(){
+    clearInterval(intervalID);
+    intervalID = setInterval(placeFigureDown, 100);
 }
 
 function pauseGameContinueGame(){
