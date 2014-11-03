@@ -10,7 +10,7 @@ var valueY;
 
 //These adjustments define a size of the game field
 var ROW=20;
-//var ROW=4;
+//var ROW=6;
 var COLUMN=12;
 //var COLUMN=6;
 
@@ -26,6 +26,7 @@ var collectedRowsCounter=0;
 var letterCounter = new LetterCounter();
 var gameIsPaused = false;
 var intervalID;
+var gameIsOver = false;
 
 
 // http://www.hunlock.com/blogs/Mastering_Javascript_Arrays#filter
@@ -392,29 +393,17 @@ function refreshGameField(){
 }
 
 function testFigureGeneration() {
+    console.log("testFigureGeneration()");
     initGameField(ROW,COLUMN);
-    console.log("init game array " + gameArray);
-
     drawGameField();
-
-    generateRandomFigure();
-    putFigureToGameField();
-    refreshGameField();
-    console.log("testFigureGeneration");
-    console.log("----- initial coordinates -----");
-    console.log("valueX "+valueX);
-    console.log("valueY "+valueY);
-    console.log("-------------------------------");
 }
 
 function moveFigureRight(){
     console.log("moveFigureRight");
-    console.log("-------------------------");
     if(figureIsPlasedDown == false) {
         detectIfMovementRightIsAllowed();
     }
 
-        console.log("movement right is allowed : " + movementRightIsAllowed);
         if(movementRightIsAllowed) {
             valueX += 1;
             for (var row = 0; row < figureArray.length; row++) {
@@ -431,8 +420,6 @@ function moveFigureRight(){
         }
     detectIfRotationIsAllowed();
     refreshGameField();
-    console.log("valueX "+valueX);
-    console.log("valueY "+valueY);
 }
 
 function moveFigureLeft(){
@@ -604,7 +591,7 @@ function placeFigureDown(){
         dumpGameField();
     }
 
-    if(movementDownIsAllowed && (gameIsPaused == false)){
+    if(movementDownIsAllowed && (gameIsPaused == false)&& (gameIsOver == false)){
 
         valueY += 1;
         for (var row = 0; row < figureArray.length; row++) {
@@ -1044,8 +1031,35 @@ function generateStatisticsTable(){
 }
 
 function startMovement(){
-    clearInterval(intervalID);
-    intervalID = setInterval(placeFigureDown, 1000);
+    if(checkIfGameIsOver() == false) {
+        clearInterval(intervalID);
+        intervalID = setInterval(placeFigureDown, 1000);
+    }
+    else{
+        clearInterval(intervalID);
+        document.getElementById("gameIsOver_message").style.display = "block";
+    }
+}
+
+function startGame(){
+    if(checkIfGameIsOver() == false){
+        generateNewFigureAndPlaceItToTheGameField();
+        startMovement();
+    }
+    else{
+        gameIsOver = false;
+        document.getElementById("gameIsOver_message").style.display = "none";
+        //we need to clear our game field before pace new figure in it
+
+        for (var row = 0; row < ROW; row++) {
+            for (var column = 0; column < COLUMN; column++) {
+                gameArray[row][column] = 0;
+            }
+        }
+        generateNewFigureAndPlaceItToTheGameField();
+        refreshGameField();
+        startMovement();
+    }
 }
 
 function dropFigureDown(){
@@ -1065,4 +1079,13 @@ function pauseGameContinueGame(){
         document.getElementById("pause").style.display = "none";
     }
 
+}
+
+function checkIfGameIsOver(){
+    for (var column = 0; column < COLUMN; column++) {
+        if(gameArray[3][column] == 2){
+            gameIsOver = true;
+        }
+    }
+    return gameIsOver;
 }
