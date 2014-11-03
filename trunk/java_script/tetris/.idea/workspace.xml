@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="b59ce25a-39a2-430c-bda4-6b6f977fcb27" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tetris.html" afterPath="$PROJECT_DIR$/tetris.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tetris.js" afterPath="$PROJECT_DIR$/tetris.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tetris.iws" />
@@ -29,31 +31,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="tetris.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="tetris.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tetris.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5304606" vertical-offset="0" max-vertical-offset="1785">
-              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+            <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="1802">
+              <caret line="16" column="19" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tetris.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="tetris.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tetris.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.96" vertical-offset="762" max-vertical-offset="18241">
-              <caret line="58" column="59" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.88" vertical-offset="2394" max-vertical-offset="8330">
-              <caret line="173" column="42" selection-start-line="173" selection-start-column="16" selection-end-line="173" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.36053413" vertical-offset="17930" max-vertical-offset="18632">
+              <caret line="1069" column="33" selection-start-line="1069" selection-start-column="33" selection-end-line="1069" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -62,8 +54,8 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="2380">
-              <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="2669">
+              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -81,8 +73,8 @@
       <list>
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/main.css" />
-        <option value="$PROJECT_DIR$/tetris.js" />
         <option value="$PROJECT_DIR$/tetris.html" />
+        <option value="$PROJECT_DIR$/tetris.js" />
       </list>
     </option>
   </component>
@@ -312,7 +304,11 @@
       <created>1414763593963</created>
       <updated>1414763593963</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="java_script: extra tags have been removed from the html page definition">
+      <created>1414765468477</created>
+      <updated>1414765468477</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -337,15 +333,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23523207" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23523207" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.121081084" sideWeight="0.31595576" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756758" sideWeight="0.49921012" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.69036335" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1390625" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16535018" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3755274" sideWeight="0.8989583" order="3" side_tool="false" content_ui="tabs" x="1" y="517" width="1920" height="697" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2056962" sideWeight="0.8989583" order="3" side_tool="false" content_ui="tabs" x="1" y="517" width="1920" height="697" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23523207" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -390,14 +386,16 @@
     <MESSAGE value="java_script: pause game and continue game features have been added to the project" />
     <MESSAGE value="java_script: feature that shows Game is paused caption inside game field if game &#10;is paused has been added to the project" />
     <MESSAGE value="java_script: feature that boosts movement of figure down when user clicks on down button has been added to the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="java_script: feature that boosts movement of figure down when user clicks on down button has been added to the project" />
+    <MESSAGE value="java_script: extra tags have been removed from the html page definition" />
+    <MESSAGE value="java_script: feature that detects if game is over has been added to the project, feature that shows game over caption has been added to the project, start game function is updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="java_script: feature that detects if game is over has been added to the project, feature that shows game over caption has been added to the project, start game function is updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="161" />
+      <option name="time" value="165" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -769,34 +767,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="2380">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.88" vertical-offset="2394" max-vertical-offset="8330">
+        <state vertical-scroll-proportion="0.8115727" vertical-offset="2394" max-vertical-offset="8330">
           <caret line="173" column="42" selection-start-line="173" selection-start-column="16" selection-end-line="173" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tetris.js">
+    <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.96" vertical-offset="762" max-vertical-offset="18241">
-          <caret line="58" column="59" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="2669">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tetris.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5304606" vertical-offset="0" max-vertical-offset="1785">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="1802">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tetris.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36053413" vertical-offset="17930" max-vertical-offset="18632">
+          <caret line="1069" column="33" selection-start-line="1069" selection-start-column="33" selection-end-line="1069" selection-end-column="33" />
           <folding />
         </state>
       </provider>
