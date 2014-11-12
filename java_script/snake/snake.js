@@ -103,6 +103,7 @@ function Snake(){
     this.movementDirection = {"leftToRight":"leftToRight", "bottomToTop":"bottomToTop", "topToBottom":"topToBottom", "rightToLeft":"rightToLeft"};
     this.snakeBody = [];
     this.directionOfMovement = this.movementDirection.leftToRight;
+    this.movementIsAllowed = true;
 
     while (this.snakeBody.push([]) < 3);
     var coordinate = 2;
@@ -123,6 +124,14 @@ function Snake(){
     }
 }
 
+Snake.prototype.getMovementIsAllowed = function(){
+    return this.movementIsAllowed;
+};
+
+Snake.prototype.setMovementIsAllowed = function(aValue){
+    return this.movementIsAllowed = aValue;
+};
+
 
 Snake.prototype.getCurrentDirection = function(){
     return this.directionOfMovement;
@@ -133,37 +142,45 @@ Snake.prototype.setCurrentDirection = function(aDirection){
         case "leftToRight":
             if(this.directionOfMovement == "rightToLeft"){
                 console.log("such movement is prohibited");
+                this.setMovementIsAllowed(false);
             }
             else {
                 this.directionOfMovement = aDirection;
+                this.setMovementIsAllowed(true);
                 console.log(this.directionOfMovement);
             }
         break;
         case "rightToLeft":
             if(this.directionOfMovement == "leftToRight"){
                 console.log("such movement is prohibited");
+                this.setMovementIsAllowed(false);
             }
             else {
                 this.directionOfMovement = aDirection;
                 console.log(this.directionOfMovement);
+                this.setMovementIsAllowed(true);
             }
          break;
         case "bottomToTop":
             if(this.directionOfMovement == "topToBottom"){
                 console.log("such movement is prohibited");
+                this.setMovementIsAllowed(false);
             }
             else {
                 this.directionOfMovement = aDirection;
                 console.log(this.directionOfMovement);
+                this.setMovementIsAllowed(true);
             }
         break;
         case "topToBottom":
             if(this.directionOfMovement == "bottomToTop"){
                 console.log("such movement is prohibited");
+                this.setMovementIsAllowed(false);
             }
             else {
                 this.directionOfMovement = aDirection;
                 console.log(this.directionOfMovement);
+                this.setMovementIsAllowed(true);
             }
             break;
     }
@@ -177,7 +194,7 @@ Snake.prototype.getBodyLength = function(){
 Snake.prototype.doOneStepUpward = function(){
     console.log("Snake.prototype.doOneStepDown");
     console.log(this.getCurrentDirection());
-    this.setCurrentDirection("topToBottom");
+    this.setCurrentDirection("bottomToTop");
 
     //we should save the initial position
     var currentValueHorizontal = 0;
@@ -185,51 +202,54 @@ Snake.prototype.doOneStepUpward = function(){
     var tmpHorizontal = 0;
     var tmpVertical = 0;
 
-    for (var body = 0; body < this.getBodyLength(); body++) {
-        if(body == 0) {
-            tmpHorizontal = this.snakeBody[body][0];
-            tmpVertical = this.snakeBody[body][1];
-            this.snakeBody[body][0] -= 1;
-        }
-        else{
-            currentValueHorizontal = this.snakeBody[body][0];
-            currentValueVertical = this.snakeBody[body][1];
+    if(this.getMovementIsAllowed()) {
+        for (var body = 0; body < this.getBodyLength(); body++) {
+            if (body == 0) {
+                tmpHorizontal = this.snakeBody[body][0];
+                tmpVertical = this.snakeBody[body][1];
+                this.snakeBody[body][0] -= 1;
+            }
+            else {
+                currentValueHorizontal = this.snakeBody[body][0];
+                currentValueVertical = this.snakeBody[body][1];
 
-            this.snakeBody[body][0] = tmpHorizontal;
-            this.snakeBody[body][1] = tmpVertical;
+                this.snakeBody[body][0] = tmpHorizontal;
+                this.snakeBody[body][1] = tmpVertical;
 
-            tmpHorizontal = currentValueHorizontal;
-            tmpVertical = currentValueVertical;
+                tmpHorizontal = currentValueHorizontal;
+                tmpVertical = currentValueVertical;
+            }
         }
     }
 };
 
 Snake.prototype.doOneStepLeft = function(){
-    console.log("Snake.prototype.doOneStepRight");
+    console.log("Snake.prototype.doOneStepLeft");
     console.log(this.getCurrentDirection());
-    this.setCurrentDirection("leftToRight");
+    this.setCurrentDirection("rightToLeft");
 
     //we should save the initial position
     var currentValueHorizontal = 0;
     var currentValueVertical = 0;
     var tmpHorizontal = 0;
     var tmpVertical = 0;
+    if(this.getMovementIsAllowed()) {
+        for (var body = 0; body < this.getBodyLength(); body++) {
+            if (body == 0) {
+                tmpHorizontal = this.snakeBody[body][0];
+                tmpVertical = this.snakeBody[body][1];
+                this.snakeBody[body][1] -= 1;
+            }
+            else {
+                currentValueHorizontal = this.snakeBody[body][0];
+                currentValueVertical = this.snakeBody[body][1];
 
-    for (var body = 0; body < this.getBodyLength(); body++) {
-        if(body == 0) {
-            tmpHorizontal = this.snakeBody[body][0];
-            tmpVertical = this.snakeBody[body][1];
-            this.snakeBody[body][1] -= 1;
-        }
-        else{
-            currentValueHorizontal = this.snakeBody[body][0];
-            currentValueVertical = this.snakeBody[body][1];
+                this.snakeBody[body][0] = tmpHorizontal;
+                this.snakeBody[body][1] = tmpVertical;
 
-            this.snakeBody[body][0] = tmpHorizontal;
-            this.snakeBody[body][1] = tmpVertical;
-
-            tmpHorizontal = currentValueHorizontal;
-            tmpVertical = currentValueVertical;
+                tmpHorizontal = currentValueHorizontal;
+                tmpVertical = currentValueVertical;
+            }
         }
     }
 };
@@ -245,24 +265,25 @@ Snake.prototype.doOneStepRight = function(){
     var tmpHorizontal = 0;
     var tmpVertical = 0;
 
-    for (var body = 0; body < this.getBodyLength(); body++) {
-        if(body == 0) {
-            tmpHorizontal = this.snakeBody[body][0];
-            tmpVertical = this.snakeBody[body][1];
-            this.snakeBody[body][1] += 1;
-        }
-        else{
-            currentValueHorizontal = this.snakeBody[body][0];
-            currentValueVertical = this.snakeBody[body][1];
+    if(this.getMovementIsAllowed()) {
+        for (var body = 0; body < this.getBodyLength(); body++) {
+            if (body == 0) {
+                tmpHorizontal = this.snakeBody[body][0];
+                tmpVertical = this.snakeBody[body][1];
+                this.snakeBody[body][1] += 1;
+            }
+            else {
+                currentValueHorizontal = this.snakeBody[body][0];
+                currentValueVertical = this.snakeBody[body][1];
 
-            this.snakeBody[body][0] = tmpHorizontal;
-            this.snakeBody[body][1] = tmpVertical;
+                this.snakeBody[body][0] = tmpHorizontal;
+                this.snakeBody[body][1] = tmpVertical;
 
-            tmpHorizontal = currentValueHorizontal;
-            tmpVertical = currentValueVertical;
+                tmpHorizontal = currentValueHorizontal;
+                tmpVertical = currentValueVertical;
+            }
         }
     }
-
 };
 
 Snake.prototype.doOneStepDown = function(){
@@ -276,55 +297,52 @@ Snake.prototype.doOneStepDown = function(){
     var tmpHorizontal = 0;
     var tmpVertical = 0;
 
-    for (var body = 0; body < this.getBodyLength(); body++) {
-        if(body == 0) {
-            tmpHorizontal = this.snakeBody[body][0];
-            tmpVertical = this.snakeBody[body][1];
-            this.snakeBody[body][0] += 1;
-        }
-        else{
-            currentValueHorizontal = this.snakeBody[body][0];
-            currentValueVertical = this.snakeBody[body][1];
+    if(this.getMovementIsAllowed()) {
+        for (var body = 0; body < this.getBodyLength(); body++) {
+            if (body == 0) {
+                tmpHorizontal = this.snakeBody[body][0];
+                tmpVertical = this.snakeBody[body][1];
+                this.snakeBody[body][0] += 1;
+            }
+            else {
+                currentValueHorizontal = this.snakeBody[body][0];
+                currentValueVertical = this.snakeBody[body][1];
 
-            this.snakeBody[body][0] = tmpHorizontal;
-            this.snakeBody[body][1] = tmpVertical;
+                this.snakeBody[body][0] = tmpHorizontal;
+                this.snakeBody[body][1] = tmpVertical;
 
-            tmpHorizontal = currentValueHorizontal;
-            tmpVertical = currentValueVertical;
+                tmpHorizontal = currentValueHorizontal;
+                tmpVertical = currentValueVertical;
+            }
         }
     }
 };
 
-
-var gameField;
-//var aSnake;
-
 function moveDown(){
     aSnake.doOneStepDown();
-    gameField.clearGameField();
-    gameField.putSnakeToGameField(aSnake);
-    gameField.refreshGameField();
+    refreshGameInterface();
 }
 
 function moveUpward(){
     aSnake.doOneStepUpward();
-    gameField.clearGameField();
-    gameField.putSnakeToGameField(aSnake);
-    gameField.refreshGameField();
+    refreshGameInterface();
 }
 
 function moveRight(){
     aSnake.doOneStepRight();
-    gameField.clearGameField();
-    gameField.putSnakeToGameField(aSnake);
-    gameField.refreshGameField();
+    refreshGameInterface();
 }
 
 function moveLeft(){
     aSnake.doOneStepLeft();
+    refreshGameInterface();
+}
+
+function refreshGameInterface(){
     gameField.clearGameField();
     gameField.putSnakeToGameField(aSnake);
     gameField.refreshGameField();
+
 }
 
 function initGame(){
