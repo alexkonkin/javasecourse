@@ -104,6 +104,7 @@ function Snake(){
     this.snakeBody = [];
     this.directionOfMovement = this.movementDirection.leftToRight;
     this.movementIsAllowed = true;
+    this.numberOfLives = 0;
 
     while (this.snakeBody.push([]) < 3);
     var coordinate = 2;
@@ -137,10 +138,23 @@ Snake.prototype.getCurrentDirection = function(){
     return this.directionOfMovement;
 };
 
+Snake.prototype.getNumberOfLives = function(){
+    return this.numberOfLives;
+};
+
+Snake.prototype.setNumberOfLives = function(aNumberOfLives){
+    this.numberOfLives = aNumberOfLives;
+};
+
+Snake.prototype.takeOneLife = function(){
+    this.numberOfLives -= 1;
+};
+
+
 Snake.prototype.setCurrentDirection = function(aDirection){
     switch (aDirection) {
         case "leftToRight":
-            if(this.directionOfMovement == "rightToLeft"){
+            if(this.directionOfMovement == this.movementDirection.rightToLeft){
                 console.log("such movement is prohibited");
                 this.setMovementIsAllowed(false);
             }
@@ -151,7 +165,7 @@ Snake.prototype.setCurrentDirection = function(aDirection){
             }
         break;
         case "rightToLeft":
-            if(this.directionOfMovement == "leftToRight"){
+            if(this.directionOfMovement == this.movementDirection.leftToRight){
                 console.log("such movement is prohibited");
                 this.setMovementIsAllowed(false);
             }
@@ -162,7 +176,7 @@ Snake.prototype.setCurrentDirection = function(aDirection){
             }
          break;
         case "bottomToTop":
-            if(this.directionOfMovement == "topToBottom"){
+            if(this.directionOfMovement == this.movementDirection.topToBottom){
                 console.log("such movement is prohibited");
                 this.setMovementIsAllowed(false);
             }
@@ -173,7 +187,7 @@ Snake.prototype.setCurrentDirection = function(aDirection){
             }
         break;
         case "topToBottom":
-            if(this.directionOfMovement == "bottomToTop"){
+            if(this.directionOfMovement == this.movementDirection.bottomToTop){
                 console.log("such movement is prohibited");
                 this.setMovementIsAllowed(false);
             }
@@ -194,8 +208,6 @@ Snake.prototype.getBodyLength = function(){
 Snake.prototype.doOneStepUpward = function(){
     console.log("Snake.prototype.doOneStepDown");
     console.log(this.getCurrentDirection());
-    this.setCurrentDirection("bottomToTop");
-
     //we should save the initial position
     var currentValueHorizontal = 0;
     var currentValueVertical = 0;
@@ -226,7 +238,7 @@ Snake.prototype.doOneStepUpward = function(){
 Snake.prototype.doOneStepLeft = function(){
     console.log("Snake.prototype.doOneStepLeft");
     console.log(this.getCurrentDirection());
-    this.setCurrentDirection("rightToLeft");
+
 
     //we should save the initial position
     var currentValueHorizontal = 0;
@@ -257,8 +269,6 @@ Snake.prototype.doOneStepLeft = function(){
 Snake.prototype.doOneStepRight = function(){
     console.log("Snake.prototype.doOneStepRight");
     console.log(this.getCurrentDirection());
-    this.setCurrentDirection("leftToRight");
-
     //we should save the initial position
     var currentValueHorizontal = 0;
     var currentValueVertical = 0;
@@ -289,7 +299,7 @@ Snake.prototype.doOneStepRight = function(){
 Snake.prototype.doOneStepDown = function(){
     console.log("Snake.prototype.doOneStepDown");
     console.log(this.getCurrentDirection());
-    this.setCurrentDirection("topToBottom");
+
 
     //we should save the initial position
     var currentValueHorizontal = 0;
@@ -318,39 +328,111 @@ Snake.prototype.doOneStepDown = function(){
     }
 };
 
+Snake.prototype.getCurrentPosition = function(){
+    return this.snakeBody[0];
+};
+
+function GameController() {
+}
+
+GameController.prototype.collisionHasOccurred = function(GameField, Snake){
+    var currentPosition = Snake.getCurrentPosition();
+    var result;
+    //var currentDirection = Snake.getCurrentDirection();
+    switch (Snake.getCurrentDirection()) {
+        case "leftToRight":
+                result = ((currentPosition[1] + 1) >= GameField.getNumberOfColumns()) ? true : false;
+            break;
+        case "rightToLeft":
+                result = ((currentPosition[1] - 1) < 0) ? true : false;
+            break;
+        case "bottomToTop":
+                result = ((currentPosition[0] - 1) < 0) ? true : false;
+            break;
+        case "topToBottom":
+                result = ((currentPosition[0] + 1) >= GameField.getNumberOfRows()) ? true : false;
+            break;
+    }
+    return result;
+};
+
+GameController.prototype.takeOneLifeOrFinishGame = function(Snake) {
+    if(Snake.getNumberOfLives() > 0){
+        Snake.takeOneLife();
+        alert("One life has been taken "+Snake.getNumberOfLives());
+    }
+    else{
+        alert("game is over");
+    }
+}
+
+
+
 function moveDown(){
-    aSnake.doOneStepDown();
+    aSnake.setCurrentDirection("topToBottom");
+    if(!aGameController.collisionHasOccurred(aGameField, aSnake)) {
+        aSnake.doOneStepDown();
+    }
+    else{
+        aGameController.takeOneLifeOrFinishGame(aSnake);
+    }
     refreshGameInterface();
 }
 
 function moveUpward(){
-    aSnake.doOneStepUpward();
+    aSnake.setCurrentDirection("bottomToTop");
+    if(!aGameController.collisionHasOccurred(aGameField, aSnake)) {
+        aSnake.doOneStepUpward();
+    }
+    else{
+        aGameController.takeOneLifeOrFinishGame(aSnake);
+    }
     refreshGameInterface();
 }
 
 function moveRight(){
-    aSnake.doOneStepRight();
+    aSnake.setCurrentDirection("leftToRight");
+    if(!aGameController.collisionHasOccurred(aGameField, aSnake)) {
+        aSnake.doOneStepRight();
+    }
+    else{
+        aGameController.takeOneLifeOrFinishGame(aSnake);
+    }
     refreshGameInterface();
 }
 
 function moveLeft(){
-    aSnake.doOneStepLeft();
+    aSnake.setCurrentDirection("rightToLeft");
+    if(!aGameController.collisionHasOccurred(aGameField, aSnake)) {
+        aSnake.doOneStepLeft();
+    }
+    else{
+        aGameController.takeOneLifeOrFinishGame(aSnake);
+    }
     refreshGameInterface();
 }
 
 function refreshGameInterface(){
-    gameField.clearGameField();
-    gameField.putSnakeToGameField(aSnake);
-    gameField.refreshGameField();
+    aGameField.clearGameField();
+    aGameField.putSnakeToGameField(aSnake);
+    aGameField.refreshGameField();
 
 }
 
 function initGame(){
-    gameField = new GameField();
+    aGameField = new GameField();
     aSnake = new Snake();
+    aSnake.setNumberOfLives(3);
+    aGameController = new GameController();
 
-    gameField.initGameField(10,20);
-    gameField.drawGameField("game_field");
-    gameField.putSnakeToGameField(aSnake);
-    gameField.refreshGameField();
+    aGameField.initGameField(10,20);
+    aGameField.drawGameField("game_field");
+    aGameField.putSnakeToGameField(aSnake);
+    aGameField.refreshGameField();
+}
+
+function test(){
+    var arr = aSnake.getCurrentPosition();
+    console.log(arr[0]);
+    console.log(arr[1]);
 }

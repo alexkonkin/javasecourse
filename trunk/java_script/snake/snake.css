@@ -5,7 +5,7 @@
     font-family: sans-serif;
     border-color: deepskyblue;
     background-color: palegoldenrod;
-    width: 420px;
+    width: 700px;
     border-radius: 10px;
     margin-left: 50px;
     margin-bottom: 20px;
@@ -61,16 +61,15 @@
     width: 20px;
 }
 
+
 #navigation{
     border-style: solid;
     border-color: deepskyblue;
     border-radius: 10px;
-    margin-left: 50px;
+    /*margin-left: 50px;*/
     width: inherit;
     float: none;
-    /*
-    outline:blueviolet solid 2px;
-    */
+
 }
 
 
@@ -80,33 +79,17 @@
     margin-left: 50%;
 }
 
-#score{
-    border-style: solid;
-    border-color: deepskyblue;
-    border-radius: 10px;
-    margin-left: 50px;
-    margin-top: 20px;
-    width: inherit;
-    float: none;
-    text-align: center;
-    /*
-    outline:blueviolet solid 2px;
-    */
-}
 
-#score table th td {
-    width: 40px;
-}
 
 
 #game_statistics{
     border-style: solid;
     border-color: deepskyblue;
     border-radius: 10px;
-    margin-left: 50px;
+    /*margin-left: 50px;*/
     margin-top: 20px;
     width: inherit;
-    height: 500px;
+    /*height: 100px;*/
     float: none;
     text-align: center;
     /*
@@ -118,34 +101,29 @@
     width: 40px;
 }
 
+
 #wrapper {
     float: left;
     height: 200px;
-    width: 240px;
-    font-weight: bold;
+    width: 180px;
+    margin-left: 10px;
+    /*font-weight: bold;*/
 }
 
-#collected_rows {
+
+#lifes_count {
     width: 50px;
-    text-align: center;
+    text-align: left;
 }
 
-#row_label {
-    width: 150px;
+#life_label {
+    width: 100px;
     text-align: right;
 
 }
 
-div [id*="_div"] table{
-    border-collapse:collapse;
-    margin-left: 50px;
-    font-size: 10px;
-    float: left;
-}
-
-div [id*="_div"] table tr td{
-    border: solid #1b1ecc 1px;
-    height: 8px;
-    width: 8px;
+#items_count {
+    width: 50px;
     text-align: left;
 }
+

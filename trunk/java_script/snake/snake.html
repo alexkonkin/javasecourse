@@ -14,7 +14,11 @@
 <!--button id="test" onclick="testFeature()"> test </button-->
 
 <div id="game_field"></div>
+<div id="wrapper">
 <table id="navigation">
+    <tr>
+        <td></td><td><button onclick="test()"> test </button></td><td></td>
+    </tr>
     <tr>
         <td></td><td><button onclick="startGame()"> start game </button></td><td></td>
     </tr>
@@ -37,6 +41,21 @@
         <td></td>
     </tr>
 </table>
+
+<table id="game_statistics">
+    <tr>
+        <td colspan="2">GAME STATISTICS</td>
+    </tr>
+    <tr>
+        <td id="life_label">LIFES LEFT</td>
+        <td id="lifes_count">0</td>
+    </tr>
+    <tr>
+        <td id="items_label">ITEMS</td>
+        <td id="items_count">0</td>
+    </tr>
+</table>
+</div>
 
 </body>
 </html>
