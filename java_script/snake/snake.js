@@ -105,6 +105,7 @@ function Snake(){
     this.directionOfMovement = this.movementDirection.leftToRight;
     this.movementIsAllowed = true;
     this.numberOfLives = 0;
+    this.numberOfEatenItems = 0;
 
     while (this.snakeBody.push([]) < 3);
     var coordinate = 2;
@@ -150,6 +151,13 @@ Snake.prototype.takeOneLife = function(){
     this.numberOfLives -= 1;
 };
 
+Snake.prototype.eatOneItem = function(){
+    this.numberOfEatenItems += 1;
+};
+
+Snake.prototype.getNumberOfEatenItems = function(){
+    return this.numberOfEatenItems;
+};
 
 Snake.prototype.setCurrentDirection = function(aDirection){
     switch (aDirection) {
@@ -332,6 +340,32 @@ Snake.prototype.getCurrentPosition = function(){
     return this.snakeBody[0];
 };
 
+Snake.prototype.increaseBodyLength = function(){
+    var tail = this.snakeBody.slice(-1)[0];
+    var firstSegment = this.snakeBody.slice(-2)[0];
+    this.snakeBody.push([]);
+
+    if(tail[0] == firstSegment[0]){
+        //horizontal segment stable vertical should be corrected
+        this.snakeBody[this.snakeBody.length-1][0] = tail[0];
+        if(tail[1] < firstSegment[1]){
+            this.snakeBody[this.snakeBody.length-1][1] = tail[1]-1;
+        }
+        else{
+            this.snakeBody[this.snakeBody.length-1][1] = tail[1]+1;
+        }
+    }else{
+        //vertical segment is stable horizontal should be corrected
+        this.snakeBody[this.snakeBody.length-1][1] = tail[1];
+        if(tail[0] < firstSegment[0]){
+            this.snakeBody[this.snakeBody.length-1][0] = tail[0]-1;
+        }
+        else{
+            this.snakeBody[this.snakeBody.length-1][0] = tail[0]+1;
+        }
+    }
+};
+
 function GameController() {
 }
 
@@ -359,13 +393,19 @@ GameController.prototype.collisionHasOccurred = function(GameField, Snake){
 GameController.prototype.takeOneLifeOrFinishGame = function(Snake) {
     if(Snake.getNumberOfLives() > 0){
         Snake.takeOneLife();
-        alert("One life has been taken "+Snake.getNumberOfLives());
+        //alert("One life has been taken "+Snake.getNumberOfLives());
     }
     else{
-        alert("game is over");
+        //alert("game is over");
+        ;
     }
 }
 
+
+GameController.prototype.updateCounters = function(Snake, lifesLeftTag, itemsEatenTag) {
+    document.getElementById(lifesLeftTag).innerHTML = Snake.getNumberOfLives();
+    document.getElementById(itemsEatenTag).innerHTML = Snake.getNumberOfEatenItems();
+}
 
 
 function moveDown(){
@@ -416,6 +456,7 @@ function refreshGameInterface(){
     aGameField.clearGameField();
     aGameField.putSnakeToGameField(aSnake);
     aGameField.refreshGameField();
+    aGameController.updateCounters(aSnake, "lifes_count", "items_count");
 
 }
 
@@ -429,10 +470,13 @@ function initGame(){
     aGameField.drawGameField("game_field");
     aGameField.putSnakeToGameField(aSnake);
     aGameField.refreshGameField();
+    refreshGameInterface();
 }
 
 function test(){
-    var arr = aSnake.getCurrentPosition();
-    console.log(arr[0]);
-    console.log(arr[1]);
+    //var arr = aSnake.getCurrentPosition();
+    //console.log(arr[0]);
+    //console.log(arr[1]);
+    aSnake.increaseBodyLength();
+    refreshGameInterface();
 }
