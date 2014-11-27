@@ -346,7 +346,7 @@ Snake.prototype.increaseBodyLength = function(){
     this.snakeBody.push([]);
 
     if(tail[0] == firstSegment[0]){
-        //horizontal segment stable vertical should be corrected
+        // horizontal segment stable vertical should be corrected
         this.snakeBody[this.snakeBody.length-1][0] = tail[0];
         if(tail[1] < firstSegment[1]){
             this.snakeBody[this.snakeBody.length-1][1] = tail[1]-1;
@@ -355,7 +355,7 @@ Snake.prototype.increaseBodyLength = function(){
             this.snakeBody[this.snakeBody.length-1][1] = tail[1]+1;
         }
     }else{
-        //vertical segment is stable horizontal should be corrected
+        // vertical segment is stable horizontal should be corrected
         this.snakeBody[this.snakeBody.length-1][1] = tail[1];
         if(tail[0] < firstSegment[0]){
             this.snakeBody[this.snakeBody.length-1][0] = tail[0]-1;
