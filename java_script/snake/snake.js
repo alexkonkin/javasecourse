@@ -12,6 +12,8 @@
 
 
  */
+var ROWS=10;
+var COLUMNS=20;
 
 function GameField(){
     this.gameArray = [];
@@ -37,6 +39,13 @@ GameField.prototype.drawGameField = function (aGameFieldTag){
     aDiv.appendChild(table);
 }
 
+GameField.prototype.getValue = function (aRaw, aColumn){
+    return this.gameArray[aRaw][aColumn];
+};
+
+GameField.prototype.setValue = function (aRaw, aColumn, aValue){
+    this.gameArray[aRaw][aColumn] = aValue;
+};
 
 GameField.prototype.getGameFieldTag = function (aGameFieldTag){
     return document.getElementById(aGameFieldTag);
@@ -74,14 +83,38 @@ GameField.prototype.putSnakeToGameField = function (Snake){
     }
 }
 
+GameField.prototype.checkIfCellIsOccupied = function (aRow, aColumn){
+    if(this.gameArray[aRow][aColumn] > 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+GameField.prototype.putMealToTheGameField = function (aRow, aColumn){
+    if(this.gameArray[aRow][aColumn] != 1){
+        this.gameArray[aRow][aColumn] = 2;
+        return true;
+    }
+    else{
+        return false;
+    }
+
+}
+
+
 GameField.prototype.refreshGameField = function(){
     for (var row = 0; row < this.getNumberOfRows() ; row++) {
         for (var column = 0; column < this.getNumberOfColumns(); column++) {
             var tagThatShouldBePainted = "td_" + row + "_" + column;
             var gameCell = document.getElementById(tagThatShouldBePainted);
             if(column < this.getNumberOfColumns()) {
-                if (this.gameArray[row][column] != 0) {
+                if (this.gameArray[row][column] == 1) {
                     gameCell.bgColor = 'red';
+                }
+                else if(this.gameArray[row][column] == 2){
+                    gameCell.bgColor = 'green';
                 }
                 else {
                     gameCell.bgColor = 'white';
@@ -94,7 +127,9 @@ GameField.prototype.refreshGameField = function(){
 GameField.prototype.clearGameField = function(){
     for (var row = 0; row < this.getNumberOfRows() ; row++) {
         for (var column = 0; column < this.getNumberOfColumns(); column++) {
-                 this.gameArray[row][column] = 0;
+            if(this.gameArray[row][column] !=2) {
+                this.gameArray[row][column] = 0;
+            }
         }
     }
 }
@@ -366,6 +401,52 @@ Snake.prototype.increaseBodyLength = function(){
     }
 };
 
+Snake.prototype.ifMealIsPresentEatIt = function(aGameField){
+    var aSnakeHead = this.getCurrentPosition();
+    switch(this.getCurrentDirection()){
+        case "leftToRight":
+                if(aGameField.getValue(aSnakeHead[0],(aSnakeHead[1]+1)) == 2){
+                    aGameField.setValue(aSnakeHead[0],(aSnakeHead[1]+1),0);
+                    this.eatOneItem();
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            break;
+        case "rightToLeft":
+            if(aGameField.getValue(aSnakeHead[0],(aSnakeHead[1]-1)) == 2){
+                aGameField.setValue(aSnakeHead[0],(aSnakeHead[1]-1),0);
+                this.eatOneItem();
+                return true;
+            }
+            else{
+                return false;
+            }
+            break;
+        case "bottomToTop":
+            if(aGameField.getValue((aSnakeHead[0]-1),aSnakeHead[1]) == 2){
+                aGameField.setValue((aSnakeHead[0]-1),aSnakeHead[1],0);
+                this.eatOneItem();
+                return true;
+            }
+            else{
+                return false;
+            }
+            break;
+        case "topToBottom":
+            if(aGameField.getValue((aSnakeHead[0]+1),aSnakeHead[1]) == 2){
+                aGameField.setValue((aSnakeHead[0]+1),aSnakeHead[1],0);
+                this.eatOneItem();
+                return true;
+            }
+            else{
+                return false;
+            }
+            break;
+    }
+}
+
 function GameController() {
 }
 
@@ -407,10 +488,14 @@ GameController.prototype.updateCounters = function(Snake, lifesLeftTag, itemsEat
     document.getElementById(itemsEatenTag).innerHTML = Snake.getNumberOfEatenItems();
 }
 
+GameController.prototype.generateRundomValue = function(aMaxValue) {
+        return Math.floor(Math.random() * (aMaxValue + 1));
+}
 
 function moveDown(){
     aSnake.setCurrentDirection("topToBottom");
     if(!aGameController.collisionHasOccurred(aGameField, aSnake)) {
+        tryToFindMealAndDoOneStep();
         aSnake.doOneStepDown();
     }
     else{
@@ -422,6 +507,7 @@ function moveDown(){
 function moveUpward(){
     aSnake.setCurrentDirection("bottomToTop");
     if(!aGameController.collisionHasOccurred(aGameField, aSnake)) {
+        tryToFindMealAndDoOneStep();
         aSnake.doOneStepUpward();
     }
     else{
@@ -430,9 +516,19 @@ function moveUpward(){
     refreshGameInterface();
 }
 
+function tryToFindMealAndDoOneStep(){
+    if(aSnake.ifMealIsPresentEatIt(aGameField)){
+        if((aSnake.getNumberOfEatenItems()%3) == 0){
+            aSnake.increaseBodyLength();
+        }
+        putNewMealToGameField();
+    };
+}
+
 function moveRight(){
     aSnake.setCurrentDirection("leftToRight");
     if(!aGameController.collisionHasOccurred(aGameField, aSnake)) {
+        tryToFindMealAndDoOneStep();
         aSnake.doOneStepRight();
     }
     else{
@@ -444,6 +540,7 @@ function moveRight(){
 function moveLeft(){
     aSnake.setCurrentDirection("rightToLeft");
     if(!aGameController.collisionHasOccurred(aGameField, aSnake)) {
+        tryToFindMealAndDoOneStep();
         aSnake.doOneStepLeft();
     }
     else{
@@ -460,23 +557,36 @@ function refreshGameInterface(){
 
 }
 
+function putNewMealToGameField(){
+    while(aGameField.putMealToTheGameField(aGameController.generateRundomValue(ROWS-1),
+        aGameController.generateRundomValue(COLUMNS-1))!=true);
+}
+
 function initGame(){
     aGameField = new GameField();
     aSnake = new Snake();
     aSnake.setNumberOfLives(3);
     aGameController = new GameController();
 
-    aGameField.initGameField(10,20);
+    aGameField.initGameField(ROWS,COLUMNS);
     aGameField.drawGameField("game_field");
     aGameField.putSnakeToGameField(aSnake);
     aGameField.refreshGameField();
+    putNewMealToGameField();
+
     refreshGameInterface();
 }
 
 function test(){
-    //var arr = aSnake.getCurrentPosition();
-    //console.log(arr[0]);
-    //console.log(arr[1]);
+    /* Increase body length test
     aSnake.increaseBodyLength();
     refreshGameInterface();
+    */
+
+    /*
+    aGameField.putMealToTheGameField(5,8);
+    refreshGameInterface();
+    */
+    aSnake.ifMealIsPresentEatIt();
+
 }
