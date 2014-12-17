@@ -12,7 +12,7 @@
     float: none;
 }
 
-#pause{
+#game_message{
     border-style: solid;
     text-align: center;
     font-size: 20px;
@@ -21,8 +21,8 @@
     background-color: palegoldenrod;
     width: 250px;
     border-radius: 10px;
-    margin-left: 140px;
-    margin-top: 200px;
+    margin-left: 280px;
+    margin-top: 120px;
     margin-bottom: 20px;
     float: none;
     position: absolute;

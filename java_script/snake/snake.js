@@ -445,10 +445,97 @@ Snake.prototype.ifMealIsPresentEatIt = function(aGameField){
             }
             break;
     }
-}
+};
 
 function GameController() {
-}
+    this.gameIsStarted = false;
+    this.gameIsPaused = false;
+    this.gameIsOver = false;
+    this.intervalID = 0;
+};
+
+GameController.prototype.gameIsStarted = function() {
+    return this.gameIsStarted;
+};
+
+GameController.prototype.gameIsPaused = function() {
+    return this.gameIsPaused;
+};
+
+GameController.prototype.gameIsOver = function() {
+    return this.gameIsOver;
+};
+
+GameController.prototype.setPauseStatus = function(aPauseStatus) {
+    this.gameIsPaused = aPauseStatus;
+};
+
+
+GameController.prototype.startMovement = function(){
+
+    if(this.gameIsStarted == false) {
+        clearInterval(this.intervalID);
+        this.intervalID = setInterval (this.doOneStep, 500, aSnake);
+        this.gameIsStarted = true;
+        this.gameIsOver = false;
+        //var intervalID = setInterval (aGameController.doOneStep, 1000, aSnake);
+    }
+    else{
+        clearInterval(this.intervalID);
+        //document.getElementById("gameIsOver_message").style.display = "block";
+    }
+    var pauseButton = document.getElementById("pause_button");
+    pauseButton.focus();
+};
+
+GameController.prototype.setResetPause = function(aMessage, aButtonPauseMessage, aButtonContinueMessage) {
+    document.getElementById("game_message").innerHTML = aMessage;
+    var pauseButton = document.getElementById("pause_button");
+    if(this.gameIsPaused == true) {
+        clearInterval(this.intervalID);
+        this.intervalID = setInterval (aGameController.doOneStep, 500, aSnake);
+        this.setPauseStatus(false);
+        document.getElementById("game_message").style.display = "none";
+        document.getElementById("pause_button").innerHTML = aButtonPauseMessage;
+    }
+    else{
+        clearInterval(this.intervalID);
+        this.setPauseStatus(true);
+        document.getElementById("pause_button").innerHTML = aButtonContinueMessage;
+        document.getElementById("game_message").style.display = "block";
+    }
+
+    pauseButton.focus();
+};
+
+GameController.prototype.doOneStep = function(Snake, GameController) {
+    if(aGameController.gameIsOver == false) {
+        switch (Snake.getCurrentDirection()) {
+            case "leftToRight":
+                moveRight();
+                break;
+            case "rightToLeft":
+                moveLeft();
+                break;
+            case "bottomToTop":
+                moveUpward();
+                break;
+            case "topToBottom":
+                moveDown();
+                break;
+        }
+    }
+    else{
+        document.getElementById("game_message").innerHTML = "Game is over";
+        document.getElementById("game_message").style.display = "block";
+        clearInterval(this.intervalID);
+    }
+    refreshGameInterface();
+};
+
+GameController.prototype.startGame = function() {
+
+};
 
 GameController.prototype.collisionHasOccurred = function(GameField, Snake){
     var currentPosition = Snake.getCurrentPosition();
@@ -478,19 +565,20 @@ GameController.prototype.takeOneLifeOrFinishGame = function(Snake) {
     }
     else{
         //alert("game is over");
+        this.gameIsOver = true;
         ;
     }
-}
+};
 
 
 GameController.prototype.updateCounters = function(Snake, lifesLeftTag, itemsEatenTag) {
     document.getElementById(lifesLeftTag).innerHTML = Snake.getNumberOfLives();
     document.getElementById(itemsEatenTag).innerHTML = Snake.getNumberOfEatenItems();
-}
+};
 
 GameController.prototype.generateRundomValue = function(aMaxValue) {
         return Math.floor(Math.random() * (aMaxValue + 1));
-}
+};
 
 function moveDown(){
     aSnake.setCurrentDirection("topToBottom");
@@ -577,16 +665,38 @@ function initGame(){
     refreshGameInterface();
 }
 
-function test(){
-    /* Increase body length test
-    aSnake.increaseBodyLength();
-    refreshGameInterface();
-    */
+document.onkeyup = function(e) {
+    switch (e.keyCode) {
+        case 37:
+            aSnake.setCurrentDirection("rightToLeft");
+            break;
+        case 38:
+            aSnake.setCurrentDirection("bottomToTop");
+            break;
+        case 39:
+            aSnake.setCurrentDirection("leftToRight");
+            break;
+        case 40:
+            aSnake.setCurrentDirection("topToBottom");
+            break;
+        case 19:
+            // Pause button is clicked
+            aGameController.setResetPause("Game is paused","pause game","continue game");
+            break;
+    }
+};
 
-    /*
-    aGameField.putMealToTheGameField(5,8);
-    refreshGameInterface();
-    */
-    aSnake.ifMealIsPresentEatIt();
-
+function startGame(){
+    if(aGameController.gameIsOver == false){
+        aGameController.startMovement();
+    }
+    else{
+        document.getElementById("game_message").style.display = "none";
+        aGameController.gameIsOver = false;
+        aGameController.gameIsStarted = false;
+        aSnake = new Snake();
+        aSnake.setNumberOfLives(3);
+        refreshGameInterface();
+        aGameController.startMovement();
+    }
 }
