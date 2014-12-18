@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="72c40adc-50af-421c-b27c-571793aa624a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snake.css" afterPath="$PROJECT_DIR$/snake.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snake.html" afterPath="$PROJECT_DIR$/snake.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snake.js" afterPath="$PROJECT_DIR$/snake.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -26,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="snake.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="snake.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snake.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.341577" vertical-offset="12201" max-vertical-offset="13209">
-              <caret line="250" column="48" selection-start-line="250" selection-start-column="48" selection-end-line="250" selection-end-column="48" />
+            <state vertical-scroll-proportion="-12.68" vertical-offset="11787" max-vertical-offset="13430">
+              <caret line="714" column="73" selection-start-line="714" selection-start-column="73" selection-end-line="714" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -39,8 +41,8 @@
       <file leaf-file-name="snake.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snake.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1122">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="-15.692307" vertical-offset="476" max-vertical-offset="1190">
+              <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -66,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="snake.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="snake.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/snake.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="2295">
-              <caret line="31" column="19" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.6458333" vertical-offset="1623" max-vertical-offset="2346">
+              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -89,9 +91,9 @@
         <option value="$PROJECT_DIR$/GameFieldSpec.js" />
         <option value="$PROJECT_DIR$/SpecRunner.html" />
         <option value="$PROJECT_DIR$/spec/GameFieldSpec.js" />
-        <option value="$PROJECT_DIR$/snake.css" />
-        <option value="$PROJECT_DIR$/snake.html" />
         <option value="$PROJECT_DIR$/snake.js" />
+        <option value="$PROJECT_DIR$/snake.html" />
+        <option value="$PROJECT_DIR$/snake.css" />
       </list>
     </option>
   </component>
@@ -255,12 +257,16 @@
       <created>1418807598216</created>
       <updated>1418807598216</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="snake js: Victory condirion and its processing have been added to the project">
+      <created>1418908629714</created>
+      <updated>1418908629714</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -303,7 +309,8 @@
     <MESSAGE value="snake js: Generation of Meal has been added to the project, methods that allow Snake to find and eat Meal have been added to the project" />
     <MESSAGE value="snake js: Game Paused and Game is over events their processing and window notifications have been added to the project" />
     <MESSAGE value="snake js: Victory condirion and its processing have been added to the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="snake js: Victory condirion and its processing have been added to the project" />
+    <MESSAGE value="snake js: Speed of snake's body growth has been implemented as getters and setters, body length has been added to the statistics table" />
+    <option name="LAST_COMMIT_MESSAGE" value="snake js: Speed of snake's body growth has been implemented as getters and setters, body length has been added to the statistics table" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -619,26 +626,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/snake.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.68" vertical-offset="11787" max-vertical-offset="13430">
+          <caret line="714" column="73" selection-start-line="714" selection-start-column="73" selection-end-line="714" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/snake.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1122">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="-15.692307" vertical-offset="476" max-vertical-offset="1190">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/snake.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="2295">
-          <caret line="31" column="19" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snake.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.341577" vertical-offset="12201" max-vertical-offset="13209">
-          <caret line="250" column="48" selection-start-line="250" selection-start-column="48" selection-end-line="250" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.6458333" vertical-offset="1623" max-vertical-offset="2346">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -12,8 +12,8 @@
 
 
  */
-var ROWS=4;
-var COLUMNS=4;
+var ROWS=10;
+var COLUMNS=10;
 
 function GameField(){
     this.gameArray = [];
@@ -186,6 +186,7 @@ function Snake(){
     this.movementIsAllowed = true;
     this.numberOfLives = 0;
     this.numberOfEatenItems = 0;
+    this.growSpeed = 0;
 
     while (this.snakeBody.push([]) < 3);
     var coordinate = 2;
@@ -420,6 +421,8 @@ Snake.prototype.getCurrentPosition = function(){
     return this.snakeBody[0];
 };
 
+
+
 Snake.prototype.increaseBodyLength = function(){
     var tail = this.snakeBody.slice(-1)[0];
     var firstSegment = this.snakeBody.slice(-2)[0];
@@ -490,6 +493,14 @@ Snake.prototype.ifMealIsPresentEatIt = function(aGameField){
             }
             break;
     }
+};
+
+Snake.prototype.setGrowSpeed = function(aGrowSpeed){
+    this.growSpeed = aGrowSpeed;
+};
+
+Snake.prototype.getGrowSpeed = function(){
+    return this.growSpeed;
 };
 
 function GameController(aDelayValue) {
@@ -629,9 +640,10 @@ GameController.prototype.takeOneLifeOrFinishGame = function(Snake) {
 };
 
 
-GameController.prototype.updateCounters = function(Snake, lifesLeftTag, itemsEatenTag) {
+GameController.prototype.updateCounters = function(Snake, lifesLeftTag, itemsEatenTag, bodyLengthTag) {
     document.getElementById(lifesLeftTag).innerHTML = Snake.getNumberOfLives();
     document.getElementById(itemsEatenTag).innerHTML = Snake.getNumberOfEatenItems();
+    document.getElementById(bodyLengthTag).innerHTML = Snake.getBodyLength();
 };
 
 GameController.prototype.generateRundomValue = function(aMaxValue) {
@@ -664,7 +676,7 @@ function moveUpward(){
 
 function tryToFindMealAndDoOneStep(){
     if(aSnake.ifMealIsPresentEatIt(aGameField)){
-        if((aSnake.getNumberOfEatenItems()%1) == 0){
+        if((aSnake.getNumberOfEatenItems()% aSnake.getGrowSpeed()) == 0){
             aSnake.increaseBodyLength();
         }
         console.log("meal is found and eaten, new meal should be placed");
@@ -700,7 +712,7 @@ function refreshGameInterface(){
     aGameField.clearGameField();
     aGameField.putSnakeToGameField(aSnake);
     aGameField.refreshGameField();
-    aGameController.updateCounters(aSnake, "lifes_count", "items_count");
+    aGameController.updateCounters(aSnake, "lifes_count", "items_count", "body_count");
 
 }
 
@@ -721,14 +733,14 @@ function initGame(){
     aGameField = new GameField();
     aSnake = new Snake();
     aSnake.setNumberOfLives(3);
-    aGameController = new GameController(1000);
+    aSnake.setGrowSpeed(2);
+    aGameController = new GameController(500);
 
     aGameField.initGameField(ROWS,COLUMNS);
     aGameField.drawGameField("game_field");
     aGameField.putSnakeToGameField(aSnake);
     aGameField.refreshGameField();
     putNewMealToGameField();
-
     refreshGameInterface();
 }
 
@@ -768,6 +780,7 @@ function startGame(){
         aGameField.clearGameField();
         aSnake = new Snake();
         aSnake.setNumberOfLives(3);
+        aSnake.setGrowSpeed(2);
         aGameController.startMovement();
         refreshGameInterface();
     }
