@@ -12,8 +12,8 @@
 
 
  */
-var ROWS=10;
-var COLUMNS=20;
+var ROWS=4;
+var COLUMNS=4;
 
 function GameField(){
     this.gameArray = [];
@@ -37,7 +37,7 @@ GameField.prototype.drawGameField = function (aGameFieldTag){
         }
     }
     aDiv.appendChild(table);
-}
+};
 
 GameField.prototype.getValue = function (aRaw, aColumn){
     return this.gameArray[aRaw][aColumn];
@@ -81,7 +81,7 @@ GameField.prototype.putSnakeToGameField = function (Snake){
             column = aSnake.snakeBody[body][1];
             this.gameArray[raw][column] = 1;
     }
-}
+};
 
 GameField.prototype.checkIfCellIsOccupied = function (aRow, aColumn){
     if(this.gameArray[aRow][aColumn] > 0){
@@ -90,7 +90,7 @@ GameField.prototype.checkIfCellIsOccupied = function (aRow, aColumn){
     else{
         return false;
     }
-}
+};
 
 GameField.prototype.putMealToTheGameField = function (aRow, aColumn){
     if(this.gameArray[aRow][aColumn] != 1){
@@ -98,10 +98,11 @@ GameField.prototype.putMealToTheGameField = function (aRow, aColumn){
         return true;
     }
     else{
+        //console.log("the values are not valid row"+aRow+" column"+aColumn);
         return false;
     }
 
-}
+};
 
 
 GameField.prototype.refreshGameField = function(){
@@ -122,7 +123,7 @@ GameField.prototype.refreshGameField = function(){
             }
         }
     }
-}
+};
 
 GameField.prototype.clearGameField = function(){
     for (var row = 0; row < this.getNumberOfRows() ; row++) {
@@ -132,7 +133,51 @@ GameField.prototype.clearGameField = function(){
             }
         }
     }
-}
+};
+
+GameField.prototype.containsMeal = function(){
+    for (var row = 0; row < this.getNumberOfRows() ; row++) {
+        for (var column = 0; column < this.getNumberOfColumns(); column++) {
+            if(this.gameArray[row][column] == 2) {
+                return true;
+            }
+        }
+    }
+    return false;
+};
+
+GameField.prototype.haveFreeCells = function(){
+    var emptyFieldCounter = 0;
+    for (var row = 0; row < this.getNumberOfRows() ; row++) {
+        for (var column = 0; column < this.getNumberOfColumns(); column++) {
+            if(this.gameArray[row][column] == 0) {
+                emptyFieldCounter++;
+            }
+        }
+    }
+
+    if(emptyFieldCounter > 1){
+        console.log("we can continue game "+emptyFieldCounter);
+        return true;
+    }
+    else{
+        console.log("victory "+emptyFieldCounter);
+        return false;
+    }
+};
+
+GameField.prototype.dumpGameField = function(){
+    console.log("----===< Game array >===----");
+    var oneRow;
+    for (var row = 0; row <= ROWS - 1; row++) {
+        oneRow = "";
+        for (var column = 0; column <= COLUMNS - 1; column++) {
+            oneRow += this.gameArray[row][column] + " ";
+        }
+        console.log(oneRow);
+    }
+    console.log("--------------------------");
+};
 
 function Snake(){
     this.movementDirection = {"leftToRight":"leftToRight", "bottomToTop":"bottomToTop", "topToBottom":"topToBottom", "rightToLeft":"rightToLeft"};
@@ -447,12 +492,14 @@ Snake.prototype.ifMealIsPresentEatIt = function(aGameField){
     }
 };
 
-function GameController() {
+function GameController(aDelayValue) {
+    this.delayValue = aDelayValue;
     this.gameIsStarted = false;
     this.gameIsPaused = false;
     this.gameIsOver = false;
+    this.gameIsFinished = false;
     this.intervalID = 0;
-};
+}
 
 GameController.prototype.gameIsStarted = function() {
     return this.gameIsStarted;
@@ -475,7 +522,7 @@ GameController.prototype.startMovement = function(){
 
     if(this.gameIsStarted == false) {
         clearInterval(this.intervalID);
-        this.intervalID = setInterval (this.doOneStep, 500, aSnake);
+        this.intervalID = setInterval (this.doOneStep, this.delayValue, aSnake);
         this.gameIsStarted = true;
         this.gameIsOver = false;
         //var intervalID = setInterval (aGameController.doOneStep, 1000, aSnake);
@@ -493,7 +540,7 @@ GameController.prototype.setResetPause = function(aMessage, aButtonPauseMessage,
     var pauseButton = document.getElementById("pause_button");
     if(this.gameIsPaused == true) {
         clearInterval(this.intervalID);
-        this.intervalID = setInterval (aGameController.doOneStep, 500, aSnake);
+        this.intervalID = setInterval (aGameController.doOneStep, this.delayValue, aSnake);
         this.setPauseStatus(false);
         document.getElementById("game_message").style.display = "none";
         document.getElementById("pause_button").innerHTML = aButtonPauseMessage;
@@ -509,7 +556,13 @@ GameController.prototype.setResetPause = function(aMessage, aButtonPauseMessage,
 };
 
 GameController.prototype.doOneStep = function(Snake, GameController) {
-    if(aGameController.gameIsOver == false) {
+    if(aGameField.containsMeal() == false){
+        putNewMealToGameField();
+    }
+
+
+    //TODO detect why I should directly use aGameController here, why parameter does not work
+    if(aGameController.gameIsOver == false && aGameField.haveFreeCells() == true) {
         switch (Snake.getCurrentDirection()) {
             case "leftToRight":
                 moveRight();
@@ -525,16 +578,22 @@ GameController.prototype.doOneStep = function(Snake, GameController) {
                 break;
         }
     }
-    else{
+    else if (aGameController.gameIsOver == true){
         document.getElementById("game_message").innerHTML = "Game is over";
         document.getElementById("game_message").style.display = "block";
-        clearInterval(this.intervalID);
+        clearInterval(aGameController.intervalID);
     }
+    else if(aGameField.haveFreeCells() == false){
+        document.getElementById("game_message").innerHTML = "Congratulations!<br>You've won this game!<br>Click start to start new game.";
+        document.getElementById("game_message").style.display = "block";
+        //clearInterval(this.intervalID);
+        //TODO why aGameController but not this.gameIsFinished
+        aGameController.gameIsFinished = true;
+        this.gameIsStarted = false;
+        clearInterval(aGameController.intervalID);
+    }
+    aGameField.dumpGameField();
     refreshGameInterface();
-};
-
-GameController.prototype.startGame = function() {
-
 };
 
 GameController.prototype.collisionHasOccurred = function(GameField, Snake){
@@ -566,7 +625,6 @@ GameController.prototype.takeOneLifeOrFinishGame = function(Snake) {
     else{
         //alert("game is over");
         this.gameIsOver = true;
-        ;
     }
 };
 
@@ -606,11 +664,12 @@ function moveUpward(){
 
 function tryToFindMealAndDoOneStep(){
     if(aSnake.ifMealIsPresentEatIt(aGameField)){
-        if((aSnake.getNumberOfEatenItems()%3) == 0){
+        if((aSnake.getNumberOfEatenItems()%1) == 0){
             aSnake.increaseBodyLength();
         }
+        console.log("meal is found and eaten, new meal should be placed");
         putNewMealToGameField();
-    };
+    }
 }
 
 function moveRight(){
@@ -646,15 +705,23 @@ function refreshGameInterface(){
 }
 
 function putNewMealToGameField(){
-    while(aGameField.putMealToTheGameField(aGameController.generateRundomValue(ROWS-1),
-        aGameController.generateRundomValue(COLUMNS-1))!=true);
+    var aRundomRow = 0;
+    var aRundomColumn = 0;
+    var flag = false;
+    do{
+        aRundomRow = aGameController.generateRundomValue(ROWS-1);
+        aRundomColumn = aGameController.generateRundomValue(COLUMNS-1);
+        flag = aGameField.putMealToTheGameField(aRundomRow,aRundomColumn);
+    }while(flag == false);
+    console.log("accepted random values are "+aRundomRow + " " +aRundomColumn);
+    aGameField.dumpGameField();
 }
 
 function initGame(){
     aGameField = new GameField();
     aSnake = new Snake();
     aSnake.setNumberOfLives(3);
-    aGameController = new GameController();
+    aGameController = new GameController(1000);
 
     aGameField.initGameField(ROWS,COLUMNS);
     aGameField.drawGameField("game_field");
@@ -687,16 +754,21 @@ document.onkeyup = function(e) {
 };
 
 function startGame(){
-    if(aGameController.gameIsOver == false){
+    aGameField.dumpGameField();
+
+    if(aGameController.gameIsOver == false && aGameController.gameIsFinished == false){
+        aGameController.gameIsStarted = false;
         aGameController.startMovement();
     }
-    else{
+    else if (aGameController.gameIsOver == true || aGameController.gameIsFinished == true){
         document.getElementById("game_message").style.display = "none";
         aGameController.gameIsOver = false;
+        aGameController.gameIsFinished = false;
         aGameController.gameIsStarted = false;
+        aGameField.clearGameField();
         aSnake = new Snake();
         aSnake.setNumberOfLives(3);
-        refreshGameInterface();
         aGameController.startMovement();
+        refreshGameInterface();
     }
 }
