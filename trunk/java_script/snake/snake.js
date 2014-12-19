@@ -532,8 +532,12 @@ GameController.prototype.setPauseStatus = function(aPauseStatus) {
 GameController.prototype.startMovement = function(){
 
     if(this.gameIsStarted == false) {
+        var self = this;
         clearInterval(this.intervalID);
-        this.intervalID = setInterval (this.doOneStep, this.delayValue, aSnake);
+
+        this.intervalID = setInterval (function() {
+            self.doOneStep(aSnake);
+        }, this.delayValue);
         this.gameIsStarted = true;
         this.gameIsOver = false;
         //var intervalID = setInterval (aGameController.doOneStep, 1000, aSnake);
@@ -573,7 +577,7 @@ GameController.prototype.doOneStep = function(Snake, GameController) {
 
 
     //TODO detect why I should directly use aGameController here, why parameter does not work
-    if(aGameController.gameIsOver == false && aGameField.haveFreeCells() == true) {
+    if(this.gameIsOver == false && aGameField.haveFreeCells() == true) {
         switch (Snake.getCurrentDirection()) {
             case "leftToRight":
                 moveRight();
