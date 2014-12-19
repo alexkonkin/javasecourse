@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="72c40adc-50af-421c-b27c-571793aa624a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snake.css" afterPath="$PROJECT_DIR$/snake.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/snake.js" afterPath="$PROJECT_DIR$/snake.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="snake.iws" />
@@ -26,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="snake.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="snake.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/snake.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.68" vertical-offset="11787" max-vertical-offset="13430">
-              <caret line="714" column="73" selection-start-line="714" selection-start-column="73" selection-end-line="714" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.2797527" vertical-offset="8880" max-vertical-offset="13498">
+              <caret line="535" column="18" selection-start-line="535" selection-start-column="18" selection-end-line="535" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -39,7 +39,7 @@
       <file leaf-file-name="snake.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snake.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.692307" vertical-offset="476" max-vertical-offset="1190">
+            <state vertical-scroll-proportion="-34.0" vertical-offset="0" max-vertical-offset="1190">
               <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
               <folding />
             </state>
@@ -66,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="snake.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="snake.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/snake.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27827382" vertical-offset="0" max-vertical-offset="2346">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2346">
+              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -89,9 +89,9 @@
         <option value="$PROJECT_DIR$/GameFieldSpec.js" />
         <option value="$PROJECT_DIR$/SpecRunner.html" />
         <option value="$PROJECT_DIR$/spec/GameFieldSpec.js" />
-        <option value="$PROJECT_DIR$/snake.js" />
         <option value="$PROJECT_DIR$/snake.html" />
         <option value="$PROJECT_DIR$/snake.css" />
+        <option value="$PROJECT_DIR$/snake.js" />
       </list>
     </option>
   </component>
@@ -263,7 +263,11 @@
       <created>1418919737359</created>
       <updated>1418919737359</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="snake js: Width of the main game caption has been adjusted">
+      <created>1418919853025</created>
+      <updated>1418919853025</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -312,7 +316,9 @@
     <MESSAGE value="snake js: Game Paused and Game is over events their processing and window notifications have been added to the project" />
     <MESSAGE value="snake js: Victory condirion and its processing have been added to the project" />
     <MESSAGE value="snake js: Speed of snake's body growth has been implemented as getters and setters, body length has been added to the statistics table" />
-    <option name="LAST_COMMIT_MESSAGE" value="snake js: Speed of snake's body growth has been implemented as getters and setters, body length has been added to the statistics table" />
+    <MESSAGE value="snake js: Width of the main game caption has been adjusted" />
+    <MESSAGE value="snake js: GameController class/call of the timer definition has been updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="snake js: GameController class/call of the timer definition has been updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -628,26 +634,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snake.js">
+    <entry file="file://$PROJECT_DIR$/snake.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.68" vertical-offset="11787" max-vertical-offset="13430">
-          <caret line="714" column="73" selection-start-line="714" selection-start-column="73" selection-end-line="714" selection-end-column="73" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2346">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/snake.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.692307" vertical-offset="476" max-vertical-offset="1190">
+        <state vertical-scroll-proportion="-34.0" vertical-offset="0" max-vertical-offset="1190">
           <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snake.css">
+    <entry file="file://$PROJECT_DIR$/snake.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27827382" vertical-offset="0" max-vertical-offset="2346">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.2797527" vertical-offset="8880" max-vertical-offset="13498">
+          <caret line="535" column="18" selection-start-line="535" selection-start-column="18" selection-end-line="535" selection-end-column="18" />
           <folding />
         </state>
       </provider>
