@@ -29,12 +29,10 @@ define('Classes/Game', ['Classes/GameField', 'Classes/Snake', 'Classes/GameContr
     function bindEvents(){
          document.getElementById('start_button').addEventListener('click', function(){
             startGame();
-            //console.log("start button is clicked");
-        }, false);
+         }, false);
         document.getElementById('pause_button').addEventListener('click', function(){
             aGameController.setResetPause('Game is paused','pause game','continue game',aSnake, aGameField);
-            console.log("pause button is clicked");
-        }, false);
+         }, false);
     }
 
     function bindKeys(){
