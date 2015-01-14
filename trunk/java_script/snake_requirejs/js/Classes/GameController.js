@@ -41,11 +41,9 @@ GameController.prototype.startMovement = function(Snake, GameField){
         }, this.delayValue);
         this.gameIsStarted = true;
         this.gameIsOver = false;
-        //var intervalID = setInterval (aGameController.doOneStep, 1000, aSnake);
     }
     else{
         clearInterval(this.intervalID);
-        //document.getElementById("gameIsOver_message").style.display = "block";
     }
     var pauseButton = document.getElementById("pause_button");
     pauseButton.focus();
@@ -58,9 +56,7 @@ GameController.prototype.setResetPause = function(aMessage, aButtonPauseMessage,
 
     if(this.gameIsPaused == true) {
         clearInterval(this.intervalID);
-        //TODO is closure needed here? GameGontroller or maybe this should be used instead of aGameController here?
-        //this.intervalID = setInterval (aGameController.doOneStep, this.delayValue, aSnake);
-        //this.intervalID = setInterval (this.doOneStep, this.delayValue, Snake, GameField);
+        //TODO is closure has allowed to fix undefined not a function error here
         this.intervalID = setInterval (function() {
             self.doOneStep(Snake, GameField);
         }, this.delayValue, Snake, GameField);
@@ -159,12 +155,9 @@ GameController.prototype.doOneStep = function(Snake, GameField) {
     ////TODO detect why I should directly use aGameController here, why parameter does not work
     //if(aGameField.containsMeal() == false){
     if(this.GameField.containsMeal() == false){
-        //TODO only for test purposes
         this.putNewMealToGameField();
     }
 
-
-    //TODO detect why I should directly use aGameController here, why parameter does not work
     if(this.gameIsOver == false && this.GameField.haveFreeCells() == true) {
         switch (Snake.getCurrentDirection()) {
             case "leftToRight":
@@ -181,30 +174,19 @@ GameController.prototype.doOneStep = function(Snake, GameField) {
                 break;
         }
     }
-    //TODO closure instead of variable?
-    //else if (aGameController.gameIsOver == true){
+
     else if (this.gameIsOver == true){
         document.getElementById("game_message").innerHTML = "Game is over";
         document.getElementById("game_message").style.display = "block";
-        //TODO
-        //clearInterval(aGameController.intervalID);
         clearInterval(this.intervalID);
     }
     else if(this.GameField.haveFreeCells() == false){
         document.getElementById("game_message").innerHTML = "Congratulations!<br>You've won this game!<br>Click start to start new game.";
         document.getElementById("game_message").style.display = "block";
-        //clearInterval(this.intervalID);
-        //TODO why aGameController but not this.gameIsFinished
-        //aGameController.gameIsFinished = true;
         this.gameIsFinished = true;
         this.gameIsStarted = false;
-        //TODO aGameController?
-        //clearInterval(aGameController.intervalID);
         clearInterval(this.intervalID);
     }
-    //TODO
-    //aGameField.dumpGameField();
-    //this.GameField.dumpGameField();
     this.refreshGameInterface(Snake);
 };
 
@@ -218,7 +200,7 @@ GameController.prototype.refreshGameInterface = function(Snake){
 GameController.prototype.collisionHasOccurred = function(GameField, Snake){
     var currentPosition = Snake.getCurrentPosition();
     var result;
-    //var currentDirection = Snake.getCurrentDirection();
+
     switch (Snake.getCurrentDirection()) {
         case "leftToRight":
             result = ((currentPosition[1] + 1) >= GameField.getNumberOfColumns()) ? true : false;
@@ -239,10 +221,8 @@ GameController.prototype.collisionHasOccurred = function(GameField, Snake){
 GameController.prototype.takeOneLifeOrFinishGame = function(Snake) {
     if(Snake.getNumberOfLives() > 0){
         Snake.takeOneLife();
-        //alert("One life has been taken "+Snake.getNumberOfLives());
     }
     else{
-        //alert("game is over");
         this.gameIsOver = true;
     }
 };
@@ -260,10 +240,3 @@ GameController.prototype.generateRundomValue = function(aMaxValue) {
 
     return GameController;
 });
-
-
-/*
-window.onload = function() {
-    document.getElementById('buttonLeft').addEventListener('click', moveUpward);
-}
-*/

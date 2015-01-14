@@ -69,7 +69,6 @@ GameField.prototype.getNumberOfColumns = function (){
 GameField.prototype.putSnakeToGameField = function (Snake){
     var raw = 0;
     var column = 0;
-    //TODO aSnake was replaced with Snake, closing should be used here?
     for(var body = 0; body < Snake.getBodyLength(); body++){
         raw = Snake.snakeBody[body][0];
         column = Snake.snakeBody[body][1];
@@ -92,7 +91,6 @@ GameField.prototype.putMealToTheGameField = function (aRow, aColumn){
         return true;
     }
     else{
-        //console.log("the values are not valid row"+aRow+" column"+aColumn);
         return false;
     }
 

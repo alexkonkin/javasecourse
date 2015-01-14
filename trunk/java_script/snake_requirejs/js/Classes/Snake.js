@@ -33,49 +33,6 @@ function Snake(){
     }
 
 }
-    /*
-    Snake.movementDirection = {"leftToRight":"leftToRight", "bottomToTop":"bottomToTop", "topToBottom":"topToBottom", "rightToLeft":"rightToLeft"};
-    Snake.snakeBody = [];
-    Snake.directionOfMovement = this.movementDirection.leftToRight;
-    Snake.movementIsAllowed = true;
-    Snake.numberOfLives = 0;
-    Snake.numberOfEatenItems = 0;
-    Snake.growSpeed = 0;
-    */
-
-/*
-Snake.create = function(){
-
-    this.movementDirection = {"leftToRight":"leftToRight", "bottomToTop":"bottomToTop", "topToBottom":"topToBottom", "rightToLeft":"rightToLeft"};
-    this.snakeBody = [];
-    this.directionOfMovement = this.movementDirection.leftToRight;
-    this.movementIsAllowed = true;
-    this.numberOfLives = 0;
-    this.numberOfEatenItems = 0;
-    this.growSpeed = 0;
-
-
-    while (this.snakeBody.push([]) < 3);
-    var coordinate = 2;
-
-    //we need to place snake along one of the walls in our game field
-    for (var body = 0; body < this.getBodyLength(); body++) {
-        for (var bodySegment = 0; bodySegment < 2; bodySegment++) {
-
-            this.snakeBody[body].push(0);
-
-            if (bodySegment == 0) {
-                this.snakeBody[body][bodySegment] = 0;
-            }
-            else {
-                this.snakeBody[body][bodySegment] = coordinate--;
-            }
-        }
-    }
-    return result;
-
-}
-*/
 
 Snake.prototype = {
 
