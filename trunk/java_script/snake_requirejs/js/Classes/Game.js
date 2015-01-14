@@ -2,21 +2,21 @@
  * Created by oleksiy.konkin on 12/30/2014.
  */
 define('Classes/Game', ['Classes/GameField', 'Classes/Snake', 'Classes/GameController'], function (GameField, Snake, GameController) {
-    var ROWS=10;
-    var COLUMNS=10;
 
     var aGameField = new GameField();
     var aSnake = new Snake();
     var aGameController = new GameController(500, aGameField);
 
-    var Game = function() {};
+    var Game = function() {
+    };
 
     Game.prototype.initGame = function (){
         aGameField = new GameField();
         aSnake = new Snake();
         aSnake.setNumberOfLives(3);
         aSnake.setGrowSpeed(2);
-        aGameField.initGameField(ROWS,COLUMNS);
+        //1-st value for ROWS, 2-nd value for COLUMNS
+        aGameField.initGameField(10,10);
         aGameField.drawGameField("game_field");
         aGameField.putSnakeToGameField(aSnake);
         aGameController.putNewMealToGameField(aGameField);
@@ -24,16 +24,18 @@ define('Classes/Game', ['Classes/GameField', 'Classes/Snake', 'Classes/GameContr
         aGameController.updateCounters(aSnake, "lifes_count", "items_count", "body_count");
         this.bindEvents();
         this.bindKeys();
-    }
+    };
 
     Game.prototype.bindEvents = function(){
+        var self = this;
          document.getElementById('start_button').addEventListener('click', function(){
-            this.startGame();
+             console.log("startGame here");
+             self.startGame(aGameController, aSnake, aGameField);
          }, false);
         document.getElementById('pause_button').addEventListener('click', function(){
             aGameController.setResetPause('Game is paused','pause game','continue game',aSnake, aGameField);
          }, false);
-    }
+    };
 
     Game.prototype.bindKeys = function(){
         document.onkeyup = function(e) {
@@ -57,11 +59,10 @@ define('Classes/Game', ['Classes/GameField', 'Classes/Snake', 'Classes/GameContr
                     break;
             }
         };
-    }
+    };
 
     Game.prototype.startGame = function(){
         //aGameField.dumpGameField();
-
         if(aGameController.gameIsOver == false && aGameController.gameIsFinished == false){
             aGameController.gameIsStarted = false;
             aGameController.startMovement(aSnake, aGameField);
@@ -78,8 +79,7 @@ define('Classes/Game', ['Classes/GameField', 'Classes/Snake', 'Classes/GameContr
             aGameController.startMovement(aSnake,aGameField);
             aGameController.refreshGameInterface(aSnake);
         }
-    }
-
+    };
 
     return new Game;
 });
