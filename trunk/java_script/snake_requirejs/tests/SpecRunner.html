@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Jasmine Spec Runner v2.0.2</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.0.2/jasmine_favicon.png">
+  <link rel="stylesheet" type="text/css" href="lib/jasmine-2.0.2/jasmine.css">
+
+  <script type="text/javascript" src="lib/jasmine-2.0.2/jasmine.js"></script>
+  <script type="text/javascript" src="lib/jasmine-2.0.2/jasmine-html.js"></script>
+  <script type="text/javascript" src="lib/jasmine-2.0.2/boot.js"></script>
+  <script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="lib/jasmine-jquery.js"></script>
+
+
+  <!-- include source files here... -->
+  <!--script type="text/javascript" src="../js/Classes/Snake.js"></script-->
+
+  <!-- include spec files here... -->
+  <!--script type="text/javascript" src="spec/SnakeSpec.js"></script-->
+
+  <!--
+   Since we are in the "test" directory, not in the standard
+   "js" directory, we need to define the path prefix' for the
+   RequireJS modules so that the modules can be found from the
+   tests running in the Spec directory.
+   -->
+    <script type="text/javascript">
+        var require = {
+            paths: {
+                "domReady": "lib/domReady",
+                "Classes": "../js/Classes"
+            }
+        };
+    </script>
+    <script type="text/javascript" src="../js/require.js"></script>
+
+    <!--
+    Use RequireJS to load and execute the actual Jasmine test
+    specifications (ie. specs).
+    NOTE: We have to use the domReady! plugin since the Jasmine
+    reporter needs to have access to the BODY tag of the document
+    when outputting the results of the test.
+    -->
+    <script type="text/javascript">
+        require(
+                [
+                    "domReady!",
+                    "spec/SnakeSpec"
+                ],
+                function( document ){
+                //In jasmine 2.0 boot.js was introduced, its responsible for setting up the environment of the runner.
+                    jasmine.getEnv().execute();
+                }
+        );
+    </script>
+</head>
+
+<body>
+</body>
+</html>
