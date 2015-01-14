@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>simple snake</title>
+    <link rel="stylesheet" type="text/css" href="css/snake.css" />
+</head>
+<!--body onLoad="initGame()"-->
+
+<div id="caption">SIMPLE SNAKE</div>
+<div id="game_message"></div>
+
+<!--button id="test" onclick="testFeature()"> test </button-->
+
+<div id="game_field"></div>
+<div id="wrapper">
+    <table id="navigation">
+        <!--tr>
+            <td></td><td><button onclick="test()"> test </button></td><td></td>
+        </tr-->
+        <tr>
+            <td></td><td><button id="start_button"> start game </button></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td><button id="pause_button"> pause game </button></td><td></td>
+        </tr>
+        <!--tr>
+            <td></td>
+            <td><button onclick="moveUpward()"> ^ </button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><button onclick="moveLeft()"> < </button></td>
+            <td>&nbsp</td>
+            <td><button onclick="moveRight()"> > </button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="moveDown()"> v </button></td>
+            <td></td>
+        </tr-->
+    </table>
+
+    <table id="game_statistics">
+        <tr>
+            <td colspan="2">GAME STATISTICS</td>
+        </tr>
+        <tr>
+            <td id="life_label">LIFES LEFT</td>
+            <td id="lifes_count">0</td>
+        </tr>
+        <tr>
+            <td id="items_label">ITEMS</td>
+            <td id="items_count">0</td>
+        </tr>
+        <tr>
+            <td id="body_label">BODY</td>
+            <td id="body_count">0</td>
+        </tr>
+    </table>
+</div>
+<script data-main="js/main" src="js/require.js"></script>
+</body>
+</html>
