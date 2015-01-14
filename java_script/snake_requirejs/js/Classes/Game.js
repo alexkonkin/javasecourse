@@ -22,20 +22,20 @@ define('Classes/Game', ['Classes/GameField', 'Classes/Snake', 'Classes/GameContr
         aGameController.putNewMealToGameField(aGameField);
         aGameField.refreshGameField();
         aGameController.updateCounters(aSnake, "lifes_count", "items_count", "body_count");
-        bindEvents();
-        bindKeys();
+        this.bindEvents();
+        this.bindKeys();
     }
 
-    function bindEvents(){
+    Game.prototype.bindEvents = function(){
          document.getElementById('start_button').addEventListener('click', function(){
-            startGame();
+            this.startGame();
          }, false);
         document.getElementById('pause_button').addEventListener('click', function(){
             aGameController.setResetPause('Game is paused','pause game','continue game',aSnake, aGameField);
          }, false);
     }
 
-    function bindKeys(){
+    Game.prototype.bindKeys = function(){
         document.onkeyup = function(e) {
             switch (e.keyCode) {
                 case 37:
@@ -59,7 +59,7 @@ define('Classes/Game', ['Classes/GameField', 'Classes/Snake', 'Classes/GameContr
         };
     }
 
-    function startGame(){
+    Game.prototype.startGame = function(){
         //aGameField.dumpGameField();
 
         if(aGameController.gameIsOver == false && aGameController.gameIsFinished == false){
